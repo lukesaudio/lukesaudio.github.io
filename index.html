@@ -56,160 +56,56 @@ body {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
 
 <body class="w3-content"  style="max-width:1300px">
 
-
-<!-- First Grid: Logo & About -->
+<!-- Navi Panel -->
 <div class="w3-row">
-  <div class="w3-half w3-2019-evening-blue w3-container w3-center" style="height:700px">
-    <div class="w3-padding-64">
+  <div class=" w3-2019-evening-blue w3-container w3-center" style="height:200px">
+    <div class="w3-padding-16">
       <h1>Welcome to the Website of LukesAudio</h1>
     </div>
-    <div class="w3-padding-16">
-      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">About</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Projects</a>
-      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">CV</a>
+    <div class="w3-bar w3-black">
+      <a class="w3-bar-item w3-button" href="index.html">Home</a>
+      <a class="w3-bar-item w3-button" href="projects.html">Projects</a>
+      <a class="w3-bar-item w3-button" href="cv.html">CV</a>
+      <a class="w3-bar-item w3-button" href="contact.html">Contact</a>
     </div>
   </div>
-  <div class="w3-half w3-2019-bluestone w3-container" style="height:700px">	
-    <div class="w3-padding-64 w3-center">
-      <h1>About Me</h1>
-		<div class="container">
-			<img src="images/photo.jpg" alt="Avatar" class="image">
-		<div class="overlay">
-    <div class="text">This is me in a park in Oslo, Norway</div>
-  </div>
+ </div>
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row w3-padding-24 w3-center w3-2019-bluestone w3-mobile" style="height:600">
+    <h1>About Me</h1>
+	<div class="w3-container">
+		<img src="images/photo.jpg" alt="Me in Oslo, Norway - 2018" class="w3-image" width="650" height="450">
+	</div>
 </div>
-      
-  </div>
-      <div class="w3-left-align w3-padding-large">
-        <p>Hey. I'm Luke, a Creative Music Technology graduate from UWE interested in sound design and audio programming for video games!</p>
-        <p>I came to uni as a performing musician, and over three years transitioned into making audio for video games. 
-		I have a liking for the unusual, complex and strange in audio and music, and this comes across in the works I produce.</p>
-		<p> I'm a devoted fan of Biffy Clyro, corgis, burgers, and a good whiskey. Hope you enjoy what ya find on here. Please get in touch if you want to chat!</p>
-      </div>
-    </div>
-  </div>
+<div class="w3-container w3-padding-32 w3-center w3-2019-evening-blue" style="height:100%">
+	<p>Hey. I'm Luke, a Creative Music Technology graduate from UWE interested in sound design and audio programming for video games!</p>
+	<p>I came to uni as a performing musician, and over three years transitioned into making audio for video games. 
+	I have a liking for the unusual, complex and strange in audio and music, and this comes across in the works I produce.</p>
+	<p> I'm a devoted fan of Biffy Clyro, corgis, burgers, and a good whiskey. Hope you enjoy what ya find on here. Please get in touch if you want to chat!</p>
 </div>
 
-<!-- Second Grid: Work & Resume -->
-<div class="w3-row">
-  <div class="w3-half w3-2019-bluestone w3-center" style="min-height:800px" id="work">
-    <div class="w3-padding-64">
-      <h2>Projects and Works</h2>
-      <p>A collection of things I made/have worked on.</p>
-    </div>
-    <div class="w3-row">
-		<div class="w3-half">
-		
-			<div class="container">
-			<img src="images/outerbounds.PNG" class="w3-rounded" style="width:80%" "height:60%">
-				<div class="overlay">
-					<a href="adverb.html"><div class="text">AdVerb</div></a>
-				</div>
-			</div>
-		</div>
-	<div class="w3-half"> 
-        <div class="container">
-			<img src="images/whackapella.JPG" class="w3-rounded" style="width:80%" "height:10%">
-				<div class="overlay">
-					<a href="whackapella.html"><div class="text">Whackapella</div></a>
-				</div>
-			</div>
-      </div>
-    </div>
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <div class="container">
-			<img src="images/bass.jpg" class="w3-rounded" style="width:80%" "height:60%">
-				<div class="overlay">
-				<a href="https://lukes-audio.bandcamp.com/" rel="noopener noreferrer" target="_blank"><div class="text">Music</div></a>
-				</div>
-			</div>
-      </div>
-      <div class="w3-half">
-        <div class="container">
-			<img src="images/photography.JPG" class="w3-rounded" style="width:80%" "height:60%">
-				<div class="overlay">
-					<a href="https://www.facebook.com/pg/LukesAudio-321298358823934/photos/?ref=page_internal" rel="noopener noreferrer" target="_blank"><div class="text">Photo & Video</div></a>
-				</div>
-			</div>
-      </div>
-    </div>
-
-  </div>
-  <div class="w3-half w3-2019-evening-blue w3-container" style="min-height:800px">
-    <div class="w3-padding-64 w3-center">
-      <h2>CV</h2>
-      <p>A draft from my CV</p>
-      <div class="w3-container w3-responsive">
-        <h3> Education </h3>
-		
-		<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-		<tr>
-			<th> Year </th>
-			<th> University </th>
-			<th> Degree </th>
-		</tr>
-		<tr>
-			<td> 2019-2020 </td>
-			<td> UWE </td>
-			<td> MSc Creative Technology </td>
-		</tr>
-		<tr>
-			<td> 2016-2019 </td>
-			<td> UWE </td>
-			<td> BSc Creative Music Technology </td>
-		</tr>
-			
-		</table>
-					
-		
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Third Grid: Links -->
-<div class="w3-row" id="contact">
-  <div class="w3-half w3-2019-evening-blue w3-container w3-center" style="height:700px">
-    <div class="w3-padding-64">
-      <h1>Links</h1>
-    </div>
-    <div class="w3-padding-64">
-      <p>lukesaudio.github.io (You're already here though...) </p>
-	  <p>linkedin.com/in/lukethomaschild
-      <p>github.com/lukesaudio</p>
-	  <p>connect.unity.com/u/luke-child</p>
-    </div>
-  </div>
-  <div class="w3-half w3-2019-bluestone w3-container" style="height:700px">
-    <div class="w3-padding-64 w3-padding-large">
-      <h1>Contact</h1>
-      <p class="w3-opacity">Drop me a line, I'm normally about!</p>
-      <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
-        <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input" style="width:100%;" type="text" required name="Name">
-        </div>
-        <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input" style="width:100%;" type="text" required name="Email">
-        </div>
-        <div class="w3-section">
-          <label>What's on your mind?</label>
-          <input class="w3-input" style="width:100%;" type="text" required name="Message">
-        </div>
-        <button type="submit" class="w3-button w3-teal w3-right">Send</button>
-      </form>
-    </div>
-  </div>
+ <div class="w3-row w3-padding-16 w3-2019-bluestone w3-center" style="height:240px">
+    <h1>Links<br></h1>
+    	<div class="w3-bar w3-black" style="width:100%">
+		  <a class="w3-bar-item w3-button w3-large fa fa-home w3-center" style="width:25%" href="https://lukesaudio.github.io"> <p>Home</p></a>
+		  <a class="w3-bar-item w3-button w3-large fa fa-linkedin w3-center" style="width:25%" href="https://linkedin.com/in/lukethomaschild"><p>LinkedIn</p></a>
+		  <a class="w3-bar-item w3-button w3-large fa fa-github w3-center" style="width:25%" href="https://github.com/lukesaudio"><p>Github</p></a>
+		  <a class="w3-bar-item w3-button w3-large fa fa-gamepad w3-center" style="width:25%" href="https://connect.unity.com/u/luke-child"><p>Unity</p></a>
+		</div>
+		
 </div>
+
+  
 
 <!-- Footer -->
 <footer class="w3-container w3-black w3-padding-16">
