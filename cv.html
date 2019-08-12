@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<style>
+body 
+{
+   width: 100%;
+   height: 20%;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; center; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main main main'
+	'right right right right right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 20px;
+  background-color: #2196F3;
+}
+
+
+</style>
+<title>Welcome to LukesAudio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<body class="w3-content w3-2019-evening-blue">
+
+<div class="w3-row">
+	<div class="w3-2019-evening-blue w3-container w3-center" style="margin-top: 115px">
+		<div class="w3-bar w3-2019-sweet-corn" style="margin-bottom: 20px">
+		<a class="w3-bar-item w3-button" href="index.html">Home</a>
+		<a class="w3-bar-item w3-button" href="projects.html">Projects</a>
+		<a class="w3-bar-item w3-button" href="cv.html">CV</a>
+		<a class="w3-bar-item w3-button" href="contact.html">Contact</a>
+		</div>
+
+		<div class="w3-padding-4">
+			<img src="images/translogo.png" alt="Logo" class="w3-image" width="60%" height="10%" style="margin-bottom:30px">
+			<img src="images/photo.JPG" alt="Logo" class="w3-image" width="20%" height="10%" style="margin-bottom:30px; margin-left:60px; border-radius: 50% ">
+		</div>
+	</div>
+</div>
+
+
+<div class="grid-container w3-2019-evening-blue">
+	<div class="item1"><h1>Mr Luke Thomas Child (BSc Hons)</h1></div>
+	
+	<div class="item2 w3-2019-sweet-corn" >
+		<div style="text-align: center"><h2>Basic Information</h2></div>
+		<div style="text-align: center"><img src="images/graduation.JPG" alt="Logo" class="w3-image"  width="300px"> </div>
+		<h3 style="text-align: center">Bristol, UK </h3>
+			
+	</div>
+	
+	<div class="item3">
+		<div><h2>About</h2></div>			
+				<p>Hey, I'm Luke. I'm a Creative Music Technology graduate with keen interest in video game audio. I joined university as a performing vocalist and guitarist and quickly transitioned into music and audio design for video games. 
+					I have a love of generative and dynamic audio systems, and believe they have a key importance in influencing a player's experience of a video game. My undergraduate dissertation <i> Exploring Adaptive Reverberation in Video Games</i>
+					introduced me to the concept of 'intelligent' audio systems in video games, which is now a topic I am carrying on in my postgraduate studies. I hope to make new and memorable audio experiences in interactive environments that go beyond simply
+					writing dynamically changing music. <br>
+					I currently live in Bristol with my partner, Paige, an MSc Events Management student also at UWE. I am a huge fan of the band Biffy Clyro; their weirdness, complexty and ability to innovate in music is an ethos I imbue into my own work.
+					Finally, I love a good burger and whiskey, and run a blog following my escapades into such. 					
+				</p>
+		
+	</div>
+	
+	<div class="item4">
+		<div><h2>Qualifications and Awards</h2></div>
+			<ul>
+				<li>MSc in Creative Technology - University of the West of England (2019/20)</li>
+				<br>
+				<li>BSc (Hons) in Creative Music Technology - University of the West of England (2016/19) <br><b>Awarded: Upper Second Class Honours</b></li>
+				<br>
+				<li>Level 3 Extended Diploma in Music Technology - Kidderminster College (2014/16) <br><b>Awarded: Distinction* Distinction Distinction</b></li>
+			</ul>
+	</div>
+	
+	<div class="item5">
+		<div><h2>Work and Publications:</h2></div>
+			<ul>
+				<li>Child, L. (2019). <i>Exploring Adaptive Reverberation in Video Games (Dissertation).</i> Bristol, England. University of the West of England.  </li>
+				<li>Cosmic. (2019) <i>Gravitate.</i> [Online]. Bristol, England: Satori Records.</li>			
+			<ul>
+	</div>
+	
+</div>
+
+
+
+
+<!-- Third Grid: Links -->
+<div class="w3-row w3-padding-4 w3-2019-evening-blue w3-center">
+	<h1>Links<br></h1>
+		<div class="w3-bar w3-2019-sweet-corn" style="width:100%">
+			<a class="w3-bar-item w3-button w3-large fa fa-bandcamp w3-center" style="width:25%" href="https://lukes-audio.bandcamp.com"> <p>Bandcamp</p></a>
+			<a class="w3-bar-item w3-button w3-large fa fa-linkedin w3-center" style="width:25%" href="https://linkedin.com/in/lukethomaschild"><p>LinkedIn</p></a>
+			<a class="w3-bar-item w3-button w3-large fa fa-github w3-center" style="width:25%" href="https://github.com/lukesaudio"><p>Github</p></a>
+			<a class="w3-bar-item w3-button w3-large fa fa-gamepad w3-center" style="width:25%" href="https://connect.unity.com/u/luke-child"><p>Unity</p></a>
+		</div>
+		
+</div>
+
+</body>
+</html>
