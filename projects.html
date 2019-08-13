@@ -7,6 +7,11 @@ body
    height: 20%;
 }
 
+p    {color: black;}
+
+
+
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -47,11 +52,12 @@ body
   cursor: pointer;
 }
 
-
-
-
+a:hover {
+  text-decoration: underline;
+}
 
 </style>
+
 <title>Welcome to LukesAudio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,17 +69,7 @@ body
 
 
 <body class="w3-content w3-2019-evening-blue">
-<div id="overlay" onclick="off()"></div>
 
-<script>
-function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
-</script>
 
 
 <div class="w3-row">
@@ -95,14 +91,125 @@ function off() {
 
 <div class="grid-container">
 
-  <div class="grid-item"><a onclick="on()">AdVerb: Adaptive Reverberation for Unity</a></div> 
-  <div class="grid-item"><a onclick="on()">Whackapella: 2D Audio Based Platform Fighter</a></div>
-  <div class="grid-item"><a onclick="on()">Other Work at University</a></div>
-  <div class="grid-item"><a onclick="on()">Luke Child: A Collection of Folk Punk Music</a></div>
-  <div class="grid-item"><a onclick="on()">Cosmic: A Lo-Fi Experimental Hip Hop Project</a></div>
-  <div class="grid-item"><a onclick="on()">University Music: A Collection Music made for my Undergraduate Degree</a></div>
- 
+  <div class="grid-item"><a onclick="document.getElementById('id01').style.display='block'">AdVerb: Adaptive Reverberation for Unity</a></div>
+  <div class="grid-item"><a onclick="document.getElementById('id02').style.display='block'">Whackapella: 2D Audio Based Platform Fighter</a></div>
+  <div class="grid-item"><a onclick="document.getElementById('id03').style.display='block'">Coming soon...</a></div>
+  <div class="grid-item"><a onclick="document.getElementById('id04').style.display='block'">Luke Child: A Collection of Folk Punk Music</a></div>
+  <div class="grid-item"><a onclick="document.getElementById('id05').style.display='block'">Cosmic: A Lo-Fi Experimental Hip Hop Project</a></div>
+  <div class="grid-item"><a onclick="document.getElementById('id06').style.display='block'">University Music: A Collection Music made for my Undergraduate Degree</a></div>
   
+  <!---Containers for modal--->
 </div>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>AdVerb: Adaptive Reverberation for Unity</h2>
+      </header>
+      <div class="w3-container">
+		<img src="images/outerbounds.png" alt="adverb" class="w3-image center" width="100%" height="10%" style="">
+        <p>
+		AdVerb is a reverberation system I am developing for the Unity games engine. AdVerb is a portmanteau of Adaptive and Reverb, and is a system that adapts to a given world space within a video game, and creates a reverberation profile accordingly.
+		The system uses raycasting and shader properties to compute averages for values such as surface smoothness, metallicness and proximity, and then applies these to an in-Unity reverb filter at runtime. 
+		</p>
+        <p>This was developed for my undergraduate dissertation. You can access the dissertation <a href="files/dissertation.pdf">HERE</a></p>
+      </div>
+		<footer class="w3-container w3-teal">
+		</footer>
+    </div>
+</div>
+
+<div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id02').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Whackapella: 2D Audio Based Platform Fighter</h2>
+      </header>
+      <div class="w3-container">
+        <p>Whackapella is a 2D platform fighting game I have been planning for a while now and will hopefully start up soon. It is an audio-focused brawl game where audio-relates charatcers, abilities and mechanics are it's niche. </p>
+        <p>Little exists on this currently, but watch this space!</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        
+      </footer>
+    </div>
+</div>
+
+<div id="id03" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id03').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Coming soon...</h2>
+      </header>
+      <div class="w3-container">
+        <p>Nothing here yet..</p>
+        <p></p>
+      </div>
+      <footer class="w3-container w3-teal">
+        
+      </footer>
+    </div>
+</div>
+
+<div id="id04" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id04').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Luke Child: A Collection of Folk Punk Music</h2>
+      </header>
+      <div class="w3-container">
+	  <img src="images/bass.jpg" alt="bass" class="w3-image center" width="100%" height="10%" style="">
+        <p>Being from the Midlands, and being a slight country boy, I've always been a fan of folk and protest song. HERE you can find some of the music I have written for this genre over the years.</p>
+        <p>The music (to the best of my knowledge) is written and performed solely by myself unless stated otherwise.</p>
+      </div>
+      <footer class="w3-container w3-teal">
+       
+      </footer>
+    </div>
+</div>
+
+<div id="id05" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id05').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Cosmic: A Lo-Fi Experimental Hip Hop Project</h2>
+      </header>
+      <div class="w3-container">
+	  <img src="images/cosmic.jpg" alt="cosmic" class="w3-image center" width="60%" height="10%" style="">
+        <p>I've never been too big on electronic genres, but I have always loved weird music. In order to develop a better love for electronic genres, I formed 'Cosmic', a pseudonym for the duet between the music I struggle with the most with the freedom of expression you get from composing digital realm. </p>
+        <p>This music is released through my buddy Joe's label <a href="https://twitter.com/satorirecords"> SATORI RECORDS </a> </p>
+      </div>
+      <footer class="w3-container w3-teal">
+       
+      </footer>
+    </div>
+</div>
+
+<div id="id06" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id06').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>University Music: A Collection Music made for my Undergraduate Degree</h2>
+      </header>
+      <div class="w3-container">
+	  <img src="images/uni-recordings.jpg" alt="uni" class="w3-image center" width="100%" height="10%" style="">
+        <p>These tracks here were all produced alongside various modules of my undergraduate degree. Many collaborations with my buddies from uni here!</p>
+        <p>Check them out <a href="https://bandcamp.com/lukes-audio/album/university"> HERE </a></p>
+      </div>
+      <footer class="w3-container w3-teal">
+      
+      </footer>
+    </div>
+</div>
+
+
+
 </body>
 </html>
