@@ -5,6 +5,11 @@ body
 {
    width: 100%;
    height: 20%;
+   
+    background-image: url("images/background6.jpg");
+  	background-repeat: no-repeat;
+  	background-position: right top;
+  	background-attachment: fixed;
 }
 
 .item1 { grid-area: header; }
@@ -13,7 +18,8 @@ body
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
 
-.grid-container {
+.grid-container 
+{
   display: grid;
   grid-template-areas:
     'header header header header header header'
@@ -21,7 +27,18 @@ body
 	'right right right right right right'
     'footer footer footer footer footer footer';
   grid-gap: 20px;
-  background-color: #2196F3;
+  
+  background: rgba(0, 0, 0, 0.8);
+}
+
+div.w3-container
+{
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+
+div.w3-row{
+  background: rgba(0, 0, 0, 0.8);
+
 }
 
 
@@ -36,10 +53,10 @@ body
 
 
 
-<body class="w3-content w3-2019-evening-blue">
+<body class="w3-content w3-animate-opacity w3-2019-evening-blue">
 
 <div class="w3-row">
-	<div class="w3-2019-evening-blue w3-container w3-center" style="margin-top: 115px">
+	<div class="w3-black w3-container w3-center" style="margin-top: 115px">
 		<div class="w3-bar w3-2019-sweet-corn" style="margin-bottom: 20px">
 		<a class="w3-bar-item w3-button" href="index.html">Home</a>
 		<a class="w3-bar-item w3-button" href="projects.html">Projects</a>
@@ -55,10 +72,10 @@ body
 </div>
 
 
-<div class="grid-container w3-2019-evening-blue">
+<div class="grid-container w3-black">
 	<div class="item1"><h1>Mr Luke Thomas Child (BSc Hons)</h1></div>
 	
-	<div class="item2 w3-2019-sweet-corn" >
+	<div class="item2 w3-2019-w3-black" >
 		<div style="text-align: center"><h2>Basic Information</h2></div>
 		<div style="text-align: center"><img src="images/graduation.jpg" alt="Logo" class="w3-image"  width="300px"> </div>
 		<h3 style="text-align: center">Bristol, UK </h3>
