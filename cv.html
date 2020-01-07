@@ -6,15 +6,12 @@ body
    width: 100%;
    height: 20%;
    
-    background-image: url("images/background6.jpg");
-  	background-repeat: no-repeat;
-  	background-position: right top;
-  	background-attachment: fixed;
+ 
 }
 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
-.item3 { grid-area: main; center; }
+.item3 { grid-area: center; }
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
 
@@ -36,11 +33,28 @@ div.w3-container
   background: rgba(0, 0, 0, 0.8);
   padding: 10px;
 
-div.w3-row{
-  background: rgba(0, 0, 0, 0.8);
 
 }
 
+body 
+{
+   
+   	width: 100%;
+   	height: 20%;
+   
+  	background-image: url("images/background4.jpg");
+  	background-repeat: no-repeat;
+  	background-position: right top;
+  	background-attachment: fixed;
+	
+	
+
+}
+
+td
+{
+	color: white;
+}
 
 </style>
 <title>Welcome to LukesAudio</title>
@@ -53,68 +67,63 @@ div.w3-row{
 
 
 
-<body class="w3-content w3-animate-opacity w3-2019-evening-blue">
 
-<div class="w3-row">
-	<div class="w3-black w3-container w3-center" style="margin-top: 115px">
-		<div class="w3-bar w3-2019-sweet-corn" style="margin-bottom: 20px">
-		<a class="w3-bar-item w3-button" href="index.html">Home</a>
-		<a class="w3-bar-item w3-button" href="projects.html">Projects</a>
-		<a class="w3-bar-item w3-button" href="cv.html">CV</a>
-		<a class="w3-bar-item w3-button" href="contact.html">Contact</a>
-		</div>
+<body class="w3-content w3-animate-opacity w3-white">
 
-		<div class="w3-padding-4">
-			<img src="images/translogo.png" alt="Logo" class="w3-image" width="60%" height="10%" style="margin-bottom:30px">
-			<img src="images/photo.JPG" alt="Logo" class="w3-image" width="20%" height="10%" style="margin-bottom:30px; margin-left:60px; border-radius: 50% ">
+	<!-- Navigation bar at top of screen -->
+	<div class="w3-row w3-center">
+		<div class="w3-2019-evening-blue w3-container w3-center">
+			<div class="w3-bar w3-2019-sweet-corn">
+				<a class="w3-bar-item w3-button" href="index.html">Home</a>
+				<a class="w3-bar-item w3-button" href="projects.html">Projects</a>
+				<a class="w3-bar-item w3-button" href="cv.html">CV</a>
+				<a class="w3-bar-item w3-button" href="contact.html">Contact</a>
+			</div>		
 		</div>
 	</div>
-</div>
+
+	<!-- Container for CV Information-->
+
+	<div class="w3-container w3-centre w3-blue">
+		<div class="w3-container w3-center w3-black w3-padding-small"> 
+				<img src="images/graduation.jpg" style="height: 60%; width: 50%;">
+		</div>
+
+		<div class="w3-container w3-center"> <!--Information Heading-->
+			<h1>Mr Luke Thomas Child</h1>
+			<h6><em>Bristol, United Kingdom</em></h6>
+		</div>
+
+		<div class="w3-container">
+			<h2>Education</h2>
+			<table class="w3-table">
+				<tr>
+					<th>Course</th>
+					<th>Institution</th>
+					<th>Date</th>
+				</tr>
+				<tr> 
+					<td>MSc Creative Technologies</td>
+					<td>University of the West of England</td>
+					<td>2019-2020</td>
+				</tr>
+				<tr>
+					<td>BSc Creative Music Technology</td>
+					<td>University of the West of England</td>
+					<td>2016-2019</td>
+				</tr>
+				
+
+			</table>
 
 
-<div class="grid-container w3-black">
-	<div class="item1"><h1>Mr Luke Thomas Child (BSc Hons)</h1></div>
-	
-	<div class="item2 w3-2019-w3-black" >
-		<div style="text-align: center"><h2>Basic Information</h2></div>
-		<div style="text-align: center"><img src="images/graduation.jpg" alt="Logo" class="w3-image"  width="300px"> </div>
-		<h3 style="text-align: center">Bristol, UK </h3>
-			
-	</div>
-	
-	<div class="item3">
-		<div><h2>About</h2></div>			
-				<p>Hey, I'm Luke. I'm a Creative Music Technology graduate with keen interest in video game audio. I joined university as a performing vocalist and guitarist and quickly transitioned into music and audio design for video games. 
-					I have a love of generative and dynamic audio systems, and believe they have a key importance in influencing a player's experience of a video game. My undergraduate dissertation <i> Exploring Adaptive Reverberation in Video Games</i>
-					introduced me to the concept of 'intelligent' audio systems in video games, which is now a topic I am carrying on in my postgraduate studies. I hope to make new and memorable audio experiences in interactive environments that go beyond simply
-					writing dynamically changing music. <br>
-					I currently live in Bristol with my partner, Paige, an MSc Events Management student also at UWE. I am a huge fan of the band Biffy Clyro; their weirdness, complexty and ability to innovate in music is an ethos I imbue into my own work.
-					Finally, I love a good burger and whiskey, and run a blog following my escapades into such. 					
-				</p>
+		</div>
+
+
 		
-	</div>
-	
-	<div class="item4">
-		<div><h2>Qualifications and Awards</h2></div>
-			<ul>
-				<li>MSc in Creative Technology - University of the West of England (2019/20)</li>
-				<br>
-				<li>BSc (Hons) in Creative Music Technology - University of the West of England (2016/19) <br><b>Awarded: Upper Second Class Honours</b></li>
-				<br>
-				<li>Level 3 Extended Diploma in Music Technology - Kidderminster College (2014/16) <br><b>Awarded: Distinction* Distinction Distinction</b></li>
-			</ul>
-	</div>
-	
-	<div class="item5">
-		<div><h2>Work and Publications:</h2></div>
-			<ul>
-				<li>Child, L. (2019). <i>Exploring Adaptive Reverberation in Video Games (Dissertation).</i> Bristol, England. University of the West of England.  </li>
-				<li>Cosmic. (2019) <i>Gravitate.</i> [Online]. Bristol, England: Satori Records.</li>			
-			<ul>
-	</div>
-	
-</div>
 
+
+	</div>
 
 </body>
 </html>
