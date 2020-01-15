@@ -1,72 +1,41 @@
 <!DOCTYPE html>
 <html>
 <style>
+
 body 
 {
-   width: 100%;
-   height: 20%;
    
-   background-image: url("images/background4.jpg");
+   	width: 100%;
+   	height: 20%;
+   
+  	background-image: url("images/background5.jpg");
   	background-repeat: no-repeat;
   	background-position: right top;
   	background-attachment: fixed;
 	
+	
+
 }
-
-p    {color: black;}
-
-
-
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2A293E	;
+  background-color:rgba(0, 0, 0, 0.8);
   padding: 10px;
-
-
 }
 .grid-item {
-  background-color: #F0EAD6;
+  background-color: rgb(52, 49, 72, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  color: black;
+  padding: 20px;
+  font-size: 30px;
   text-align: center;
-  cursor: pointer;
-   
 }
-
 .grid-item:hover
 {
-	background-color: rgba(240, 234, 214, 0.3	);
-	color: white;
-	transition: background-color 0.15s;
-	transition: color 0.15s;
+  background-color: rgb(52, 49, 72, 1.0);
 }
 
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0; 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer;
-}
 
-a:hover {
-  text-decoration: underline;
-}
-
-div.w3-container
-{
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-}
 </style>
 
 <title>Welcome to LukesAudio</title>
@@ -84,7 +53,7 @@ div.w3-container
 
 	<!-- Navigation bar at top of screen -->
 	<div class="w3-row w3-center">
-		<div class="w3-2019-evening-blue w3-container w3-center">
+		<div class="w3-2019-sweet-corn w3-container w3-center">
 			<div class="w3-bar w3-2019-sweet-corn">
 				<a class="w3-bar-item w3-button" href="index.html">Home</a>
 				<a class="w3-bar-item w3-button" href="projects.html">Projects</a>
@@ -92,128 +61,22 @@ div.w3-container
 				<a class="w3-bar-item w3-button" href="contact.html">Contact</a>
 			</div>		
 		</div>
-	</div>
-
-
-<div class="grid-container">
-
-  <div class="grid-item"><a onclick="document.getElementById('id01').style.display='block'">AdVerb: Adaptive Reverberation for Unity</a></div>
-  <div class="grid-item"><a onclick="document.getElementById('id02').style.display='block'">Whackapella: 2D Audio Based Platform Fighter</a></div>
-  <div class="grid-item"><a onclick="document.getElementById('id03').style.display='block'">Coming soon...</a></div>
-  <div class="grid-item"><a onclick="document.getElementById('id04').style.display='block'">Luke Child: A Collection of Folk Punk Music</a></div>
-  <div class="grid-item"><a onclick="document.getElementById('id05').style.display='block'">Cosmic: A Lo-Fi Experimental Hip Hop Project</a></div>
-  <div class="grid-item"><a onclick="document.getElementById('id06').style.display='block'">University Music: A Collection Music made for my Undergraduate Degree</a></div>
+  </div>
   
-  <!---Containers for modal--->
-</div>
+  <div class="grid-container" style="margin-top: 115px">
+    <div class="grid-item" style="grid-column: 1 / span 2;">Postgraduate Research</div>
+    <div class="grid-item" style="grid-column: 3 / span 2;">Undergraduate Research</div> 
+    <div class="grid-item" style="grid-column: 1;">Cosmic</div>
+    <div class="grid-item" style="grid-column: 2;">Luke Child</div>
+    <div class="grid-item" style="grid-column: 3;">Scrub</div>
+    <div class="grid-item" style="grid-column: 4;">lukesaudio</div>  
+    <div class="grid-item" style="grid-column: 1 / span 4;">HTM 2019 - Reigning Cats and Dogs</div>
+    <div class="grid-item" style="grid-column: 1 / span 4;">HTM 2016 - The Web Wars</div>
+  </div>
 
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>AdVerb: Adaptive Reverberation for Unity</h2>
-      </header>
-      <div class="w3-container">
-		<img src="images/outerbounds.png" alt="adverb" class="w3-image center" width="100%" height="10%" style="">
-        <p>
-		AdVerb is a reverberation system I am developing for the Unity games engine. AdVerb is a portmanteau of Adaptive and Reverb, and is a system that adapts to a given world space within a video game, and creates a reverberation profile accordingly.
-		The system uses raycasting and shader properties to compute averages for values such as surface smoothness, metallicness and proximity, and then applies these to an in-Unity reverb filter at runtime. 
-		</p>
-        <p>This was developed for my undergraduate dissertation. You can access the dissertation <a href="files/dissertation.pdf">HERE</a></p>
-      </div>
-		<footer class="w3-container w3-teal">
-		</footer>
-    </div>
-</div>
+  
 
-<div id="id02" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id02').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Whackapella: 2D Audio Based Platform Fighter</h2>
-      </header>
-      <div class="w3-container">
-        <p>Whackapella is a 2D platform fighting game I have been planning for a while now and will hopefully start up soon. It is an audio-focused brawl game where audio-relates charatcers, abilities and mechanics are it's niche. </p>
-        <p>Little exists on this currently, but watch this space!</p>
-      </div>
-      <footer class="w3-container w3-teal">
-        
-      </footer>
-    </div>
-</div>
 
-<div id="id03" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id03').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Coming soon...</h2>
-      </header>
-      <div class="w3-container">
-        <p>Nothing here yet..</p>
-        <p></p>
-      </div>
-      <footer class="w3-container w3-teal">
-        
-      </footer>
-    </div>
-</div>
-
-<div id="id04" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id04').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Luke Child: A Collection of Folk Punk Music</h2>
-      </header>
-      <div class="w3-container">
-	  <img src="images/bass.jpg" alt="bass" class="w3-image center" width="100%" height="10%" style="">
-        <p>Being from the Midlands, and being a slight country boy, I've always been a fan of folk and protest song. HERE you can find some of the music I have written for this genre over the years.</p>
-        <p>The music (to the best of my knowledge) is written and performed solely by myself unless stated otherwise.</p>
-      </div>
-      <footer class="w3-container w3-teal">
-       
-      </footer>
-    </div>
-</div>
-
-<div id="id05" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id05').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Cosmic: A Lo-Fi Experimental Hip Hop Project</h2>
-      </header>
-      <div class="w3-container">
-	  <img src="images/cosmic.jpg" alt="cosmic" class="w3-image center" width="60%" height="10%" style="">
-        <p>I've never been too big on electronic genres, but I have always loved weird music. In order to develop a better love for electronic genres, I formed 'Cosmic', a pseudonym for the duet between the music I struggle with the most with the freedom of expression you get from composing digital realm. </p>
-        <p>This music is released through my buddy Joe's label <a href="https://twitter.com/satorirecords"> SATORI RECORDS </a> </p>
-      </div>
-      <footer class="w3-container w3-teal">
-       
-      </footer>
-    </div>
-</div>
-
-<div id="id06" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id06').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>University Music: A Collection Music made for my Undergraduate Degree</h2>
-      </header>
-      <div class="w3-container">
-	  <img src="images/uni-recordings.jpg" alt="uni" class="w3-image center" width="100%" height="10%" style="">
-        <p>These tracks here were all produced alongside various modules of my undergraduate degree. Many collaborations with my buddies from uni here!</p>
-        <p>Check them out <a href="https://bandcamp.com/lukes-audio/album/university"> HERE </a></p>
-      </div>
-      <footer class="w3-container w3-teal">
-      
-      </footer>
-    </div>
-</div>
 
 
 
