@@ -21,23 +21,28 @@ body
 
 div
 {
-	animation: fadeIn 2s;
-	animation-delay: 1s;
+	visibility: hidden;
+	animation: 1s linear 1s forwards fadeIn ;
 }
 
 p
 {
 	font-family: "Catamaran", sans-serif;
-	font-size: 15px;
+	font-size: 20px;
 }
 
 
 
 @keyframes fadeIn
  {
-  from {opacity: 0.0;}
-  to {opacity: 1.0;}
+	to {visibility: visible;}
+
+  	from {opacity: 0.0;}
+  	to {opacity: 1.0;}
+
 }
+
+
 
 </style>
 
@@ -56,7 +61,7 @@ p
 
 <body class="w3-content">
 
-<div class="w3-container w3-black" style="margin-top: 115px;">
+<div class="w3-container" style="margin-top: 115px; background-color: rgba(0, 0, 0, 0.8);">
 	<div class="w3-container w3-center">
 		<div class="w3-bar w3-2019-sweet-corn" style="margin-bottom: 20px">
 				<a class="w3-bar-item w3-button" href="index.html">Home</a>
@@ -76,9 +81,9 @@ p
 			<p>Hey. I'm Luke, a Creative Music Technology graduate from UWE interested in sound design and audio programming for video games!</p>
 			<p>I came to uni as a performing musician, and over three years transitioned into making audio for video games. 
 			I have a liking for the unusual, complex and strange in audio and music, and this comes across in the works I produce.</p>
-			<p> I'm a devoted fan of Biffy Clyro, corgis, burgers, and a good whiskey. Hope you enjoy what ya find on here. Please get in touch if you want to chat!</p>
+			<p> I'm a devoted fan of Biffy Clyro, corgis, burgers, and a good whiskey. Hope you enjoy what ya find on here! Please get in touch if you want to chat.</p>
 	</div>
-	</div>
+</div>
 
 
 

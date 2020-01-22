@@ -3,58 +3,23 @@
 <style>
 body 
 {
-   width: 100%;
-   height: 20%;
-   
- 
-}
-
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: center; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
-
-.grid-container 
-{
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu menu main main main main'
-	'right right right right right right'
-    'footer footer footer footer footer footer';
-  grid-gap: 20px;
-  
-  background: rgba(0, 0, 0, 0.8);
-}
-
-div.w3-container
-{
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-
-
-}
-
-body 
-{
    
    	width: 100%;
    	height: 20%;
    
-  	background-image: url("images/background4.jpg");
+  	background-image: url("images/matt/full.jpg");
   	background-repeat: no-repeat;
-  	background-position: right top;
+  	background-position:center;
+	  
   	background-attachment: fixed;
+	background-size:cover;
 	
 	
 
 }
 
-td
-{
-	color: white;
-}
+
+
 
 </style>
 <title>Welcome to LukesAudio</title>
@@ -70,60 +35,30 @@ td
 
 <body class="w3-content w3-animate-opacity w3-white">
 
+
 	<!-- Navigation bar at top of screen -->
 	<div class="w3-row w3-center">
-		<div class="w3-2019-evening-blue w3-container w3-center">
+		<div class="w3-2019-sweet-corn w3-container w3-center">
 			<div class="w3-bar w3-2019-sweet-corn">
 				<a class="w3-bar-item w3-button" href="index.html">Home</a>
 				<a class="w3-bar-item w3-button" href="projects.html">Projects</a>
 				<a class="w3-bar-item w3-button" href="cv.html">CV</a>
 				<a class="w3-bar-item w3-button" href="contact.html">Contact</a>
+				
 			</div>		
 		</div>
 	</div>
 
-	<!-- Container for CV Information-->
-
-	<div class="w3-container w3-centre w3-blue">
-		<div class="w3-container w3-center w3-black w3-padding-small"> 
-				<img src="images/graduation.jpg" style="height: 60%; width: 50%;">
-		</div>
-
-		<div class="w3-container w3-center"> <!--Information Heading-->
-			<h1>Mr Luke Thomas Child</h1>
-			<h6><em>Bristol, United Kingdom</em></h6>
-		</div>
-
-		<div class="w3-container">
-			<h2>Education</h2>
-			<table class="w3-table">
-				<tr>
-					<th>Course</th>
-					<th>Institution</th>
-					<th>Date</th>
-				</tr>
-				<tr> 
-					<td>MSc Creative Technologies</td>
-					<td>University of the West of England</td>
-					<td>2019-2020</td>
-				</tr>
-				<tr>
-					<td>BSc Creative Music Technology</td>
-					<td>University of the West of England</td>
-					<td>2016-2019</td>
-				</tr>
-				
-
-			</table>
 
 
-		</div>
-
-
-		
-
-
+	<div class="w3-container">
 	</div>
 
+	<embed src="files/resume-low.pdf" type="application/pdf" width="100%", height="923px" />
+
+
+
+
+	
 </body>
 </html>
