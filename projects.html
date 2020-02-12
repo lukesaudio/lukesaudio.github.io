@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <style>
+.project {display:initial}
 
 body 
 {
@@ -24,7 +25,9 @@ body
   grid-template-columns: auto auto auto;
   background-color:rgba(0, 0, 0, 0.322);
   padding: 10px;
+  cursor: pointer;
 }
+
 .grid-item {
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.7);
@@ -33,10 +36,21 @@ body
   text-align: center;
   font-family: "Catamaran", sans-serif;
 	font-size: 30px;
+  
 }
 .grid-item:hover
 {
   background-color: rgba(217, 255, 0, 0.801);
+}
+
+p
+{
+  color: black;
+}
+
+h1
+{
+  color: black;
 }
 
 
@@ -71,19 +85,159 @@ body
 
   <div class="w3-panel w3-blue">
     <h3>Just quick...</h3>
-    <p>I am still adding to this page, so please bare with me while I make things accessable!</p>
+    <p style="color: white;">I am still adding to this page, so please bare with me while I make things accessable!</p>
   </div> 
   
   <div class="grid-container" style="margin-top: 115px; width: 100%;">
-    <div class="grid-item" style="grid-column: 1 / span 2;">Postgraduate Research</div>
-    <div class="grid-item" style="grid-column: 3 / span 2;">Undergraduate Research</div> 
-    <div class="grid-item" style="grid-column: 1;">Cosmic</div>
-    <div class="grid-item" style="grid-column: 2;">Luke Child</div>
-    <div class="grid-item" style="grid-column: 3;">Scrub</div>
-    <div class="grid-item" style="grid-column: 4;">lukesaudio</div>  
-    <div class="grid-item" style="grid-column: 1 / span 4;">HTM 2019 - Reigning Cats and Dogs</div>
-    <div class="grid-item" style="grid-column: 1 / span 4;">HTM 2016 - The Web Wars</div>
+    <div class="grid-item" onclick="document.getElementById('id01').style.display='block'" style="grid-column: 1 / span 2;">Postgraduate Research</div>
+    <div class="grid-item" onclick="document.getElementById('id02').style.display='block'" style="grid-column: 3 / span 2;">Undergraduate Research</div> 
+    <div class="grid-item" onclick="document.getElementById('id03').style.display='block'" style="grid-column: 1;">Cosmic</div>
+    <div class="grid-item" onclick="document.getElementById('id04').style.display='block'" style="grid-column: 2;">Luke Child</div>
+    <div class="grid-item" onclick="document.getElementById('id05').style.display='block'" style="grid-column: 3;">Scrub</div>
+    <div class="grid-item" onclick="document.getElementById('id06').style.display='block'" style="grid-column: 4;">lukesaudio</div>  
+    <div class="grid-item" onclick="document.getElementById('id07').style.display='block'" style="grid-column: 1 / span 4;">HTM 2019 - Reigning Cats and Dogs</div>
+    <div class="grid-item" onclick="document.getElementById('id08').style.display='block'" style="grid-column: 1 / span 4;">HTM 2016 - The Web Wars</div>
   </div>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Postgradate Research</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id02').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Undergraduate Research</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id03" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id03').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Cosmic - A psychedelic trip hop music project</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id04" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id04').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Luke Child - Music released as me!</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id05" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id05').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Scrub - A folk punk music project with Corey Ford</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id06" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id06').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>lukesaudio - an umbrella term for my creative works</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id07" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id07').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>HackTheMidlands 2019 - Reigning Cats and Dogs</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id07').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="id08" class="w3-modal">
+    <div class="w3-modal-content">
+
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id08').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>HackTheMidlands 2016 - The Web Wars</h2>
+      </header>
+
+      <div class="w3-container">
+        <span onclick="document.getElementById('id08').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  
 
   
 
