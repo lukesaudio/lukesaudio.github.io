@@ -10,10 +10,11 @@
 <style>
 .project {display:initial}
 
-body 
+html, body 
 {
    
    	width: 100%;
+    height: 100%;
    
   	background-image: url("images/matt/full.jpg");
   	background-repeat: no-repeat;
@@ -39,25 +40,63 @@ h1
   font-family: "Catamaran", sans-serif;
   
 }
-.w3-twothird
-{
-  height: 40vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 16px;
+
+.collapsible {
+  background: rgba(0,0,0,0.9);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: cent;
+  outline: none;
+  font-size: 40px;
+  transition: transform 0.5s;
+  transition: color 0.2s;
+  transition: background 0.2s;
+
 
 }
-.w3-third
-{
-  background-color: rgba(0, 0, 0, 0.9);
-  height: 40vh;
-  padding: 16px;
+
+.active, .collapsible:hover {
+  background: rgba(255,255,255, 0.8);
+  color:rgba(0, 0, 0, 1.0);
+  transform: scale(1.02);
+
 }
 
-.w3-row
-{
-  margin-left: 8vw;
-  margin-right: 8vw;
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.98);
+  width: 100%;
+  height: 100%;
 }
+
+a
+{
+  font-size: 30px;
+  color: white;
+}
+
+h2
+{
+  color: white;
+}
+
+.w3-btn
+{
+  color: white; background-color:dodgerblue; width: 100%;
+}
+.w3-btn:hover
+{
+  color: white; background-color:royalblue; width: 100%;
+}
+
+
+
 
 </style>
 
@@ -73,77 +112,67 @@ h1
   
   </div>
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-<div class="w3-container" style="margin-top: 200px;">
-  <div class="w3-row">
+  
+<div class="w3-container w3-row" style="margin: 2%; margin-top: 8%; max-height: 80%;">
+  
+  <button type="button" class="collapsible">Research</button>
+  <div class="content">
 
-    <div class="w3-twothird">      
-    <h1 style="text-align: left;">Undergraduate Research - Exploring Adaptive Reverberation in Video Games</h1>
-    <p>
+    <div class="w3-container w3-padding-16 w3-border-grey">
+      <div class="w3-twothird w3-padding">
+        <h2>Developing a Framework for Understanding Reverberation Perception to Enhance Immersion in Virtual Environments (Postgraduate Abstract)</h2> 
+      </div>
 
-      Some demo text
-
-    </p>
-    </div> 
-
-    <div class="w3-third">
-      <div class="w3-container w3-padding-32">
-        <img src="images/outerbounds.PNG" alt="outerbounds" class="w3-image">
+      <div class="w3-third">
+        <a class="w3-btn" href="files/extended_abstract.pdf"><i class="fa fa-download"> </i>PDF</a>
       </div>
     </div>
 
-  </div>
+    <div class="w3-container w3-padding-16 w3-border-grey">
+      <div class="w3-twothird w3-padding">
+        <h2>Exploring Adaptive Reverberation in Video Games (Undergraduate Dissertation)</h2> 
+      </div>
 
-  <!---------------------------------------------------------------------------------------------------------------------------------------------->
-  <div class="w3-row">
-
-    <div class="w3-third">
-      <div class="w3-container w3-padding-32">
-        <img src="images/graduation.jpg" alt="outerbounds" class="w3-image">
+      <div class="w3-third">
+        <a class="w3-btn" href="files/undergraduate_dissertation.pdf"><i class="fa fa-download"> </i>PDF</a>
       </div>
     </div>
 
-    <div class="w3-twothird">      
-    <h1 style="text-align: right;">Postgraduate Research - Developing a Framework for Understanding Reverberation Perception to Enhance Immersion in Virtual Environments</h1>
-    <p style="text-align: right;">
-
-      Some demo text
-
-    </p>
-    </div> 
-
-    
 
   </div>
 
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-
-<div class="w3-row">
-
-  <div class="w3-twothird">    
-    <h1 style="text-align: left;">Hackathons/Game Jams</h1>
-    <p>
-
-      Some demo text
-
-    </p>
-    </div> 
-
-  <div class="w3-third">
-    <div class="w3-container w3-padding-32">
-      <img src="images/photo.JPG" alt="outerbounds" class="w3-image">
-    </div>
+  <button type="button" class="collapsible">Music</button>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 
-  
+  <button type="button" class="collapsible">Games</button>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
 
-  
-
+  <button type="button" class="collapsible">Collaborations</button>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
 </div>
-
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
-</div>
   
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 
   
