@@ -58,8 +58,12 @@ h1
 
 
 }
+.active
+{
+  background-color: black;
 
-.active, .collapsible:hover {
+}
+.collapsible:hover {
   background: rgba(255,255,255, 0.8);
   color:rgba(0, 0, 0, 1.0);
   transform: scale(1.02);
@@ -67,10 +71,10 @@ h1
 }
 
 .content {
-  padding: 0 18px;
+  padding: 18px;
   display: none;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.98);
+  background-color: rgba(0, 0, 0, 0.95);
   width: 100%;
   height: 100%;
 }
@@ -83,6 +87,9 @@ a
 
 h2
 {
+  font-family: "Catamaran", sans-serif;
+  text-align: center;  
+  font-size: 2vw;
   color: white;
 }
 
@@ -94,8 +101,66 @@ h2
 {
   color: white; background-color:royalblue; width: 100%;
 }
+.w3-image
+{
+  padding: 16px;
+}
+.album
+{
+  filter: grayscale(90%);
+}
 
+.album:hover
+{
+  filter: grayscale(0%);
+  transform: scale(1.03);
 
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+.container {
+  position: relative;
+}
+.albumText
+{
+  color: white;
+}
+
+@media screen and (min-width: 601px) {
+  .albumTextMobile
+  {
+    display: none;
+  }
+  .albumText
+  {
+    display: initial;
+  }
+  
+ 
+}
+
+@media screen and (max-width: 600px) {
+  .albumTextMobile
+  {
+    display: initial;
+  }
+  .albumText
+  {
+    display: none;
+  }
+  
+  h2
+  {
+    font-size: 7vw;
+
+  }
+
+  }
 
 
 </style>
@@ -104,9 +169,9 @@ h2
   
   <div class="w3-black w3-center w3-top" id="mainContent" style="width: 100%; padding: 20px;">
 
-    <a class="w3-bar-item w3-button" href="index.html" style="font-size: 20px;">Home</a>
+    <a class="w3-bar-item w3-button" href="index.html" style="font-size: 20px;">Home</a>  
     <a class="w3-bar-item w3-button" href="about.html" style="font-size: 20px;">About</a>
-      <a class="w3-bar-item w3-button" href="projects.html" style="font-size: 20px;">Projects</a>
+    <a class="w3-bar-item w3-button" href="projects.html" style="font-size: 20px;">Projects</a>
     <a class="w3-bar-item w3-button" href="cv.html" style="font-size: 20px;">CV</a>
     <a class="w3-bar-item w3-button" href="contact.html "style="font-size: 20px;">Contact</a>
   
@@ -143,15 +208,45 @@ h2
 
   <button type="button" class="collapsible">Music</button>
   <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-row">
+      
+      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://satorirecordsuk.bandcamp.com/album/gravitate-ep"> <img class="w3-image album" src="images/cosmic.jpg" ></a></div>
+      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Cosmic</h2></div>   
+   
+      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://thecoreyford.bandcamp.com/releases"><img class="w3-image album" src="images/corona.jpg"></a>  </div>
+      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Me and Flu: A Compilation of Isolation Vibrations (Single Track)</h2></div>
+
+      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://soundcloud.com/user-519010136/sets/corey-friends-ep-1/s-aVnbp"><img class="w3-image album" src="images/corey.jpg"></a>  </div>
+      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>The Corey and Friends EP (Vocals)</h2></div>
+
+      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://www.youtube.com/channel/UCWa2Z3gSSsz7ZiBT_f8hHcw"><img class="w3-image album" src="images/colourful.jpg"></a>  </div>
+      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Music Videos</h2></div>
+
+      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://satorirecordsuk.bandcamp.com/"><img class="w3-image album" src="images/satori.jpg"></a>  </div>
+      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Satori and Friends (Label) </h2></div>
+
+
+    </div>
+    <div class="w3-row">
+      
+      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Cosmic</h2></div>   
+      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Me and Flu: A Compilation of Isolation Vibrations (Single Track)</h2></div>
+      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>The Corey and Friends EP (Vocals)</h2></div>
+      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Music Videos</h2></div>
+      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Satori and Friends (Label) </h2></div>
+      
+    </div>
+
+
   </div>
 
-  <button type="button" class="collapsible">Games</button>
+
+  <button type="button" class="collapsible">Games and Interactive Media</button>
   <div class="content">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 
-  <button type="button" class="collapsible">Collaborations</button>
+  <button type="button" class="collapsible">Miscellaneous</button>
   <div class="content">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
