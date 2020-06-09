@@ -1,344 +1,233 @@
 <!DOCTYPE html>
 <html>
+
+    <title>Cosmic</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+
+    
+
     <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          margin: 0;
-          font-family: "Catamaran", sans-serif;
-          font-size: 17px;
-        }
-        
-        #glueVideo {
-          position: fixed;
-          right: 0;
-          bottom: 0;
-          min-width: 100%; 
-          min-height: 100%;
-        }
-        
-        .content {
-          position: fixed;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          padding: 20px;
-        }
 
-        .contentTop {
-          position: fixed;
-          top: 0;
-          background: rgba(0, 0, 0, 0.5);
-          color: #f1f1f1;
-          width: 100%;
-          padding: 20px;
-        }
-        
-        canvas
+        html, body 
         {
-            border:5px solid yellow;
             width: 100%;
-            max-height: 180px;
+            height: 100%;
+            
+            background-color: black;
+            background-repeat: no-repeat;
+            background-position:center;
+            
+            background-attachment: fixed;
+            background-size:cover;
+
+            overflow: auto;
+            font-family: 'Catamaran', sans-serif;
+
         }
 
+        * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container 
+{
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+    </style>
 
 
-        </style>
 
-
-<title>Cosmic</title>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
 
 
 
 <body>
 
+    <div class="w3-black w3-center" id="mainContent" style="width: 100%; padding: 20px;	">
 
-<div class="w3-display-container">
+		<a class="w3-bar-item w3-button" href="index.html" style="font-size: 20px;">Home</a>
+		<a class="w3-bar-item w3-button" href="about.html" style="font-size: 20px;">About</a>
+		<a class="w3-bar-item w3-button" href="projects.html" style="font-size: 20px;">Projects</a>
+		<a class="w3-bar-item w3-button" href="cv.html" style="font-size: 20px;">CV</a>
+		<a class="w3-bar-item w3-button" href="contact.html "style="font-size: 20px;">Contact</a>
+	
+	</div>
 
-    <div class="contentTop w3-center" style="z-index: 1; text-align: center;">
-        <h1>Cosmic</h1>
+    
+
+    <!-- Slideshow container -->
+    
+<div class="slideshow-container">
+
+
+
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <div class="text">Gravitate</div>
+
+      <iframe width="1903" height="772" src="https://www.youtube.com/embed/Ih7ldPVuVmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
     </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <div class="text">Scream</div>
 
-        <video autoplay muted loop id="glueVideo">
-            <h1>Hello There</h1>
-          <source src="videos/cosmicglue.mp4" type="video/mp4">
-        </video>
-        
-        <div class="content">
-            <canvas id="canvas"></canvas>
-        </div>
-</div>       
-        
+      <iframe width="1903" height="772" src="https://www.youtube.com/embed/rLmj3xIV7oE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <div class="text">Glue</div>
+      <iframe width="1903" height="772" src="https://www.youtube.com/embed/7EN8Qracszs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+
+
+
 
 
 </body>
+
 <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
 
-(function () {
-    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    window.requestAnimationFrame = requestAnimationFrame;
-})();
-
-var canvas = document.getElementById("canvas"),
-    ctx = canvas.getContext("2d"),
-    width = 500,
-    height = 200,
-    player = {
-        x: width / 2,
-        y: height - 15,
-        width: 2.5,
-        height: 5,
-        speed: 3,
-        velX: 0,
-        velY: 0,
-        jumping: false,
-        grounded: false
-    },
-    keys = [],
-    friction = 0.8,
-    gravity = 0.3;
-
-var boxes = [];
-
-// dimensions
-boxes.push({ //Left Buffer
-    x: 0,
-    y: 0,
-    width: 10,
-    height: height
-});
-boxes.push({ //Floor
-    x: 0,
-    y: height - 2,
-    width: width,
-    height: 50
-});
-boxes.push({ //Right Buffer
-    x: width - 10,
-    y: 0,
-    width: 50,
-    height: height
-});
-
-boxes.push({ //Platform 1 Top Left
-    x: 0,
-    y: 30,
-    width: 80,
-    height: 20
-    
-});
-boxes.push({ //Platform 2 Lower Left
-    x: 0,
-    y: 130,
-    width: 80,
-    height: 20
-});
-boxes.push({ //Platform 3 Lower Left Assist
-    x: 70,
-    y: 145,
-    width: 20,
-    height: 20
-});
-
-boxes.push({ //Upper Left Assist
-    x: 120,
-    y: 50,
-    width: 40,
-    height: 20
-});
-
-boxes.push({ //Middle Assist
-    x: 250,
-    y: 50,
-    width: 30,
-    height: 20
-});
-
-boxes.push({ //Plaform near stairs
-    x: width-130,
-    y: height-80,
-    width: 20,
-    height: 20
-});
-
-boxes.push({ //Plaform near stairs
-    x: width-185,
-    y: height - 100,
-    width: 15,
-    height: 15
-});
-
-//Staircase Bottom Right
-boxes.push({
-    x: width-70,
-    y: height-20,
-    width: 60,
-    height: 20
-});
-
-boxes.push({
-    x: width-50,
-    y: height-40,
-    width: 60,
-    height: 20
-});
-
-boxes.push({
-    x: width-30,
-    y: height-60,
-    width: 60,
-    height: 20
-});
-
-boxes.push({
-    x: width-20,
-    y: height-80,
-    width: 60,
-    height: 20
-});
-
-//More Platforms top right
-boxes.push({
-    x: width-80,
-    y: 80,
-    width: 20,
-    height: 20
-});
-
-boxes.push({
-    x: width-20,
-    y: 30,
-    width: 60,
-    height: 20
-});
-
-
-
-canvas.width = width;
-canvas.height = height;
-
-function update() {
-    // check keys
-    if (keys[38] || keys[32] || keys[87]) {
-        // up arrow or space
-        if (!player.jumping && player.grounded) {
-            player.jumping = true;
-            player.grounded = false;
-            player.velY = -player.speed * 2;
-        }
-    }
-    if (keys[39] || keys[68]) {
-        // right arrow
-        if (player.velX < player.speed) {
-            player.velX++;
-        }
-    }
-    if (keys[37] || keys[65]) {
-        // left arrow
-        if (player.velX > -player.speed) {
-            player.velX--;
-        }
-    }
-
-    player.velX *= friction;
-    player.velY += gravity;
-
-    ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = "darkslategray";
-    ctx.beginPath();
-    
-    player.grounded = false;
-    for (var i = 0; i < boxes.length; i++) {
-        ctx.rect(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
-        
-        var dir = colCheck(player, boxes[i]);
-
-        if (dir === "l" || dir === "r") {
-            player.velX = 0;
-            player.jumping = false;
-        } else if (dir === "b") {
-            player.grounded = true;
-            player.jumping = false;
-        } else if (dir === "t") {
-            player.velY *= -1;
-        }
-
-    }
-    
-    if(player.grounded){
-         player.velY = 0;
-    }
-    
-    player.x += player.velX;
-    player.y += player.velY;
-
-    ctx.fill();
-    ctx.fillStyle = "white";
-    ctx.fillRect(player.x, player.y, player.width, player.height);
-
-    requestAnimationFrame(update);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function colCheck(shapeA, shapeB) {
-    // get the vectors to check against
-    var vX = (shapeA.x + (shapeA.width / 2)) - (shapeB.x + (shapeB.width / 2)),
-        vY = (shapeA.y + (shapeA.height / 2)) - (shapeB.y + (shapeB.height / 2)),
-        // add the half widths and half heights of the objects
-        hWidths = (shapeA.width / 2) + (shapeB.width / 2),
-        hHeights = (shapeA.height / 2) + (shapeB.height / 2),
-        colDir = null;
-
-    // if the x and y vector are less than the half width or half height, they we must be inside the object, causing a collision
-    if (Math.abs(vX) < hWidths && Math.abs(vY) < hHeights) {
-        // figures out on which side we are colliding (top, bottom, left, or right)
-        var oX = hWidths - Math.abs(vX),
-            oY = hHeights - Math.abs(vY);
-        if (oX >= oY) {
-            if (vY > 0) {
-                colDir = "t";
-                shapeA.y += oY;
-            } else {
-                colDir = "b";
-                shapeA.y -= oY;
-            }
-        } else {
-            if (vX > 0) {
-                colDir = "l";
-                shapeA.x += oX;
-            } else {
-                colDir = "r";
-                shapeA.x -= oX;
-            }
-        }
-    }
-    return colDir;
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-document.body.addEventListener("keydown", function (e) {
-    keys[e.keyCode] = true;
-});
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 
-document.body.addEventListener("keyup", function (e) {
-    keys[e.keyCode] = false;
-});
-
-
-window.addEventListener("load", function () {
-    update();
-});
-    
 </script>
+
 
 </html>
 
