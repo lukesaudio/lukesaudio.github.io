@@ -228,6 +228,10 @@ function showSlides(n) {
   var video1 = document.getElementById("video1"); 
   var video2 = document.getElementById("video2"); 
   var video3 = document.getElementById("video3"); 
+  
+      video1.pause();
+      video2.pause();
+      video3.pause();
 
 
 
@@ -236,10 +240,7 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) 
   {
       slides[i].style.display = "none";
-      video1.pause;
-      video2.pause;
-      video3.pause;
-
+      
       
   }
   for (i = 0; i < dots.length; i++) 
