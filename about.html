@@ -15,104 +15,19 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/OrangeTheme.css">
+
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
 
 <!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
 
 
 <style>
-
-body, html 
-{
-  height: 100%;
-  margin: 0;
-  background-color: #F39B6D;
-  overflow: hidden;
-  font-family: 'Catamaran', sans-serif;
-
-
-}
-
-h1
-{
-  color: #eff9f0;
-  padding: 16px;  
-  font-size: 72px;
-  font-family: 'Catamaran', sans-serif;
-
-}
-
-p
-{
-  color: #eff9f0; 
-}
-
-/* The side navigation menu */  
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #270722;  
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-.arrow {
-
-  transition: 0.4s;
-}
-
-.change .arrow {
-  transform: rotate(-180deg);
-}
-
-.navButton:hover
-{
-  cursor: pointer;
-}
 
 
 </style>
@@ -121,9 +36,8 @@ p
 
 <body>
   <div id="main">
-
     <div class="w3-row";">
-      <h1>//welcome to lukesaudio</h1>
+      <h1>//about</h1>
     </div>
 
     <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed; top: 50%;" onclick="menuButton(this); toggleNavBar()">
@@ -133,9 +47,23 @@ p
     
     </div>
   
-      <div class="w3-container" style="background-color: #270722; width: 30%;">
-        <img src="images/headshot.jpg">
-      </div> 
+    <div class="w3-row" style="position:fixed; left: 7.5%; width: 85%; display:flex;">
+      <div class="w3-half" style="background-color: green;">
+
+        <img src="images/orange-headshot.png" alt="Orange Headshot" class="w3-image">
+      </div>
+
+      <div class="w3-half" style="background-color:#183059;">
+        <p class="w3-padding-16" style ="font-size: 3.2vh; margin: 16px;">
+          Hello there. I am Luke. I'm an audio and music creator with a love for creativity and technology.
+          The works I produce are born from a love for the weird, the complex and the beautiful.
+          I started out in music, and still compose it. I release music in the general areas of trip hop, lo-fi, math and hard rock. 
+          Through university, I traversed into audio technology and game sound. I particularly love reverberation and the way it embodies and gives personality to sound. 
+          I'm currently getting knee deep in games programming and design. Head over to my projects section if you would like to take a look.       
+        </p>
+      </div>
+    </div>
+  
 
     <div id="mySidenav" class="sidenav">
       <a href="index.html">Home</a>
