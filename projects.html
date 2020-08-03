@@ -51,6 +51,20 @@ body::-webkit-scrollbar {
   padding: 32px;
 }
 
+.filterDivRow {
+  float: left;
+  background-color: #183059;
+  color: #ffffff;
+  font-size: 100%;
+  min-width: 80%;
+  line-height: 30px;
+  text-align: left;
+  margin: 0px;
+  display: block; /* Hidden by default */
+  padding: 32px;
+  margin-left: 10%;
+}
+
 
 /* The "show" class is added to the filtered elements */
 .show {
@@ -99,12 +113,27 @@ body::-webkit-scrollbar {
 
     <!-- Control buttons -->
     <div class="w3-container" style="margin-left: 100px;">
+      <div id="myBtnContainer2">
+        <button class="btn" id="toggleStyleList" onclick="changeToListMode()">Simplified List Mode</button>
+        <button class="btn" id="toggleStyleGrid" onclick="changeToShapesMode()">Funky Squares Mode</button>
+      </div>
+
       <div id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')">all</button>
         <button class="btn" onclick="filterSelection('music')">music</button>
         <button class="btn" onclick="filterSelection('interactive')">interactive</button>
         <button class="btn" onclick="filterSelection('art')">art</button>
         <button class="btn" onclick="filterSelection('research')">research</button>
+
+      </div>
+
+      <div id="myBtnContainerList" style="display: none;">
+        <button class="btn active" onclick="filterSelectionList('all')">all</button>
+        <button class="btn" onclick="filterSelectionList('music')">music</button>
+        <button class="btn" onclick="filterSelectionList('interactive')">interactive</button>
+        <button class="btn" onclick="filterSelectionList('art')">art</button>
+        <button class="btn" onclick="filterSelectionList('research')">research</button>
+
       </div>
 
       <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
@@ -114,101 +143,33 @@ body::-webkit-scrollbar {
         <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
         <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
         <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
+        <div class="filterDiv interactive music"><a href="https://www.google.com">microcosm</a></div>
         <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
         <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
         <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>        <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div> <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>        <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div> <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>        <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>
+        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   
+        <div class="filterDiv research"><a href="https://www.google.com">PYTCH Bristol and Virtual Production with UE4 and HTC Vive</a></div>   
+    
+        
+        
+      </div>
+    </div>
+
+    <div class="w3-responsive" id="projectList" style="display: none;">
+
+      <div class="filterDivRow music w3-row"><a href="https://www.google.com">cosmic</a></div>
+      <div class="filterDivRow music w3-row"><a href="https://www.google.com">scrub</a></div>
+      <div class="filterDivRow music w3-row"><a href="https://www.google.com">university</a></div>
+      <div class="filterDivRow interactive w3-row"><a href="https://www.google.com">worlds from words</a></div>
+      <div class="filterDivRow interactive music w3-row"><a href="https://www.google.com">last band standing</a></div>
+      <div class="filterDivRow interactive music w3-row"><a href="https://www.google.com">microcosm</a></div>
+      <div class="filterDivRow art w3-row"><a href="https://www.google.com">LeftToRight</a></div>
+      <div class="filterDivRow art w3-row"><a href="https://www.google.com">20200206000210</a></div>
+      <div class="filterDivRow research w3-row"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
+      <div class="filterDivRow research w3-row"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   
+      <div class="filterDivRow research w3-row"><a href="https://www.google.com">PYTCH Bristol and Virtual Production with UE4 and HTC Vive</a></div>  
       
 
-      </div>
     </div>
 
     <div id="mySidenav" class="sidenav">
@@ -259,7 +220,8 @@ function toggleNavBar()
  
 }
 
-function menuButton(x) {
+function menuButton(x) 
+{
   x.classList.toggle("change");
 }
 
@@ -275,6 +237,66 @@ function filterSelection(c) {
   }
 }
 
+filterSelectionList("all")
+function filterSelectionList(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDivRow");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function changeToListMode()
+{
+  var x =   document.getElementById("projectGrid");
+  var y =   document.getElementById("projectList");
+  var btn1 = document.getElementById("toggleStyleGrid");
+  var btn2 = document.getElementById("toggleStyleList");
+
+  var btnList = document.getElementById("myBtnContainerList");
+  var btnGrid = document.getElementById("myBtnContainer");
+
+  btnList.style.display = "block";
+  btnGrid.style.display = "none";
+
+
+
+
+  x.style.display = "none";
+  y.style.display = "block";
+
+  btn1.style.opacity = "70%";
+  btn2.style.opacity = "100%";
+
+
+}
+
+function changeToShapesMode()
+{
+  var x =   document.getElementById("projectGrid");
+  var y =   document.getElementById("projectList");
+  var btn1 = document.getElementById("toggleStyleGrid");
+  var btn2 = document.getElementById("toggleStyleList");
+
+  
+  var btnList = document.getElementById("myBtnContainerList");
+  var btnGrid = document.getElementById("myBtnContainer");
+
+  btnList.style.display = "none";
+  btnGrid.style.display = "block";
+
+  x.style.display = "block";
+  y.style.display = "none";
+
+  btn1.style.opacity = "100%";
+  btn2.style.opacity = "70%";
+
+  
+}
+
 // Show filtered elements
 function w3AddClass(element, name) {
   var i, arr1, arr2;
@@ -288,7 +310,8 @@ function w3AddClass(element, name) {
 }
 
 // Hide elements that are not selected
-function w3RemoveClass(element, name) {
+function w3RemoveClass(element, name) 
+{
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
