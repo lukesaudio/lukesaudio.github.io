@@ -27,6 +27,62 @@
 
 
 <style>
+  .sidenavAcc {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #270722;  
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenavAcc .closeBtnAcc
+ {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.sidenavAcc a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavAcc a:hover {
+  color: #f1f1f1;
+}
+
+#main {
+  transition: margin-left .5s;
+
+
+}
+
+#btn2
+{
+  transition: margin-right .5s;
+  
+
+}
+button
+{
+  color: black;
+  padding: 8px;
+  left: 33%;
+  min-width: 100%;
+  max-height: 4%;
+  
+}
 
 
 
@@ -41,9 +97,16 @@
       <h1>//welcome to lukesaudio</h1>
     </div>
 
-    <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed; top: 50%;" onclick="menuButton(this); toggleNavBar()">
+    <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed;  top: 50%;" onclick="menuButton(this); toggleNavBar()">
       <div class="arrow">
         <i class="fa fa-arrow-right" style="color: white;" ></i>
+      </div>
+    
+    </div>
+
+    <div class="w3-container w3-padding-16 navButton" id="btn2" style="background-color: #276FBF; position: fixed; right: 0; padding-right: 20px;  top: 50%;" onclick="menuButton(this); toggleNavBarAcc()">
+      <div class="arrow">
+        <i class="fa fa-arrow-left" style="color: white;" ></i>
       </div>
     
     </div>
@@ -56,7 +119,18 @@
       <a href="cv.html">CV</a>
       <a href="contact.html">Contact</a>
     </div>
-  </div>
+
+    <div id="mySidenavAcc" class="sidenavAcc">
+      <h2>Accessibility Options</h2>
+      <button class="navButton">High Contrast Colors</button>
+      <button class="navButton">Change Font Size</button>
+      <button class="navButton">Change Word Spacing</button>    
+      <button class="navButton">Use Sans-serif/simplified fonts</button>    
+      <button class="navButton">Reset to default</button>     
+ 
+ 
+    </div>
+  </div>  
   
 
 
@@ -66,10 +140,13 @@
 <script>
 
 var isToggled = false;
+var isToggledAcc = false;
+
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+function openNav() 
+{
+  document.getElementById("mySidenav").style.width = "250px";  
   document.getElementById("main").style.marginLeft = "250px";
 }
 
@@ -77,6 +154,22 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+} 
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNavAcc() 
+{
+  document.getElementById("mySidenavAcc").style.width = "250px";  
+  document.getElementById("btn2").style.marginRight = "250px";
+
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNavAcc() 
+{
+  document.getElementById("mySidenavAcc").style.width = "0";
+  document.getElementById("btn2").style.marginRight = "0";
+
 } 
 
 function toggleNavBar()
@@ -97,7 +190,26 @@ function toggleNavBar()
  
 }
 
-function menuButton(x) {
+function toggleNavBarAcc()
+{
+  switch(isToggledAcc)
+  {
+    case true:
+      closeNavAcc();
+      isToggledAcc = false;
+      break;
+    
+    case false:
+      openNavAcc()
+      isToggledAcc = true;
+      break;
+  }
+
+ 
+}
+
+function menuButton(x) 
+{
   x.classList.toggle("change");
 }
 

@@ -16,10 +16,8 @@
 <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css" href="css/OrangeTheme.css">
-
-
-
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -38,32 +36,25 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
-.filterDiv {
-  float: left;
-  background-color: #276FBF;
-  color: #ffffff;
-  font-size: 200%;
-  max-width: 30%;
-  line-height: 30px;
-  text-align: center;
-  margin: 2px;
-  display: none; /* Hidden by default */
-  padding: 32px;
-}
+.filterDiv 
+{
 
-.filterDivRow {
   float: left;
-  background-color: #183059;
   color: #ffffff;
   font-size: 100%;
-  min-width: 80%;
+  width: 80%;
   line-height: 30px;
   text-align: left;
   margin: 0px;
-  display: block; /* Hidden by default */
+  display: none; /* Hidden by default */
   padding: 32px;
   margin-left: 10%;
+  text-shadow: 2px 2px 40px #000000;
+
+
 }
+
+
 
 
 /* The "show" class is added to the filtered elements */
@@ -78,12 +69,19 @@ body::-webkit-scrollbar {
   padding: 12px 16px;
   background-color: #f1f1f1;
   cursor: pointer;
+  transition: 0.2s;
 }
 
-/* Add a light grey background on mouse-over */
-.btn:hover {
-  background-color: #ddd;
+.btn2 {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+
 
 /* Add a dark background to the active button */
 .btn.active {
@@ -91,7 +89,10 @@ body::-webkit-scrollbar {
   color: white;
 }
 
-
+.btn2.active2 {
+  background-color: #666;
+  color: white;
+}
 
 </style>
 
@@ -112,13 +113,15 @@ body::-webkit-scrollbar {
     </div>
 
     <!-- Control buttons -->
-    <div class="w3-container" style="margin-left: 100px;">
-      <div id="myBtnContainer2">
-        <button class="btn" id="toggleStyleList" onclick="changeToListMode()">Simplified List Mode</button>
-        <button class="btn" id="toggleStyleGrid" onclick="changeToShapesMode()">Funky Squares Mode</button>
+   
+      <div id="myBtnContainer2" style="padding: 16px;">
+        <button class="btn2 active2" onclick="ToggleContrast(0); SetChildColour()">colourful</button>
+        <button class="btn2" onclick="ToggleContrast(1); SetChildColour()">high contrast</button>
+        
+
       </div>
 
-      <div id="myBtnContainer">
+      <div id="myBtnContainer" style="padding: 16px;">
         <button class="btn active" onclick="filterSelection('all')">all</button>
         <button class="btn" onclick="filterSelection('music')">music</button>
         <button class="btn" onclick="filterSelection('interactive')">interactive</button>
@@ -127,50 +130,28 @@ body::-webkit-scrollbar {
 
       </div>
 
-      <div id="myBtnContainerList" style="display: none;">
-        <button class="btn active" onclick="filterSelectionList('all')">all</button>
-        <button class="btn" onclick="filterSelectionList('music')">music</button>
-        <button class="btn" onclick="filterSelectionList('interactive')">interactive</button>
-        <button class="btn" onclick="filterSelectionList('art')">art</button>
-        <button class="btn" onclick="filterSelectionList('research')">research</button>
+      <div class="w3-container" onmouseout="ResetOpacity()" id="projectGrid">
 
+        <a href="/projects/cosmic.html" class="filterDiv music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('0')">cosmic</a>
+        <a href="/projects/scrub.html" class="filterDiv music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('1')">scrub</a>
+        <a href="/projects/university.html" class="filterDiv music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('2')">university</a>
+        <a href="/projects/worldsfromworlds.html" class="filterDiv interactive w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('3')">worlds from words</a>
+        <a href="/projects/lastbandstanding.html" class="filterDiv interactive music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('4')">last band standing</a>
+        <a href="/projects/microcosm.html" class="filterDiv interactive music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('5')">microcosm</a>
+        <a href="/projects/lefttoright.html" class="filterDiv art w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('6')">LeftToRight</a>
+        <a href="/projects/20200206000210.html" class="filterDiv art w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('7')">20200206000210</a>
+        <a href="/projects/mastersresearch.html" class="filterDiv research w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('8')">masters research</a>
+        <a href="/projects/undergraduateresearch.html" class="filterDiv research w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('9')">undergraduate research</a>
+        <a href="/projects/pytch.html" class="filterDiv research w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('10')">PYTCH Bristol and Virtual Production with UE4 and HTC Vive</a>
+        
+  
       </div>
 
-      <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-      <div class="w3-container" id="projectGrid" >
-        <div class="filterDiv music"><a href="https://www.google.com">cosmic</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">scrub</a></div>
-        <div class="filterDiv music"><a href="https://www.google.com">university</a></div>
-        <div class="filterDiv interactive"><a href="https://www.google.com">worlds from words</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">last band standing</a></div>
-        <div class="filterDiv interactive music"><a href="https://www.google.com">microcosm</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">LeftToRight</a></div>
-        <div class="filterDiv art"><a href="https://www.google.com">20200206000210</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-        <div class="filterDiv research"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   
-        <div class="filterDiv research"><a href="https://www.google.com">PYTCH Bristol and Virtual Production with UE4 and HTC Vive</a></div>   
+     
+
+    </div>
+
     
-        
-        
-      </div>
-    </div>
-
-    <div class="w3-responsive" id="projectList" style="display: none;">
-
-      <div class="filterDivRow music w3-row"><a href="https://www.google.com">cosmic</a></div>
-      <div class="filterDivRow music w3-row"><a href="https://www.google.com">scrub</a></div>
-      <div class="filterDivRow music w3-row"><a href="https://www.google.com">university</a></div>
-      <div class="filterDivRow interactive w3-row"><a href="https://www.google.com">worlds from words</a></div>
-      <div class="filterDivRow interactive music w3-row"><a href="https://www.google.com">last band standing</a></div>
-      <div class="filterDivRow interactive music w3-row"><a href="https://www.google.com">microcosm</a></div>
-      <div class="filterDivRow art w3-row"><a href="https://www.google.com">LeftToRight</a></div>
-      <div class="filterDivRow art w3-row"><a href="https://www.google.com">20200206000210</a></div>
-      <div class="filterDivRow research w3-row"><a href="https://www.google.com">developing a framework for understanding reverberation perception to enhance immersion in virtual environments (postgraduate abstract)</a></div>
-      <div class="filterDivRow research w3-row"><a href="https://www.google.com">exploring adaptive reverberation in video Games (undergraduate dissertation)</a></div>   
-      <div class="filterDivRow research w3-row"><a href="https://www.google.com">PYTCH Bristol and Virtual Production with UE4 and HTC Vive</a></div>  
-      
-
-    </div>
 
     <div id="mySidenav" class="sidenav">
       <a href="index.html">Home</a>
@@ -188,6 +169,7 @@ body::-webkit-scrollbar {
 
 <script>
 
+var isHighContrast = false;
 var isToggled = false;
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
@@ -237,66 +219,6 @@ function filterSelection(c) {
   }
 }
 
-filterSelectionList("all")
-function filterSelectionList(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDivRow");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function changeToListMode()
-{
-  var x =   document.getElementById("projectGrid");
-  var y =   document.getElementById("projectList");
-  var btn1 = document.getElementById("toggleStyleGrid");
-  var btn2 = document.getElementById("toggleStyleList");
-
-  var btnList = document.getElementById("myBtnContainerList");
-  var btnGrid = document.getElementById("myBtnContainer");
-
-  btnList.style.display = "block";
-  btnGrid.style.display = "none";
-
-
-
-
-  x.style.display = "none";
-  y.style.display = "block";
-
-  btn1.style.opacity = "70%";
-  btn2.style.opacity = "100%";
-
-
-}
-
-function changeToShapesMode()
-{
-  var x =   document.getElementById("projectGrid");
-  var y =   document.getElementById("projectList");
-  var btn1 = document.getElementById("toggleStyleGrid");
-  var btn2 = document.getElementById("toggleStyleList");
-
-  
-  var btnList = document.getElementById("myBtnContainerList");
-  var btnGrid = document.getElementById("myBtnContainer");
-
-  btnList.style.display = "none";
-  btnGrid.style.display = "block";
-
-  x.style.display = "block";
-  y.style.display = "none";
-
-  btn1.style.opacity = "100%";
-  btn2.style.opacity = "70%";
-
-  
-}
-
 // Show filtered elements
 function w3AddClass(element, name) {
   var i, arr1, arr2;
@@ -326,11 +248,26 @@ function w3RemoveClass(element, name)
 // Add active class to the current control button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
+
+var btnContainer2 = document.getElementById("myBtnContainer2");
+var btns2 = btnContainer2.getElementsByClassName("btn2");
+
+for (var i = 0; i < btns.length; i++) 
+{
+  btns[i].addEventListener("click", function() 
+  {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+  });
+}
+for (var i = 0; i < btns.length; i++) 
+{
+  btns2[i].addEventListener("click", function() 
+  {
+    var current = document.getElementsByClassName("active2");
+    current[0].className = current[0].className.replace(" active2", "");
+    this.className += " active2";
   });
 }
 
@@ -373,11 +310,7 @@ function SetChildColour()
    if(i >= c.length / 2)
    {  
 
-    /*
-      var r2 = rAbs - ((rAbs - rDist) / (c.length / 2)) * (i - iAmount);
-      var g2 = gAbs - ((gAbs - gDist) / (c.length / 2)) * (i - iAmount);
-      var b2 = bAbs - ((bAbs - bDist) / (c.length / 2)) * (i - iAmount);
-      */
+
       var r2 = rAbs; - ((243 / (c.length / 3)) * ((i - iAmount)+1));
       var g2 = gAbs - ((155 / (c.length / 3)) * ((i - iAmount)+1));
       var b2 = 100;
@@ -392,19 +325,80 @@ function SetChildColour()
 
    }
  
-    
-    
-   
- 
-
-    c[i].style.fontSize = getRndInteger(32, 50) + "px";
+    c[i].style.fontSize = 50 + "px";
     c[i].style.lineHeight = 5 + "vh";
 
+    if(isHighContrast)
+  {    
+    c[i].style.backgroundColor = "black";
+    
+  }
+
+  }
+
+
+}
+
+function getRndInteger(min, max) 
+{
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function FadeColour(index)
+{
+  var c = document.getElementsByClassName("filterDiv");
+
+  for(i = 0; i < c.length; i++)
+  {
+    c[i].style.opacity = '100%';
+   
+  }
+
+  for(i = 0; i < c.length; i++)
+  {
+    if(i != index)
+    {
+      c[i].style.opacity = '40%' ;
+      if(isHighContrast)
+      {
+        c[i].style.opacity = '80%' ;
+      }
+    } 
+    
+    if(i == index) c[i].style.borderStyle = 'solid';
+
+ 
+   
+  }
+
+  console.log("Length is = to " + c.length);
+
+ 
+  
+
+}
+
+function ResetOpacity()
+{
+
+  var c = document.getElementsByClassName("filterDiv");
+
+  for(i = 0; i < c.length; i++)
+  {
+    c[i].style.opacity = '100%';
+    
+    c[i].style.borderStyle = 'none';
+
+   
   }
 }
 
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
+function ToggleContrast(index)
+{
+  if(index == 0) {isHighContrast = false}
+  if(index == 1) {isHighContrast = true}  
+
+  console.log(isHighContrast);
 }
 
 </script>
