@@ -1,0 +1,149 @@
+Participant Data File
+
+Name: <redacted>
+Age: 22
+Method: Headphones
+
+Samples in question: 
+Male Voice - Outdoors Desert half (UnityEngine.AudioClip)
+Male Voice - Small Room Knights Hall half (UnityEngine.AudioClip)
+Male Voice - Home Kitchen half (UnityEngine.AudioClip)
+
+2 is similar to 3
+
+Similarities:
+Samples two and three both have slight echoes with a high pitch to them. The echo seems to end dully as if they are both indoors in smaller spaces, rather than a large open room. Potentially in a home as there is a warmth to them?
+
+Differences:
+Sample one in contrast sounds bright. It has a more open quality as if it is on a much larger space with nothing for the sound to reflect off - maybe outside or just a large room. This gives a whimsical quality to the sound, it sounds like there is a slight echoey twinkle which fades into each word. It is a somewhat exciting sound,.
+
+Samples in question: 
+Paphorn - Town House Studios (UnityEngine.AudioClip)
+Paphorn - Church St Paul (UnityEngine.AudioClip)
+Paphorn - Bus half (UnityEngine.AudioClip)
+
+1 is similar to 3
+
+Similarities:
+The reverb on these sounds is bright, metallic and short. It doesn't dissipate but somewhat abruptly stops. This could be a very confined space, maybe one of them is a padded cell? 
+
+Differences:
+Sample two on the other hand has a long ghostly echo maybe in a cave or a dungeon. It's the kind of sound I associate from films as being underground and makes me feel alert as is sometimes associated with danger. It has a sharp quality which makes me think of high ceilings.
+
+Samples in question: 
+Female Voice - Van half (UnityEngine.AudioClip)
+Female Voice - Town House Studios half (UnityEngine.AudioClip)
+Female Voice - Outdoors Desert (UnityEngine.AudioClip)
+
+2 is similar to 3
+
+Similarities:
+In sample 2 and 3 the original sound is pushed backwards compared to the echo. They sound as if they are outdoors and the sound is being whisked away by the natural expanse as there is nothing to reflect off of. 
+
+Differences:
+Sample 1 in contrast has a ringing quality to the sound that almost amplifies the original sound by its quick succession. It sounds happy.
+
+Samples in question: 
+Horn - Small Room Knights Hall (UnityEngine.AudioClip)
+Horn - Arena 1 (UnityEngine.AudioClip)
+Horn - Ampitheatre 2 (UnityEngine.AudioClip)
+
+2 is similar to 3
+
+Similarities:
+sample 2 and 3 have an almost regal reverb quality that makes the original sound seem important. It is full, warm and slow. It reminds me of outdoor theatres or castles.
+
+Differences:
+Th reverb on sample 1 sounds tinny and flat. It sounds like a more confined space. There is a harshness added to the original sound.
+
+Samples in question: 
+Male Voice - Home Bathroom 2 (UnityEngine.AudioClip)
+Male Voice - Arena 2 (UnityEngine.AudioClip)
+Male Voice - Small Room Knights Hall half (UnityEngine.AudioClip)
+
+1 is similar to 2
+
+Similarities:
+Sample 1 and 2 have a very clear echo on the original sound. Whilst sample 2 is booming, sample 1 is slightly softer but both are intirguing. They sound like the are reflecting oof of water perhaps a swimmng pool, there is a wave-like quality where there is multiple things to reflect off of. They are both engaging.
+
+Differences:
+In sample 3 the reverb is muffled and warm. It is short as if in a small room. 
+
+Samples in question: 
+Paphorn - Outdoors Desert half (UnityEngine.AudioClip)
+Paphorn - Ampitheatre 2 (UnityEngine.AudioClip)
+Paphorn - Church York (UnityEngine.AudioClip)
+
+1 is similar to 2
+
+Similarities:
+Sample 1 and 2 are both bright, tinny and fun. Whilst sample 2 has a longer echo, they are both subtlle in their sounds.
+
+Differences:
+Sample 3 has a define, errie echo. The sound's echo is loud and then fades quaityl quickly in an elongated whisper.
+
+Samples in question: 
+Male Voice - Arena 1 half (UnityEngine.AudioClip)
+Male Voice - Masterphonics half (UnityEngine.AudioClip)
+Male Voice - Home Bathroom 2 half (UnityEngine.AudioClip)
+
+1 is similar to 2
+
+Similarities:
+Sample 1 and 2 are warm and defined. I can't work out where they are though sample 2 could be an arena? I think sample 1 is inside but the reverb has the same warm, resonating, friendly tone. 
+
+Differences:
+On the other hand sample 2 has a subtle quality. It more amplifies the original sound than distract from it. It is short, quiet and muffled.
+
+Samples in question: 
+Horn - Small Room Knights Hall half (UnityEngine.AudioClip)
+Horn - Ampitheatre 1 half (UnityEngine.AudioClip)
+Horn - Small Room Knights Hall half (UnityEngine.AudioClip)
+
+1 is similar to 3
+
+Similarities:
+Sample 1 and 3 sound bright yet short, vry very similar.
+
+Differences:
+Sample 2 has a regal quality. It sounds like it is a much larger space, with a grand expanse to drift over. It feels exciting o listen to. 
+
+Samples in question: 
+Horn - Small Room Knights Hall half (UnityEngine.AudioClip)
+Horn - Ampitheatre 1 half (UnityEngine.AudioClip)
+Horn - Small Room Knights Hall half (UnityEngine.AudioClip)
+
+1 is similar to 3
+
+Similarities:
+These two sound incredibly similar. There is abrightness that sounds as if the walls are very close and in a confined space. The reverb is high pitched and metallic.
+
+Differences:
+This sample (2) has  a long, quiet echo. It allows the sound to travel further, like a ringing in the ears. 
+
+Samples in question: 
+Light Gunshot - Church St Paul (UnityEngine.AudioClip)
+Light Gunshot - Home Bathroom 2 (UnityEngine.AudioClip)
+Light Gunshot - Masterphonics (UnityEngine.AudioClip)
+
+1 is similar to 3
+
+Similarities:
+Sample 1 and two have booming qaulties, although sample 1 is more extended than the other I kind of consider them identical qualities otherwise. They are somewhat muffled, or the opposite of distinct? There is a quality that seems errie as the sound is heard over nd over again.
+
+Differences:
+Sample 2 is flat, boring, muted. It is a blunt stop to the sound in contrast to the other two. Maybe a pillow? 
+
+
+Samples in question: 
+Blues Vocals and Guitar - Ampitheatre 2 half (UnityEngine.AudioClip)
+Blues Vocals and Guitar - Van half (UnityEngine.AudioClip)
+Blues Vocals and Guitar - Home Bathroom 2 half (UnityEngine.AudioClip)
+
+1 is similar to 3
+
+Similarities:
+The reverb on sample 1 and 3 has a longer echo but is somewhat flatter. The pitch is flat and seems to be in a smaller space but maybe more confined a there is a continuation of the opposite that i allowed. It sounds sort of homely. 
+
+Differences:
+Sample 2 is bright and warm. It has a ringing that is soft and subtle. It gives more character to the original sound. 
