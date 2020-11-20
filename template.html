@@ -12,10 +12,6 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
-<link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/OrangeTheme.css">
 
 
@@ -26,146 +22,20 @@
 <!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
 
 
-<style>
-
-
-/* The side navigation menu */  
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #270722;  
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-.arrow {
-
-  transition: 0.4s;
-}
-
-.change .arrow {
-  transform: rotate(-180deg);
-}
-
-.navButton:hover
-{
-  cursor: pointer;
-}
-
-
-</style>
-
 
 
 <body>
-  <div id="main">
 
-    <div class="w3-row";">
-      <h1>//welcome to lukesaudio</h1>
-    </div>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
 
-    <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed; top: 50%;" onclick="menuButton(this); toggleNavBar()">
-      <div class="arrow">
-        <i class="fa fa-arrow-right" style="color: white;" ></i>
-      </div>
-    
-    </div>
-  
-
-    <div id="mySidenav" class="sidenav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-  
-
-
+  <p>This is a paragraph of text</p>
 
 </body>
 
-<script>
 
-var isToggled = false;
-
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
-
-function toggleNavBar()
-{
-  switch(isToggled)
-  {
-    case true:
-      closeNav();
-      isToggled = false;
-      break;
-    
-    case false:
-      openNav()
-      isToggled = true;
-      break;
-  }
-
- 
-}
-
-function menuButton(x) {
-  x.classList.toggle("change");
-}
-
-
-</script>
 </html>

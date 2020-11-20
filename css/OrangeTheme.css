@@ -1,31 +1,135 @@
+@font-face 
+{
+  font-family: 'Manjari';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/manjari/v3/k3kQo8UPMOBO2w1UfdnoLg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*<!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->*/
+
+
+
 body, html 
 {
   height: 100%;
-  margin: 0;
+  width:  100%;
+  margin: auto;
   background-color: #F39B6D;
   overflow: hidden;
   font-family: 'Manjari', sans-serif;
+  
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Manjari', sans-serif;
+  color: #eff9f0;
+  padding: 16px;  
 
 }
 
-h1
-{
-  color: #eff9f0;
-  padding: 16px;  
-  font-size: 72px;
-  font-family: 'Manjari', sans-serif;
-}
-h2
-{
-  color: #eff9f0;
-  padding: 16px;  
-  font-family: 'Manjari', sans-serif;
-}
+
 
 p
 {
+  padding: 16px;
   color: #eff9f0; 
 }
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) 
+{
+  h1
+  {
+    font-size: 4.5vw;
+  }
+
+  h2
+  {
+
+    font-size: 4vw;
+  }
+
+  h3
+  {
+  
+    font-size: 3.6vw;
+  }
+
+  h4
+  {
+  
+    font-size: 3vw;
+  }
+
+  h5
+  {
+    
+    font-size: 2.4vw;
+  }
+
+  h6
+  {
+    
+    font-size: 1.8vw;
+  }  
+
+  p{
+    font-size: 1.5vw;
+
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) 
+{
+  h1
+  {
+    font-size: 5vh;
+  }
+  
+  h2
+  {
+  
+    font-size: 4.5vh;
+  }
+  
+  h3
+  {
+   
+    font-size: 4vh;
+  }
+  
+  h4
+  {
+   
+    font-size: 3vh;
+  }
+  
+  h5
+  {
+    
+    font-size: 2.5vh;
+  }
+  
+  h6
+  {
+    
+    font-size: 2.25vh;
+  }
+  
+  p
+  {
+    font-size: 1.75vh;
+
+  }
+
+}
+
+/*________________________________________________________________________________________________________________________________________________________*/
 
 /* The side navigation menu */  
 .sidenav {
@@ -63,6 +167,64 @@ p
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+
+.sidenavAcc {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #270722;  
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenavAcc .closeBtnAcc
+ {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.sidenavAcc a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavAcc a:hover {
+  color: #f1f1f1;
+}
+
+#main {
+  transition: margin-left .5s;
+
+
+}
+
+#btn2
+{
+  transition: margin-right .5s;
+  
+
+}
+button
+{
+  color: black;
+  padding: 8px;
+  left: 33%;
+  min-width: 100%;
+  max-height: 4%;
+  
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
