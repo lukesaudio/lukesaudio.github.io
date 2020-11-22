@@ -26,12 +26,7 @@
 
 <style>
 
-body{
-  overflow:scroll;
-}
-body::-webkit-scrollbar {
-    display: none;
-}
+
 .container {
   overflow: hidden;
 }
@@ -49,7 +44,9 @@ body::-webkit-scrollbar {
   display: none; /* Hidden by default */
   padding: 32px;
   margin-left: 10%;
-  text-shadow: 2px 2px 40px #000000;
+  text-shadow: 2px 2px 70px #000000;
+
+  
 
 
 }
@@ -58,7 +55,8 @@ body::-webkit-scrollbar {
 
 
 /* The "show" class is added to the filtered elements */
-.show {
+.show 
+{
   display: flex;
 }
 
@@ -67,38 +65,26 @@ body::-webkit-scrollbar {
   border: none;
   outline: none;
   padding: 12px 16px;
-  background-color: #f1f1f1;
+  background-color: eff9f0;
   cursor: pointer;
   transition: 0.2s;
-}
-
-.btn2 {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
+  scale: 90%;}
 
 
 /* Add a dark background to the active button */
 .btn.active {
-  background-color: #666;
+  background-color: #183059;
   color: white;
+  scale: 100%;
 }
 
-.btn2.active2 {
-  background-color: #666;
-  color: white;
-}
+
 
 </style>
 
 
 
-<body onload="SetChildColour()">
+<body onload="SetChildColour()" class="w3-animate-opacity">
   <div id="main">
 
     <div class="w3-row";">
@@ -114,13 +100,7 @@ body::-webkit-scrollbar {
 
     <!-- Control buttons -->
    
-      <div id="myBtnContainer2" style="padding: 16px;">
-        <button class="btn2 active2" onclick="ToggleContrast(0); SetChildColour()">colourful</button>
-        <button class="btn2" onclick="ToggleContrast(1); SetChildColour()">high contrast</button>
-        
-
-      </div>
-
+    
       <div id="myBtnContainer" style="padding: 16px;">
         <button class="btn active" onclick="filterSelection('all')">all</button>
         <button class="btn" onclick="filterSelection('music')">music</button>
@@ -249,8 +229,6 @@ function w3RemoveClass(element, name)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 
-var btnContainer2 = document.getElementById("myBtnContainer2");
-var btns2 = btnContainer2.getElementsByClassName("btn2");
 
 for (var i = 0; i < btns.length; i++) 
 {
@@ -261,15 +239,7 @@ for (var i = 0; i < btns.length; i++)
     this.className += " active";
   });
 }
-for (var i = 0; i < btns.length; i++) 
-{
-  btns2[i].addEventListener("click", function() 
-  {
-    var current = document.getElementsByClassName("active2");
-    current[0].className = current[0].className.replace(" active2", "");
-    this.className += " active2";
-  });
-}
+
 
 function SetChildColour()
 {

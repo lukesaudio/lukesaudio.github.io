@@ -12,30 +12,42 @@
 
 
 
-body, html 
+body
 {
   height: 100%;
   width:  100%;
   margin: auto;
   background-color: #F39B6D;
   overflow: hidden;
-  font-family: 'Manjari', sans-serif;
+  font-family: 'Manjari', sans-serif; 
   
+  
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeBody {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 h1, h2, h3, h4, h5, h6
 {
   font-family: 'Manjari', sans-serif;
   color: #eff9f0;
-  padding: 16px;  
-
+  padding: 16px; 
+  animation-name: fadeIn;  
+  animation-duration: 1s;
 }
 
 
 
 p
 {
-  padding: 16px;
+  padding: 1.5vw;
   color: #eff9f0; 
 }
 
@@ -77,10 +89,7 @@ p
     font-size: 1.8vw;
   }  
 
-  p{
-    font-size: 1.5vw;
 
-  }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -121,11 +130,7 @@ p
     font-size: 2.25vh;
   }
   
-  p
-  {
-    font-size: 1.75vh;
 
-  }
 
 }
 
@@ -143,6 +148,8 @@ p
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  
 }
 
 /* The navigation menu links */
@@ -205,7 +212,8 @@ p
   color: #f1f1f1;
 }
 
-#main {
+#main 
+{
   transition: margin-left .5s;
 
 
@@ -214,24 +222,17 @@ p
 #btn2
 {
   transition: margin-right .5s;
-  
+ 
 
 }
-button
-{
-  color: black;
-  padding: 8px;
-  left: 33%;
-  min-width: 100%;
-  max-height: 4%;
-  
-}
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) 
+{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
@@ -240,6 +241,12 @@ button
 .arrow {
 
   transition: 0.4s;
+  opacity: 0;
+
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
 }
 
 .change .arrow {
@@ -249,6 +256,18 @@ button
 .navButton:hover
 {
   cursor: pointer;
+}
+.navButton
+{
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  border: white;
+  border-width: 3px;
+  border-style: solid;
+
 }
 
 a:link {
@@ -268,3 +287,25 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+
+/* width */
+::-webkit-scrollbar {
+  background-color: #F39B6D;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F39B6D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eff9f0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #eff9f0;
+}
+
