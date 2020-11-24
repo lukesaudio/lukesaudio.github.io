@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+ 
+   
+
+
+<title>//projects->cosmic</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="../css/OrangeTheme.css">
+
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+
+<style>
+  p
+  {
+    transition: 0.1s;
+
+  }
+
+
+  body, html
+  {
+    width: 100%;
+    height: 100%;
+
+   
+  }
+
+
+
+
+</style>
+<!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
+
+
+<body onresize="changeImageDisplayType()">
+  <div id="main">
+
+    <div class="w3-row">
+      <h1>//<a href="../projects.html" style="color:#eff9f0 ;">projects</a> -> scrub</h1>
+    </div>
+
+
+    
+
+  
+    <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed; top: 50%; z-index: 1; opacity: 0;" onclick="menuButton(this); toggleNavBar()">
+      <div class="arrow">
+        <i class="fa fa-arrow-right" style="color: white;" ></i>
+      </div>    
+    </div>
+
+    <div class="w3-container w3-row w3-animate-opacity" style="background-color: #270722;">
+
+      <div class="w3-display-container w3-mobile w3-cell" style="width: 50%;">
+        <div class="w3-container w3-display-middle" style="width: 97%;" id="picture">
+            <img src="../images/scrub.png" alt="The band performing in a video for the song 'Coffee Girl' that we wrote" class="w3-image" style="padding:16px;" >
+        </div>
+      </div>
+
+      <div class="w3-container w3-mobile w3-cell" style="width: 50%;">
+        <div class="w3-container" style="margin: auto;">
+          <p> 
+              'Scrub' is a semi-serious folk punk project ran by myself and Corey Ford, a great friend of mine from univeristy. My love of folk and sarcastic songwriting, with Corey's love of punk and being a bit silly formed our questionable act. <br><br>
+              Though we have no official releases currently, we plan to record at the next convenience (thanks Covid-19). On that release, you'll find songs about me being the president of the USA, about a friend of mine's ex girlfriend's mum drag racing cars, about an 86 year old dancing lady, and my girlfriend the barista. <br><br>
+              You can find some teasers <a href="https://www.youtube.com/playlist?list=PLNQOB1CgmMfLWMHWGMd49ydPpWwhSYqMW"><i>here</i></a>.
+              
+
+          </p>
+      </div>
+
+    </div>
+    
+
+    <div id="mySidenav" class="sidenav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../cv.html">CV</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+  
+
+
+
+</body>
+
+<script>
+
+var isToggled = false;
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+
+  
+
+}
+
+
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+
+} 
+
+
+function toggleNavBar()
+{
+  switch(isToggled)
+  {
+    case true:
+      closeNav();
+      isToggled = false;
+      break;
+    
+    case false:
+      openNav()
+      isToggled = true;
+      break;
+  }
+
+ 
+}
+
+function menuButton(x) {
+  x.classList.toggle("change");
+}
+
+function changeImageDisplayType()
+{
+  
+  if(window.innerWidth < 601)
+  {
+    document.getElementById("picture").classList.remove("w3-display-middle");
+  }
+
+  if(window.innerWidth > 601)
+  {
+    document.getElementById("picture").classList.add("w3-display-middle");
+  }
+
+  
+
+  
+}
+
+
+</script>
+</html>
