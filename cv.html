@@ -1,111 +1,220 @@
 <!DOCTYPE html>
 <html>
 
-	<title>CV - LukesAudio</title>
+ 
+   
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
-	<link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
 
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<title>//cv</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/OrangeTheme.css">
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 
 <style>
-html, body 
-{
-   
-   	width: 100%;
-   	height: 100%;
-	   background-image: url("images/background7.jpg");
-
-	   background-color: black;
-  	background-repeat: no-repeat;
-  	background-position:center;
-	  
-  	background-attachment: fixed;
-	background-size:cover;
-
-	font-family: 'Catamaran', sans-serif;
-	
-	
-
-}
-
-.pdfVis
-{
-	display: block;
-}
-.pdfDL
-{
-	display: none;
-}
-
-.w3-btn
-{
-  color: white; background-color:dodgerblue; width: 100%;
-}
-.w3-btn:hover
-{
-  color: white; background-color:royalblue; width: 100%;
-}
-
-@media screen and (min-width: 601px) 
-{
-  .pdfVis
-	{
-		display: block;
-
-	}
-	.pdfDL
-	{
-		display: none;
-	}
- 
-}
-
-@media screen and (max-width: 600px) 
-{
-	.pdfVis
-	{
-		display: none;
-
-	}
-	.pdfDL
-	{
-		display: block;
-	}
+  p
+  {
+    transition: 0.1s;
 
   }
 
 
+  body, html
+  {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    
+  }
+
+
+
+
 </style>
-
-<body>
-
-
-	<div class="w3-black w3-center" id="mainContent" style="width: 100%; padding: 20px;	">
-
-		<a class="w3-bar-item w3-button" href="index.html" style="font-size: 20px;">Home</a>
-		<a class="w3-bar-item w3-button" href="about.html" style="font-size: 20px;">About</a>
-		<a class="w3-bar-item w3-button" href="projects.html" style="font-size: 20px;">Projects</a>
-		<a class="w3-bar-item w3-button" href="cv.html" style="font-size: 20px;">CV</a>
-		<a class="w3-bar-item w3-button" href="contact.html "style="font-size: 20px;">Contact</a>
-	
-	</div>
+<!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
 
 
+<body onresize="changeImageDisplayType()">
+  <div id="main">
 
-	<embed class="w3-padding-24 pdfVis" src="files/cvpdf.pdf" type="application/pdf" style="width: 80%; height: 90%; margin-left: 10%; zoom: 0.8;">
-		
-	<div class="w3-container pdfDL w3-padding-16" style="background-color: rgba(0, 0, 0, 0.8); margin-top: 50%;">
-		<h1 style="text-align: center; color: white;">Please download my CV here!</h1>
-		<a class="w3-btn w3-padding-16" href="files/cv.png"><i class="fa fa-download"> </i> Luke Child CV</a>
-	</div>
+    <div class="w3-row">
+      <h1>//cv</h1>
+    </div>
+
+
+    
+
+  
+    <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed; top: 50%; z-index: 1; opacity: 0;" onclick="menuButton(this); toggleNavBar()">
+      <div class="arrow">
+        <i class="fa fa-arrow-right" style="color: white;" ></i>
+      </div>    
+    </div>
+
+
+
+ <!--
+      
+    <div class="w3-container w3-row w3-animate-opacity" style="background-color: #270722;">
+      <img class="w3-image" src="images/orange-headshot.png" alt="A photograph of me, taken by my parents, at my graduation ceremony in Bristol Cathedral for my Bachelors degree. I'm dressed in a SUPER nice tweed suit and paisley shirt, smiling with my graduation cap on" style="width: 33%;  padding: 16px;">
+      <img class="w3-image" src="images/graduation.jpg" alt="A photograph of me, taken by my parents, at my graduation ceremony in Bristol Cathedral for my Bachelors degree. I'm dressed in a SUPER nice tweed suit and paisley shirt, smiling with my graduation cap on" style="width: 33%;  padding: 16px;">
+      <img class="w3-image" src="images/bass.jpg  " alt="A photograph of me, taken by my parents, at my graduation ceremony in Bristol Cathedral for my Bachelors degree. I'm dressed in a SUPER nice tweed suit and paisley shirt, smiling with my graduation cap on" style="width: 33%;  padding: 16px;">
+      
+
+      </div>
+    -->
+
+      <div class="w3-container w3-row w3-animate-opacity" style="background-color: #270722;">
+        <h2 style="text-align: center; ">Luke Child - (he/him)</h2>
+      </div>
+
+    <div class="w3-container w3-row w3-animate-opacity" style="background-color: #270722;">
+
+      <div class="w3-container w3-mobile w3-cell" style="width: 50%;">
+        <h4 style="text-decoration: underline;">Education</h4>]
+
+        <h6>-MSc Creative Technology - University of the West of England - 2019-2020<br></h6>
+        
+        <p>
+          <i>Dissertation Title: Utilising Elicitation Methods to Understand and Design Informative and Accessible Experiences of Digital Reverberation</i>       
+        </p>
+
+        <h6>-BSc Creative Music Technology - University of the West of England - 2016-2019<br></h6>
+        
+        <p>
+          <i>Dissertation Title - Exploring Adaptive Reverberation in Video Games</i>
+        </p>
+        
+
+      </div> 
+      
+    </div>
+    
+    <div class="w3-container w3-row w3-animate-opacity" style="background-color: #270722;">
+
+      <div class="w3-container w3-mobile w3-cell" style="width: 50%;">
+
+        <h4 style="text-decoration: underline;">Work and Experience</h4>
+
+
+        <div clas="w3-row">
+          <h6>-Audio Editor (Volunteer) - Bristol Libraries 'Shelf Life' Podcast</h6>
+          <p>I direct the editing and assist in producing episodes of the Shelf Life podcast. Removing hesitation markers and mouth sounds, helping to direct flow of conversation and improve clarity of recordings</p>
+        </div>
+
+        
+        <div clas="w3-row">
+          <h6>-Virtual Production Intership - PYTCH Bristol x UWE Foundry</h6>
+          <p>I worked on developing a homebrew virtual production setup with PYTCH using the Unreal game engine and HTC Vive tracking capabilities. I assisted in creating and extending UE Blueprints to test and refine
+             motion tracking and actor positioning in-engine, as well as creating and testing custom configuration files for both a dual monitor and custom Cave Wall system. I also collated research and formed documentation on optimising the tracking setup and ways to improve it for future use. 
+          </p>
+        </div>
+
+
+      </div>
+        
+
+>     </div> 
+
+
+
+    </div>
+
+
+
+  
+
+  
+    
+
+    <div id="mySidenav" class="sidenav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  
+
+
 
 </body>
+
+<script>
+
+var isToggled = false;
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+
+  
+
+}
+
+
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+
+} 
+
+
+function toggleNavBar()
+{
+  switch(isToggled)
+  {
+    case true:
+      closeNav();
+      isToggled = false;
+      break;
+    
+    case false:
+      openNav()
+      isToggled = true;
+      break;
+  }
+
+ 
+}
+
+function menuButton(x) {
+  x.classList.toggle("change");
+}
+
+function changeImageDisplayType()
+{
+  
+  if(window.innerWidth < 601)
+  {
+    document.getElementById("picture").classList.remove("w3-display-middle");
+  }
+
+  if(window.innerWidth > 601)
+  {
+    document.getElementById("picture").classList.add("w3-display-middle");
+  }
+
+  
+
+  
+}
+
+
+</script>
 </html>

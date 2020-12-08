@@ -1,361 +1,375 @@
 <!DOCTYPE html>
 <html>
 
-<title>Projects - LukesAudio</title>
+ 
+   
+
+
+<title>//projects</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" type="text/css" href="css/OrangeTheme.css">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+<!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
+
+
 <style>
-.project {display:initial}
-
-html, body 
-{
-   
-   	width: 100%;
-    height: 100%;
-    background-image: url("images/background7.jpg");
-
-   
-  	background-color: black;
-  	background-position:center;
-	  
-  	background-attachment: fixed;
-    background-size:cover;	
-    font-family: "Catamaran", sans-serif;
-
-    
 
 
-}
-
-p
-{
-  font-size: 22px;
-  color: white;
-
-}
-
-h1
-{
-  color: white;
-  font-family: "Catamaran", sans-serif;
-  
-}
-
-.collapsible {
-  background: rgba(0,0,0,0.9);
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  height: 100%;
-  border: none;
-  text-align: cent;
-  outline: none;
-  font-size: 40px;
-  transition: transform 0.5s;
-  transition: color 0.2s;
-  transition: background 0.2s;
-
-
-}
-.active
-{
-  background-color: black;
-
-}
-.collapsible:hover {
-  background: rgba(255,255,255, 0.8);
-  color:rgba(0, 0, 0, 1.0);
-  transform: scale(1.02);
-
-}
-
-.content {
-  padding: 18px;
-  display: none;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  height: 100%;
-}
-
-a
-{
-  font-size: 30px;
-  color: white;
-}
-
-h2
-{
-  font-family: "Catamaran", sans-serif;
-  text-align: center;  
-  font-size: 2vw;
-  color: white;
-}
-
-.w3-btn
-{
-  color: white; background-color:dodgerblue; width: 100%;
-}
-.w3-btn:hover
-{
-  color: white; background-color:royalblue; width: 100%;
-}
-.w3-image
-{
-  padding: 16px;
-}
-.album
-{
-  filter: grayscale(70%);
-}
-
-.album:hover
-{
-  filter: grayscale(0%);
-  transform: scale(1.03);
-
-
-}
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-}
 .container {
-  position: relative;
+  overflow: hidden;
 }
-.albumText
+
+.filterDiv 
 {
+
+  float: left;
+  color: #ffffff;
+  font-size: 100%;
+  width: 80%;
+  line-height: 30px;
+  text-align: left;
+  margin: 0px;
+  display: none; /* Hidden by default */
+  padding: 32px;
+  margin-left: 10%;
+  text-shadow: 2px 2px 70px #000000;
+
+  
+
+
+}
+
+
+
+
+/* The "show" class is added to the filtered elements */
+.show 
+{
+  display: flex;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: eff9f0;
+  cursor: pointer;
+  transition: 0.2s;
+  scale: 90%;}
+
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #183059;
   color: white;
+  scale: 100%;
 }
 
-@media screen and (min-width: 601px) 
-{
-  .albumTextMobile
-  {
-    display: none;
-  }
-  .albumText
-  {
-    display: initial;
-  }
-  
- 
-}
-
-@media screen and (max-width: 600px) 
-{
-  .albumTextMobile
-  {
-    display: initial;
-  }
-  .albumText
-  {
-    display: none;
-  }
-  
-  h2
-  {
-    font-size: 7vw;
-
-  }
-
-  }
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE and Edge */
-.example {
-  -ms-overflow-style: none;
-}
 
 
 </style>
 
-<body>
-  
-  <div class="w3-black w3-center w3-top" id="mainContent" style="width: 100%; padding: 20px;">
 
-    <a class="w3-bar-item w3-button" href="index.html" style="font-size: 20px;">Home</a>  
-    <a class="w3-bar-item w3-button" href="about.html" style="font-size: 20px;">About</a>
-    <a class="w3-bar-item w3-button" href="projects.html" style="font-size: 20px;">Projects</a>
-    <a class="w3-bar-item w3-button" href="cv.html" style="font-size: 20px;">CV</a>
-    <a class="w3-bar-item w3-button" href="contact.html "style="font-size: 20px;">Contact</a>
-  
-  </div>
 
-  
-<div class="w3-container w3-row" style="margin: 2%; margin-top: 12%; max-height: 80%;">
-  
-  <button type="button" class="collapsible">Research</button>
-  <div class="content">
+<body onload="SetChildColour()" class="w3-animate-opacity">
+  <div id="main">
 
-    <div class="w3-container w3-padding-16 w3-border-grey">
-      <div class="w3-twothird w3-padding">
-        <h2>Developing a Framework for Understanding Reverberation Perception to Enhance Immersion in Virtual Environments (Postgraduate Abstract)</h2> 
-      </div>
-
-      <div class="w3-third">
-        <a class="w3-btn" href="files/extended_abstract.pdf"><i class="fa fa-download"> </i> PDF</a>
-      </div>
+    <div class="w3-row";">
+      <h1>//projects</h1>
     </div>
 
-    <div class="w3-container w3-padding-16 w3-border-grey">
-      <div class="w3-twothird w3-padding">
-        <h2>Exploring Adaptive Reverberation in Video Games (Undergraduate Dissertation)</h2> 
+    <div class="w3-container w3-padding-16 navButton" style="background-color: #276FBF; position: fixed; top: 50%;" onclick="menuButton(this); toggleNavBar()">
+      <div class="arrow">
+        <i class="fa fa-arrow-right" style="color: white;" ></i>
       </div>
-
-      <div class="w3-third">
-        <a class="w3-btn" href="files/undergraduate_dissertation.pdf"><i class="fa fa-download"> </i> PDF</a>
-      </div>
+    
     </div>
 
-
-  </div>
-
-  <button type="button" class="collapsible">Music</button>
-  <div class="content">
-    <div class="w3-row">
-      
-      <div class="w3-col w3-mobile"style="width:20%"> <a href="projects/Cosmic.html"> <img class="w3-image album" src="images/cosmic.jpg" ></a></div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Cosmic</h2></div>   
+    <!-- Control buttons -->
    
-      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://thecoreyford.bandcamp.com/releases"><img class="w3-image album" src="images/corona.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Me and Flu: A Compilation of Isolation Vibrations (Single Track)</h2></div>
+    
+      <div id="myBtnContainer" style="padding: 16px;">
+        <button class="btn active" onclick="filterSelection('all')">all</button>
+        <button class="btn" onclick="filterSelection('music')">music</button>
+        <button class="btn" onclick="filterSelection('interactive')">interactive</button>
+        <button class="btn" onclick="filterSelection('art')">art</button>
+        <button class="btn" onclick="filterSelection('research')">research</button>
 
-      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://soundcloud.com/user-519010136/sets/corey-friends-ep-1/s-aVnbp"><img class="w3-image album" src="images/corey.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>The Corey and Friends EP (Vocals)</h2></div>
+      </div>
 
-      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://www.youtube.com/channel/UCWa2Z3gSSsz7ZiBT_f8hHcw"><img class="w3-image album" src="images/colourful.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>Music Videos</h2></div>
+      <div class="w3-container" onmouseout="ResetOpacity()" id="projectGrid">
 
-      <div class="w3-col w3-mobile"style="width:20%"> <a href="https://lukes-audio.bandcamp.com/album/university"><img class="w3-image album" src="images/uni-recordings.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:20%"> <h2>University Recordings</h2></div>
+        <a href="projects/cosmic.html" class="filterDiv music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('0')">cosmic</a>
+        <a href="projects/scrub.html" class="filterDiv music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('1')">scrub</a>
+        <a href="projects/universitymusic.html" class="filterDiv music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('2')">university music</a>
+        <a href="projects/worldsfromwords.html" class="filterDiv interactive w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('3')">worlds from words</a>
+        <a href="projects/lastbandstanding.html" class="filterDiv interactive music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('4')">last band standing</a>
+        <a href="projects/microcosm.html" class="filterDiv interactive music w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('5')">microcosm</a>
+        <a href="projects/lefttoright.html" class="filterDiv art w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('6')">LeftToRight</a>
+        <a href="projects/20200206000210.html" class="filterDiv art w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('7')">20200206000210</a>
+        <a href="projects/mastersresearch.html" class="filterDiv research w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('8')">masters research</a>
+        <a href="projects/undergraduateresearch.html" class="filterDiv research w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('9')">undergraduate research</a>
+        <a href="projects/pytchinternship.html" class="filterDiv research w3-row" onmouseout="SetChildColour()" onmouseover="FadeColour('10')">PYTCH Bristol and Virtual Production with UE4 and HTC Vive</a>
+        
+  
+      </div>
 
-
-    </div>
-    <div class="w3-row">
-      
-      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Cosmic</h2></div>   
-      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Me and Flu: A Compilation of Isolation Vibrations (Single Track)</h2></div>
-      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>The Corey and Friends EP (Vocals)</h2></div>
-      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>Music Videos</h2></div>
-      <div class="w3-col albumText w3-mobile"style="width:20%"> <h2>University Recordings</h2></div>
-      
-    </div>
-
-
-  </div>
-
-
-  <button type="button" class="collapsible">Games and Interactive Media</button>
-  <div class="content">
-    <div class="w3-row w3-center">
-      
-      <div class="w3-col w3-mobile"style="width:25%"> <a href="Projects/WorldsFromWorlds.html"> <img class="w3-image album" src="images/toolkit.jpg" ></a></div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:25%"> <h2>Worlds from Words - Exploring Homelessness Stories in Virtual Reality</h2></div>   
-   
-      <div class="w3-col w3-mobile"style="width:25%"> <a href="https://devpost.com/software/reigning-cats-dogs-hjknow"><img class="w3-image album" src="images/rcad.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:25%"> <h2>HackTheMidlands 2019 - Reigning Cats and Dogs</h2></div>
-
-      <div class="w3-col w3-mobile"style="width:25%"> <a href="https://devpost.com/software/the-web-wars"><img class="w3-image album" src="images/webwars.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:25%"> <h2>HackTheMidlands 2016 - The Web Wars (Winner of award 'Best use of Majestic API)</h2></div>
-
-      <div class="w3-col w3-mobile"style="width:25%"> <a href="files/lbs_summary.pdf"><img class="w3-image album" src="images/lbs.jpg"></a>  </div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:25%"> <h2>Last Band Standing</h2></div>
      
 
-
-    </div>
-    <div class="w3-row">
-      
-      <div class="w3-col albumText w3-padding-16 w3-mobile"style="width:25%"> <h2>Worlds from Words - Exploring Homelessness Stories in Virtual Reality</h2></div>   
-      <div class="w3-col albumText w3-padding-16 w3-mobile"style="width:25%"> <h2>HackTheMidlands 2019 - Reigning Cats and Dogs</h2></div>
-      <div class="w3-col albumText w3-padding-16 w3-mobile"style="width:25%"> <h2>HackTheMidlands 2016 - The Web Wars (Winner of award 'Best use of Majestic API)</h2></div>
-      <div class="w3-col albumText w3-padding-16 w3-mobile"style="width:25%"> <h2>Last Band Standing</h2></div>
-
-   
-      
     </div>
 
+    
 
+    <div id="mySidenav" class="sidenav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
-
-  <button type="button" class="collapsible">Digital Art</button>
-  <div class="content">
-    <div class="w3-row w3-center">
-      
-      <div class="w3-col w3-mobile"style="width:50%"> <a href="Projects/20200206000210.html"> <img class="w3-image album" src="images/20200.jpg" ></a></div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:50%"> <h2>20200206000210</h2></div>     
-
-      <div class="w3-col w3-mobile"style="width:50%"> <a href="Projects/left2right.html"> <img class="w3-image album" src="images/toolkit.jpg" ></a></div>
-      <div class="w3-col albumTextMobile w3-mobile"style="width:50%"> <h2>Left2Right</h2></div>     
-     
-
-
-    </div>
-    <div class="w3-row">
-      
-      <div class="w3-col albumText w3-padding-16 w3-mobile"style="width:50%"> <h2>20200206000210</h2></div>   
-      <div class="w3-col albumText w3-padding-16 w3-mobile"style="width:50%"> <h2>Left2Right</h2></div>
-
-   
-      
-    </div>
-
-
-  </div>
-
   
 
-  
-  <button type="button" class="collapsible">Photography</button>
-  <div class="content">
-    <a href="Projects/Photography.html" class="w3-button w3-black" style="width: 100%;"><p style="text-align: center;">View Gallery</p></a>
-  </div>
-
-
- 
-  
-</div>
-
-  
-  <script>
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-  
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-  </script>
-
-
-  
-  
-  
 
 
 </body>
+
+<script>
+
+var isHighContrast = false;
+var isToggled = false;
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+} 
+
+function toggleNavBar()
+{
+  switch(isToggled)
+  {
+    case true:
+      closeNav();
+      isToggled = false;
+      break;
+    
+    case false:
+      openNav()
+      isToggled = true;
+      break;
+  }
+
+ 
+}
+
+function menuButton(x) 
+{
+  x.classList.toggle("change");
+}
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) 
+{
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+
+
+for (var i = 0; i < btns.length; i++) 
+{
+  btns[i].addEventListener("click", function() 
+  {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+function SetChildColour()
+{
+  var c = document.getElementById("projectGrid").children;
+
+  var percent = 100.0;
+
+    var rAbs;
+    var gAbs;
+    var bAbs;
+    var iAmount;
+
+
+  for(var i = 0; i < c.length; i++)
+  {
+
+   if(i < c.length / 2)
+   {
+    var r = ((243 / (c.length / 3)) * (i+1));
+      var g = ((155 / (c.length / 3)) * (i+1));
+      var b = 100;
+
+    c[i].style.backgroundColor = "rgb(" + r + ", " + g  + ", " + b + ")" ;
+    c[i].style.color = "rgb(255, 255, 255)" ;
+
+    rAbs = r;
+    gAbs = g;
+    bAbs = b;
+    iAmount = i;
+
+   }
+
+   console.log("End RGB = " + rAbs +" and " + gAbs +" and " + bAbs);
+
+
+  
+
+   if(i >= c.length / 2)
+   {  
+
+
+      var r2 = rAbs; - ((243 / (c.length / 3)) * ((i - iAmount)+1));
+      var g2 = gAbs - ((155 / (c.length / 3)) * ((i - iAmount)+1));
+      var b2 = 100;
+    
+
+    c[i].style.backgroundColor = "rgb(" + r2 + ", " + g2  + ", " + b2 + ")" ;
+
+    console.log("iAmount is equal to " + iAmount);
+
+
+    c[i].style.color = "rgb(255, 255, 255)" ;
+
+   }
+ 
+    c[i].style.fontSize = 50 + "px";
+    c[i].style.lineHeight = 5 + "vh";
+
+    if(isHighContrast)
+  {    
+    c[i].style.backgroundColor = "black";
+    
+  }
+
+  }
+
+
+}
+
+function getRndInteger(min, max) 
+{
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function FadeColour(index)
+{
+  var c = document.getElementsByClassName("filterDiv");
+
+  for(i = 0; i < c.length; i++)
+  {
+    c[i].style.opacity = '100%';
+   
+  }
+
+  for(i = 0; i < c.length; i++)
+  {
+    if(i != index)
+    {
+      c[i].style.opacity = '40%' ;
+      if(isHighContrast)
+      {
+        c[i].style.opacity = '80%' ;
+      }
+    } 
+    
+    if(i == index) c[i].style.borderStyle = 'solid';
+
+ 
+   
+  }
+
+  console.log("Length is = to " + c.length);
+
+ 
+  
+
+}
+
+function ResetOpacity()
+{
+
+  var c = document.getElementsByClassName("filterDiv");
+
+  for(i = 0; i < c.length; i++)
+  {
+    c[i].style.opacity = '100%';
+    
+    c[i].style.borderStyle = 'none';
+
+   
+  }
+}
+
+function ToggleContrast(index)
+{
+  if(index == 0) {isHighContrast = false}
+  if(index == 1) {isHighContrast = true}  
+
+  console.log(isHighContrast);
+}
+
+</script>
 </html>
