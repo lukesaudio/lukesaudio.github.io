@@ -149,8 +149,6 @@ function windowResized()
 {
   resizeCanvas(windowWidth / 3, windowWidth / 3);
   
-  
-  
 }
 
 function clearCanvas()
@@ -160,9 +158,7 @@ function clearCanvas()
 
 function saveOutput()
 {
-  scale(100);
   saveCanvas(output, "output", 'png');
-  scale(1);
 }
 
 
