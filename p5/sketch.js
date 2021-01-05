@@ -53,8 +53,6 @@ var canvasRotationZMax = 10;
 var canvasRotationZStep = 0.001;
 
 let output;
-var saveOutput;
-let outputCounter = 0;
 
 
 
@@ -159,6 +157,8 @@ function clearCanvas()
 
 function saveOutput()
 {
+ 
+
   saveCanvas(output, "output", 'png');
 }
 
