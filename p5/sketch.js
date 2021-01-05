@@ -97,6 +97,8 @@ gui.addButton("saveOutput", function() {
   saveOutput();
 });
 
+gui.moveTo(height, 0);
+
 
   
 
