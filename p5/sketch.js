@@ -148,6 +148,7 @@ strokeWeight(strokeThickness);
 function windowResized()
 {
   resizeCanvas(windowWidth / 3, windowWidth / 3);
+  //issue here
   
 }
 
