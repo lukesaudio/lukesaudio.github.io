@@ -6,9 +6,13 @@ function openNav()
 
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
+  console.log("hello");
+
 
   
 }
+
+
 
 
 
@@ -17,12 +21,17 @@ function closeNav() {
   
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+  console.log("hello");
+
 
 } 
 
 
 function toggleNavBar()
 {
+ 
+  console.log('hello');
+  
   switch(isToggled)
   {
     case true:
@@ -35,12 +44,16 @@ function toggleNavBar()
       isToggled = true;
       break;
   }
+  
+
+  
 
  
 }
 
 function menuButton(x) {
   x.classList.toggle("change");
+  
 }
 
 function changeImageDisplayType()

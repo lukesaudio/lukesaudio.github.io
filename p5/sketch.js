@@ -15,6 +15,53 @@ let camera;
 
 let timer;
 
+
+var gui;
+var colourValueR = 0;
+var colourValueRMin = 0;
+var colourValueRMax = 255;
+var colourValueRStep = 1;
+
+var colourValueG = 0;
+var colourValueGMin = 0;
+var colourValueGMax = 255;
+var colourValueGStep = 1;
+
+var colourValueB = 0;
+var colourValueBMin = 0;
+var colourValueBMax = 255;
+var colourValueBStep = 1;
+
+var strokeThickness = 0.1;
+var strokeThicknessMin = 0.01;
+var strokeThicknessMax = 1;
+var strokeThicknessStep = 0.01;
+
+var canvasRotationX = 0;
+var canvasRotationXMin = 0;
+var canvasRotationXMax = 10;
+var canvasRotationXStep = 0.001;
+
+var canvasRotationY = 0;
+var canvasRotationYMin = 0;
+var canvasRotationYMax = 10;
+var canvasRotationYStep = 0.001;
+
+var canvasRotationZ = 0;
+var canvasRotationZMin = 0;
+var canvasRotationZMax = 10;
+var canvasRotationZStep = 0.001;
+
+
+
+
+
+
+
+
+
+
+
 function setup() 
 {
   createCanvas(windowWidth / 3, windowWidth / 3, WEBGL);
@@ -30,22 +77,29 @@ function setup()
     timer = 20000;
 
 
-
-    
-
-
   }
+  
+  
+gui = createGui('Line Drawing Parameters');
+gui.addGlobals('colourValueR', 'colourValueG', 'colourValueB', 'strokeThickness', 'canvasRotationX', 'canvasRotationY', 'canvasRotationZ');
+gui.addButton("clearCanvas", function() {
+  clearCanvas();
+});
+
+
+  
 
 
 }
 
 function draw() 
 {
+camera.rotateX(canvasRotationX);
+camera.rotateY(canvasRotationY);
+camera.rotateZ(canvasRotationZ);
 
-camera.rotateX(0.001);
-camera.rotateY(0.001);
-camera.rotateZ(0.001);
-
+stroke(colourValueR, colourValueG, colourValueB);
+strokeWeight(strokeThickness);
 
 
 
@@ -75,12 +129,7 @@ camera.rotateZ(0.001);
 
 
 
-    if (millis() > timer)
-    {
-      clear();
-      
-      timer = timer + 20000;
-    }
+ 
 
 
   }
@@ -96,5 +145,14 @@ function windowResized()
 {
   resizeCanvas(windowWidth / 3, windowWidth / 3);
 }
+
+function clearCanvas()
+{
+  clear();
+}
+
+
+
+
 
 
