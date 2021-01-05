@@ -52,6 +52,10 @@ var canvasRotationZMin = 0;
 var canvasRotationZMax = 10;
 var canvasRotationZStep = 0.001;
 
+let output;
+var saveOutput;
+let outputCounter = 0;
+
 
 
 
@@ -64,8 +68,11 @@ var canvasRotationZStep = 0.001;
 
 function setup() 
 {
-  createCanvas(windowWidth / 3, windowWidth / 3, WEBGL);
+  output = createCanvas(windowWidth / 3, windowWidth / 3, WEBGL);
+
   camera = createEasyCam();
+
+
   for(let i = 0; i < maxPoints; i++)
   {
     pointsArray.push(createVector(random(-maxDist, maxDist), random(-maxDist,maxDist), random(-maxDist, maxDist)));
@@ -77,6 +84,8 @@ function setup()
     timer = 20000;
 
 
+
+
   }
   
   
@@ -84,6 +93,10 @@ gui = createGui('Line Drawing Parameters');
 gui.addGlobals('colourValueR', 'colourValueG', 'colourValueB', 'strokeThickness', 'canvasRotationX', 'canvasRotationY', 'canvasRotationZ');
 gui.addButton("clearCanvas", function() {
   clearCanvas();
+});
+
+gui.addButton("saveOutput", function() {
+  saveOutput();
 });
 
 
@@ -94,14 +107,13 @@ gui.addButton("clearCanvas", function() {
 
 function draw() 
 {
+
 camera.rotateX(canvasRotationX);
 camera.rotateY(canvasRotationY);
 camera.rotateZ(canvasRotationZ);
 
 stroke(colourValueR, colourValueG, colourValueB);
 strokeWeight(strokeThickness);
-
-
 
   for(let i = 0; i < pointsArray.length; i++)
   {
@@ -128,15 +140,7 @@ strokeWeight(strokeThickness);
     line(pointsArray[i].x, pointsArray[i].y, pointsArray[i].z, pointsArray[next].x, pointsArray[next].y, pointsArray[next].z);
 
 
-
- 
-
-
   }
-
-
-
-
 
 }
 
@@ -144,11 +148,19 @@ strokeWeight(strokeThickness);
 function windowResized()
 {
   resizeCanvas(windowWidth / 3, windowWidth / 3);
+  output = null;
+  output = createGraphics(windowWidth / 3, windowWidth / 3);
+  
 }
 
 function clearCanvas()
 {
   clear();
+}
+
+function saveOutput()
+{
+  saveCanvas(output, "output", 'png');
 }
 
 
