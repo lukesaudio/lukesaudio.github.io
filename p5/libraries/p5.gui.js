@@ -134,6 +134,18 @@
             qs.setGlobalChangeHandler(null);
         };
 
+        this.toggleCollapsed = function(){
+            qs.toggleCollapsed();
+        };
+
+        this.setPosition = function(x, y){
+            qs.setPosition(x, y);
+        };
+
+        this.setWidth = function(width){
+            qs.setWidth(width);
+        }
+
         this.show = function() { qs.show(); };
         this.hide = function() { qs.hide(); };
 

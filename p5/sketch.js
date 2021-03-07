@@ -66,7 +66,9 @@ let output;
 
 function setup() 
 {
+  
   output = createCanvas(windowWidth / 3, windowWidth / 3, WEBGL);
+  
 
   camera = createEasyCam();
 
@@ -87,7 +89,7 @@ function setup()
   }
   
   
-gui = createGui('Line Drawing Parameters');
+gui = createGui('Double Click/Tap me for parameters!');
 gui.addGlobals('colourValueR', 'colourValueG', 'colourValueB', 'strokeThickness', 'canvasRotationX', 'canvasRotationY', 'canvasRotationZ');
 gui.addButton("clearCanvas", function() {
   clearCanvas();
@@ -98,6 +100,9 @@ gui.addButton("saveOutput", function() {
 });
 
 
+gui.toggleCollapsed();
+gui.setWidth(width);
+gui.setPosition(x, y);
 
   
 
@@ -147,7 +152,8 @@ strokeWeight(strokeThickness);
 function windowResized()
 {
   resizeCanvas(windowWidth / 3, windowWidth / 3);
-  //issue here
+  gui.setWidth(width);
+
   
 }
 
