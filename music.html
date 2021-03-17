@@ -61,9 +61,12 @@
   color: #eff9f0;
     font-family: 'Manjari', sans-serif;
     font-size: 32px;
-    width: 100%;
     height: 100%;
-  overflow-y: scroll;
+    width: 100%;
+  overflow-x: scroll;
+  overflow-y:hidden;
+  white-space: nowrap;
+
   padding: 16px;
 }
 
@@ -87,53 +90,42 @@
   background:   #555; 
 }
 
+img{
+  height: 100%;
+  padding: 16px;
+  padding-bottom: 64px;
+  background-color: white;
+}
+
 </style>
 
 
 
 <body onresize="changeDisplayType()">
 
-    <div id="mainContent" class="w3-display-middle" style="height: 55%;">
+    <div id="mainContent" class="w3-display-middle" style="height: 55%; width: 90%;">
 
-      <div id="aboutText" class="w3-row w3-center w3-padding-16">
-        <img src="images/a beautiful self portrait of me.jpg" alt="An abstractly-edited photograph of my face. The image has been reduced to general shapes and colours." style="width: 60%;">
+      <div id="aboutText" class="w3-row w3-center w3-padding-16" style="height:100%" >
 
-        <p>Luke is an audio researcher, musician and creative working in Bristol, UK
+        <a href="https://open.spotify.com/artist/56c8tykbh8jy0Wp3TxYVK4?si=_Xsfs4tYTE6Ua2mvoQajxA"> <img src="images/cosmic.jpg">        </a>     
+        <a href="https://www.youtube.com/watch?v=t4SDr3AHNjk&list=PLNQOB1CgmMfLWMHWGMd49ydPpWwhSYqMW"> <img src="images/scrub.png">           </a>     
+        <a href="https://itslukesaudio.bandcamp.com/album/university"> <img src="images/uni-recordings.jpg">                    </a>       
+        <a href="https://thecoreyford.bandcamp.com/releases"> <img src="images/corona.jpg">                                     </a>     
+        <a href="https://soundcloud.com/user-519010136/sets/corey-friends-ep-1/s-aVnbp"> <img src="images/corey.jpg">           </a>     
 
+               
 
-          <br><br>He grew up as a wee lad in Worcestershire, in the West Midlands where, as an angsty teen, 
-          he learned guitar and began writing math-infused alternative rock after becoming obsessed with the band Biffy Clyro. 
-          
-          <br><br>He ventured to Bristol to study Creative Music Technology, developing an interest in game audio and digital reverberation. 
-          He also formed the band 'Scrub' in this time, a tongue-in-cheek punk project writing songs about wacky occurrances, 
-          such as dancing old ladies, drag racing mothers and barista girlfriends. 
-
-          <br><br>These studies led him on to a Masters degree in Creative Technology, where Luke became invested in audio and accessibility, particularly
-          the ways in which reverberation is percieved. In this time, he also started the spacey alt-hop pseudonym 'Cosmic' on independent label
-          'Satori Records', releasing his first EP 'Gravitate' in February 2020. 
-
-          <br><br>Luke is currently writing papers and proposals towards starting a PhD in Audio Perception and Accessibility. 
-
-          <br><br>Away from these things, Luke is a pretty neighbourly dude. He enjoys making generative art, drinking Japanese whisky, LOVES corgis, and finds 4/4 unnerving, 
-          much preferring the finer palate of a good 5/4 with a dash of jazzy semblance to taste. 
-
-       
-
-
-
-
-        </p>
 
       </div>
 
       
      
       <div id="buttonRow" class="w3-row w3-center w3-padding-16">
-        <a href="index.html"><button>Home</button></a>
-        <a href="about.html"><button>About</button></a>
-        <a href="music.html"><button>Music</button></a>
-        <a href="art.html"><button>Art</button></a>
-        <a href="research.html"><button>Research</button></a>
+        <a href="index.html"><button>Home</button>        </a>
+        <a href="about.html"><button>About</button>       </a>
+        <a href="music.html"><button>Music</button>       </a>
+        <a href="art.html">  <button>Art</button>           </a>
+        <a href="research.html"><button>Research</button> </a>
       </div>
 
 

@@ -13,18 +13,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="p5/style.css">
-
-
-<script src="p5/libraries/p5.min.js"></script>
-<script src="p5/libraries/p5.sound.min.js"></script>
-<script src="p5/libraries/p5.easycam.min.js"></script>
-<script src="p5/libraries/p5.accessibility.js"></script>
-<script src="p5/libraries/quicksettings.js"></script>
-<script src="p5/libraries/p5.gui.js"></script>
-<script src="p5/libraries/p5.dom.js"></script>
-<script src="p5/libraries/dat.gui.js"></script>
-
 
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -61,9 +49,12 @@
   color: #eff9f0;
     font-family: 'Manjari', sans-serif;
     font-size: 32px;
-    width: 100%;
     height: 100%;
-  overflow-y: scroll;
+    width: 100%;
+  overflow-x: scroll;
+  overflow-y:hidden;
+  white-space: nowrap;
+
   padding: 16px;
 }
 
@@ -87,53 +78,38 @@
   background:   #555; 
 }
 
+img{
+  height: 100%;
+  padding: 16px;
+  padding-bottom: 64px;
+  background-color: white;
+}
+
 </style>
 
 
 
 <body onresize="changeDisplayType()">
 
-    <div id="mainContent" class="w3-display-middle" style="height: 55%;">
+    <div id="mainContent" class="w3-display-middle" style="height: 75%; width: 100%;">
 
-      <div id="aboutText" class="w3-row w3-center w3-padding-16">
-        <img src="images/a beautiful self portrait of me.jpg" alt="An abstractly-edited photograph of my face. The image has been reduced to general shapes and colours." style="width: 60%;">
+      <div id="aboutText" class="w3-row w3-center w3-padding-16" style="height:100%" >
 
-        <p>Luke is an audio researcher, musician and creative working in Bristol, UK
+        <a href="files/masters_dissertation.pdf"> <img src="images/mastersDiss.png">        </a>     
+        <a href="files/masters_extended_abstract.pdf"> <img src="images/mastersAbs.png">           </a>    
+        <a href="files/undergraduate_dissertation.pdf"> <img src="images/undergradDiss.png">           </a>     
 
-
-          <br><br>He grew up as a wee lad in Worcestershire, in the West Midlands where, as an angsty teen, 
-          he learned guitar and began writing math-infused alternative rock after becoming obsessed with the band Biffy Clyro. 
-          
-          <br><br>He ventured to Bristol to study Creative Music Technology, developing an interest in game audio and digital reverberation. 
-          He also formed the band 'Scrub' in this time, a tongue-in-cheek punk project writing songs about wacky occurrances, 
-          such as dancing old ladies, drag racing mothers and barista girlfriends. 
-
-          <br><br>These studies led him on to a Masters degree in Creative Technology, where Luke became invested in audio and accessibility, particularly
-          the ways in which reverberation is percieved. In this time, he also started the spacey alt-hop pseudonym 'Cosmic' on independent label
-          'Satori Records', releasing his first EP 'Gravitate' in February 2020. 
-
-          <br><br>Luke is currently writing papers and proposals towards starting a PhD in Audio Perception and Accessibility. 
-
-          <br><br>Away from these things, Luke is a pretty neighbourly dude. He enjoys making generative art, drinking Japanese whisky, LOVES corgis, and finds 4/4 unnerving, 
-          much preferring the finer palate of a good 5/4 with a dash of jazzy semblance to taste. 
-
-       
-
-
-
-
-        </p>
 
       </div>
 
       
      
       <div id="buttonRow" class="w3-row w3-center w3-padding-16">
-        <a href="index.html"><button>Home</button></a>
-        <a href="about.html"><button>About</button></a>
-        <a href="music.html"><button>Music</button></a>
-        <a href="art.html"><button>Art</button></a>
-        <a href="research.html"><button>Research</button></a>
+        <a href="index.html"><button>Home</button>          </a>
+        <a href="about.html"><button>About</button>         </a>
+        <a href="music.html"><button>Music</button>         </a>
+        <a href="art.html">  <button>Art</button>           </a>
+        <a href="research.html"><button>Research</button>   </a>
       </div>
 
 

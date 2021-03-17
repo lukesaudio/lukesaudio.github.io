@@ -1,8 +1,27 @@
 
 
-canvas 
+
+
+@media only screen and (min-width: 600px) 
 {
-  display: block;
-  margin-left: 33%;
-  
+  canvas 
+  {
+    display: block;
+    margin-left: 33%;    
+   
+
+    
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) 
+{
+  canvas 
+  {
+    display: block;
+    margin-left: 0%;
+    
+  }
 }
