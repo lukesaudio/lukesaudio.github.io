@@ -1,4 +1,5 @@
 
+
 let pointsArray = [];
 let lerpArray = [];
 
@@ -17,6 +18,7 @@ let timer;
 
 
 var gui;
+var guiActive;
 var colourValueR = 0;
 var colourValueRMin = 0;
 var colourValueRMax = 255;
@@ -32,7 +34,7 @@ var colourValueBMin = 0;
 var colourValueBMax = 255;
 var colourValueBStep = 1;
 
-var strokeThickness = 0.1;
+var strokeThickness = 0;
 var strokeThicknessMin = 0.01;
 var strokeThicknessMax = 1;
 var strokeThicknessStep = 0.01;
@@ -54,8 +56,10 @@ var canvasRotationZStep = 0.001;
 
 let output;
 
+//Box Drawing
 
-
+var fontForText;
+var shouldDrawText;
 
 
 
@@ -66,8 +70,23 @@ let output;
 
 function setup() 
 {
-  
+    //____________________________________________________________________________________________________________ARTs
+
+  colourValueR = random(0, 255);
+  colourValueG = random(0, 255);
+  colourValueB = random(0, 255);
+  strokeThickness = random(0.01, 1);
+  canvasRotationX = random(0, 10);
+  canvasRotationY = random(0, 10);
+  canvasRotationZ = random(0, 10);
+
+  fontForText = loadFont('fonts/Manjari-Bold.ttf');
+  shouldDrawText = true;
+
+
+
   output = createCanvas(windowWidth / 3, windowWidth / 3, WEBGL);
+  output.parent("sketchBox");
   
 
   camera = createEasyCam();
@@ -80,62 +99,54 @@ function setup()
 
     v3 = createVector(0, 0, 0);
     camera.zoom(25);
-
     timer = 20000;
-
-
-
 
   }
   
+  //____________________________________________________________________________________________________________GUI
   
-gui = createGui('Double Click/Tap me for parameters!');
-gui.addGlobals('colourValueR', 'colourValueG', 'colourValueB', 'strokeThickness', 'canvasRotationX', 'canvasRotationY', 'canvasRotationZ');
-gui.addButton("clearCanvas", function() {
-  clearCanvas();
-});
 
-gui.addButton("saveOutput", function() {
-  saveOutput();
-});
+  guiActive = false;
 
 
-gui.toggleCollapsed();
-gui.setWidth(width);
-gui.setPosition(x, y);
+  //____________________________________________________________________________________________________________BOX DRAWING
 
-  
 
 
 }
 
 function draw() 
 {
+  //____________________________________________________________________________________________________________ART
+
+
 
 camera.rotateX(canvasRotationX);
 camera.rotateY(canvasRotationY);
 camera.rotateZ(canvasRotationZ);
+  
+
+
+ 
+
 
 stroke(colourValueR, colourValueG, colourValueB);
 strokeWeight(strokeThickness);
 
   for(let i = 0; i < pointsArray.length; i++)
-  {
-
-    
+  {   
 
     let next = i+1;
     if(next >= pointsArray.length){ next = 0;} 
 
     if (amount > 1 || amount < 0) 
-    {
+    { 
       step *= -1;
     }
 
     amount += step;
 
     v3 = p5.Vector.lerp(pointsArray[i], lerpArray[i], amount);
-
 
     pointsArray[i] = v3;
 
@@ -144,15 +155,64 @@ strokeWeight(strokeThickness);
     line(pointsArray[i].x, pointsArray[i].y, pointsArray[i].z, pointsArray[next].x, pointsArray[next].y, pointsArray[next].z);
 
 
+
+
   }
+
+ 
+  if(shouldDrawText)
+  {
+    textFont(fontForText);
+    textSize(20);
+    stroke(255);
+    strokeWeight(200);
+    fill(255, 255, 255);
+    text("welcome to lukesaudio", random(0, width), random(0, height));
+  }
+
 
 }
 
 
+
 function windowResized()
 {
-  resizeCanvas(windowWidth / 3, windowWidth / 3);
-  gui.setWidth(width);
+  if(windowWidth > 600)
+  {
+    resizeCanvas(windowWidth / 3, windowWidth / 3);
+
+  }
+
+  else
+  {
+    resizeCanvas(windowWidth, windowWidth);
+    
+  }
+
+  if(windowWidth < 600)
+  {
+    if(gui)
+    {
+      gui.setWidth(windowWidth);
+      gui.setPosition(0, 0);
+    }
+   
+    
+
+
+  }
+  else
+  {
+    if(gui)
+    {
+      gui.setWidth(width);
+      gui.setPosition(output.position().x,output.position().y);
+  
+    }
+
+  }
+
+
 
   
 }
@@ -164,9 +224,61 @@ function clearCanvas()
 
 function saveOutput()
 {
- 
+    saveCanvas(output, "output", 'png');
+}
 
-  saveCanvas(output, "output", 'png');
+function keyPressed()
+{
+  if(keyCode == 71)
+  {
+    if(!guiActive)
+    {
+      makeGUI();
+      guiActive = true;
+
+    }
+  }
+}
+
+function toggleTextDrawing()
+{
+  switch(shouldDrawText)
+  {
+    case true:
+      shouldDrawText = false;
+      break;
+    case false:
+      shouldDrawText = true;
+      break;
+    default: shouldDrawText = true;
+  }
+}
+
+function makeGUI()
+{
+  
+gui = createGui('double click here for parameters. click and drag to move.'  );
+gui.addGlobals('colourValueR', 'colourValueG', 'colourValueB', 'strokeThickness', 'canvasRotationX', 'canvasRotationY', 'canvasRotationZ');
+
+gui.addButton("Refresh Canvas", function() {
+  clearCanvas();
+});
+
+gui.addButton("Save Output", function() {
+  saveOutput();
+});
+
+gui.addButton("Toggle Text Drawing", function() {
+  toggleTextDrawing();
+});
+
+
+gui.toggleCollapsed();
+gui.setWidth(width);
+
+
+gui.setPosition(output.position().x,output.position().y);
+
 }
 
 
