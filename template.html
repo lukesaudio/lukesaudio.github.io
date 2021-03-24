@@ -8,11 +8,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" type="text/css" href="css/OrangeTheme.css">
 <link rel="stylesheet" type="text/css" href="p5/style.css">
 
 
@@ -34,35 +31,7 @@
 
 
 <style>
-
-
-body, html
-  {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-   
-  }
-
- @keyframes fadeIn 
- {
-  from {opacity: 0%;}
-  to {opacity: 100%;} 
- }
  
-#sketchBox
-{
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  
-}
-
-#buttonRow
-{
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
-
 
 
 
@@ -70,99 +39,31 @@ body, html
 
 
 
-<body onresize="changeDisplayType()">
+<body>
 
-    <div id="mainContent" class="w3-display-middle" style="width: 100%;">
+<<<<<<< Updated upstream
+    <div class="w3-container" style="width: 100%; padding: 0">
+=======
+>>>>>>> Stashed changes
 
-      
-      <div id="sketchBox" class="w3-container">
-
-          <h1 id="modeText">WHAT IS THE MODE OF THE DAY, CHEF?</h1>        
-
-      </div>
-
-      <div id="buttonRow" class="w3-row w3-center w3-padding-16">
+      <div class="w3-row w3-center" style="background-color: black;"  >
         <a href="index.html"><button>Home</button></a>
         <a href="about.html"><button>About</button></a>
         <a href="music.html"><button>Music</button></a>
         <a href="art.html"><button>Art</button></a>
         <a href="research.html"><button>Research</button></a>
+        <a href="fun.html"><button>Fun</button></a>
+        <a href="interactive.html"><button>Interactive</button></a>
+
 
 
       </div>
-
-
     </div>
 
 </body>
 
-<script>
-  var darkMode = true;
-  var x = window.matchMedia("(prefers-color-scheme: dark)");
-  checkDarkMode(x); // Call listener function at run time
-  x.addListener(checkDarkMode); // Attach listener function on state changes
- 
-
-  function changeDisplayType() 
-  {
-    if(window.innerWidth < 600)
-    {
-      var element = document.getElementById("mainContent");
-      element.classList.add("w3-container") ;
-      element.classList.remove("w3-display-middle");
-      console.log("small");
-    
-    }
-    else
-    {
-      var element = document.getElementById("mainContent");
-      element.classList.remove("w3-container");
-      element.classList.add("w3-display-middle");
-      console.log(big);
-
-    }
-  
-  }
 
 
-
-      
-    function checkDarkMode(x) 
-    {
-      if (x.matches) 
-      { // If media query matches
-        darkMode = true;
-        console.log("We like it dark");
-        var el = document.getElementById('sketchBox'); // your element
-        el.style.backgroundColor = 'rgb(3, 0, 3)';
-        document.body.style.backgroundColor = 'rgb(3, 0, 3)';
-        document.body.style.color = "white";       
-
-        
-
-      } 
-      
-      else 
-      {
-        darkMode = false;
-        console.log("We like it light");
-        var el = document.getElementById('sketchBox'); // your element
-        el.style.backgroundColor = 'rgb(239, 249, 240)';
-        document.body.style.backgroundColor = 'rgb(239, 249, 240)';
-        document.body.style.color = "black";
-
-
-
-    }
-}
-
-
-
-
-
-
-
-</script>
 
 
 

@@ -86,6 +86,9 @@ body, html
 
 
 <body onresize="changeDisplayType()">
+  <div class="w3-container">
+    <a href="../fun.html"><h1><-- Back</h1></a>
+  </div>
 
     <div id="mainContent" class="w3-display-middle" style="width: 100%;">
 
@@ -100,15 +103,7 @@ body, html
           
 
 
-      <div id="buttonRow" class="w3-row w3-center w3-padding-16">
-        <a href="../index.html"><button>Home</button></a>
-        <a href="../about.html"><button>About</button></a>
-        <a href="../music.html"><button>Music</button></a>
-        <a href="../art.html"><button>Art</button></a>
-        <a href="../research.html"><button>Research</button></a>
-
-
-      </div>
+          
 
 
     </div>
@@ -297,7 +292,7 @@ function replaceText()
   var adjectiveUsed = adjectives[Math.floor(Math.random() * adjectives.length)];
   var adjectiveUsed2 = adjectives[Math.floor(Math.random() * adjectives.length)]
 
-  baseText.innerHTML = "Today's mode is a <span style=\"" + fontUsed + " " + adjectiveUsed  + "</span>" + " " + key + " " + mode[modeIndex] + " <br>with <span style=\"" +fontUsed2 + adjectiveUsed2 + "</span>"   +  " notes of " + finalNoteString ;
+  baseText.innerHTML = "Today's mode is a <span style=\"" + fontUsed + " " + adjectiveUsed  + "</span>" + " " + key + " " + mode[modeIndex] + " <br>with <span style=\"" +fontUsed2 + adjectiveUsed2 + "</span>"   +  " notes of:<br><br>" + finalNoteString + "<br><br>" ;
 
 
   
