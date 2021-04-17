@@ -1,0 +1,105 @@
+#buttonRow
+{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+#aboutText
+{
+  color: #eff9f0;
+    font-family: 'Manjari', sans-serif;
+    font-size: 32px;
+    height: 100%;
+    width: 100%;
+
+  white-space: nowrap;
+
+  padding: 16px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eff9f0; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:   #555; 
+}
+
+img
+{
+  padding: 16px;
+  transition: 0.3s;
+  background-color: white;
+  height: 100%;
+  
+}
+img:hover
+{
+   filter: brightness(50%); 
+}
+
+img:hover + .centered
+{
+  
+   opacity: 1;
+}
+
+
+.column 
+{
+  height: 100%;  
+  padding: 5px;
+  display: inline-flex;
+}
+
+.row
+{
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap:wrap;
+}
+
+a
+{
+  height: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 16px;
+  opacity: 0;
+  transition: 0.3s;
+
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered:hover {
+  opacity: 1;
+}
+
+.centered:hover + pare
+{
+   filter: brightness(50%); 
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>//about</title>
+<title>//video</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,91 +13,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="p5/style.css">
-
-
-<script src="p5/libraries/p5.min.js"></script>
-<script src="p5/libraries/p5.sound.min.js"></script>
-<script src="p5/libraries/p5.easycam.min.js"></script>
-<script src="p5/libraries/p5.accessibility.js"></script>
-<script src="p5/libraries/quicksettings.js"></script>
-<script src="p5/libraries/p5.gui.js"></script>
-<script src="p5/libraries/p5.dom.js"></script>
-<script src="p5/libraries/dat.gui.js"></script>
-
-
+<link rel="stylesheet" type="text/css" href="css/minimalist site/carousel.css">
+<link rel="stylesheet" type="text/css" href="css/minimalist site/all.css">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-<!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
-
-
-<style>
-
-  body, html
-  {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-   
-  }
-
- @keyframes fadeIn 
- {
-  from {opacity: 0%;}
-  to {opacity: 100%;} 
- }
- 
-
-#buttonRow
-{
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
-
-#aboutText
-{
-  color: #eff9f0;
-    font-family: 'Manjari', sans-serif;
-    font-size: 32px;
-    height: 100%;
-    width: 100%;
-  overflow-x: scroll;
-  overflow-y:hidden;
-  white-space: nowrap;
-
-  padding: 16px;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #eff9f0; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background:   #555; 
-}
-
-img{
-  height: 100%;
-  padding: 16px;
-  padding-bottom: 64px;
-  background-color: white;
-}
-
-</style>
 
 
 
@@ -105,27 +25,53 @@ img{
 
     <div id="mainContent" class="w3-display-middle" style="height: 55%; width: 90%;">
 
-      <div id="aboutText" class="w3-row w3-center w3-padding-16" style="height:100%" >
+      <div id="aboutText" class="w3-row w3-center w3-padding-16"  style=" width: 100%;" >     
+        
 
-        <a href="https://www.youtube.com/watch?v=lR4aAFHkDcw"> <img src="images/swirl.jpg">                    </a>       
-        <a href="https://www.youtube.com/watch?v=ws6ceL4nSUE&t=1s"> <img src="images/mountain.png">           </a>     
- 
+          <div class="row" >
 
-               
+  
+            <div class="column container">
 
+              <a href="https://www.youtube.com/watch?v=lR4aAFHkDcw">  
+                <img src="images/swirl.jpg" alt="A piece of generative artwork made with OpenFrameworks. Pictured is what can best be described as the shape of a quarter of a doughnut. The effect created looks like demin, or crosshatch drawing, and has semi-transparent circles overlayed on top.  "> 
+                <div class="centered" style="white-space: pre-wrap;">20200206000210 </div>
 
-      </div>
+              </a>
+            </div>         
+
+            <div class="column container">
+              <a href="https://www.youtube.com/watch?v=ws6ceL4nSUE&t=1s"> 
+                <img src="images/mountain.png" alt="A piece of artwork created in OpenFrameworks. Pictured is the outcome from drawing a series of lines from the left side of the screen to the right side of the screen segmentally, and filling in the space with colour. The result looks like a colourful abstract mountain range">           
+                <div class="centered">LeftToRight</div>
+                
+              </a>     
+            </div>
+
+            
+            
+          </div>
+
+       
+
+          
+
+    
+      
+
+        </div>
 
       
      
       <div id="buttonRow" class="w3-row w3-center w3-padding-16">
         <a href="index.html"><button>Home</button></a>
         <a href="about.html"><button>About</button></a>
-        <a href="music.html"><button>Music</button></a>
-        <a href="art.html"><button>Art</button></a>
-        <a href="research.html"><button>Research</button></a>
-        <a href="fun.html"><button>Fun</button></a>
+        <a href="audio.html"><button>Audio</button></a>
+        <a href="video.html"><button>Video</button></a>
         <a href="interactive.html"><button>Interactive</button></a>
+        <a href="art.html"><button>Art</button></a>
+        <!--<a href="research.html"><button>Research</button></a>-->
+        <a href="fun.html"><button>Fun</button></a>
 
       </div>
 
@@ -165,7 +111,7 @@ img{
         document.getElementById('aboutText').style.color = "black";
     }
     
-  }
+   }
   
 
 

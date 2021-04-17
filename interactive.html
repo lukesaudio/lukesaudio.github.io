@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<title>//index</title>
+<title>//interactive</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,15 +15,10 @@
 
 <link rel="stylesheet" type="text/css" href="p5/style.css">
 
+<link rel="stylesheet" type="text/css" href="css/minimalist site/carousel.css">
+<link rel="stylesheet" type="text/css" href="css/minimalist site/all.css">
 
-<script src="p5/libraries/p5.min.js"></script>
-<script src="p5/libraries/p5.sound.min.js"></script>
-<script src="p5/libraries/p5.easycam.min.js"></script>
-<script src="p5/libraries/p5.accessibility.js"></script>
-<script src="p5/libraries/quicksettings.js"></script>
-<script src="p5/libraries/p5.gui.js"></script>
-<script src="p5/libraries/p5.dom.js"></script>
-<script src="p5/libraries/dat.gui.js"></script>
+
 
 
 
@@ -33,156 +28,57 @@
 <!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
 
 
-<style>
-
-
-body, html
-  {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-   
-  }
-
- @keyframes fadeIn 
- {
-  from {opacity: 0%;}
-  to {opacity: 100%;} 
- }
- 
-
-#buttonRow
-{
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
-
-#aboutText
-{
-  color: #eff9f0;
-    font-family: 'Manjari', sans-serif;
-    font-size: 32px;
-    height: 100%;
-    width: 100%;
-  overflow-x: hidden;
-  overflow-y:scroll;
-
-
-  padding: 16px;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #eff9f0; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background:   #555; 
-}
-
-img{
-  height: 100%;
-  padding: 16px;
-
-  background-color: white;
-}
-
-.w3-card
-{
-  border-style: solid;
-  text-align: left;
-  margin: 32px;
-}
-.w3-half
-{
-  padding: 16px;
-}
-
-header{
-  background-color: #F39B6D;
-}
-
-a{
-  text-shadow: 0px 0px 30px black;
-}
-
-
-</style>
-
-
-
 <body onresize="changeDisplayType()">
 
-  <div id="mainContent" class="w3-display-middle" style="height: 55%; width: 90%;">
+    <div id="mainContent" class="w3-display-middle" style="height: 55%; width: 90%;">
 
-    <div id="aboutText" class="w3-row w3-center w3-padding-16" style="height:100%" >
-<!--------------------------------------------------------------------------------------------------------------------------->
-
-      <div class="w3-card" style="height: 90%;">
-
-        <header class="w3-container">
-
-          <h1><a href="interactive/worldsfromwords.html">Worlds from Words</a></h1>
-
-        </header>
+      <div id="aboutText" class="w3-row w3-center w3-padding-16"  style=" width: 100%;" >     
         
-        <div class="w3-row" style="height: 100%;">
 
-            <div class="w3-half">
-              <p>A VR Experience exploring stories from members of Bristol's homeless communities</p>
-            </div>
+          <div class="row" >
+
+  
+            <div class="column container">
+
+              <a href="explore/interactive/worlds-from-words.html">  
+               <img src="images/worldsfromwords.jpg" style="max-width:100%; max-height: 80%;">
+                <div class="centered" style="white-space: pre-wrap;">Worlds from Words </div>
+
+              </a>
+            </div>         
+
             
-            <div class="w3-half w3-center" style="height: 100%;">
-              <a href="interactive/worldsfromwords.html"><img src="images/worldsfromwords.jpg" style="max-width:100%; max-height: 80%;"></a>
-            </div>
+
+            
+            
+          </div>
+
+       
+
+          
+
+    
+      
 
         </div>
 
+      
+     
+      <div id="buttonRow" class="w3-row w3-center w3-padding-16">
+        <a href="index.html"><button>Home</button></a>
+        <a href="about.html"><button>About</button></a>
+        <a href="audio.html"><button>Audio</button></a>
+        <a href="video.html"><button>Video</button></a>
+        <a href="interactive.html"><button>Interactive</button></a>
+        <a href="art.html"><button>Art</button></a>
+        <!--<a href="research.html"><button>Research</button></a>-->
+        <a href="fun.html"><button>Fun</button></a>
+
       </div>
-<!--------------------------------------------------------------------------------------------------------------------------->
 
-
-        
-
-
-
-
-
-             
 
 
     </div>
-
-    
-   
-    <div id="buttonRow" class="w3-row w3-center w3-padding-16">
-      <a href="index.html"><button>Home</button></a>
-      <a href="about.html"><button>About</button></a>
-      <a href="music.html"><button>Music</button></a>
-      <a href="art.html"><button>Art</button></a>
-      <a href="research.html"><button>Research</button></a>
-      <a href="fun.html"><button>Fun</button></a>
-      <a href="interactive.html"><button>Interactive</button></a>
-
-
-    </div>
-
-
-
-  </div>
-
-</body>
 
 </body>
 
@@ -193,68 +89,60 @@ a{
   x.addListener(checkDarkMode); // Attach listener function on state changes
  
 
-  function changeDisplayType() 
+
+
+
+  function checkDarkMode(x) 
   {
-    if(window.innerWidth < 600)
-    {
-      var element = document.getElementById("mainContent");
-      element.classList.add("w3-container") ;
-      element.classList.remove("w3-display-middle");
-      console.log("small");
-    
-    }
-    else
-    {
-      var element = document.getElementById("mainContent");
-      element.classList.remove("w3-container");
-      element.classList.add("w3-display-middle");
-      console.log(big);
-
-    }
-  
-  }
-
-
-
-      
-    function checkDarkMode(x) 
-    {
-      if (x.matches) 
-      { // If media query matches
+    if (x.matches) 
+    { // If media query matches
         darkMode = true;
         console.log("We like it dark");
-        var el = document.getElementById('sketchBox'); // your element
-        el.style.backgroundColor = 'rgb(3, 0, 3)';
         document.body.style.backgroundColor = 'rgb(3, 0, 3)';
-        document.body.style.color = "white";       
+        document.getElementById('aboutText').style.color = "white";
 
-        
 
-      } 
+    } 
       
-      else 
-      {
+    else 
+    {
         darkMode = false;
-        console.log("We like it light");
-        var el = document.getElementById('sketchBox'); // your element
-        el.style.backgroundColor = 'rgb(239, 249, 240)';
+        console.log("We like it light");     
         document.body.style.backgroundColor = 'rgb(239, 249, 240)';
-        document.body.style.color = "black";
-
-
-
+        document.getElementById('aboutText').style.color = "black";
     }
-}
+    
+   }
+  
 
 
 
 
-
-
+  function fade(el, property, start, end, duration) 
+    {
+        var interval = 10;
+        var steps = duration / interval;
+        var step_u = 1.0 / steps;
+        var u = 0.0;
+        var theInterval = setInterval(function() 
+        {
+            if (u >= 1.0) 
+            {
+                clearInterval(theInterval);
+            }
+           
+            var r = Math.round(lerp(start.r, end.r, u));
+            var g = Math.round(lerp(start.g, end.g, u));
+            var b = Math.round(lerp(start.b, end.b, u));
+            var colorname = 'rgb(' + r + ',' + g + ',' + b + ')';
+            el.style.setProperty(property, colorname);
+            
+            u += step_u;
+        }, interval);
+    }
+    
 
 </script>
-
-
 
 
 </html>

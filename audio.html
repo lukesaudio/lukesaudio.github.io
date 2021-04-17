@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<title>//audio</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/minimalist site/carousel.css">
+<link rel="stylesheet" type="text/css" href="css/minimalist site/all.css">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<body onresize="changeDisplayType()">
+
+    <div id="mainContent" class="w3-display-middle" style="height: 55%; width: 90%;">
+
+      <div id="aboutText" class="w3-row w3-center w3-padding-16"  style=" width: 100%;" >     
+        
+
+          <div class="row" >
+
+  
+            <div class="column container">
+
+              <a href="explore/audio/shelf-life.html">  
+                <img src="images/shelflife.jpeg" alt="An image of the album cover for Gravitate, an EP I made under my pseudonym Cosmic. The Album cover is a blurred photograph of the moon with a grain effect over it. There is a white strip down the right side of the image. The words Cosmic Gravitate EP are in the lower right hand corner "> 
+                <div class="centered" style="white-space:pre-wrap;">Audio Editor / Transcriber for <b>Shelf Life</b></div>
+
+              </a>
+            </div>  
+
+               <div class="column container">
+
+
+              <a href="explore/audio/cosmic.html">  
+                <img src="images/cosmic.jpg" alt="An image of the album cover for Gravitate, an EP I made under my pseudonym Cosmic. The Album cover is a blurred photograph of the moon with a grain effect over it. There is a white strip down the right side of the image. The words Cosmic Gravitate EP are in the lower right hand corner "> 
+                <div class="centered">Cosmic</div>
+
+              </a>
+            </div>            
+
+
+
+            <div class="column container">
+              <a href="explore/audio/scrub.html"> 
+                <img src="images/scrub.png" alt="An image of my band Scrub, a casual punk band with myself and Corey Ford. The image is a screenshot from a video we made performing one of our songs. There are five sections arranged in 4 quadrant and a central image. They show me playing guitar, me playing drums, me performing vocals, me playing bass, and Corey playing guitar.">           
+                <div class="centered">'Scrub', the silly punk band</div>
+                
+              </a>     
+            </div>
+
+            <div class="column container">
+              <a href="explore/audio/songs-from-university.html"> 
+                <img src="images/uni-recordings.jpg" alt="The album cover for a collection of songs I released with fellow students during my time at university. The image is letterboxed, and showcases an edited image of myself and 7 friends stood in a row with our arms around each other. It is edited in a geometric style, with the hue changed to make us all a shade of blue/purple.">    
+                <div class="centered">Songs from University</div>
+
+              </a>       
+            </div>
+
+            <div class="column container">
+              <a href="explore/audio/flu-and-me.html"> 
+                <img src="images/corona.jpg" alt="The album cover for Flu and Me: A Compilation of Isolation Vibrations. The image is in a cartoonised style, and features Godzilla shooting lasers from their eyes at charicatures of each performer on the album. These performers are running away in fear from the lasers. Text representing the album name is also on the cover.">                                     
+                <div class="centered" style="white-space: pre-wrap;">Flu and Me:&#10 A Compilation of Isolation Vibrations</div>
+
+              </a>     
+            </div>
+
+            <div class="column container">
+              <a href="explore/audio/corey-and-friends-ep.html"> 
+                <img src="images/corey.jpg" alt="The album cover for the Corey and Friends EP. The image is a pair of legs wearing fishnet tights, flowers and heels, drawn in a traditional tattooist style. The words Corey and Friends are in the top left corner in a spray painted font. In the same font, however positioned in the lower right corner, are the words EP-1">       
+                <div class="centered">Corey and Friends EP</div>
+
+         
+    
+              </a>     
+            </div>
+            
+          </div>
+
+          
+
+          
+          
+
+    
+      
+
+        </div>
+
+      
+     
+      <div id="buttonRow" class="w3-row w3-center w3-padding-16">
+        <a href="index.html"><button>Home</button></a>
+        <a href="about.html"><button>About</button></a>
+        <a href="audio.html"><button>Audio</button></a>
+        <a href="video.html"><button>Video</button></a>
+        <a href="interactive.html"><button>Interactive</button></a>
+        <a href="art.html"><button>Art</button></a>
+        <!--<a href="research.html"><button>Research</button></a>-->
+        <a href="fun.html"><button>Fun</button></a>
+
+      </div>
+
+
+
+    </div>
+
+</body>
+
+<script>
+  var darkMode = true;
+  var x = window.matchMedia("(prefers-color-scheme: dark)");
+  checkDarkMode(x); // Call listener function at run time
+  x.addListener(checkDarkMode); // Attach listener function on state changes
+ 
+
+
+
+
+  function checkDarkMode(x) 
+  {
+    if (x.matches) 
+    { // If media query matches
+        darkMode = true;
+        console.log("We like it dark");
+        document.body.style.backgroundColor = 'rgb(3, 0, 3)';
+        document.getElementById('aboutText').style.color = "white";
+
+
+    } 
+      
+    else 
+    {
+        darkMode = false;
+        console.log("We like it light");     
+        document.body.style.backgroundColor = 'rgb(239, 249, 240)';
+        document.getElementById('aboutText').style.color = "black";
+    }
+    
+   }
+  
+
+
+
+
+  function fade(el, property, start, end, duration) 
+    {
+        var interval = 10;
+        var steps = duration / interval;
+        var step_u = 1.0 / steps;
+        var u = 0.0;
+        var theInterval = setInterval(function() 
+        {
+            if (u >= 1.0) 
+            {
+                clearInterval(theInterval);
+            }
+           
+            var r = Math.round(lerp(start.r, end.r, u));
+            var g = Math.round(lerp(start.g, end.g, u));
+            var b = Math.round(lerp(start.b, end.b, u));
+            var colorname = 'rgb(' + r + ',' + g + ',' + b + ')';
+            el.style.setProperty(property, colorname);
+            
+            u += step_u;
+        }, interval);
+    }
+    
+
+</script>
+
+
+</html>
