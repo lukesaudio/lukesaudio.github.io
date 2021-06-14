@@ -16,6 +16,7 @@ let camera;
 
 let timer;
 
+let cheatsActive;
 
 var gui;
 var guiActive;
@@ -82,6 +83,7 @@ function setup()
 
   fontForText = loadFont('fonts/Manjari-Bold.ttf');
   shouldDrawText = true;
+  cheatsActive= false;
 
 
 
@@ -167,7 +169,21 @@ strokeWeight(strokeThickness);
     stroke(255);
     strokeWeight(200);
     fill(255, 255, 255);
-    text("welcome to lukesaudio", random(0, width), random(0, height));
+    switch(cheatsActive)
+    {
+      case false:
+        text("welcome to lukesaudio", random(0, width), random(0, height));
+        break;
+      case true:
+        text("Sunshine", random(0, width), random(0, height));
+        break;
+      default:
+        text("welcome to lukesaudio", random(0, width), random(0, height));
+
+        break;
+
+        
+    }
   }
 
 
@@ -254,6 +270,11 @@ function toggleTextDrawing()
   }
 }
 
+function toggleCheats()
+{
+  cheatsActive = true;
+}
+
 function makeGUI()
 {
   
@@ -270,6 +291,10 @@ gui.addButton("Save Output", function() {
 
 gui.addButton("Toggle Text Drawing", function() {
   toggleTextDrawing();
+});
+
+gui.addButton("u wan some cheets???", function() {
+  toggleCheats();
 });
 
 

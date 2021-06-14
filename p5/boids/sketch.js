@@ -24,6 +24,8 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
 
+  
+
   canvas.style('z-index', '-1');
   centreStart = createVector(windowWidth / 2, windowHeight / 2);
   cornerStart = createVector(0, 0);
@@ -46,7 +48,7 @@ function setup() {
   cheatsActivated = false;
   cheatCounter = 0;
 
-  cheats.push('none', 'LukesFaceio', 'Raycast', 'Sunshine');
+  cheats.push('none', 'LukesFaceio', 'Raycast', 'Sunshine', 'ItsOver9000');
 
 
 
@@ -169,8 +171,7 @@ Boid.prototype.seek = function(target) {
 Boid.prototype.render = function() {
   // Draw a triangle rotated in the direction of velocity
   let theta = this.velocity.heading() + radians(90);
-  fill(127);
-  stroke(200);
+ 
   //-------------------------------------------------------------------------------------------------------- CHOOSE WHAT COOL EFFECT U WANT
 
   switch(currentCheat)
@@ -187,8 +188,26 @@ Boid.prototype.render = function() {
       break;
 
     case "Sunshine":
+      
+      stroke(255, random(100, 255), 0);
+      fill(255, 255, 0);
+      strokeWeight(2);
       line(centreStart.x, centreStart.y, this.position.x - 10, this.position.y - 10);
+         
+
+      
        break;
+
+       case 'ItsOver9000':
+        stroke(255, random(100, 255), 0);
+        fill(255, 255, 0);
+        strokeWeight(2);
+        line(centreStart.x, centreStart.y, this.position.x - 10, this.position.y - 10);
+        line(cornerStart.x, cornerStart.y, this.position.x - 10, this.position.y - 10);
+        image(img, this.position.x - 10, this.position.y - 10, 50, 50);
+
+
+
 
     default: break;
   }
