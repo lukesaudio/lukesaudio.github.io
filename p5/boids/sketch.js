@@ -97,7 +97,11 @@ Flock.prototype.run = function() {
 }
 
 Flock.prototype.addBoid = function(b) {
-  this.boids.push(b);
+  if(this.boids.length <= 250)
+  {
+    this.boids.push(b);
+
+  }
 }
 
 // The Nature of Code
