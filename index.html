@@ -1,106 +1,224 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Luke Child - Audio Perception Researcher and Musician</title>
-  <meta name="title" content="Luke Child - Audio Perception Researcher and Musician">
-  <meta name="description" content="Welcome to the world of lukesaudio">
-
+<title>//lukesaudio </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Primary Meta Tags -->
-
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://lukesaudio.com/">
-<meta property="og:title" content="Luke Child - Audio Perception Researcher and Musician">
-<meta property='og:description' content="Welcome to the world of lukesaudio">
-<meta property='og:image' content="https://lukesaudio.com/images/photo.jpg">
-<meta name='description' content="Welcome to the world of lukesaudio">
-<meta name='image' content="https://lukesaudio.com/images/photo.jpg">
-<meta name="author" content="Luke Child">
-
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://lukesaudio.com/">
-<meta property="twitter:title" content="Luke Child - Audio Perception Researcher and Musician">
-<meta property="twitter:description" content="Welcome to the world of lukesaudio">
-<meta property="twitter:image" content="https://lukesaudio.com/images/photo.jpg">
-
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="css/minimalist.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<script src="https://kit.fontawesome.com/f07ef7440b.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+p{color: rgb(199, 199, 199);}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
-<link rel="stylesheet" type="text/css" href="p5/style.css">
+a:link {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: underline;
+ color: gold;
+}
+</style>
+<body class="w3-black">
 
-<link rel="stylesheet" type="text/css" href="css/minimalist site/carousel.css">
-<link rel="stylesheet" type="text/css" href="css/minimalist site/all.css">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/w3images/avatar_smoke.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>home</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>about</p>
+  </a>
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>projects</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>contact</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">home</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">about</a>
+    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">projects</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">contact</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">welcome to </span> lukesaudio</h1>
+    <p>audio perception, composition and creative technology.</p>
+    <img src="/images/photo.jpg" alt="a self portrait of me, a bearded, glasses wearing male with short dirty blonde hair, against a plain white wall. I am wearing a tie-dye long sleeved t shirt by the brand Rip and Dip. I am facing to my right, and have a small smile.  " class="w3-image" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey" style="text-align: right;">who the f is luke?</h2>
+    <hr style="width:100%" class="w3-opacity">
+    <p>Luke is an audio researcher, musician and creative working in Bristol, UK
 
 
-
-<script src="p5/libraries/p5.min.js"></script>
-<script src="p5/libraries/p5.sound.min.js"></script>
-<script src="p5/libraries/p5.easycam.min.js"></script>
-<script src="p5/libraries/p5.accessibility.js"></script>
-<script src="p5/libraries/quicksettings.js"></script>
-<script src="p5/libraries/p5.gui.js"></script>
-<script src="p5/libraries/p5.dom.js"></script>
-<script src="p5/libraries/dat.gui.js"></script>
-
-
-
-
-
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-</head>
-
-
-
-
-<body onresize="changeDisplayType()">
-  <h2 style="color: rgba(3, 0, 3, 50); padding: 12px;">type cheats on the about page</h2>
-
-
-    <div id="mainContent" class="w3-display-middle" style="width: 100%;">
-
-
-
+      <br><br>He grew up as a wee lad in Worcestershire, in the West Midlands where, as an angsty teen, 
+      he learned guitar and began writing math-infused alternative rock after becoming obsessed with the band Biffy Clyro. 
       
-      <div id="sketchBox" class="w3-container">
+      <br><br>He ventured to Bristol to study Creative Music Technology, developing an interest in game audio and digital reverberation. 
+      He also formed the band 'Scrub' in this time, a tongue-in-cheek punk project writing songs about wacky occurrances, 
+      such as dancing old ladies, drag racing mothers and barista girlfriends. 
 
-        <script src="p5/sketch.js" ></script>
-        
-      </div>
+      <br><br>These studies led him on to a Masters degree in Creative Technology, where Luke became invested in audio and accessibility, particularly
+      the ways in which reverberation is percieved. In this time, he also started the spacey alt-hop pseudonym 'Cosmic' on independent label
+      'Satori Records', releasing his first EP 'Gravitate' in February 2020. 
 
-      <div id="buttonRow" class="w3-row w3-center w3-padding-16" style="background-color: #070106;">
-        <a href="index.html"><button>Home</button></a>
-        <a href="about.html"><button>About</button></a>
-        <a href="audio.html"><button>Audio</button></a>
-        <a href="video.html"><button>Video</button></a>
-        <a href="interactive.html"><button>Interactive</button></a>
-        <a href="art.html"><button>Art</button></a>
-        <a href="research.html"><button>Research</button></a>
-        <a href="fun.html"><button>Fun</button></a>
+      <br><br>Luke is currently writing papers and proposals towards starting a PhD in Audio Perception and Accessibility. 
 
+      <br><br>Away from these things, Luke is a pretty neighbourly chap. He enjoys making generative art, drinking Japanese whisky, LOVES corgis, and finds 4/4 unnerving, 
+      much preferring the finer palate of a good 5/4 with a dash of jazzy semblance to taste. 
+
+   
 
 
-      </div>
 
+
+    </p>
+
+    <h2 class="w3-text-light-grey" style="text-align: right;">what have i done?</h2>
+    <hr style="width:100%" class="w3-opacity">
+
+    <h3>education</h3>
+    <p>
+      MSc Creative Technology - University of the West of England <br><br>
+      BSc Creative Music Technology - University of the West of England
+
+    </p>
+
+    <h3>notable work</h3>
+    <p>
+      Occasional Associate Lecturer - University of the West of England (2021-present)<br> 
+      Specialising in research and practice, perceptual audio evaluation and interactive audio<br><br>
+
+      Research Assistant - Remote:CTRL Residency with Mi.mu (2021-present)<br>
+      coordinating qualitative research studies with disabled artists using Mi.mu gloves for creative practice<br><br>
+      
+      Research Intern - PYTCH Bristol x UWE Foundry (summer 2020)<br>
+      developing virtual production technologies for live events technologies using Unreal Engine<br><br>
+
+      Student Representative for MSC Creative Technologies - University of the West of England (2019-2021)<br>
+      addressing student concerns and feedback alongside running study sessions and wellbeing check-ins for fellow students on my course
+
+    </p>
+
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content w3-center" id="projects">
+    <h2 class="w3-text-light-grey" style="text-align: right;">projects?</h2>
+    <hr style="width:100%" class="w3-opacity">
+
+    <h3 class="w3-text-light-grey">research</h3>
+    <hr style="width:100%" class="w3-opacity w">
+    <p>
+      <a href="https://www.aes.org/e-lib/browse.cfm?elib=21060">Towards an audio attribute framework for understanding the perception of reverberant spaces 
+      through elicitation and clustering methods based on participant expectation (Child and Ford, 2021)</a>
+
+    </p>
+
+    <h3 class="w3-text-light-grey">music</h3>
+    <hr style="width:100%" class="w3-opacity ">
+
+    <h4 class="w3-text-light-grey">cosmic</h4>
+    <p>
+      a spacey trip hop experience delivered to you through satori records. Here, you'll find ambient polyrhythmic soundscapes, rap tracks about space and enough glitchiness to satisfy even the lowest of fi
+    </p>  
+    <a href="https://earthtocosmic.github.io"><svg class="w3-padding-16 w3-hover-opacity" id="svg" width="50%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.3 119.24"><defs><style>.cls-1{fill:#ffffff;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#1bfb0b;}</style></defs><title>Combined no lines</title><g id="svgg"><path id="path0" class="cls-1" d="M217.8.2C193.1,2.7,170.5,15,159.4,32l-1.3,1.9H157a30.16,30.16,0,0,1-3.6-.3c-30.4-3.6-64,.8-73.3,9.6C60.6,61.5,122,92.7,212.4,110.4c98.8,19.4,157.6,5.6,115.7-27-10-7.7-33.2-20.2-45.2-24.2-3.8-1.3-3.5-.9-3.4-4.2.7-15.4.1-20.4-3.1-27.2C269.4,13,254.3,3.3,233.8.6a108.22,108.22,0,0,0-16-.4m15.5,5.3c20.1,2.5,35.3,13.4,40,28.4,1.2,3.7,1.6,24.2.6,25.9a7.38,7.38,0,0,1-2.9.7c-1.5.3-4.5.8-6.7,1.2-11.9,2.1-20.2,2.1-35.5,0-21.3-3-48.9-12.6-60.7-21.3-1.8-1.4-6-5.3-6-5.8,0-1,2.6-4.3,6.4-8.1,12.1-12.1,29.3-19.6,48.8-21.4a142.47,142.47,0,0,1,16,.4M212.9,7.7c-6.6,1.4-24.5,9.9-33.5,15.9-5.7,3.8-6.9,5.3-5.6,6.7a34.65,34.65,0,0,0,5.6,3,37.27,37.27,0,0,1,3.5,1.6c2.5,1.3,2.3,1.4,6.2-2.5a146.15,146.15,0,0,1,16.7-14c5.4-4,7.8-6.1,9-7.5,2.5-2.8,1.8-4-1.9-3.2M197.7,18.5s-1.3,1.2-2.9,2.6-4.5,4.1-6.4,6.1l-3.5,3.5-2.6-.9c-3.1-1-3.4-1.3-2.4-2.2,2.2-1.8,17.8-9.8,17.8-9.1M139.5,35.8c11.5.6,19.6,2.1,21.9,3.9.5.4,1.8,1.5,2.9,2.5,21.9,19,84.3,32,107.5,22.5,2.3-.9,5.3-2.1,6.6-2.5,1.5-.5,5.6,1.2,18.2,7.4,49.5,24.5,54.3,41.6,12.7,45.3C238.1,121.2,91,81.8,80.1,53.5c-4.3-11.3,24.1-19.7,59.4-17.7m6.1,7.3c-12.4,2.8-20.7,18.8-15.2,29.3,3.9,7.4,14.9,10.9,20.1,6.3,1.9-1.6.1-2.2-3.9-1.2-8.7,2.3-16.7-5.8-15.1-15.1,2.6-14.9,19.8-23.1,27.1-12.9,1.3,1.8,1.6,2,2,1.1,1.9-4.3-7.7-9.2-15-7.5M167.1,60c-8.5,1.4-14,12.8-9.6,19.7,5.6,8.7,19.1,5.5,21.7-5.1,2.2-8.5-4-16-12.1-14.6m4.7,2.6c9.4,4.3,5.6,19.3-4.9,19.3-4.9,0-8.4-3.4-8.4-8.1-.1-7.6,7.4-13.9,13.3-11.2M196.4,65c-5.4,1.8-6,5.2-2.6,13.9,2.9,7.3,1.4,13.6-3.1,13.6-2.3,0-3.5-1.5-3.8-5s-.4-3.8-.7-4.2c-1.1-1.3-2.5,2.3-2.1,5.2,1,6.3,7,8.8,11.1,4.7,3.4-3.4,3.5-9.3.3-17-1.7-4.1-1.9-5-1-6.7,1.4-2.8,4.7-3.2,7.2-.9,1.3,1.2,1.9,1.2,1.8-.2.1-2.4-4.1-4.4-7.1-3.4m16.9,6.7c-3.9,2.6-6.8,24.8-3.7,28,1.1,1.1,1.4-.2.8-4.7-.9-7.1,1.9-21.9,3.9-20.7.6.4,1.4,3.8,2,9.1.9,7.8,1.8,8.4,3.9,2.8,1.9-5.1,4.9-9.7,6.3-9.5,2.1.3,2.1,6.2-.3,18.5-.6,3.3-.8,6-.3,6.3,2.8,1.8,6-19.7,3.7-24.8-1.9-4.3-4.9-3.5-8.6,2.3-2.2,3.3-2.1,3.3-2.4.8-.9-6.2-3.2-9.5-5.3-8.1m36.4,1.9c-.6.2-1.4.5-1.9.6-1.4.4-1.8,1.3-1.2,2.4a5.21,5.21,0,0,1,.6,1.5c.5,2,1.9,2.6,4.3,1.9.8-.2,1.8-.5,2.3-.6,1.7-.3,2.3-1.6,1.3-2.9a3.51,3.51,0,0,1-.6-1.4c-.2-1.7-2.4-2.4-4.8-1.5m20.9,5.1c-4.8,1.2-10.2,10.8-10.1,18.3,0,10.6,8.4,15.9,13.4,8.5,2-2.9,1.1-5.2-1.1-2.7-3.8,4.5-6.1,4.5-8.4.2-4.2-7.9,3-24.6,9.4-22,1.5.6,2.1-.4.9-1.5a5.07,5.07,0,0,0-4.1-.8M246.8,84c-2.1,2.2-9.3,20.3-9.3,23.2a1.82,1.82,0,0,0,.4,1.1l.4.5.7-.8c.7-.8,1.3-2.2,3-7,.5-1.4,2-5.4,3.4-8.8,2.7-6.9,3.2-8.2,3-8.6s-1-.3-1.6.4" transform="translate(-76.48 -0.06)"></path><path id="path2" class="cls-2" d="M166.5,23.1c-.8.8-1.4,1.5-1.4,1.5a13.31,13.31,0,0,0,1.6-1.5c.8-.8,1.4-1.5,1.4-1.5s-.8.7-1.6,1.5m-41,9.4h.9c.2,0,0-.1-.5-.1s-.7.1-.4.1m11,0h.9c.2,0,0-.1-.4-.1-.6,0-.8.1-.5.1m-14.1,3.2h.7c.2-.1,0-.1-.3-.1s-.6.1-.4.1m14,0h.7c.2-.1,0-.1-.3-.1-.5,0-.6.1-.4.1m138,11.8c0,3.2,0,4.5.1,2.8V44.5c-.1-1.5-.1-.2-.1,3M148.8,42.7h1c.2,0,0-.1-.6-.1s-.7.1-.4.1m-69.3.9-.8.9.8-.9c.8-.7,1-.8.8-.8l-.8.8m96.8,19.3c.4.4.7.7.8.7s-.2-.3-.6-.7-.7-.7-.8-.7a5.17,5.17,0,0,0,.6.7m71.2.4H249c.4,0,.1-.1-.7-.1s-1.2.1-.8.1M131.2,64.7c0,.7,0,.9.1.5V64c-.1-.3-.1,0-.1.7m24.6,9.6c0,.6,0,.8.1.4v-1c-.1-.2-.1,0-.1.6m72.1,7.1c0,.6,0,.9.1.5V80.8c0-.3-.1,0-.1.6m2.4,2.9c0,.4,0,.6.1.3v-.8c0-.2-.1,0-.1.5m-43.5,2.3c0,.5,0,.7.1.4v-.9c-.1-.2-.1,0-.1.5m147.1,2.2a14.47,14.47,0,0,0,1.7,1.6,11.14,11.14,0,0,0-1.5-1.6,14.47,14.47,0,0,0-1.7-1.6c-.1,0,.7.7,1.5,1.6M210.1,90.4c0,.4,0,.5.1.3a.85.85,0,0,0,0-.7c0-.2-.1,0-.1.4m52.8,7.1c0,.6,0,.8.1.4v-1c0-.2-.1,0-.1.6m.4,8.9a7.28,7.28,0,0,1,.6.7l.6.6-.5-.7c-.6-.6-.7-.7-.7-.6m24.5,9.1h1.6c.4,0,0-.1-.9-.1s-1.2,0-.7.1m8.1,0h1.5c.4,0,.1-.1-.7-.1s-1.2,0-.8.1m-12.5,3.8h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1m15.6,0h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1" transform="translate(-76.48 -0.06)"></path></g></svg></a>
+
+    <hr style="width:50%; margin-left: 25%" class="w3-opacity ">
+
+    <h4 class="w3-text-light-grey">scrub</h4>
+    <p>
+      a semi-serious punk duo with fellow audio researcher Corey Ford. We write songs about 86 year old dancing old ladies, barista girlfriends, and how a friend of mine's ex girlfriends mum drag raced cars in south wales
+    </p>
+    <a href="https://www.youtube.com/watch?v=t4SDr3AHNjk&list=PLNQOB1CgmMfLWMHWGMd49ydPpWwhSYqMW"><img src="/images/scrub3.jpg" alt="A photograph of myself and researcher Corey Ford sat on a sofa in Axe and Trap studios in Wells, UK. Corey is playing a guitar while I am sat to his side staring at him.  " class="w3-image w3-hover-opacity" width="50%"> </a>
+    <hr style="width:50%; margin-left: 25%" class="w3-opacity">
+
+
+    <h3 class="w3-text-light-grey">technology</h3>
+    <hr style="width:100%" class="w3-opacity">
+
+    <h4 class="w3-text-light-grey">worlds from words</h4>
+    <p>
+      a project using oculus vr and unity to visualise stories from members of bristol's homeless and rough sleeping communities
+    </p>
+    <a href="https://www.youtube.com/watch?v=7mMdHHbg_B0&list=PLNQOB1CgmMfJXQ1rrmEUL6YsGQCABXeIm"><img src="/images/worldsfromwordsdemo.JPG" alt="A photograph of my friend Michael testing out my worlds from words project on a macintosh computer" class="w3-image w3-hover-opacity" width="50%"> </a>
+
+ 
+
+    <h3 class="w3-text-light-grey">art</h3>
+    <hr style="width:100%" class="w3-opacity">
+
+    <!-- Grid for photos -->
+
+    <div class="w3-image">
+      <a data-flickr-embed="true" href="https://www.flickr.com/photos/193600793@N07/albums/72157719629050938" title="Generative Art"><img src="https://live.staticflickr.com/65535/51354907068_52b9de10f3.jpg" width="800" height="600" alt="Generative Art"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>    <!-- End photo grid -->
+
+    </div>
+    <div class="w3-image">
+      <a data-flickr-embed="true" href="https://www.flickr.com/photos/193600793@N07/albums/72157719641721492" title="Aliens"><img src="https://live.staticflickr.com/65535/51355695445_6db4ca538c_c.jpg" width="800" height="600" alt="Aliens"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
     </div>
 
+
+
+    
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey" style="text-align: right;">where can you find me?</h2>
+   
+    <hr style="width:100%" class="w3-opacity">
+
+    <p>
+      come and chat to me via the linked icons below. saves my email address getting picked up by those web scraping bots.
+    </p>
+
+
+
+
+  
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge w3-center">
+    <a href="https://www.twitter.com/itslukesaudio"> <i class="fab fa-twitter-square fa-3x w3-hover-opacity"></i></a>
+    <a href="https://www.insa.com/lukesaudio"> <i class="fab fa-instagram-square fa-3x w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/lukethomaschild/"> <i class="fab fa-linkedin fa-3x w3-hover-opacity"></i></a>
+    <a href="https://www.researchgate.net/profile/Luke-Child"><i class="fab fa-researchgate fa-3x w3-hover-opacity"></i></a>
+
+
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
 </body>
-
-
-<script type="text/javascript" src="js/minimalistJS.js"></script>
-
-
 </html>
