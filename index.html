@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>//lukesaudio </title>
+<title>Welcome to LukesAudio </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <script src="https://kit.fontawesome.com/f07ef7440b.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,43 +17,156 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-p{color: rgb(199, 199, 199);}
+body, h1,h2,h3,h4,h5,h6 {font-family: 'Manjari', sans-serif; color: rgb(199, 199, 199);}
+p{color: rgb(199, 199, 199); font-size: 20px;}
+h3{text-decoration: underline;}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
+.w3-sidebar {width: 120px;background: #ff8a28;}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
+
+.w3-bar-item, .w3-bar-item > *{
+  color: #141115;
+}
+
+
+.w3-button:hover, .w3-button:hover > * 
+{
+  background-color: #141115 !important;
+  color: white !important;
+
+}
 a:link {
  text-decoration: none;
 }
 a:hover {
  text-decoration: underline;
  color: gold;
+ 
 }
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #141115;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 </style>
-<body class="w3-black">
+
+
+<body style="background-color: #141115;">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="/w3images/avatar_smoke.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>home</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large ">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>about</p>
   </a>
-  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large ">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>projects</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large ">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>contact</p>
   </a>
@@ -57,7 +174,7 @@ a:hover {
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+  <div class="w3-bar  w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">home</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">about</a>
     <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">projects</a>
@@ -68,11 +185,49 @@ a:hover {
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-padding-32 w3-center" id="home" style="background-color: #141115;">
     <h1 class="w3-xxxlarge"><span class="w3-hide-small w3-mobile">welcome to </span>lukesaudio</h1>
     <p>audio perception, composition and creative technology.</p>
-    <img src="/images/photo.jpg" alt="a self portrait of me, a bearded, glasses wearing male with short dirty blonde hair, against a plain white wall. I am wearing a tie-dye long sleeved t shirt by the brand Rip and Dip. I am facing to my right, and have a small smile.  " class="w3-image" width="992" height="1108">
+    <!--<img src="/images/photo.jpg" alt="a self portrait of me, a bearded, glasses wearing male with short dirty blonde hair, against a plain white wall. I am wearing a tie-dye long sleeved t shirt by the brand Rip and Dip. I am facing to my right, and have a small smile.  " class="w3-image" width="992" height="1108"> -->
+    
+ 
   </header>
+
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/me/me1.jpg" style="width:100%">
+      <div class="text" style="background-color: #141115;">A photo of myself in a tye dye Rip n Dip t-shirt smiling against a plain wall</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/me/me2.jpg" style="width:100%">
+      <div class="text" style="background-color: #141115;">A photo of myself mid-recording session playing a drum kit in the live room of Axe and Trap studios in Wells, UK</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/me/me3.jpg" style="width:100%">
+      <div class="text" style="background-color: #141115;">A photo of myself with a neutral expression against a graffiti-covered wall modelling a t-shirt from Satori Records</div>
+    </div>
+
+ 
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
@@ -221,4 +376,35 @@ a:hover {
 </div>
 
 </body>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </html>
