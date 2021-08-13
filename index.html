@@ -16,8 +16,8 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: 'Manjari', sans-serif; color: rgb(255, 255, 255);}
-p{color: rgb(255, 255, 255); font-size: 20px;}
+body, h1,h2,h3,h4,h5,h6 {font-family: 'Manjari', sans-serif; color: #EEE5E9;}
+p{color: #EEE5E9; font-size: 20px; text-align: left}
 h3{text-decoration: underline;}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
@@ -33,6 +33,10 @@ h3{text-decoration: underline;}
 }
 
 
+iframe {
+  margin: 16px;
+  }
+
 .w3-button:hover, .w3-button:hover > * 
 {
   background-color: #141115 !important;
@@ -44,7 +48,6 @@ a:link {
 }
 a:hover {
  text-decoration: underline;
- color: #ff8a28;
  
 }
 
@@ -56,6 +59,7 @@ a:hover {
   max-width: 1000px;
   position: relative;
   margin: auto;
+
 }
 
 /* Hide the images by default */
@@ -119,11 +123,11 @@ a:hover {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: #ff8a28 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #141115;
+  background-color: #ff8a28;
 }
 
 /* Fading animation */
@@ -185,10 +189,14 @@ a:hover {
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center" id="home" style="background-color: #141115;">
-    <h1 class="w3-xxxlarge"><span class="w3-hide-small w3-mobile">welcome to </span>lukesaudio</h1>
-    <p>audio perception, composition and creative technology.</p>
-    <!--<img src="/images/photo.jpg" alt="a self portrait of me, a bearded, glasses wearing male with short dirty blonde hair, against a plain white wall. I am wearing a tie-dye long sleeved t shirt by the brand Rip and Dip. I am facing to my right, and have a small smile.  " class="w3-image" width="992" height="1108"> -->
     
+    <h1 class="w3-xxxlarge"><span class="w3-hide-small w3-mobile">welcome to </span>lukesaudio</h1>
+    <p style="text-align: center;">audio perception, composition and creative technology (audio transcriptions coming soon!)</p>
+    <!--<img src="/images/photo.jpg" alt="a self portrait of me, a bearded, glasses wearing male with short dirty blonde hair, against a plain white wall. I am wearing a tie-dye long sleeved t shirt by the brand Rip and Dip. I am facing to my right, and have a small smile.  " class="w3-image" width="992" height="1108"> -->
+    <audio controls>
+      <source src="audio/test.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+    </audio>
  
   </header>
 
@@ -228,10 +236,25 @@ a:hover {
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
+  <br>
+  <br>
+  <br>
+
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey" style="text-align: right;">who the eff is luke?</h2>
-    <hr style="width:100%" class="w3-opacity">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" style="border:8px solid #EEE5E9; padding: 32px;" id="about">
+    <br><br><hr style="width:100%" class="w3-opacity">
+
+  
+    <div class="w3-half">
+      <audio controls>
+        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+    </div>
+
+    <div class="w3-half">
+      <h2 class="w3-text-light-grey" style="text-align: right;">who the eff is luke?</h2>
+    </div>
+    
+    <br><br><hr style="width:100%" class="w3-opacity">
     <p>Luke is an audio researcher, musician and creative working in Bristol, UK
 
 
@@ -251,6 +274,9 @@ a:hover {
       <br><br>Away from these things, Luke is a pretty neighbourly chap. He enjoys making generative art, drinking Japanese whisky, LOVES corgis, and finds 4/4 unnerving, 
       much preferring the finer palate of a good 5/4 with a dash of jazzy semblance to taste. 
 
+      <br><br><hr style="width:100%" class="w3-opacity">
+
+
    
 
 
@@ -258,8 +284,16 @@ a:hover {
 
     </p>
 
-    <h2 class="w3-text-light-grey" style="text-align: right;">what have i done?</h2>
-    <hr style="width:100%" class="w3-opacity">
+    <div class="w3-half">
+      <audio controls>
+        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+    </div>
+
+    <div class="w3-half">
+      <h2 class="w3-text-light-grey" style="text-align: right;">where did I learn things?</h2>
+    </div>
+    
+    <br><br><hr style="width:100%" class="w3-opacity">
 
     <h3>education</h3>
     <p>
@@ -284,17 +318,38 @@ a:hover {
 
     </p>
 
-  
+    
+  </div>
+  <br>
+  <br>
+  <br>
   <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content w3-center" id="projects">
-    <h2 class="w3-text-light-grey" style="text-align: right;">projects?</h2>
-    <hr style="width:100%" class="w3-opacity">
+  <div class="w3-content w3-padding-64 w3-content w3-center " style="border:8px solid #EEE5E9; padding: 32px; ;" id="projects">
 
-    <h3 class="w3-text-light-grey">research</h3>
-    <hr style="width:100%" class="w3-opacity w">
+    <br><br><hr style="width:100%" class="w3-opacity">
+    <div class="w3-half" style="text-align: left;">
+      <audio controls>
+        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+    </div>
+
+    <div class="w3-half">
+      <h2 class="w3-text-light-grey" style="text-align: right;">what cool things have I done?</h2>
+    </div>
+    
+    <br><br><hr style="width:100%" class="w3-opacity">
+
+    <h3 class="w3-text-light-grey" style="text-align: left">research</h3>
+    <hr style="width:100%" class="w3-opacity">
     <p>
-      <a href="https://www.aes.org/e-lib/browse.cfm?elib=21060">Towards an audio attribute framework for understanding the perception of reverberant spaces 
+      towards an audio attribute framework for understanding the perception of reverberant spaces 
       through elicitation and clustering methods based on participant expectation (Child and Ford, 2021)</a>
+
+      <br>
+      <br>
+
+      <a href="https://www.aes.org/e-lib/browse.cfm?elib=21060" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">visit paper publication website</a>
+
+
 
     </p>
 
@@ -305,7 +360,24 @@ a:hover {
     <p>
       a spacey trip hop experience delivered to you through satori records. Here, you'll find ambient polyrhythmic soundscapes, rap tracks about space and enough glitchiness to satisfy even the lowest of fi
     </p>  
-    <a href="https://earthtocosmic.github.io"><svg class="w3-padding-16 w3-hover-opacity" id="svg" width="50%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.3 119.24"><defs><style>.cls-1{fill:#ffffff;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#1bfb0b;}</style></defs><title>Combined no lines</title><g id="svgg"><path id="path0" class="cls-1" d="M217.8.2C193.1,2.7,170.5,15,159.4,32l-1.3,1.9H157a30.16,30.16,0,0,1-3.6-.3c-30.4-3.6-64,.8-73.3,9.6C60.6,61.5,122,92.7,212.4,110.4c98.8,19.4,157.6,5.6,115.7-27-10-7.7-33.2-20.2-45.2-24.2-3.8-1.3-3.5-.9-3.4-4.2.7-15.4.1-20.4-3.1-27.2C269.4,13,254.3,3.3,233.8.6a108.22,108.22,0,0,0-16-.4m15.5,5.3c20.1,2.5,35.3,13.4,40,28.4,1.2,3.7,1.6,24.2.6,25.9a7.38,7.38,0,0,1-2.9.7c-1.5.3-4.5.8-6.7,1.2-11.9,2.1-20.2,2.1-35.5,0-21.3-3-48.9-12.6-60.7-21.3-1.8-1.4-6-5.3-6-5.8,0-1,2.6-4.3,6.4-8.1,12.1-12.1,29.3-19.6,48.8-21.4a142.47,142.47,0,0,1,16,.4M212.9,7.7c-6.6,1.4-24.5,9.9-33.5,15.9-5.7,3.8-6.9,5.3-5.6,6.7a34.65,34.65,0,0,0,5.6,3,37.27,37.27,0,0,1,3.5,1.6c2.5,1.3,2.3,1.4,6.2-2.5a146.15,146.15,0,0,1,16.7-14c5.4-4,7.8-6.1,9-7.5,2.5-2.8,1.8-4-1.9-3.2M197.7,18.5s-1.3,1.2-2.9,2.6-4.5,4.1-6.4,6.1l-3.5,3.5-2.6-.9c-3.1-1-3.4-1.3-2.4-2.2,2.2-1.8,17.8-9.8,17.8-9.1M139.5,35.8c11.5.6,19.6,2.1,21.9,3.9.5.4,1.8,1.5,2.9,2.5,21.9,19,84.3,32,107.5,22.5,2.3-.9,5.3-2.1,6.6-2.5,1.5-.5,5.6,1.2,18.2,7.4,49.5,24.5,54.3,41.6,12.7,45.3C238.1,121.2,91,81.8,80.1,53.5c-4.3-11.3,24.1-19.7,59.4-17.7m6.1,7.3c-12.4,2.8-20.7,18.8-15.2,29.3,3.9,7.4,14.9,10.9,20.1,6.3,1.9-1.6.1-2.2-3.9-1.2-8.7,2.3-16.7-5.8-15.1-15.1,2.6-14.9,19.8-23.1,27.1-12.9,1.3,1.8,1.6,2,2,1.1,1.9-4.3-7.7-9.2-15-7.5M167.1,60c-8.5,1.4-14,12.8-9.6,19.7,5.6,8.7,19.1,5.5,21.7-5.1,2.2-8.5-4-16-12.1-14.6m4.7,2.6c9.4,4.3,5.6,19.3-4.9,19.3-4.9,0-8.4-3.4-8.4-8.1-.1-7.6,7.4-13.9,13.3-11.2M196.4,65c-5.4,1.8-6,5.2-2.6,13.9,2.9,7.3,1.4,13.6-3.1,13.6-2.3,0-3.5-1.5-3.8-5s-.4-3.8-.7-4.2c-1.1-1.3-2.5,2.3-2.1,5.2,1,6.3,7,8.8,11.1,4.7,3.4-3.4,3.5-9.3.3-17-1.7-4.1-1.9-5-1-6.7,1.4-2.8,4.7-3.2,7.2-.9,1.3,1.2,1.9,1.2,1.8-.2.1-2.4-4.1-4.4-7.1-3.4m16.9,6.7c-3.9,2.6-6.8,24.8-3.7,28,1.1,1.1,1.4-.2.8-4.7-.9-7.1,1.9-21.9,3.9-20.7.6.4,1.4,3.8,2,9.1.9,7.8,1.8,8.4,3.9,2.8,1.9-5.1,4.9-9.7,6.3-9.5,2.1.3,2.1,6.2-.3,18.5-.6,3.3-.8,6-.3,6.3,2.8,1.8,6-19.7,3.7-24.8-1.9-4.3-4.9-3.5-8.6,2.3-2.2,3.3-2.1,3.3-2.4.8-.9-6.2-3.2-9.5-5.3-8.1m36.4,1.9c-.6.2-1.4.5-1.9.6-1.4.4-1.8,1.3-1.2,2.4a5.21,5.21,0,0,1,.6,1.5c.5,2,1.9,2.6,4.3,1.9.8-.2,1.8-.5,2.3-.6,1.7-.3,2.3-1.6,1.3-2.9a3.51,3.51,0,0,1-.6-1.4c-.2-1.7-2.4-2.4-4.8-1.5m20.9,5.1c-4.8,1.2-10.2,10.8-10.1,18.3,0,10.6,8.4,15.9,13.4,8.5,2-2.9,1.1-5.2-1.1-2.7-3.8,4.5-6.1,4.5-8.4.2-4.2-7.9,3-24.6,9.4-22,1.5.6,2.1-.4.9-1.5a5.07,5.07,0,0,0-4.1-.8M246.8,84c-2.1,2.2-9.3,20.3-9.3,23.2a1.82,1.82,0,0,0,.4,1.1l.4.5.7-.8c.7-.8,1.3-2.2,3-7,.5-1.4,2-5.4,3.4-8.8,2.7-6.9,3.2-8.2,3-8.6s-1-.3-1.6.4" transform="translate(-76.48 -0.06)"></path><path id="path2" class="cls-2" d="M166.5,23.1c-.8.8-1.4,1.5-1.4,1.5a13.31,13.31,0,0,0,1.6-1.5c.8-.8,1.4-1.5,1.4-1.5s-.8.7-1.6,1.5m-41,9.4h.9c.2,0,0-.1-.5-.1s-.7.1-.4.1m11,0h.9c.2,0,0-.1-.4-.1-.6,0-.8.1-.5.1m-14.1,3.2h.7c.2-.1,0-.1-.3-.1s-.6.1-.4.1m14,0h.7c.2-.1,0-.1-.3-.1-.5,0-.6.1-.4.1m138,11.8c0,3.2,0,4.5.1,2.8V44.5c-.1-1.5-.1-.2-.1,3M148.8,42.7h1c.2,0,0-.1-.6-.1s-.7.1-.4.1m-69.3.9-.8.9.8-.9c.8-.7,1-.8.8-.8l-.8.8m96.8,19.3c.4.4.7.7.8.7s-.2-.3-.6-.7-.7-.7-.8-.7a5.17,5.17,0,0,0,.6.7m71.2.4H249c.4,0,.1-.1-.7-.1s-1.2.1-.8.1M131.2,64.7c0,.7,0,.9.1.5V64c-.1-.3-.1,0-.1.7m24.6,9.6c0,.6,0,.8.1.4v-1c-.1-.2-.1,0-.1.6m72.1,7.1c0,.6,0,.9.1.5V80.8c0-.3-.1,0-.1.6m2.4,2.9c0,.4,0,.6.1.3v-.8c0-.2-.1,0-.1.5m-43.5,2.3c0,.5,0,.7.1.4v-.9c-.1-.2-.1,0-.1.5m147.1,2.2a14.47,14.47,0,0,0,1.7,1.6,11.14,11.14,0,0,0-1.5-1.6,14.47,14.47,0,0,0-1.7-1.6c-.1,0,.7.7,1.5,1.6M210.1,90.4c0,.4,0,.5.1.3a.85.85,0,0,0,0-.7c0-.2-.1,0-.1.4m52.8,7.1c0,.6,0,.8.1.4v-1c0-.2-.1,0-.1.6m.4,8.9a7.28,7.28,0,0,1,.6.7l.6.6-.5-.7c-.6-.6-.7-.7-.7-.6m24.5,9.1h1.6c.4,0,0-.1-.9-.1s-1.2,0-.7.1m8.1,0h1.5c.4,0,.1-.1-.7-.1s-1.2,0-.8.1m-12.5,3.8h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1m15.6,0h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1" transform="translate(-76.48 -0.06)"></path></g></svg></a>
+    <svg class="w3-padding-16" id="svg" width="50%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.3 119.24"><defs><style>.cls-1{fill:#ffffff;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#1bfb0b;}</style></defs><title>Combined no lines</title><g id="svgg"><path id="path0" class="cls-1" d="M217.8.2C193.1,2.7,170.5,15,159.4,32l-1.3,1.9H157a30.16,30.16,0,0,1-3.6-.3c-30.4-3.6-64,.8-73.3,9.6C60.6,61.5,122,92.7,212.4,110.4c98.8,19.4,157.6,5.6,115.7-27-10-7.7-33.2-20.2-45.2-24.2-3.8-1.3-3.5-.9-3.4-4.2.7-15.4.1-20.4-3.1-27.2C269.4,13,254.3,3.3,233.8.6a108.22,108.22,0,0,0-16-.4m15.5,5.3c20.1,2.5,35.3,13.4,40,28.4,1.2,3.7,1.6,24.2.6,25.9a7.38,7.38,0,0,1-2.9.7c-1.5.3-4.5.8-6.7,1.2-11.9,2.1-20.2,2.1-35.5,0-21.3-3-48.9-12.6-60.7-21.3-1.8-1.4-6-5.3-6-5.8,0-1,2.6-4.3,6.4-8.1,12.1-12.1,29.3-19.6,48.8-21.4a142.47,142.47,0,0,1,16,.4M212.9,7.7c-6.6,1.4-24.5,9.9-33.5,15.9-5.7,3.8-6.9,5.3-5.6,6.7a34.65,34.65,0,0,0,5.6,3,37.27,37.27,0,0,1,3.5,1.6c2.5,1.3,2.3,1.4,6.2-2.5a146.15,146.15,0,0,1,16.7-14c5.4-4,7.8-6.1,9-7.5,2.5-2.8,1.8-4-1.9-3.2M197.7,18.5s-1.3,1.2-2.9,2.6-4.5,4.1-6.4,6.1l-3.5,3.5-2.6-.9c-3.1-1-3.4-1.3-2.4-2.2,2.2-1.8,17.8-9.8,17.8-9.1M139.5,35.8c11.5.6,19.6,2.1,21.9,3.9.5.4,1.8,1.5,2.9,2.5,21.9,19,84.3,32,107.5,22.5,2.3-.9,5.3-2.1,6.6-2.5,1.5-.5,5.6,1.2,18.2,7.4,49.5,24.5,54.3,41.6,12.7,45.3C238.1,121.2,91,81.8,80.1,53.5c-4.3-11.3,24.1-19.7,59.4-17.7m6.1,7.3c-12.4,2.8-20.7,18.8-15.2,29.3,3.9,7.4,14.9,10.9,20.1,6.3,1.9-1.6.1-2.2-3.9-1.2-8.7,2.3-16.7-5.8-15.1-15.1,2.6-14.9,19.8-23.1,27.1-12.9,1.3,1.8,1.6,2,2,1.1,1.9-4.3-7.7-9.2-15-7.5M167.1,60c-8.5,1.4-14,12.8-9.6,19.7,5.6,8.7,19.1,5.5,21.7-5.1,2.2-8.5-4-16-12.1-14.6m4.7,2.6c9.4,4.3,5.6,19.3-4.9,19.3-4.9,0-8.4-3.4-8.4-8.1-.1-7.6,7.4-13.9,13.3-11.2M196.4,65c-5.4,1.8-6,5.2-2.6,13.9,2.9,7.3,1.4,13.6-3.1,13.6-2.3,0-3.5-1.5-3.8-5s-.4-3.8-.7-4.2c-1.1-1.3-2.5,2.3-2.1,5.2,1,6.3,7,8.8,11.1,4.7,3.4-3.4,3.5-9.3.3-17-1.7-4.1-1.9-5-1-6.7,1.4-2.8,4.7-3.2,7.2-.9,1.3,1.2,1.9,1.2,1.8-.2.1-2.4-4.1-4.4-7.1-3.4m16.9,6.7c-3.9,2.6-6.8,24.8-3.7,28,1.1,1.1,1.4-.2.8-4.7-.9-7.1,1.9-21.9,3.9-20.7.6.4,1.4,3.8,2,9.1.9,7.8,1.8,8.4,3.9,2.8,1.9-5.1,4.9-9.7,6.3-9.5,2.1.3,2.1,6.2-.3,18.5-.6,3.3-.8,6-.3,6.3,2.8,1.8,6-19.7,3.7-24.8-1.9-4.3-4.9-3.5-8.6,2.3-2.2,3.3-2.1,3.3-2.4.8-.9-6.2-3.2-9.5-5.3-8.1m36.4,1.9c-.6.2-1.4.5-1.9.6-1.4.4-1.8,1.3-1.2,2.4a5.21,5.21,0,0,1,.6,1.5c.5,2,1.9,2.6,4.3,1.9.8-.2,1.8-.5,2.3-.6,1.7-.3,2.3-1.6,1.3-2.9a3.51,3.51,0,0,1-.6-1.4c-.2-1.7-2.4-2.4-4.8-1.5m20.9,5.1c-4.8,1.2-10.2,10.8-10.1,18.3,0,10.6,8.4,15.9,13.4,8.5,2-2.9,1.1-5.2-1.1-2.7-3.8,4.5-6.1,4.5-8.4.2-4.2-7.9,3-24.6,9.4-22,1.5.6,2.1-.4.9-1.5a5.07,5.07,0,0,0-4.1-.8M246.8,84c-2.1,2.2-9.3,20.3-9.3,23.2a1.82,1.82,0,0,0,.4,1.1l.4.5.7-.8c.7-.8,1.3-2.2,3-7,.5-1.4,2-5.4,3.4-8.8,2.7-6.9,3.2-8.2,3-8.6s-1-.3-1.6.4" transform="translate(-76.48 -0.06)"></path><path id="path2" class="cls-2" d="M166.5,23.1c-.8.8-1.4,1.5-1.4,1.5a13.31,13.31,0,0,0,1.6-1.5c.8-.8,1.4-1.5,1.4-1.5s-.8.7-1.6,1.5m-41,9.4h.9c.2,0,0-.1-.5-.1s-.7.1-.4.1m11,0h.9c.2,0,0-.1-.4-.1-.6,0-.8.1-.5.1m-14.1,3.2h.7c.2-.1,0-.1-.3-.1s-.6.1-.4.1m14,0h.7c.2-.1,0-.1-.3-.1-.5,0-.6.1-.4.1m138,11.8c0,3.2,0,4.5.1,2.8V44.5c-.1-1.5-.1-.2-.1,3M148.8,42.7h1c.2,0,0-.1-.6-.1s-.7.1-.4.1m-69.3.9-.8.9.8-.9c.8-.7,1-.8.8-.8l-.8.8m96.8,19.3c.4.4.7.7.8.7s-.2-.3-.6-.7-.7-.7-.8-.7a5.17,5.17,0,0,0,.6.7m71.2.4H249c.4,0,.1-.1-.7-.1s-1.2.1-.8.1M131.2,64.7c0,.7,0,.9.1.5V64c-.1-.3-.1,0-.1.7m24.6,9.6c0,.6,0,.8.1.4v-1c-.1-.2-.1,0-.1.6m72.1,7.1c0,.6,0,.9.1.5V80.8c0-.3-.1,0-.1.6m2.4,2.9c0,.4,0,.6.1.3v-.8c0-.2-.1,0-.1.5m-43.5,2.3c0,.5,0,.7.1.4v-.9c-.1-.2-.1,0-.1.5m147.1,2.2a14.47,14.47,0,0,0,1.7,1.6,11.14,11.14,0,0,0-1.5-1.6,14.47,14.47,0,0,0-1.7-1.6c-.1,0,.7.7,1.5,1.6M210.1,90.4c0,.4,0,.5.1.3a.85.85,0,0,0,0-.7c0-.2-.1,0-.1.4m52.8,7.1c0,.6,0,.8.1.4v-1c0-.2-.1,0-.1.6m.4,8.9a7.28,7.28,0,0,1,.6.7l.6.6-.5-.7c-.6-.6-.7-.7-.7-.6m24.5,9.1h1.6c.4,0,0-.1-.9-.1s-1.2,0-.7.1m8.1,0h1.5c.4,0,.1-.1-.7-.1s-1.2,0-.8.1m-12.5,3.8h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1m15.6,0h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1" transform="translate(-76.48 -0.06)"></path></g></svg><br><br>
+
+    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/DM9HLLTHIaU" title="Cosmic - Gravitate (Live Performance)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p style="text-align: center;">[A wavy and trippy video on YouTube of me performing as Cosmic in a pre-recorded, livestreamed concert. I am playing guitar and singing, while crazy and swirly visuals interupt the video] </p>
+    <a href="https://www.instagram.com/earthtocosmic/" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">view on instagram</a>
+
+        <a href="https://satorirecordsuk.bandcamp.com/album/gravitate-ep" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">view on bandcamp</a>
+
+        <a href="https://open.spotify.com/artist/56c8tykbh8jy0Wp3TxYVK4" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">listen on spotify</a>
+
+        <a href="https://www.satorirecords.co.uk/" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">visit record label website</a>
+
+        <a href="https://www.youtube.com/channel/UCltxsTWOxahnN85w7a1zZ2Q/videos" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">watch on YouTube</a>
+
+
+
+
+
 
     <hr style="width:50%; margin-left: 25%" class="w3-opacity ">
 
@@ -345,12 +417,22 @@ a:hover {
 
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey" style="text-align: right;">where can you find me?</h2>
-   
-    <hr style="width:100%" class="w3-opacity">
+    <br><br><hr style="width:100%" class="w3-opacity">
+
+    <div class="w3-half">
+      <audio controls>
+        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+    </div>
+
+    <div class="w3-half">
+      <h2 class="w3-text-light-grey" style="text-align: right;">where can you find me?</h2>
+    </div>
+    
+    <br><br><hr style="width:100%" class="w3-opacity">   
+
 
     <p>
-      come and chat to me via the linked icons below. saves my email address getting picked up by those web scraping bots.
+      come and chat to me via the linked icons below. it saves my email address from getting picked up by those dastardly web-scraping bots.
     </p>
 
 
@@ -363,7 +445,7 @@ a:hover {
     <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge w3-center">
     <a href="https://www.twitter.com/itslukesaudio"> <i class="fab fa-twitter-square fa-3x w3-hover-opacity"></i></a>
-    <a href="https://www.insa.com/lukesaudio"> <i class="fab fa-instagram-square fa-3x w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/lukesaudio"> <i class="fab fa-instagram-square fa-3x w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com/in/lukethomaschild/"> <i class="fab fa-linkedin fa-3x w3-hover-opacity"></i></a>
     <a href="https://www.researchgate.net/profile/Luke-Child"><i class="fab fa-researchgate fa-3x w3-hover-opacity"></i></a>
 
