@@ -1,491 +1,123 @@
 <!DOCTYPE html>
 <html>
-<title>Welcome to LukesAudio </title>
+<title>Index - LukesAudio </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="/2021 - Homepage.css">
 <script src="https://kit.fontawesome.com/f07ef7440b.js" crossorigin="anonymous"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manjari&display=swap" rel="stylesheet">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
 
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: 'Manjari', sans-serif; color: #EEE5E9;}
-p{color: #EEE5E9; font-size: 20px; text-align: left}
-h3{text-decoration: underline;}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #ff8a28;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
 
-.w3-bar-item, .w3-bar-item > *{
-  color: #141115;
-}
-
-
-iframe {
-  margin: 16px;
-  }
-
-.w3-button:hover, .w3-button:hover > * 
-{
-  background-color: #141115 !important;
-  color: white !important;
-
-}
-a:link {
- text-decoration: none;
-}
-a:hover {
- text-decoration: underline;
- 
-}
-
-
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: #ff8a28 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #ff8a28;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 </style>
 
 
-<body style="background-color: #141115;">
+<body>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <!--<img src="/w3images/avatar_smoke.jpg" style="width:100%"> -->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>home</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large ">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>about</p>
-  </a>
-  <a href="#projects" class="w3-bar-item w3-button w3-padding-large ">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>projects</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large ">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>contact</p>
-  </a>
-</nav>
+  <div class="w3-row">
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar  w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">home</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">about</a>
-    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">projects</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">contact</a>
-  </div>
-</div>
+    <div class="w3-half w3-mobile w3-container" id="leftSide" >
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center" id="home" style="background-color: #141115;">
-    
-    <h1 class="w3-xxxlarge"><span class="w3-hide-small w3-mobile">welcome to </span>lukesaudio</h1>
-    <p style="text-align: center;">audio perception, composition and creative technology (audio transcriptions coming soon!)</p>
-    <!--<img src="/images/photo.jpg" alt="a self portrait of me, a bearded, glasses wearing male with short dirty blonde hair, against a plain white wall. I am wearing a tie-dye long sleeved t shirt by the brand Rip and Dip. I am facing to my right, and have a small smile.  " class="w3-image" width="992" height="1108"> -->
-    <audio controls>
-      <source src="audio/test.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-    </audio>
- 
-  </header>
+      <!--MAIN CONTENT FOR THE LEFT SIDE START-->
+      <div class="w3-container w3-centered" style="margin: 16px; " id="leftSideContent">
+        
+        <div class="w3-container" id="leftSideInnerContent">
+          <div class="w3-container w3-centered w3-animate-left-fast" id="leftSideText" style="border: 4px solid #929ca3; background-color:white">
+            <div class="title">Luke Child</div>
+            <div class="subtitle">Audio Perception, Interaction and Accessibility researcher</div>  
+          </div>
+          
+          <div class="w3-container w3-padding-24 w3-animate-left-normal"  >
+            <div class="w3-row w3-center" style="border: 4px solid #929ca3; background-color:white">
+              <a href="about.html"><div class="w3-quarter w3-container w3-button w3-center">About Me</div></a>
+              <a href="research.html"><div class="ws3-quarter w3-container w3-button w3-center">Research</div></a>
+              <a href="music.html"><div class="w3-quarter w3-container w3-button w3-center">Music</div></a>
+              <a href="projects.html"><div class="w3-quarter w3-container w3-button w3-center">Projects</div></a>
+              <a href="contact.html"><div class="w3-quarter w3-container w3-button w3-center">Contact</div></a>
+            </div>
+          </div>
+        </div>
+        
 
-  <div class="slideshow-container">
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="images/me/me1.jpg" style="width:100%">
-      <div class="text" style="background-color: #141115;">A photo of myself in a tye dye Rip n Dip t-shirt smiling against a plain wall</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="images/me/me2.jpg" style="width:100%">
-      <div class="text" style="background-color: #141115;">A photo of myself mid-recording session playing a drum kit in the live room of Axe and Trap studios in Wells, UK</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="images/me/me3.jpg" style="width:100%">
-      <div class="text" style="background-color: #141115;">A photo of myself with a neutral expression against a graffiti-covered wall modelling a t-shirt from Satori Records</div>
+
+      </div>
+      <!--MAIN CONTENT FOR THE LEFT SIDE END-->
+
+          
+     
     </div>
 
- 
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-
-  <br>
-  <br>
-  <br>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" style="border:8px solid #EEE5E9; padding: 32px;" id="about">
-    <br><br><hr style="width:100%" class="w3-opacity">
-
-  
-    <div class="w3-half">
-      <audio controls>
-        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
-    </div>
-
-    <div class="w3-half">
-      <h2 class="w3-text-light-grey" style="text-align: right;">who the eff is luke?</h2>
-    </div>
-    
-    <br><br><hr style="width:100%" class="w3-opacity">
-    <p>Luke is an audio researcher, musician and creative working in Bristol, UK
-
-
-      <br><br>He grew up as a wee lad in Worcestershire, in the West Midlands where, as an angsty teen, 
-      he learned guitar and began writing math-infused alternative rock after becoming obsessed with the band Biffy Clyro. 
-      
-      <br><br>He ventured to Bristol to study Creative Music Technology, developing an interest in game audio and digital reverberation. 
-      He also formed the band 'Scrub' in this time, a tongue-in-cheek punk project writing songs about wacky occurrances, 
-      such as dancing old ladies, drag racing mothers and barista girlfriends. 
-
-      <br><br>These studies led him on to a Masters degree in Creative Technology, where Luke became invested in audio and accessibility, particularly
-      the ways in which reverberation is percieved. In this time, he also started the spacey alt-hop pseudonym 'Cosmic' on independent label
-      'Satori Records', releasing his first EP 'Gravitate' in February 2020. 
-
-      <br><br>Luke is currently writing papers and proposals towards starting a PhD in Audio Perception and Accessibility. 
-
-      <br><br>Away from these things, Luke is a pretty neighbourly chap. He enjoys making generative art, drinking Japanese whisky, LOVES corgis, and finds 4/4 unnerving, 
-      much preferring the finer palate of a good 5/4 with a dash of jazzy semblance to taste. 
-
-      <br><br><hr style="width:100%" class="w3-opacity">
-
-
+    <div class="w3-half w3-mobile w3-animate-right-slow" id="profileImage">
    
+     
 
-
-
-
-    </p>
-
-    <div class="w3-half">
-      <audio controls>
-        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+    <div class="container centered">
+      <img src="images/me/me5.jpg" alt="A glitched digital artwork of myself in a colourful tye dye long sleeved shirt that has been manipulated with a wind smudging effect that makes it look like I'm digitally being blown away"  style="width: 150%; min-height: 1000px; object-fit: cover;" id="starterImage">
+      <div class="overlay">
+        <div class="text">A glitched digital artwork of me I created in Photoshop using the Filter > Stylize > Wind functionality. I was wearing a tye dye long sleeved shirt in the original photo, so the result is a series of windswept colourful lines that loosely resemble a human figure (me!)</div>
+      </div>
     </div>
 
-    <div class="w3-half">
-      <h2 class="w3-text-light-grey" style="text-align: right;">where did I learn things?</h2>
-    </div>
-    
-    <br><br><hr style="width:100%" class="w3-opacity">
-
-    <h3>education</h3>
-    <p>
-      MSc Creative Technology - University of the West of England <br><br>
-      BSc Creative Music Technology - University of the West of England
-
-    </p>
-
-    <h3>notable work</h3>
-    <p>
-      Occasional Associate Lecturer - University of the West of England (2021-present)<br> 
-      Specialising in research and practice, perceptual audio evaluation and interactive audio<br><br>
-
-      Research Assistant - Remote:CTRL Residency with Mi.mu (2021-present)<br>
-      coordinating qualitative research studies with disabled artists using Mi.mu gloves for creative practice<br><br>
-      
-      Research Intern - PYTCH Bristol x UWE Foundry (summer 2020)<br>
-      developing virtual production technologies for live events technologies using Unreal Engine<br><br>
-
-      Student Representative for MSC Creative Technologies - University of the West of England (2019-2021)<br>
-      addressing student concerns and feedback alongside running study sessions and wellbeing check-ins for fellow students on my course
-
-    </p>
-
-    
-  </div>
-  <br>
-  <br>
-  <br>
-  <!-- Portfolio Section -->
-  <div class="w3-content w3-padding-64 w3-content w3-center " style="border:8px solid #EEE5E9; padding: 32px; ;" id="projects">
-
-    <br><br><hr style="width:100%" class="w3-opacity">
-    <div class="w3-half" style="text-align: left;">
-      <audio controls>
-        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
+    <div class="container centered">
+      <img src="images/me/me1.jpg" alt="A upper body portrait photograph of me, a white, bearded male wearing glasses and a colourful tye dye t shirt from the brand Rip n Dip. I am against a plain white wall. I am facing to the left and have a slight smile"  style="width: 150%; min-height: 1000px; object-fit: cover;">
+      <div class="overlay">
+        <div class="text">A upper body portrait photograph of me, a white, bearded male wearing glasses and a colourful tye dye t shirt from the brand Rip n Dip. I am against a plain white wall. I am facing to the left and have a slight smile </div>
+      </div>
     </div>
 
-    <div class="w3-half">
-      <h2 class="w3-text-light-grey" style="text-align: right;">what cool things have I done?</h2>
+    <div class="container centered">
+      <img src="images/me/me2 small.jpg" alt="A photograph taken of me playing drums in the live room of Axe and Trap studios in Wells, UK."  style="width: 150%; min-height: 1000px; object-fit: cover;" >
+      <div class="overlay">
+        <div class="text">A photograph taken of me playing drums in the live room of Axe and Trap studios in Wells, UK. The studio has a really warm and homely feel to it; there are old instruments around, the colour scheme is fairly natural and uses lots of wood/old rugs/baffling to decorate and treat the room. I'm playing a 4 piece drum set with 2 crashes, a ride and a set of high hats. There are two microphones placed above the drums in the photo, and other mics placed over the kit.   </div>
+      </div>
     </div>
-    
-    <br><br><hr style="width:100%" class="w3-opacity">
 
-    <h3 class="w3-text-light-grey" style="text-align: left">research</h3>
-    <hr style="width:100%" class="w3-opacity">
-    <p>
-      towards an audio attribute framework for understanding the perception of reverberant spaces 
-      through elicitation and clustering methods based on participant expectation (Child and Ford, 2021)</a>
+    <div class="container centered">
+      <img src="images/me/me3.jpg" alt="A very posey photograph of me modelling merchandise for the indie record label I am signed to, Satori Records. I am a white male, with a beard, short hair and glasses and I am stood against a graffiti covered wall down a side street in Bristol."  style="width: 150%; min-height: 1000px; object-fit: cover;">
+      <div class="overlay">
+        <div class="text">A very posey photograph of me modelling merchandise for the indie record label I am signed to, Satori Records. I am a white male, with a beard, short hair and glasses and I am stood against a graffiti covered wall down a side street in Bristol. I look a little moody, but that's just me trying to pose seriously for a photograph. I am wearing a black t shirt with the Satori Records logo on it. The logo is the kanji characters for Satori, which translates to enlightenment in English. </div>
+      </div>
+    </div>
 
-      <br>
-      <br>
+    <div class="container centered">
+      <img src="images/me/me4.jpg" alt="This is a scan of a polaroid picture my friend Ben took of me while visiting the Eden Project. I wanted a spacey photograph to use for my music side project, Cosmic. I am a white male with a beard, short hair and glasses. I am stood in front of an outdoor solar system installation wearing my spacey tye dye shirt."  style="width: 150%; min-height: 1000px; object-fit: cover;" >
+      <div class="overlay">
+        <div class="text">This is a scan of a polaroid picture my friend Ben took of me while visiting the Eden Project. I wanted a spacey photograph to use for my music side project, Cosmic. I am a white male with a beard, short hair and glasses. I am stood in front of an outdoor solar system installation wearing my spacey tye dye shirt. I have my eyes closed, but this was accidental, as right at the last second, I started into a reflection of the sun, but Ben caught the photo before I looked like I was squinting, and instead, I look like I'm asleep with a smile.</div>
+      </div>
+    </div>
 
-      <a href="https://www.aes.org/e-lib/browse.cfm?elib=21060" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">visit paper publication website</a>
+    <div class="container centered">
+      <img src="images/me/me7.jpg" alt="A photograph taken of me hiking up Buttermere in the Lake District. I am a white male with a beard, short hair and glasses. I am stood with my arms in a strong muscle flexing position due to my accomplishment of getting halfway up a mountain. I'm wearing a t shirt with a forest-like drawing of the author John Green on and the word Pizza underneath."  style="width: 150%; min-height: 1000px; object-fit: cover;">
+      <div class="overlay">
+        <div class="text">A photograph taken of me hiking up Buttermere in the Lake District. I am a white male with a beard, short hair and glasses. I am stood with my arms in a strong muscle flexing position due to my accomplishment of getting halfway up a mountain. I'm wearing a t shirt with a forest-like drawing of the author John Green on and the word Pizza underneath. This is a t shirt from the yearly Pizzamas celebration in the Vlogbrothers community. In the background is a view out over the Lake District, featuring the sky and grassy mountains. I am stood on a rocky gravel and stone path. </div>
+      </div>
+    </div>
 
-
-
-    </p>
-
-    <h3 class="w3-text-light-grey">music</h3>
-    <hr style="width:100%" class="w3-opacity ">
-
-    <h4 class="w3-text-light-grey">cosmic</h4>
-    <p>
-      a spacey trip hop experience delivered to you through satori records. Here, you'll find ambient polyrhythmic soundscapes, rap tracks about space and enough glitchiness to satisfy even the lowest of fi
-    </p>  
-    <svg class="w3-padding-16" id="svg" width="50%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.3 119.24"><defs><style>.cls-1{fill:#ffffff;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#1bfb0b;}</style></defs><title>Combined no lines</title><g id="svgg"><path id="path0" class="cls-1" d="M217.8.2C193.1,2.7,170.5,15,159.4,32l-1.3,1.9H157a30.16,30.16,0,0,1-3.6-.3c-30.4-3.6-64,.8-73.3,9.6C60.6,61.5,122,92.7,212.4,110.4c98.8,19.4,157.6,5.6,115.7-27-10-7.7-33.2-20.2-45.2-24.2-3.8-1.3-3.5-.9-3.4-4.2.7-15.4.1-20.4-3.1-27.2C269.4,13,254.3,3.3,233.8.6a108.22,108.22,0,0,0-16-.4m15.5,5.3c20.1,2.5,35.3,13.4,40,28.4,1.2,3.7,1.6,24.2.6,25.9a7.38,7.38,0,0,1-2.9.7c-1.5.3-4.5.8-6.7,1.2-11.9,2.1-20.2,2.1-35.5,0-21.3-3-48.9-12.6-60.7-21.3-1.8-1.4-6-5.3-6-5.8,0-1,2.6-4.3,6.4-8.1,12.1-12.1,29.3-19.6,48.8-21.4a142.47,142.47,0,0,1,16,.4M212.9,7.7c-6.6,1.4-24.5,9.9-33.5,15.9-5.7,3.8-6.9,5.3-5.6,6.7a34.65,34.65,0,0,0,5.6,3,37.27,37.27,0,0,1,3.5,1.6c2.5,1.3,2.3,1.4,6.2-2.5a146.15,146.15,0,0,1,16.7-14c5.4-4,7.8-6.1,9-7.5,2.5-2.8,1.8-4-1.9-3.2M197.7,18.5s-1.3,1.2-2.9,2.6-4.5,4.1-6.4,6.1l-3.5,3.5-2.6-.9c-3.1-1-3.4-1.3-2.4-2.2,2.2-1.8,17.8-9.8,17.8-9.1M139.5,35.8c11.5.6,19.6,2.1,21.9,3.9.5.4,1.8,1.5,2.9,2.5,21.9,19,84.3,32,107.5,22.5,2.3-.9,5.3-2.1,6.6-2.5,1.5-.5,5.6,1.2,18.2,7.4,49.5,24.5,54.3,41.6,12.7,45.3C238.1,121.2,91,81.8,80.1,53.5c-4.3-11.3,24.1-19.7,59.4-17.7m6.1,7.3c-12.4,2.8-20.7,18.8-15.2,29.3,3.9,7.4,14.9,10.9,20.1,6.3,1.9-1.6.1-2.2-3.9-1.2-8.7,2.3-16.7-5.8-15.1-15.1,2.6-14.9,19.8-23.1,27.1-12.9,1.3,1.8,1.6,2,2,1.1,1.9-4.3-7.7-9.2-15-7.5M167.1,60c-8.5,1.4-14,12.8-9.6,19.7,5.6,8.7,19.1,5.5,21.7-5.1,2.2-8.5-4-16-12.1-14.6m4.7,2.6c9.4,4.3,5.6,19.3-4.9,19.3-4.9,0-8.4-3.4-8.4-8.1-.1-7.6,7.4-13.9,13.3-11.2M196.4,65c-5.4,1.8-6,5.2-2.6,13.9,2.9,7.3,1.4,13.6-3.1,13.6-2.3,0-3.5-1.5-3.8-5s-.4-3.8-.7-4.2c-1.1-1.3-2.5,2.3-2.1,5.2,1,6.3,7,8.8,11.1,4.7,3.4-3.4,3.5-9.3.3-17-1.7-4.1-1.9-5-1-6.7,1.4-2.8,4.7-3.2,7.2-.9,1.3,1.2,1.9,1.2,1.8-.2.1-2.4-4.1-4.4-7.1-3.4m16.9,6.7c-3.9,2.6-6.8,24.8-3.7,28,1.1,1.1,1.4-.2.8-4.7-.9-7.1,1.9-21.9,3.9-20.7.6.4,1.4,3.8,2,9.1.9,7.8,1.8,8.4,3.9,2.8,1.9-5.1,4.9-9.7,6.3-9.5,2.1.3,2.1,6.2-.3,18.5-.6,3.3-.8,6-.3,6.3,2.8,1.8,6-19.7,3.7-24.8-1.9-4.3-4.9-3.5-8.6,2.3-2.2,3.3-2.1,3.3-2.4.8-.9-6.2-3.2-9.5-5.3-8.1m36.4,1.9c-.6.2-1.4.5-1.9.6-1.4.4-1.8,1.3-1.2,2.4a5.21,5.21,0,0,1,.6,1.5c.5,2,1.9,2.6,4.3,1.9.8-.2,1.8-.5,2.3-.6,1.7-.3,2.3-1.6,1.3-2.9a3.51,3.51,0,0,1-.6-1.4c-.2-1.7-2.4-2.4-4.8-1.5m20.9,5.1c-4.8,1.2-10.2,10.8-10.1,18.3,0,10.6,8.4,15.9,13.4,8.5,2-2.9,1.1-5.2-1.1-2.7-3.8,4.5-6.1,4.5-8.4.2-4.2-7.9,3-24.6,9.4-22,1.5.6,2.1-.4.9-1.5a5.07,5.07,0,0,0-4.1-.8M246.8,84c-2.1,2.2-9.3,20.3-9.3,23.2a1.82,1.82,0,0,0,.4,1.1l.4.5.7-.8c.7-.8,1.3-2.2,3-7,.5-1.4,2-5.4,3.4-8.8,2.7-6.9,3.2-8.2,3-8.6s-1-.3-1.6.4" transform="translate(-76.48 -0.06)"></path><path id="path2" class="cls-2" d="M166.5,23.1c-.8.8-1.4,1.5-1.4,1.5a13.31,13.31,0,0,0,1.6-1.5c.8-.8,1.4-1.5,1.4-1.5s-.8.7-1.6,1.5m-41,9.4h.9c.2,0,0-.1-.5-.1s-.7.1-.4.1m11,0h.9c.2,0,0-.1-.4-.1-.6,0-.8.1-.5.1m-14.1,3.2h.7c.2-.1,0-.1-.3-.1s-.6.1-.4.1m14,0h.7c.2-.1,0-.1-.3-.1-.5,0-.6.1-.4.1m138,11.8c0,3.2,0,4.5.1,2.8V44.5c-.1-1.5-.1-.2-.1,3M148.8,42.7h1c.2,0,0-.1-.6-.1s-.7.1-.4.1m-69.3.9-.8.9.8-.9c.8-.7,1-.8.8-.8l-.8.8m96.8,19.3c.4.4.7.7.8.7s-.2-.3-.6-.7-.7-.7-.8-.7a5.17,5.17,0,0,0,.6.7m71.2.4H249c.4,0,.1-.1-.7-.1s-1.2.1-.8.1M131.2,64.7c0,.7,0,.9.1.5V64c-.1-.3-.1,0-.1.7m24.6,9.6c0,.6,0,.8.1.4v-1c-.1-.2-.1,0-.1.6m72.1,7.1c0,.6,0,.9.1.5V80.8c0-.3-.1,0-.1.6m2.4,2.9c0,.4,0,.6.1.3v-.8c0-.2-.1,0-.1.5m-43.5,2.3c0,.5,0,.7.1.4v-.9c-.1-.2-.1,0-.1.5m147.1,2.2a14.47,14.47,0,0,0,1.7,1.6,11.14,11.14,0,0,0-1.5-1.6,14.47,14.47,0,0,0-1.7-1.6c-.1,0,.7.7,1.5,1.6M210.1,90.4c0,.4,0,.5.1.3a.85.85,0,0,0,0-.7c0-.2-.1,0-.1.4m52.8,7.1c0,.6,0,.8.1.4v-1c0-.2-.1,0-.1.6m.4,8.9a7.28,7.28,0,0,1,.6.7l.6.6-.5-.7c-.6-.6-.7-.7-.7-.6m24.5,9.1h1.6c.4,0,0-.1-.9-.1s-1.2,0-.7.1m8.1,0h1.5c.4,0,.1-.1-.7-.1s-1.2,0-.8.1m-12.5,3.8h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1m15.6,0h.8c.2-.1,0-.1-.5-.1s-.5,0-.3.1" transform="translate(-76.48 -0.06)"></path></g></svg><br><br>
-
-    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/DM9HLLTHIaU" title="Cosmic - Gravitate (Live Performance)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p style="text-align: center;">[A wavy and trippy video on YouTube of me performing as Cosmic in a pre-recorded, livestreamed concert. I am playing guitar and singing, while crazy and swirly visuals interupt the video] </p>
-    <a href="https://www.instagram.com/earthtocosmic/" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">view on instagram</a>
-
-        <a href="https://satorirecordsuk.bandcamp.com/album/gravitate-ep" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">view on bandcamp</a>
-
-        <a href="https://open.spotify.com/artist/56c8tykbh8jy0Wp3TxYVK4" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">listen on spotify</a>
-
-        <a href="https://www.satorirecords.co.uk/" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">visit record label website</a>
-
-        <a href="https://www.youtube.com/channel/UCltxsTWOxahnN85w7a1zZ2Q/videos" class="w3-btn" style="background-color:#EEE5E9; color: #141115; ">watch on YouTube</a>
-
-
-
-
-
-
-    <hr style="width:50%; margin-left: 25%" class="w3-opacity ">
-
-    <h4 class="w3-text-light-grey">scrub</h4>
-    <p>
-      a semi-serious punk duo with fellow audio researcher Corey Ford. We write songs about 86 year old dancing old ladies, barista girlfriends, and how a friend of mine's ex girlfriends mum drag raced cars in south wales
-    </p>
-    <a href="https://www.youtube.com/watch?v=t4SDr3AHNjk&list=PLNQOB1CgmMfLWMHWGMd49ydPpWwhSYqMW"><img src="/images/scrub3.jpg" alt="A photograph of myself and researcher Corey Ford sat on a sofa in Axe and Trap studios in Wells, UK. Corey is playing a guitar while I am sat to his side staring at him.  " class="w3-image w3-hover-opacity" width="50%"> </a>
-    <hr style="width:50%; margin-left: 25%" class="w3-opacity">
-
-
-    <h3 class="w3-text-light-grey">technology</h3>
-    <hr style="width:100%" class="w3-opacity">
-
-    <h4 class="w3-text-light-grey">worlds from words</h4>
-    <p>
-      a project using oculus vr and unity to visualise stories from members of bristol's homeless and rough sleeping communities
-    </p>
-    <a href="https://www.youtube.com/watch?v=7mMdHHbg_B0&list=PLNQOB1CgmMfJXQ1rrmEUL6YsGQCABXeIm"><img src="/images/worldsfromwordsdemo.JPG" alt="A photograph of my friend Michael testing out my worlds from words project on a macintosh computer" class="w3-image w3-hover-opacity" width="50%"> </a>
+    <div class="w3-container" style="text-align: center;">
+      <h2>You reached the end. Well done, you! :)</h2>
+    </div>
 
  
 
-    <h3 class="w3-text-light-grey">art</h3>
-    <hr style="width:100%" class="w3-opacity">
-
-    <!-- Grid for photos -->
-
-      <a data-flickr-embed="true" href="https://www.flickr.com/photos/193600793@N07/albums/72157719629050938" title="Generative Art"><img src="https://live.staticflickr.com/65535/51354907068_52b9de10f3_n.jpg" width="400" height="300" alt="Generative Art"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>   
-      <a data-flickr-embed="true" href="https://www.flickr.com/photos/193600793@N07/albums/72157719641721492" title="Aliens"><img src="https://live.staticflickr.com/65535/51355695445_6db4ca538c_c.jpg" width="400" height="300"  alt="Aliens"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
-
-
-
-    
-  <!-- End Portfolio Section -->
+    </div>
   </div>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <br><br><hr style="width:100%" class="w3-opacity">
-
-    <div class="w3-half">
-      <audio controls>
-        <source src="audio/test.mp3" type="audio/mp3">Your browser does not support the audio element.</audio>
-    </div>
-
-    <div class="w3-half">
-      <h2 class="w3-text-light-grey" style="text-align: right;">where can you find me?</h2>
-    </div>
-    
-    <br><br><hr style="width:100%" class="w3-opacity">   
 
 
-    <p>
-      come and chat to me via the linked icons below. it saves my email address from getting picked up by those dastardly web-scraping bots.
-    </p>
-
-
-
-
-  
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge w3-center">
-    <a href="https://www.twitter.com/itslukesaudio"> <i class="fab fa-twitter-square fa-3x w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/lukesaudio"> <i class="fab fa-instagram-square fa-3x w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/lukethomaschild/"> <i class="fab fa-linkedin fa-3x w3-hover-opacity"></i></a>
-    <a href="https://www.researchgate.net/profile/Luke-Child"><i class="fab fa-researchgate fa-3x w3-hover-opacity"></i></a>
-
-
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
 
 </body>
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
-</html>
