@@ -192,6 +192,8 @@ i:hover
     
   }
 
+  
+
   .containerProjects
   {
     position: relative;
@@ -235,6 +237,7 @@ i:hover
   .containerProjects:hover .overlayProjects {
     opacity: 1;
   }
+
 
   
   
