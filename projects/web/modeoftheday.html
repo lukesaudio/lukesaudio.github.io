@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<title>Mode of the Day - LukesAudio </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="/2021 - Homepage.css">
+<script src="https://kit.fontawesome.com/f07ef7440b.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="stylesheet" type="text/css" href="p5/style.css">
+
+
+<!--
+  Fonts for Generator
+-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+
+
+<script src="p5/libraries/p5.min.js"></script>
+<script src="p5/libraries/p5.sound.min.js"></script>
+<script src="p5/libraries/p5.easycam.min.js"></script>
+<script src="p5/libraries/p5.accessibility.js"></script>
+<script src="p5/libraries/quicksettings.js"></script>
+<script src="p5/libraries/p5.gui.js"></script>
+<script src="p5/libraries/p5.dom.js"></script>
+<script src="p5/libraries/dat.gui.js"></script>
+
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Colours ["#F39B6D orange","#183059" space cadet,"#eff9f0 white" "#276FBF blue" "#270722 Dark purple"-->
+
+
+
+
+<body>
+
+
+    <div class="w3-display-middle">
+
+      
+
+          <h3 class="w3-center w3-animate-left-fast" id="modeText">"WHAT IS THE MODE OF THE DAY, CHEF?"</h3>    
+          <div class="w3-container w3-animate-right-fast"  style="text-align: center;">
+            <button onclick="replaceText()" >let me see...</button>
+          </div>      
+
+
+    </div>
+
+    <div class="w3-display-bottommiddle" style="margin-bottom: 64px;">
+      <a href="../../projects.html"><div class="w3-button" style="font-size:large; width: 100%;">Go back to projects</div></a>
+
+    </div>
+
+
+   
+
+    
+
+
+</body>
+
+<script>
+
+      
+    
+var baseText = document.getElementById("modeText");
+
+  var adjectives = ['acerbic','acid','acidic','acrid','aftertaste','aged','ambrosial','ample','appealing','appetizing','aromatic','astringent','baked','balsamic','beautiful','bite-size','bitter','bland','blazed','blended','blunt','boiled','brackish','briny','brown','browned','burnt','buttered','caked','calorie','candied','caramelized','caustic','center cut','char-broiled','cheesy','chilled','chocolate','chocolate flavored','choice','cholesterol free','chunked','cinnamon','classic','classy','clove  coated','cold','cool','copious','country','crafted','creamed','creamy','crisp','crunchy','cured','cutting','dazzling','deep-fried','delectable','delectable','delicious','delight','delightful','distinctive','doughy','dressed','dripping','drizzle','drizzled','dry','dulcified','dull','edible','elastic','encrusted','epicurean taste','extraordinary','famous','fantastic','fetid','fiery','filet','fizzy','flaky','flat','flavored','flavorful','flavorless','flavorsome','fleshy','fluffy','fragile','free','free – range','fresh','fried','frosty','frozen','fruity','full','full-bodied','furry','famy','garlic','garlicky','generous','generous portion','gingery','glazed','golden','gorgeous','gourmet','greasy','grilled','gritty','gustatory','half','harsh','heady','heaping','heart healthy','heart smart','hearty','heavenly','homemade','honey','honeyed','honey-glazed','hot','ice-cold','icy','incisive','indulgent','infused','insipid','intense','intriguing','juicy','jumbo','large','lavish','layered','lean','leathery','lemon','less','light / lite','lightly salted','lightly-breaded','lip smacking','lively','low','low sodium','low-fat','lukewarm','luscious','lush','marinated','mashed','mellow','mild','minty','mixed','mixture of','moist','moist','mouth-watering','nationally famous','natural','nectarous','non-fat','nutmeg','nutty','oily','open face','organic','overpowering','palatable indicates','penetrating','peppery','perfection','petite','pickled','piquant','plain','pleasant','plump','poached','popular','pounded','prepared','prickly','pulpy','pungent','pureed','rancid','rank','reduced','refresh','rich','ripe','roasted','robust','rotten','rubbery','saccharine','saline','salty','savory','sapid','saporific','saporous','satin','satiny','sauteed','savorless','savory','scrumptious','sea salt','seared','seasoned','served in','served with','sharp','sharp-tasting','silky','simmered','sizzling','skillfully','small','smelly','smoked','smoky','smooth','smothered','soothing','sour','southern style','special','spiced','spicy','spiral-cut','spongy','sprinkled','stale','steamed','steamy','sticky','stinging','strawberry flavored','strong','stuffed','succulent','sugar coated','sugar free','sugared','sugarless','sugary','superb','sweet','sweet-and-sour','sweetened','syrupy','tangy','tantalizing','tart','tasteful','tasteless','tasty','tender','tepid','terrific','thick','thin','toasted','toothsome','topped','tossed','tough','traditional','treacly','treat','unflavored','unsavory','unseasoned','vanilla','vanilla flavored','velvety','vinegary','warm','waxy','weak','whipped','whole','wonderful','yucky','yummy','zesty','zingy'];
+  var key = "c";
+  var mode = [];
+  var modeIndex = 0;
+  var modeValues;
+  var finalNoteString = "";
+ 
+  var notes = [];  
+  var fonts = [];
+
+  var ionian      = [0, 2, 4, 5, 7, 9, 11, 12];
+  var dorian      = [0, 2, 3, 5, 7, 9, 10, 12];
+  var phrygian    = [0, 1, 3, 5, 7, 8, 10, 12];
+  var lydian      = [0, 2, 4, 6, 7, 9, 11, 12];
+  var mixolydian  = [0, 2, 4, 5, 7, 9, 10, 12];
+  var aeolian     = [0, 2, 3, 5, 7, 8, 10, 12];
+  var locrian     = [0, 1, 3, 5, 6, 8, 10, 12];
+
+
+
+  notes.push("A");
+  notes.push("A#/Bb");
+  notes.push("B");
+  notes.push("C");
+  notes.push("C#/Db");
+  notes.push("D");
+  notes.push("D#/Eb");
+  notes.push("E");
+  notes.push("F");
+  notes.push("F#/Gb");
+  notes.push("G");
+  notes.push("G#/Ab");  
+
+  mode.push("Ionian");
+  mode.push("Dorian");
+  mode.push("Phrygian");
+  mode.push("Lydian");
+  mode.push("Mixolydian");
+  mode.push("Aeolian"); 
+  mode.push("Locrian");
+
+  fonts.push("font-family: 'Grandstander', cursive;\">");
+  fonts.push("font-family: 'Fredoka One', cursive;\">");
+  fonts.push("font-family: 'Bangers', cursive;\">");
+
+
+
+
+  
+
+  function setMode(modeName)
+
+
+  {
+
+    switch(modeName)
+    {
+      case "Ionian":
+        modeValues = ionian;
+        modeIndex = 0;
+
+        break;
+
+        case "Dorian":
+        modeValues = dorian;
+        modeIndex = 1;
+
+        break;
+
+        case "Phrygian":
+        modeValues = phrygian;
+        modeIndex = 2;
+
+        break;
+
+        case "Lydian":
+        modeValues = lydian;
+        modeIndex = 3;
+
+        break;
+
+        case "Mixolydian":
+        modeValues = mixolydian;
+        modeIndex = 4;
+
+        break;
+
+        case "Aeolian":
+        modeValues = aeolian;
+        modeIndex = 5;
+
+        break;
+
+        case "Locrian":
+        modeValues = locrian;
+        modeIndex = 6;
+
+        break;
+
+     
+    }
+
+    key = notes[Math.floor(Math.random() * notes.length)];
+  }
+  
+
+function replaceText()
+{
+
+  
+  setMode(mode[Math.floor(Math.random() * mode.length)]);
+  getNotes();
+
+  console.log("mode is set to " + mode[modeIndex]);
+
+  var fontUsed = fonts[Math.floor(Math.random() * fonts.length)];
+  var fontUsed2 = fonts[Math.floor(Math.random() * fonts.length)];
+
+  var adjectiveUsed = adjectives[Math.floor(Math.random() * adjectives.length)];
+  var adjectiveUsed2 = adjectives[Math.floor(Math.random() * adjectives.length)]
+
+  baseText.innerHTML = "Today's mode is a <span style=\"" + fontUsed + " " + adjectiveUsed  + "</span>" + " " + key + " " + mode[modeIndex] + " <br>with <span style=\"" +fontUsed2 + adjectiveUsed2 + "</span>"   +  " notes of:<br><br>" + finalNoteString + "<br><br>" ;
+
+
+  
+  
+
+}
+
+function getNotes()
+{
+  var index = notes.indexOf(key);
+  var nextNote;
+  finalNoteString = "";
+  for(var i = 0; i < modeValues.length; i++)
+  {
+    console.log(index + " and the mode index " + modeValues[i]);
+    var temp = index + modeValues[i];
+    if(temp >= 12) temp -=12;
+    finalNoteString += "[" + notes[temp] + "] ";
+
+    console.log(finalNoteString);
+
+  }
+}
+
+
+
+</script>
+
+
+
+
+</html>

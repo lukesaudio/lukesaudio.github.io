@@ -1,236 +1,93 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Research - LukesAudio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="websiteTheme.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<title>Research - LukesAudio </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="/2021 - Homepage.css">
+<script src="https://kit.fontawesome.com/f07ef7440b.js" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="websiteScript.js"></script>
-
-        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
 
-    </head>
+<style>
+
+
+
+</style>
 
 
 <body>
 
-  <!---------------------------------------CORE WEBSITE BACKGROUND AND NAVIGATION---------------------------------------->
+  <div class="w3-row">
 
+    <div class="w3-half w3-mobile w3-container w3-animate-left-fast" id="leftSide" >
+
+      <!--MAIN CONTENT FOR THE LEFT SIDE START-->
+      <div class="w3-container w3-centered" style="margin: 16px; " id="leftSideContent">
         
-        
+        <div class="w3-container" id="leftSideInnerContent">
+          <div class="w3-container w3-centered" id="leftSideText" style="border: 4px solid #929ca3; background-color:white">
+            <div class="title">Research</div>
+            <a href="index.html"><div class="w3-quarter w3-container w3-button w3-center" style="font-size:large; margin-top: 16px;margin-bottom: 16px">Go to the Homepage</div></a>
 
-<div class="indexHeroImageText">
+          </div>
+          
+          <div class="w3-container w3-padding-24" >
+            <div class="w3-row w3-center" style="border: 4px solid #929ca3; background-color:white;  max-height: 500px;" id=aboutText  >
+              <p style="padding-left: 16px; padding-right: 16px;">
+               I am currently active in audio perception research, specifically involving how reverberation is perceieved individually, and if there are links between how we each describe our perceptions (hint: there are!)<br><br>
+               I'm also active  in audio accessibility and game audio research. 
+               <h3>Publications:</h3>
+               <ul>
+                <li><a href="https://www.aes.org/e-lib/browse.cfm?elib=21060"><p>Towards an audio attribute framework for understanding the perception of reverberant spaces through elicitation and clustering methods based on participant expectation</p></a></li>
+               
+              </ul>
 
-    <h1>Research</h1>
-    <a href="/index.html"><div class="btn">Home</div></a>
-    <a href="/about.html"><div class="btn">About</div></a>
-    <a href="/research.html"><div class="btn">Research</div></a>
-    <a href="/music.html"><div class="btn">Music</div></a>
-    <a href="/code.html"><div class="btn">Code</div></a>
-
-
-
-        
-
-</div>
-
-        <!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="/index.html"><div class="btn">Home</div></a>
-    <a href="/about.html"><div class="btn">About</div></a>
-    <a href="/research.html"><div class="btn">Research</div></a>
-    <a href="/music.html"><div class="btn">Music</div></a>
-    <a href="/code.html"><div class="btn">Code</div></a>
-  </div>
-
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-<div class="w3-container"   >
-  <div class="w3-container w3-row" onclick="openNav()">
-    <div class="w3-half">
-      <i   class="fas fa-bars fa-3x w3-centered" id="openButton" ></i>
-    </div>  
-
-    <div class="w3-half" style="text-align: right;">
-      <h2 class="researchHeader">Research</h2>
-    </div>  
-  </div>
-  
-  
-
-    
-</div>
+               <h3>Research Projects:</h3>
+               <ul>
+                <li><a href="https://remote-ctrl.mimugloves.com/"><p><b>RESEARCH ASSISTANT: </b>Remote_CRTL: A Creative Research & Development Residency</p></a></li>
 
 
-
-<div class="w3-container researchText" >
-
-  <div class="tab">
-       
-
-    <button  style="min-width: 150px;" class="tablinks" id="start" style="display: block;" onclick="openTab(event, 'Publications')">Publications</button>
-    <button  style="min-width: 150px;" class="tablinks" onclick="openTab(event, 'Research Projects')">Research Projects</button>
-    <button  style="min-width: 150px;" class="tablinks" onclick="openTab(event, 'Other Works')">Other works</button>
-    
-  </div>
-  <div class="researchTextSegment w3-row">
-  
-    <div class="w3-mobile">
+               </ul>
 
 
-
-      <div id="Publications" class="tabcontent" style="overflow-y: auto;">
-        <div class="w3-container tabText" style="border: solid;">
-          <h3 style="text-decoration: underline;">Towards an audio attribute framework for understanding the perception of 
-            reverberant spaces through elicitation and clustering methods based on participant expectation (Child and Ford 2021)</h3>
-          <p style="font-size:20px">
-           Presented at the AES 150th Convention (May, 2021)
-            <a class="researchButtons"  href="https://www.aes.org/e-lib/browse.cfm?elib=21060">Visit AES page (membership required to access paper)</a>
-
-          </p>
-        </div>
-
-      </div>
-
-      
-     
-      
-      <div id="Research Projects" class="tabcontent">
-        <div class="w3-container tabText">
-          <h3 style="text-decoration: underline;">Remote_CTRL - A Creative Research & Development Residency (2021)</h3>
-
-          <p style="font-size:20px">
-           
-           Remote_CTRL is a new research and development residency. We’re inviting five Disabled creatives to spend the summer of 2021 making new work, exploring and expanding their creative practice with the use of MiMU Gloves.
-
-          <a class="researchButtons"  href="https://remote-ctrl.mimugloves.com/">Project Website</a>
-
-          </p>
-        </div>
-
-        <div class="w3-container tabText">
-          <h3 style="text-decoration: underline;">Virtual Production Research Internship - PYTCH Bristol x UWE Foundry</h3>
-
-          <p style="font-size:20px">  
-           
-            Working alongisde PYTCH Bristol x UWE Foundry for 3 months to research into the development a bespoke in-house cave screen setup for virtual production in Unreal Engine 4
-            using Oculus Quest tracking
-
-          <a class="researchButtons"  href="https://pytch.co.uk/knowledge/the-virtual-venue">Project Outcome</a>
-
-          </p>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div id="Other Works" class="tabcontent ">
-        <div class="w3-container tabText">
-          <h3 style="text-decoration: underline;">Utilising Elicitation Methods to Understand and Design Informative and Accessible Experiences of Digital Reverberation - Masters Dissertation</h3>
-
-          <p style="font-size:20px">
-            <a class="researchButtons"  href="/files/masters_dissertation.pdf">View PDF</a>
-
-          </p>
-
-        </div>
-
-        <div class="w3-container tabText">
-          <h3 style="text-decoration: underline;">Developing a Framework for Understanding Reverberation Perception to Enhance Immersion in Virtual Environments - Masters Extended Abstract</h3>
-
-          <p style="font-size:20px">
-            <a class="researchButtons"  href="/files/masters_extended_abstract.pdf">View PDF</a>
-
-          </p>
-
-        </div>
-
-        <div class="w3-container tabText">
-          <h3 style="text-decoration: underline;">Exploring Adaptive Reverberation Systems in Video Games - Undergraduate Dissertation</h3>
-
-          <p style="font-size:20px">
-            <a class="researchButtons"  href="/files/undergraduate_dissertation.pdf">View PDF</a>
-
-          </p>
-
-        </div>
-      </div>
-      
-    
+      <!--MAIN CONTENT FOR THE LEFT SIDE END-->
     </div>
-      
 
-
-  </div>
-</div>
-
-
-
-<!---------------------------------------CORE WEBSITE BACKGROUND AND NAVIGATION END---------------------------------------->
-
-      
-</body>
-<script>
- 
-
-var started = false;
-
-
- document.getElementById('start').style.display = "block";
- document.getElementById('start').className += " active";
-
- document.getElementById('Publications').style.display = "block";
-
-
-
-  function openTab(evt, tabLabel) 
-  {
-
-    if(started == false)
-    {
-      document.getElementById('start').className.replace(" active", "");
-      started = true;
-
-    }
-
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabLabel).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-  </script>
-
+    <div class="w3-half w3-mobile w3-animate-right-normal" id="profileImage">
+   
   
-</html>
+      <div class="container centered">
+        <img src="images/me/me8.jpg" alt="This is a photograph I took after being accepted for my first publication in AES after handing in my Masters thesis. I am a white male with a beard, short hair and glasses, wearing a brown woolen shirt. I have folded the title page of my thesis into a paper aeroplane and am gesturing to throw it towards the right of the frame. The background is a plain white wall."  style="width: 150%; min-height: 1000px; object-fit: cover;">
+        <div class="overlay">
+          <div class="text">This is a photograph I took after being accepted for my first publication in AES after handing in my Masters thesis. I am a white male with a beard, short hair and glasses, wearing a brown woolen shirt. I have folded the title page of my thesis into a paper aeroplane and am gesturing to throw it towards the right of the frame. The background is a plain white wall. </div>
+        </div>
+      </div>
+  
+  
+   
+  
+      </div>
+    </div>
+    
+
+    
+  </div>
 
 
+
+
+</body>
 
