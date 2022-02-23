@@ -4,6 +4,13 @@ var backgroundImg, ufo, beam, platform;
 
 var touchdown, gravitate;
 
+var albums;
+
+var currentlyCarrying;
+
+
+var prevPosition;
+
 function setup() {
   createCanvas(screen.availWidth,screen.availHeight );
   
@@ -20,7 +27,9 @@ function setup() {
   ufo.addImage(ufoGraphic);
 
   beam = createSprite(ufo.position.x, ufo.position.y + 35);
-  beam.setCollider("rectangle", 0, 0, 600, 100);
+  beam.setCollider("rectangle", 0, 35, 600, 100);
+
+  albums = new Group();
 
   touchdown = createSprite(500, 500);
   var touchdownGraphic = loadImage('assets/touchdown.jpg');
@@ -29,6 +38,17 @@ function setup() {
   gravitate = createSprite(800, 500);
   var gravitateGraphic = loadImage('assets/gravitate.jpg');
   gravitate.addImage(gravitateGraphic);
+
+  albums.add(touchdown);
+  albums.add(gravitate);  
+
+  isCarrying = false;
+  currentlyCarrying = "none";
+
+
+
+
+
 } 
 
 function draw() {
@@ -61,13 +81,68 @@ function draw() {
 
   if(keyDown(" "))
   {
-    line(ufo.position.x, ufo.position.y + 35, ufo.position.x, ufo.position.y + 300);
-    line(ufo.position.x, ufo.position.y + 35, ufo.position.x + 300, ufo.position.y + 300);
-    line(ufo.position.x, ufo.position.y + 35, ufo.position.x - 300, ufo.position.y + 300);
+    line(ufo.position.x - 300, ufo.position.y + 300, ufo.position.x + 300, ufo.position.y + 300) 
+
+    if(albums.overlap(beam))
+    {
+      console.log("overlapping");  
+
+      if(currentlyCarrying == "none")
+      {
+        console.log("Currently carrying == " + currentlyCarrying);  
+        albums.overlap(beam, attach);
+      }
+    
+      
+    }
+
+
+  }
+
+  if(keyWentUp(" "))
+  {
+    isCarrying = false;
+    currentlyCarrying = "none";
+    console.log("isCarrying == " + isCarrying);
+    console.log("Currently carrying == " + currentlyCarrying);  
 
   }
 
 
 
+
+
+
+
+
   drawSprites();
 } 
+
+function attach() 
+{
+
+
+if(this == touchdown)  
+{
+currentlyCarrying = "touchdown";
+console.log("Currently carrying == " + currentlyCarrying);  
+
+
+}
+else if(this == gravitate)
+{
+  currentlyCarrying = "gravitate"
+  console.log("Currently carrying == " + currentlyCarrying);  
+
+}
+else
+{
+  currentlyCarrying = "none"
+  console.log("Currently carrying == " + currentlyCarrying);  
+
+}
+
+
+  
+    
+}
