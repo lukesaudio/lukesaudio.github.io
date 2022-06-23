@@ -151,7 +151,6 @@ a:hover
 .navButton
 {
   visibility: hidden;
-  margin: 16px;
 }
 
 .overlay {
@@ -172,7 +171,7 @@ a:hover
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 10%; /* 25% from the top */
+  top:5%; /* 25% from the top */
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -183,19 +182,18 @@ a:hover
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
+  right: 0px;
+  top: 2%;
   font-size: 60px;
 }
+
+
 
 @media only screen and (max-width: 600px) 
 {
 
   .overlay .closebtn 
   {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
     display: block;
     visibility: visible;
 
@@ -248,7 +246,7 @@ a:hover
 .indexHeaderMobile
 {
   position: relative;
-  top: 25%;
+  top: 20%;
   width: 100%;
   display: none;
   text-align: center;
