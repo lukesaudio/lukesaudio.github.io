@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Calistoga
-- Font Author: Copyright 2019 The Calistoga Project Authors (https://github.com/SorkinType/Calistoga)
-- Font Source: http://fonts.gstatic.com/s/calistoga/v8/6NUU8F2OJg6MeR7l4e0vtMYAwdRZfw.ttf
+- Font Title: Poppins
+- Font Author: Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
+- Font Source: http://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLBT5V1tvFP-KUEg.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

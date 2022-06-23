@@ -1,296 +1,180 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>About - LukesAudio</title>
+    <head>      
+        <!---------------------------------------------------------------------------- HOUSEKEEPING -->      
+        <meta charset="UTF-8">
+        <title>lukesaudio - about</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="websiteTheme.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
+        
+        <!---------------------------------------------------------------------------- JS -->      
         <script type="text/javascript" src="websiteScript.js"></script>
 
+        <!---------------------------------------------------------------------------- EXTERNAL CSS -->      
+        <link rel="stylesheet" href="websiteTheme.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+
+        <!---------------------------------------------------------------------------- FAVICON/MANIFEST -->      
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="images/favicon/site.webmanifest">
-
-
+        <link rel="manifest" href="images/favicon/site.webmanifest">    
 
     </head>
 
- 
+    <body>
+        <!----------------------------------------------------- TEMPLATE START -->      
+        <!---------------------------------------------------------------------------- NAVIGATION BAR DESKTOP -->      
 
-<body>
+        <div class="navIcons">
+            <div class="w3-row" style="width: 80%; margin: auto;">
+                <div class="w3-col w3-container" style="width:14%; padding: 0; ">
+                <a id="aboutPage" href="/index.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">home</span></a>
+                <a href="index.html"><p class="animate__animated animate__fadeIn">Home</p></a>
 
-  <!---------------------------------------CORE WEBSITE BACKGROUND AND NAVIGATION---------------------------------------->
+                </div>
 
+                <!-------------------------------------------------------------->      
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0; ">
+                <a id="aboutPage" href="/about.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">badge</span></a>
+                <a href="about.html"><p class="animate__animated animate__fadeIn">About</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="musicPage"     href="/music.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">radio</span></a>
+                <a href="music.html"><p class="animate__animated animate__fadeIn">Music</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="audioPage"     href="/audio.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">speaker</span></a>
+                <a href="audio.html"><p class="animate__animated animate__fadeIn">Audio</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="codePage"      href="/code.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">terminal</span></a>
+                <a href="code.html"><p class="animate__animated animate__fadeIn">Code</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="researchPage"  href="/research.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">school</span></a>
+                <a href="research.html"><p class="animate__animated animate__fadeIn">Research</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;"> 
+                <a id="artPage" href="/art.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">image</span></a>
+                <a href="art.html"><p class="animate__animated animate__fadeIn" style="border-right: solid;">Art</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+            </div>
+        </div>
+
+        <!---------------------------------------------------------------------------- NAVIGATION OVERLAY MOBILE -->      
+
+
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-------------------------------------------------------------->
+
+
+            <div class="overlay-content">
+                <div class="navIconsMobile">
+
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col    w3-container" style="width:100%; ">
+                            <a href="/index.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">home</span></a>
+                            <a href="index.html"> <p style="border-right: solid;">Home</p></a>
+                        </div>
+                    </div>
+
+                    <!-------------------------------------------------------------->
+                    
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col    w3-container" style="width:50%; ">
+                            <a id="aboutPage" href="/about.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">badge</span></a>
+                            <a href="about.html"><p>About</p></a>
+                        </div>
+                        
+                        <!-------------------------------------------------------------->
+
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="musicPage"     href="/music.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">radio</span></a>
+                            <a href="music.html"> <p style="border-right: solid;">Music</p></a>
+                        </div>
+                    </div>
+
+                    <!-------------------------------------------------------------->
+                    
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="audioPage"     href="/audio.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">speaker</span></a>
+                            <a href="audio.html" "><p>Audio</p></a>
+                        </div>
+
+                        <!-------------------------------------------------------------->
+                    
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="codePage"      href="/code.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">terminal</span></a>
+                            <a href="code.html"> <p style="border-right: solid;">Code</p></a>
+                        </div>        
+                    </div>
+
+                    <!-------------------------------------------------------------->
+                    
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="researchPage"  href="/research.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">school</span></a>
+                            <a href="research.html"><p>Research</p></a>
+                        </div>
+
+                        <!-------------------------------------------------------------->
+
+                        <div class="w3-col  w3-container" style="width:50%"> 
+                            <a id="artPage" href="/art.html"><span class="icon animate__animated animate__fadeIn   material-icons-two-tone grow md-mobile">image</span></a>
+                            <a href="art.html"> <p style="border-right: solid;">Art</p></a>
+                        </div>
+                    </div>
+                
+                    <!-------------------------------------------------------------->
+                
+                </div>  
+            </div>
+
+        </div>
+
+        <span class="navButton material-icons-two-tone md-13" style="cursor:pointer; " onclick="openNav()">menu</span>
+
+        <!----------------------------------------------------- TEMPLATE END -->    
         
-        
+        <img src="/images/about/2.jpg" style="width: 100%;">
 
-<div class="indexHeroImageText">
 
-    <h1>About</h1>
-    <a href="/index.html"><div class="btn">Home</div></a>
-    <a href="/about.html"><div class="btn">About</div></a>
-    <a href="/research.html"><div class="btn">Research</div></a>
-    <a href="/music.html"><div class="btn">Music</div></a>
-    <a href="/code.html"><div class="btn">Code</div></a>
-
-
-
-        
-
-</div>
-
-        <!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="/index.html"><div class="btn">Home</div></a>
-    <a href="/about.html"><div class="btn">About</div></a>
-    <a href="/research.html"><div class="btn">Research</div></a>
-    <a href="/music.html"><div class="btn">Music</div></a>
-    <a href="/code.html"><div class="btn">Code</div></a>
-  </div>
-
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-
-<div class="w3-container"   >
-  <div class="w3-container w3-row" onclick="openNav()">
-    <div class="w3-half">
-      <i   class="fas fa-bars fa-3x w3-centered" id="openButton" ></i>
-    </div>  
-
-    <div class="w3-half" style="text-align: right;">
-      <h2 class="aboutHeader">About</h2>
-    </div>  
-  </div>
-  
-
-    
-</div>
-
-<!---------------------------------------CORE WEBSITE BACKGROUND AND NAVIGATION END---------------------------------------->
-
-
-
-
-<div class="w3-container aboutText" >
-
-
-
-
-  <div class="aboutTextSegment w3-row">
-  
-    <div class="w3-mobile w3-threequarter">
-      <p>
-        You've entered the realm of Luke Child, a fiercely proud West Midlander currently lost in the graffitied jungle known as Bristol.
-        Known for his love of the weird and wonderful in creative practice, Luke is a researcher, musician, and enjoyer/destroyer of things.
-       
-        Care to take a look around? This is not, I dare say, the Bristol botanical gardens. 
-        Have you any idea where you are? Where you truly are? Welcome to the deceptively verdant mind of the Luke Thomas Child. 
-        That's right! You're in the head of a fantastical, absurdly creative technologist!<br><br>
-        <a href="https://en.uesp.net/wiki/Skyrim:Sheogorath">(why does that passage sound weirdly familiar..?)</a>
-
-        <br>  
-        <br>  
-
-        <a class="next aboutButtons"  onclick="plusSlides(1)">>Explore this mysterious fellow further</a>
-        <a class="prev aboutButtons" href="https://cataas.com/cat">>BORING. Show me a random cat instead</a>
-        
-      </p>
-    
-   
-    </div>
-
-
-</div>
-
-
-
-<div class="aboutTextSegment w3-row">
-  
-  <div class="w3-mobile w3-threequarter">
-    <p>
-      And so into history we delve! Luke was born in Worcester, <a href="https://www.bbc.co.uk/news/resources/idt-sh/views_from_an_average_town">Britains most average place.</a>
-      He started out actually wanting to be an animator, but given the lack of anything hand drawn on this website, you can see how well that went. Instead,
-      inspired by a Welsh fridge magnet given to him by his Nan, Luke took up acoustic guitar aged 12, electric guitar aged 13, and singing aged 14. During
-      this time, he was in a <a href="https://www.youtube.com/user/NewGeneration212">super cool high school cover band</a>, a super dark and heavy metal band and 
-      a competing high school acapella group. But, contrasting everything else, he had a bunch of nerdy programmer/DnD friends, and they were sure as hell getting him 
-      into programming...
-
-      <br><br>
-
-      <br>  
-
-      <a class="next aboutButtons"  onclick="plusSlides(1)">>Okay, so music and programming?</a>
-      <a class="prev aboutButtons" onclick="plusSlides(-1)">>Retrace your steps</a>
-      
-    </p>
-  
- 
-  </div>
-
-
-</div>
-
-<div class="aboutTextSegment w3-row">
-  
-  <div class="w3-mobile w3-threequarter">
-    <p>
-      Indeed! Luke got massively into games when he was about 14, and spent lots of time playing various games, including TES IV and V, Minecraft, Civilisation V, 
-      Left for Dead 2, but perhaps most crucially... Bioshock. After completing the game and being in awe at the 'Would you kindly?' twist, Luke had a revelation and thought
-      "You know what, I wanna do games for a living!".
-      <br>"...but I don't code or draw, I do sound and music", he thought to himself. And it was here Luke realised, he was gonna have to be someone who makes sounds and 
-      music for games. Armed with this new drive and an SM58, he got better at coding, learned some jazzy chords and modes on guitar and
-      <a href="https://itslukesaudio.bandcamp.com/album/gentle-hands-2014-demo">wrote his first bunch of songs.</a>
-
-      <br><br>
-
-
-      <a class="next aboutButtons"  onclick="plusSlides(1)">>Cool! Let's pick up the pace a bit though...</a>
-      <a class="prev aboutButtons" onclick="plusSlides(-1)">>Retrace your steps</a>
-
-    </p>
-  
- 
-  </div>
-
-
-</div>
-
-<div class="aboutTextSegment w3-row">
-  
-  <div class="w3-mobile w3-threequarter">
-    <p>
-      Okay okay...<br>
-      Luke evolved out of his angsty emo phase and wish for snakebite piercings (sorry Mum) and went to university at UWE in Bristol.
-      He did degree in Creative Music Technology and made lots of cool stuff, including <a href="https://itslukesaudio.bandcamp.com/album/university">
-      covers of Stevie Wonder and TLC, some slightly wacky attempts at jazz and score-oriented composition</a>. It was around this time he met some
-      fantastic people who helped him realise that learning and doing stuff is cool. Luke got super into reverberation and spatial audio at this point,
-      writing a dissertation on Adaptive Reverberation in Video Games and building an adaptive reverberation system (or *ahem* ARS for short. I was very mature).
-      <br><br>
-
-
-      <a class="next aboutButtons"  onclick="plusSlides(1)">>Makes sense. What happened from here?</a>
-      <a class="prev aboutButtons" onclick="plusSlides(-1)">>Retrace your steps</a>
-
-    </p>
-  
- 
-  </div>
-
-
-</div>
-
-<div class="aboutTextSegment w3-row">
-  
-  <div class="w3-mobile w3-threequarter">
-    <p>
-      Well... this reverb thing really stuck for Luke. He liked it so much that he took a masters at UWE too and continued writing and learning about reverb!
-      This time, it was in the context of creative technology and design, which gave Luke the chance to learn lots of code and software, make cool things like a 
-      HTTP request, music API auto-fighter called Last Band Standing, a bunch of generative art in openFrameworks, and more music! It was around this time that Luke got super
-      musical, and developed the alter ego 'Cosmic', a psychedelic space-obsessed experimental rap and ambience persona 
-      that <a href="https://satorirecordsuk.bandcamp.com/album/gravitate-ep">released their first album in February 2020!</a> Luke had got the creative and academic itch, and
-      was ready to start actually doing something about it. 
-      <br><br>
-
-
-      <a class="next aboutButtons"  onclick="plusSlides(1)">>Neat! So music, code, reverb... have we finished?</a>
-      <a class="prev aboutButtons" onclick="plusSlides(-1)">>Retrace your steps</a>
-
-    </p>
-  
- 
-  </div>
-
-
-</div>
-
-
-<div class="aboutTextSegment w3-row">
-  
-  <div class="w3-mobile w3-threequarter">
-    <p>
-      I mean... are we ever finished? 
-      Luke progressed from using and building reverbs to actually trying to understand how we understand 3D space, both acoustically and digitally. He discovered elicitation, 
-      perceptual audio evauluation, and a bunch of fantastic researchers during masters. He enjoyed it that much that he wrote his thesis on how understanding the perception
-      of reverberation from memory might help design accessible interactions with spatial audio in interactive media for those with visual and aural disabilities.
-      <a href="https://www.aes.org/e-lib/browse.cfm?elib=21060">This thesis, albeit a much shorter version, actually got accepted for publication and presentation at the Audio Engineering Society's 150th Convention!</a>
-      <br><br>
-
-
-      <a class="next aboutButtons"  onclick="plusSlides(1)">>Right. This has taken a while... shall we wrap it up?</a>
-      <a class="prev aboutButtons" onclick="plusSlides(-1)">>Retrace your steps</a>
-
-    </p>
-  
- 
-  </div>
-
-
-</div>
-
-<div class="aboutTextSegment w3-row">
-  
-  <div class="w3-mobile w3-threequarter">
-    <p>
-      As you wish! This publication really spurred Luke on to want to research in spatial audio, audio perception and accessible interaction design. He's currently
-      applying for PhD funding, teaching audio programming and research modules at UWE, making weird and wacky trip hop beats, conducting research in accessible audio, 
-      playing board games, hitting the gym, sampling hot sauces, making generative art, enjoying super colourful things, listening to the band Biffy Clyro, preaching that
-      corgis are the superior dog breed, fighting to change the narrative and create an inclusive future for all, playing Overwatch, exclusively wearing long sleeve tees   
-      and desiging text-based 'about page' adventures for those willing to read. Thank you for reading!
-      <br><br>
-
-
-      <a class="next aboutButtons"  onclick="plusSlides(1)">>Finally! Take me back to the beginning</a>
-      <a class="prev aboutButtons" onclick="plusSlides(-1)">>Retrace your steps</a>
-
-    </p>
-  
- 
-  </div>
-
-
-</div>
-
-
-      
-</body>
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  document.body.  getElementsByClassName("aboutText").scrollTop = 0;
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("aboutTextSegment");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  slides[slideIndex-1].style.display = "block";
-}
-</script>
+    </body>
 </html>
+  
+<script>
+
+    bounceThenSize();
+
+</script>

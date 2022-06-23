@@ -1,96 +1,177 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Code - LukesAudio</title>
+    <head>      
+        <!---------------------------------------------------------------------------- HOUSEKEEPING -->      
+        <meta charset="UTF-8">
+        <title>lukesaudio - code</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="websiteTheme.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
+        
+        <!---------------------------------------------------------------------------- JS -->      
         <script type="text/javascript" src="websiteScript.js"></script>
 
+        <!---------------------------------------------------------------------------- EXTERNAL CSS -->      
+        <link rel="stylesheet" href="websiteTheme.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+
+        <!---------------------------------------------------------------------------- FAVICON/MANIFEST -->      
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="images/favicon/site.webmanifest">
-
-        
-    <script src="/sketches/coming soon/libraries/p5.min.js"></script>
-    <script src="sketches/coming soon/libraries/p5.sound.min.js"></script>
-
-
+        <link rel="manifest" href="images/favicon/site.webmanifest">    
 
     </head>
 
+    <body>
+        <!----------------------------------------------------- TEMPLATE START -->      
+        <!---------------------------------------------------------------------------- NAVIGATION BAR DESKTOP -->      
+
+        <div class="navIcons">
+            <div class="w3-row" style="width: 80%; margin: auto;">
+                <div class="w3-col w3-container" style="width:14%; padding: 0; ">
+                <a id="aboutPage" href="/index.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">home</span></a>
+                <a href="index.html"><p class="animate__animated animate__fadeIn">Home</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->      
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0; ">
+                <a id="aboutPage" href="/about.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">badge</span></a>
+                <a href="about.html"><p class="animate__animated animate__fadeIn">About</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="musicPage"     href="/music.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">radio</span></a>
+                <a href="music.html"><p class="animate__animated animate__fadeIn">Music</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="audioPage"     href="/audio.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">speaker</span></a>
+                <a href="audio.html"><p class="animate__animated animate__fadeIn">Audio</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="codePage"      href="/code.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">terminal</span></a>
+                <a href="code.html"><p class="animate__animated animate__fadeIn">Code</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;">
+                <a id="researchPage"  href="/research.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">school</span></a>
+                <a href="research.html"><p class="animate__animated animate__fadeIn">Research</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+
+                <div class="w3-col w3-container" style="width:14%; padding: 0;"> 
+                <a id="artPage" href="/art.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-nav">image</span></a>
+                <a href="art.html"><p class="animate__animated animate__fadeIn" style="border-right: solid;">Art</p></a>
+
+                </div>
+
+                <!-------------------------------------------------------------->
+            </div>
+        </div>
+
+        <!---------------------------------------------------------------------------- NAVIGATION OVERLAY MOBILE -->      
 
 
-<body>
+        <div id="myNav" class="overlay">
 
-  <!---------------------------------------CORE WEBSITE BACKGROUND AND NAVIGATION---------------------------------------->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        
-        
-
-<div class="indexHeroImageText">
-
-    <h1>Code</h1>
-    <a href="/index.html"><div class="btn">Home</div></a>
-    <a href="/about.html"><div class="btn">About</div></a>
-    <a href="/research.html"><div class="btn">Research</div></a>
-    <a href="/music.html"><div class="btn">Music</div></a>
-    <a href="/code.html"><div class="btn">Code</div></a>
+            <!-------------------------------------------------------------->
 
 
+            <div class="overlay-content">
+                <div class="navIconsMobile">
 
-        
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col    w3-container" style="width:100%; ">
+                            <a href="/index.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">home</span></a>
+                            <a href="index.html"> <p style="border-right: solid;">Home</p></a>
+                        </div>
+                    </div>
 
-</div>
+                    <!-------------------------------------------------------------->
+                    
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col    w3-container" style="width:50%; ">
+                            <a id="aboutPage" href="/about.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">badge</span></a>
+                            <a href="about.html"><p>About</p></a>
+                        </div>
+                        
+                        <!-------------------------------------------------------------->
 
-        <!-- The overlay -->
-<div id="myNav" class="overlay">
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="musicPage"     href="/music.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">radio</span></a>
+                            <a href="music.html"> <p style="border-right: solid;">Music</p></a>
+                        </div>
+                    </div>
 
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <!-------------------------------------------------------------->
+                    
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="audioPage"     href="/audio.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">speaker</span></a>
+                            <a href="audio.html" "><p>Audio</p></a>
+                        </div>
 
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="/index.html"><div class="btn">Home</div></a>
-    <a href="/about.html"><div class="btn">About</div></a>
-    <a href="/research.html"><div class="btn">Research</div></a>
-    <a href="/music.html"><div class="btn">Music</div></a>
-    <a href="/code.html"><div class="btn">Code</div></a>
-  </div>
+                        <!-------------------------------------------------------------->
+                    
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="codePage"      href="/code.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">terminal</span></a>
+                            <a href="code.html"> <p style="border-right: solid;">Code</p></a>
+                        </div>        
+                    </div>
 
-</div>
+                    <!-------------------------------------------------------------->
+                    
+                    <div class="w3-row" style="width: 80%; margin: auto;">
+                        <div class="w3-col  w3-container" style="width:50%">
+                            <a id="researchPage"  href="/research.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">school</span></a>
+                            <a href="research.html"><p>Research</p></a>
+                        </div>
 
-<!-- Use any element to open/show the overlay navigation menu -->
+                        <!-------------------------------------------------------------->
 
-<div class="w3-container"   >
-  <div class="w3-container w3-row" onclick="openNav()">
-    <div class="w3-half">
-      <i   class="fas fa-bars fa-3x w3-centered" id="openButton" ></i>
-    </div>  
+                        <div class="w3-col  w3-container" style="width:50%"> 
+                            <a id="artPage" href="/art.html"><span class="icon animate__animated animate__fadeIn   material-icons-two-tone grow md-mobile">image</span></a>
+                            <a href="art.html"> <p style="border-right: solid;">Art</p></a>
+                        </div>
+                    </div>
+                
+                    <!-------------------------------------------------------------->
+                
+                </div>  
+            </div>
 
-    <div class="w3-half" style="text-align: right;">
-      <h2 class="aboutHeader">Code</h2>
-    </div>  
-  </div>
-  
+        </div>
 
-    
-</div>
+        <span class="navButton material-icons-two-tone md-13" style="cursor:pointer; " onclick="openNav()">menu</span>
 
-<!---------------------------------------CORE WEBSITE BACKGROUND AND NAVIGATION END---------------------------------------->
+        <!----------------------------------------------------- TEMPLATE END -->      
 
-<script src="sketches/coming soon/sketch.js"></script>
-
-      
-</body>
+    </body>
 </html>
+  
+<script>
 
+    bounceThenSize();
 
-
-
+</script>
