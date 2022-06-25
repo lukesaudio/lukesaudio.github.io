@@ -11,7 +11,8 @@ body, html
     width: 100%;
     height: 100%;
 
-    overflow: scroll;
+    font-family: Poppins, sans-serif !important;
+
 
     background-color: #E6E8E6;
     color: #262322;
@@ -73,7 +74,6 @@ h6
 
 p
 {
-  font-family: Poppins, sans-serif !important;
 
   font-size: 16px;
   
@@ -99,9 +99,33 @@ a:hover
   text-decoration: underline;
 }
 
+img
+{
+  width: 70%;
+  padding: 2px;
+  margin:auto;
+  background-color: #262322;
+
+}
+
+@media only screen and (max-width: 600px) { img{width: 100%;} }
 
 
-/* CUSTOM CLASSES - GENERAL */
+figcaption
+{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding: 16px;
+  color: black;
+  font-size: calc(16px + 0.2vw);
+    
+  background-color: #E6E8E6;
+
+}
+
+
+/************************************************************* CUSTOM CLASSES - GENERAL */
 .navIcons 
 {
   position: relative;
@@ -150,7 +174,7 @@ a:hover
 
 .navButton
 {
-  visibility: hidden;
+  display: none;
 }
 
 .overlay {
@@ -166,6 +190,7 @@ a:hover
   border-right: solid;
   visibility: hidden;
 
+
 }
 
 /* Position the content inside the overlay */
@@ -176,6 +201,8 @@ a:hover
   text-align: center; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
   visibility: hidden;
+  height: 100%;
+
 
 }
 
@@ -196,24 +223,35 @@ a:hover
   {
     display: block;
     visibility: visible;
+    background-color: #E6E8E6;
+
 
   }
 
   .overlay-content
   {
     visibility: visible;
+    background-color: #E6E8E6;
+
 
   }
 
   .navButton
   {
-    
-    visibility: visible;
+    display: inline;
+    position:sticky;
+    top: 0;
+    background-color: #E6E8E6;
+    border-right: solid;
+    border-bottom: solid;
+
+
+
   }
 
 }
 
-/* CUSTOM CLASSES - INDEX */
+/************************************** CUSTOM CLASSES - INDEX */
 .indexIcons 
 {
   position: relative;
@@ -277,6 +315,23 @@ a:hover
 
 
 }
+
+
+/************************************** CUSTOM CLASSES - ABOUT */
+.aboutMain
+{
+  width: 80%;
+  margin: auto;
+  text-align: center; 
+
+}
+
+.aboutMain p
+{
+  font-size: 20px;
+ padding: 16px;
+}
+
 
 
 /*Icon styling*/
