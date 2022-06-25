@@ -18,6 +18,8 @@ body, html
     color: #262322;
     margin: 0;
 
+    overflow-x: hidden;
+
 
 }
 
