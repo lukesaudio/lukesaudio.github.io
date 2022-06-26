@@ -126,6 +126,29 @@ figcaption
 
 }
 
+table
+{
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+
+}
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th:hover
+{
+  text-decoration: underline;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 
 /************************************************************* CUSTOM CLASSES - GENERAL */
 .navIcons 
