@@ -129,16 +129,30 @@ figcaption
 table
 {
   width: 100%;
-  margin: auto;
+  margin: auto;    
   border-collapse: collapse;
+  overflow-x: scroll;
+  
+}
 
+@media only screen and (max-width: 600px) 
+{ 
+  table
+  {  
+    display: block;
+  } 
 }
 
 
+
 td, th {
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+th
+{
+  background-color: #C45BAA;
+  color: #E6E8E6;
 }
 th:hover
 {
@@ -148,6 +162,9 @@ th:hover
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+
+
 
 
 /************************************************************* CUSTOM CLASSES - GENERAL */
@@ -357,9 +374,66 @@ tr:nth-child(even) {
  padding: 16px;
 }
 
+/************************************** CUSTOM CLASSES - MUSIC */
+
+
+.sectionCollapsible 
+{
+  background-color: #C45BAA;
+  color: #E6E8E6;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: solid;
+  text-align: left;
+  font-size: 24px;  
+  
+}
+
+.sectionCollapsible:hover 
+{
+  opacity:85%;
+
+}
+ 
+.sectionContent 
+{
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  
+}
+
+.active
+{
+  background-color: black !important;
+  opacity: 80%;
+}
+
+.scrollButton
+{
+  margin: 32px; background-color: #C45BAA; color: #E6E8E6; border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px;
+  opacity: 70%;
+  border: solid;}
+
+.scrollButton:hover
+{
+  background-color: #CE78B9;
+  opacity: 100%;
+}
+
+
 
 
 /*Icon styling*/
+
+
+.material-icons-two-tone.md-dropdown { font-size: 32px;}
+.material-icons-two-tone.md-dropdown:hover { background-color: inherit;}
+
 
 
 .material-icons-two-tone.md-nav { font-size: 3vw; }

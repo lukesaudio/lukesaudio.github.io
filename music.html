@@ -135,7 +135,7 @@
                         <!-------------------------------------------------------------->
                     
                         <div class="w3-col  w3-container" style="width:50%">
-                            <a id="codePage"      href="/code.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">terminal</span></a>
+                            <a id="codePage" href="/code.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">terminal</span></a>
                             <a href="code.html"> <p style="border-right: solid;">Code</p></a>
                         </div>        
                     </div>
@@ -144,7 +144,7 @@
                     
                     <div class="w3-row" style="width: 80%; margin: auto;">
                         <div class="w3-col  w3-container" style="width:50%">
-                            <a id="researchPage"  href="/research.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">school</span></a>
+                            <a id="researchPage" href="/research.html"><span class="icon animate__animated animate__fadeIn material-icons-two-tone grow md-mobile">school</span></a>
                             <a href="research.html"><p>Research</p></a>
                         </div>
 
@@ -165,181 +165,330 @@
 
         <span class="navButton material-icons-two-tone md-13" style="cursor:pointer; " onclick="openNav()">menu</span>
 
+        
+
         <!----------------------------------------------------- TEMPLATE END -->    
         
         <div class="aboutMain">
+
+
+
+            
 
             <h1>Here you'll find the musical ideas my brain has brought to life</h1>
             <h3>Buckle in... we like to do weird shit here</h3><br>            
 
             <p>
                 Here we'll take a meander through the fields and forests known as 'my musical output since I was 13 or so'.<br>     
-                Please use the handy menu just below this text if you're after something specific. You can sort the menu through clicking
-                each respective header. 
+                You can expand each of the headings below by clicking on them, unveiling swathes of my musical history, complete 
+                with images, links and all. *tsk* lucky you, eh?
             </p>
 
-            <table id="musicTable">
+            <div class="w3-container">
+                <button type="button" class="sectionCollapsible" style="background-color: #C45BAA;">Table of Releases</button>
+
+                <div class="sectionContent">    
+
+
+                <table id="musicTable" style="overflow-x:scroll">
                 <tr>
-                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
-                  <th style="cursor:pointer" onclick="sortTable(0)">Artist Name</th>
-                  <th style="cursor:pointer" onclick="sortTable(1)">Album Name</th>
-                  <th style="cursor:pointer" onclick="sortTable(2)">Year Released</th>
-                  <th style="cursor:pointer" onclick="sortTable(3)">Label</th>
-                  <th style="cursor:pointer" onclick="sortTable(4)">Genre</th>
+             <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+                <th style="cursor:pointer" onclick="sortTable(0)">Artist Name</th>
+                <th style="cursor:pointer" onclick="sortTable(1)">Album Name</th>
+                <th style="cursor:pointer" onclick="sortTable(2)">Year Released</th>
+                <th style="cursor:pointer" onclick="sortTable(3)">Label</th>
+                <th style="cursor:pointer" onclick="sortTable(4)">Genre</th>
 
 
 
 
-                </tr>
-                <tr>
-                  <td>Cosmic</td>
-                  <td>Gravitate</td>
-                  <td>2019</td>
-                  <td>Satori Records</td>
-                  <td>Trip hop</td>
-                </tr>
-                <tr>
-                    <td>Cosmic</td>
-                    <td>Touchdown</td>
-                    <td>2021</td>
-                    <td>Satori Records</td>
-                    <td>Alternative Hip Hop</td>
-                </tr>
-                <tr>
-                    <td>Cosmic</td>
-                    <td>Takeoff</td>
-                    <td>TBC</td>
-                    <td>Satori Records</td>
-                    <td>Alternative Hip Hop</td>
-                </tr>
-                <tr>
-                    <td>Various Artists</td>
-                    <td>Songs from University</td>
-                    <td>2019</td>
-                    <td>Self Released</td>
-                    <td>Various</td>
-                </tr>
-                <tr>
-                    <td>Various Artists</td>
-                    <td>Me and Flu: A Compilation of Isolation Vibrations</td>
-                    <td>2020</td>
-                    <td>Self Released</td>
-                    <td>Rock/Experimental</td>
-                </tr>
-                <tr>
-                    <td>Corey Ford</td>
-                    <td>Songs with Friends</td>
-                    <td>2018</td>
-                    <td>Self Released</td>
-                    <td>Punk</td>
-                </tr>
-                <tr>
-                    <td>Scrub</td>
-                    <td>Drag Car Racer</td>
-                    <td>TBC</td>
-                    <td>Self Released</td>
-                    <td>Punk</td>
-                </tr>
-               
-                <tr>
-                    <td>Honest Eyes</td>
-                    <td>Gentle Hands</td>
-                    <td>2014</td>
-                    <td>Self Released</td>                  
-                    <td>Acoustic/Instrumental</td>
-                </tr>
-              </table>
+            </tr>
+            <tr>
+              <td>Cosmic</td>
+              <td>Gravitate</td>
+              <td>2019</td>
+              <td>Satori Records</td>
+              <td>Trip hop</td>
+            </tr>
+            <tr>
+                <td>Cosmic</td>
+                <td>Touchdown</td>
+                <td>2021</td>
+                <td>Satori Records</td>
+                <td>Alternative Hip Hop</td>
+            </tr>
+            <tr>
+                <td>Cosmic</td>
+                <td>Takeoff</td>
+                <td>TBC</td>
+                <td>Satori Records</td>
+                <td>Alternative Hip Hop</td>
+            </tr>
+            <tr>
+                <td>Various Artists</td>
+                <td>Songs from University</td>
+                <td>2019</td>
+                <td>Self Released</td>
+                <td>Various</td>
+            </tr>
+            <tr>
+                <td>Various Artists</td>
+                <td>Me and Flu: A Compilation of Isolation Vibrations</td>
+                <td>2020</td>
+                <td>Self Released</td>
+                <td>Rock/Experimental</td>
+            </tr>
+            <tr>
+                <td>Corey Ford</td>
+                <td>Songs with Friends</td>
+                <td>2018</td>
+                <td>Self Released</td>
+                <td>Punk</td>
+            </tr>
+            <tr>
+                <td>Scrub</td>
+                <td>Drag Car Racer</td>
+                <td>TBC</td>
+                <td>Self Released</td>
+                <td>Punk</td>
+            </tr>
+           
+            <tr>
+                <td>Honest Eyes</td>
+                <td>Gentle Hands</td>
+                <td>2014</td>
+                <td>Self Released</td>                  
+                <td>Acoustic/Instrumental</td>
+            </tr>
+          </table>
+          </div>
+          </div>
 
-           <!--------------------------------------------------------------------------------------------------------------->
+       <!--------------------------------------------------------------------------------------------------------------->
 
-            <h1>Cosmic</h1>
-            <h3>Intergalactic Assassin/Interplanetary Bandit... he has a few names</h3><br>  
-            
-            <figure>
-                <img src="/images/music/cosmic/1.jpg" alt="The first 'Cosmic' photoshoot. I am looking plainly into a camera with a slight head tilt. I am wearing the first 
-                run of Satori Records merchandise; a plain black t shirt with a kanji symbol for Enlightenment on the front. The background is a vibrant 
-                graffitied wall in Stokes Croft, Bristol, UK.">
 
-                <figcaption>Figure 1 - The first 'Cosmic' photoshoot. I am looking plainly into a camera with a slight head tilt. I am wearing the first 
-                    run of Satori Records merchandise; a plain black t shirt with a kanji symbol for Enlightenment on the front. The background is a vibrant 
-                    graffitied wall in Stokes Croft, Bristol, UK.  
-                </figcaption>
-            </figure>
-
-            <p>
-                Cosmic begain in a second year Electroacoustic Assignment for Composition and Performance at university. I had a big love of
-                generative audio and destructive/off-piste mix techniques and thought hey, wouldn't that make for a corker of a song? One set of lyrics about
-                two of my friends in a forbidden relationship, a series of pseudo-random chord changes, severe pitch correction and glitched text-to-speech
-                of a Romeo and Juliet quote later, Gravitate, the first Cosmic track was born. <br><br>
+            <div class="w3-container ">
+                <button type="button" class="sectionCollapsible" style="background-color: #C45BAA">Cosmic - Intergalatic Mathematical Trip Hop made by an alien
                 
-                This then turned into a 3 track EP (also named Gravitate) consisting of:<br>
-                    <br><h4>Gravitate - the aforementioned song</h4><br>
-                    <h4>Glue - a song about being obsessively stuck to one's phone</h4><br>
-                    <h4>Scream - a soirée into using random shouting mixed with heavy pitch correction against a 7/4 time signature
-                        with quintuplet and septuplet drums/arps accompanying</h4><br><br>
+                </button>
+    
+                    <div class="sectionContent">
+    
+                        <h1>Cosmic</h1>
+                        <h3>Intergalactic Assassin/Interplanetary Bandit... he has a few names</h3><br>  
+                        
+                        <figure>
+                            <img src="/images/music/cosmic/1.jpg" alt="The first 'Cosmic' photoshoot. I am looking plainly into a camera with a slight head tilt. I am wearing the first 
+                            run of Satori Records merchandise; a plain black t shirt with a kanji symbol for Enlightenment on the front. The background is a vibrant 
+                            graffitied wall in Stokes Croft, Bristol, UK.">
+    
+                            <figcaption>Figure 1 - The first 'Cosmic' photoshoot. I am looking plainly into a camera with a slight head tilt. I am wearing the first 
+                                run of Satori Records merchandise; a plain black t shirt with a kanji symbol for Enlightenment on the front. The background is a vibrant 
+                                graffitied wall in Stokes Croft, Bristol, UK.  
+                            </figcaption>
+                        </figure>
+    
+                        <p>
+                            Cosmic begain in a second year Electroacoustic Assignment for Composition and Performance at university. I had a big love of
+                            generative audio and destructive/off-piste mix techniques and thought hey, wouldn't that make for a corker of a song? One set of lyrics about
+                            two of my friends in a forbidden relationship, a series of pseudo-random chord changes, severe pitch correction and glitched text-to-speech
+                            of a Romeo and Juliet quote later... Gravitate, the first Cosmic track was born, snowballing into an three-track EP of the same name...
+                            
+                        </p>
 
-                </ol>  
-            </p>
+                        <button type="button" class="sectionCollapsible" style="background-color: #974181">EP 1 - Gravitate</button>
+                        <div class="sectionContent">
+
+                        <figure>
+                            <img src="/images/music/cosmic/2.jpg" style="width: 50%;" alt="The front cover for the Gravitate EP. The photograph is a distorted/grainy close up photograph of a 
+                            red crescent moon against a black sky with a white strip along the right side blending into it granularly. 
+                            The words 'cosmic' and 'gravitate' are in the lower right corner in a rounded typeface. ">
+    
+                            <figcaption>Figure 2 - The front cover for the Gravitate EP. The photograph is a distorted/grainy close up photograph of a 
+                                red crescent moon against a black sky with a white strip along the right side blending into it granularly. 
+                                The words 'cosmic' and 'gravitate' are in the lower right corner in a rounded typeface. 
+                            </figcaption>
+                        </figure>
+
+                   
+
+                                
+                                <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Gravitate - a song for forbidden lovers</button>
+                                <div class="sectionContent">
+                                    <iframe width="1380" height="520" src="https://www.youtube.com/embed/Ih7ldPVuVmY" title="Gravitate - Cosmic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/gravitate"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+                                </div>      
+                                
+                                <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Glue - a song about being obsessively stuck to one's phone</button>
+                                <div class="sectionContent">
+                                    <iframe width="1380" height="520" src="https://www.youtube.com/embed/7EN8Qracszs?list=PLNQOB1CgmMfJUfcqrMVJ-IX-Y1kb2uznD" title="Glue - Cosmic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/glue"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+
+                                </div>      
+                                
+                                <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Scream -a song about shouting and then destructively editing it</button>
+                                <div class="sectionContent">
+                                    <iframe width="1380" height="520" src="https://www.youtube.com/embed/7EN8Qracszs?list=PLNQOB1CgmMfJUfcqrMVJ-IX-Y1kb2uznD" title="Glue - Cosmic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/scream"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+
+                                </div>     
+
+                        </div>
+
+                        <button type="button" class="sectionCollapsible" style="background-color: #974181">LP 1 - Touchdown</button>
+                        <div class="sectionContent">
+
+                            <p>
+                                Riding the wave that oscillated outword from the <i>*ahem*</i> moderate success of Gravitate, Cosmic embarked on his first
+                                full length EP. Sitting on a beat-melody combo from four years prior, the track Touchdown was born, paving the way for astronomical trip-hop
+                                bops to come into fruition.
+                                
+                            </p>
+
+                        <figure>
+                            <img src="/images/music/cosmic/3.jpg" style="width: 50%;" alt="The front cover for the first Cosmic LP titled Touchdown.
+                            The photograph is of me wearing a tie-dyed long sleeve t-shirt, with my eyes closed and generally with a dreamy expression. 
+                            Behind me is a large scuplture at the Eden Project, showcasing orbits around an Earth model. The background is lush green 
+                            jungle forestry.">
+    
+                            <figcaption>Figure 2 - The front cover for the first Cosmic LP titled 'Touchdown'.
+                                The photograph is of me wearing a tie-dyed long sleeve t-shirt, with my eyes closed and generally with a dreamy expression. 
+                                Behind me is a large scuplture at the Eden Project, showcasing orbits around an Earth model. The background is lush green 
+                                jungle forestry. 
+                            </figcaption>
+                        </figure>
+
+                        <p>
+                            Touchdown came with a few singles/videos on it's debut via Satori Records...
+                            
+                        </p>
+
+                        <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Touchdown ft Kuriboh</button>
+                                <div class="sectionContent">
+                                    <iframe width="1380" height="520" src="https://www.youtube.com/embed/1HMLbERPeuU" title="Cosmic - Touchdown (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/touchdown-ft-kuriboh"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+                                </div>
+                        
+                        <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Gravitate</button>
+                                <div class="sectionContent">
+                                    <iframe width="1380" height="520" src="https://www.youtube.com/embed/DM9HLLTHIaU" title="Cosmic LIVE Audio/Visual Set @ 'Satori Records Presents...' Online Event Showcase 31/01/2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/gravitate-2"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+                                </div>
+
+                        <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Glue</button>
+                                <div class="sectionContent">
+                                    <iframe width="1380" height="520" src="https://www.youtube.com/embed/Q6Hq5Jx7XYo" title="Cosmic - Glue (Official Lyric Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/glue-2"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+                                </div>
+
+                       
+
+                    </div>
+
+                       
+                
 
 
-            <figure>
-                <img src="/images/music/cosmic/2.jpg" alt="The front cover for the Gravitate EP. The photograph is a distorted/grainy close up photograph of a 
-                red crescent moon against a black sky with a white strip along the right side blending into it granularly. 
-                The words 'cosmic' and 'gravitate' are in the lower right corner in a rounded typeface. ">
+                                
+                     </div>
+                </div>
+    
+                <!--------------------------------------------------------------------------------------------------------------->
+    
+                <div class="w3-container ">
+                    <button type="button" class="sectionCollapsible" style="background-color: #C45BAA">Scrub - Two academics making tongue-in-cheek melodic punk under 2 minutes long</button>
+                    <div class="sectionContent">            
+                        <h1>Scrub</h1>
+                        <h3>Did you hear the one about the two academics who walked into a bar?</h3><br>            
+    
+                        <p>
+                            Scrub. Starting off as a 4-piece university assignment band called 'Scrub Lords' and recording covers from TLC and Stevie Wonder (see the Luke Child section below)
+                            Scrub went from 4 to 2, and became the punk outlet for myself and fellow academic in HCI <a href="https://codetta.codes/" style="text-decoration: underline">Corey Ford</a>
+                            Jamming together throughout second year uni, Corey asked Luke to guest star vocals on his own music, the 'Corey and Friends EP'.
 
-                <figcaption>Figure 2 - The front cover for the Gravitate EP. The photograph is a distorted/grainy close up photograph of a 
-                    red crescent moon against a black sky with a white strip along the right side blending into it granularly. 
-                    The words 'cosmic' and 'gravitate' are in the lower right corner in a rounded typeface. 
-                </figcaption>
-            </figure>
+                            <a href="https://soundcloud.com/user-519010136/sets/corey-friends-ep-1/s-aVnbp"><button type="button" class="scrollButton">View album on Bandcamp</button></a>
+
+                            
+                            
+                            
+                            <br>Scrub then wrote five original songs with a total length of under ten mins, recorded them all in the summer
+                            of 2021, dropped a song, failed to mix them, and is still waiting to release their first EP. Watch this space. 
+                            
+                            <br>              
+                        </p>
+    
+    
+                        <figure>
+                            <img src="/images/music/scrub/1.jpg" alt="A film-styled photograph of me and Corey Ford in the live room of a recording studio. We're both
+                            perched on a sofa. Corey is dressed in all black and is tuning/noodling on his guitar, and I'm sat staring at him. There are guitars and
+                            acoustic treatment on the walls behind us.">
+    
+                            <figcaption >Figure 3 - a film-styled photograph of me and Corey Ford in the live room of a recording studio. We're both
+                                perched on a sofa. Corey is dressed in all black and is tuning/noodling on his guitar, and I'm sat staring at him. There are guitars and
+                                acoustic treatment on the walls behind us.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            
+    
+                <!--------------------------------------------------------------------------------------------------------------->
+    
+                <div class="w3-container">
+                    <button type="button" class="sectionCollapsible" style="background-color: #C45BAA;" >Luke Child - The remaining tidbits of musical wanderlust I've explored over the years</button>
+    
+                    <div class="sectionContent">    
+                        <h1>Luke Child</h1>
+                        <h3>A section for "here are all the random additional projects where I'm just little old me making some noise"</h3><br>            
+    
+                        <p>
+                            I've gotten involved with various musical projects throughout my time on this planet.        
+                        </p>
+    
+    
+                        <figure>
+                            <img src="/images/music/luke/1.jpg" alt="A film-styled photograph of me playing the drums in a recording studio in Wells, UK.">
+    
+                            <figcaption>Figure 4 - A film-styled photograph of me playing the drums in a recording studio in Wells, UK.">
+    
+                            </figcaption>
+                        </figure>
+
+                        <a href="https://itslukesaudio.bandcamp.com/"><button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Personal Bandcamp</button></a>
+                           
+                        
+                        <button type="button" class="sectionCollapsible" style="background-color: #974181; width: 80%;">Flu and Me - A Compilation of Isolation Vibrations</button>
+                                <div class="sectionContent">
+                                    <figure>
+                                        <img src="/images/music/luke/2.jpg" alt="The album cover for Flu and Me - A Compilation of Isolation Vibrations. The art is of a Godzilla-like creature chasing
+                                        six humans down a road while shooting lasers at them from it's eyes. The humans represent the seven collaborators on the album, all with shocked expressions as
+                                        they run away. The art style is that of MS Paint, and features the title as text toward the middle left. ">
+                
+                                        <figcaption >Figure - The album cover for Flu and Me - A Compilation of Isolation Vibrations. The art is of a Godzilla-like creature chasing
+                                            six humans down a road while shooting lasers at them from it's eyes. The humans represent the seven collaborators on the album, all with shocked expressions as
+                                            they run away. The art style is that of MS Paint, and features the title as text toward the middle left. 
+                                        </figcaption>
+                                    </figure>
+                                    <a href="https://satorirecordsuk.bandcamp.com/track/gravitate-2"><button type="button" class="scrollButton">View song on Bandcamp</button></a>
+                                </div>
+
+                       
+
+
+                    </div>
+                </div>
+
+                
+         
+            
 
             <!--------------------------------------------------------------------------------------------------------------->
 
-            <h1>Scrub</h1>
-            <h3>Did you hear the one about the two academics who walked into a bar?</h3><br>            
-
-            <p>
-                And by a formative time for me, I mean that it defined my entire music taste and fashion choice. I got into learning heavy guitar riffs and solos from the likes of
-                Bullet for my Valentine and Trivium, started to play drums and got interested in odd time signatures and Biffy Clyro (more on them to come) and 
-                discovered my eclectic and colourful side. I also got into audio technology here and began recording my own music, releasing my first instrumental EP in 2016 and 
-                *aquiring* my first copy of Cubase, along with a Behringer C1 and a Roland UA-25 audio interface.<br>              
-            </p>
-
-
-            <figure>
-                <img src="/images/music/scrub/1.jpg" alt="A film-styled photograph of me and Corey Ford in the live room of a recording studio. We're both
-                perched on a sofa. Corey is dressed in all black and is tuning/noodling on his guitar, and I'm sat staring at him. There are guitars and
-                acoustic treatment on the walls behind us.">
-
-                <figcaption>Figure 3 -  a film-styled photograph of me and Corey Ford in the live room of a recording studio. We're both
-                    perched on a sofa. Corey is dressed in all black and is tuning/noodling on his guitar, and I'm sat staring at him. There are guitars and
-                    acoustic treatment on the walls behind us.
-                </figcaption>
-            </figure>
-
             <!--------------------------------------------------------------------------------------------------------------->
 
-            <h1>Luke Child</h1>
-            <h3>A section for "here are all the random additional projects where I'm just little old me making some noise"</h3><br>            
-
-            <p>
-                Coming soon...              
-            </p>
-
-
-            <figure>
-                <img src="/images/music/luke/1.jpg" alt="A film-styled photograph of me playing the drums in a recording studio in Wells, UK.">
-
-                <figcaption>Figure 4 - A film-styled photograph of me playing the drums in a recording studio in Wells, UK.">
-
-                </figcaption>
-            </figure>
-
-            <!--------------------------------------------------------------------------------------------------------------->
-
-            <!--------------------------------------------------------------------------------------------------------------->
-
-            <h1>Enjoy things. Destroy things. Create the absurd. Make yourself heard.</h1>
+            <button class="scrollButton" type="button" onclick="scrollToTop()" style="position: absolute; bottom: 0%; right: 0%;"><span class="material-icons-two-tone md-dropdown">
+                arrow_upward
+                </span></button>
 
 
         </div>
@@ -352,5 +501,21 @@
 <script>
 
     bounceThenSize();
+
+    
+var coll = document.getElementsByClassName("sectionCollapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
 </script>
