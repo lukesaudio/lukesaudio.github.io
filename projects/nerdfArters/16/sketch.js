@@ -4,8 +4,8 @@ let pizzajohn;
 
 function preload() 
 {
-  customFont = loadFont('/Righteous-Regular.ttf');
-  pizzajohn = loadImage('/pizzajohnBIG.png');
+  customFont = loadFont('/projects/nerdfArters/16/Righteous-Regular.ttf');
+  pizzajohn = loadImage('/projects/nerdfArters/16/pizzajohnBIG.png');
 
 }
 
