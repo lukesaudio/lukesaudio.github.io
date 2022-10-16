@@ -3,17 +3,18 @@ let customFont;
 let pizzajohn;
 let pizza; 
 
-let s1, s2;
+let s1, s2, s3, s4;
 let gravity = 9.0;
 let mass = 2.0;
+
+const springs = [new Spring2D()];
 
 function preload() 
 {
   customFont = loadFont('/projects/nerdfArters/16/Righteous-Regular.ttf');
   pizzajohn = loadImage('/projects/nerdfArters/16/pizzajohnBIG.png');
   pizza = loadImage('/projects/nerdfArters/16/pizzaPNG.png');
-  pizzaCursor = pizza;
-  pizzaCursor.size(16, 16);
+ 
 
 
 }
@@ -22,6 +23,9 @@ function preload()
 let buttonHours;
 let buttonMinutes;
 let buttonSeconds;
+
+let newPizza;
+let currentPizzaCount = 1;
 
 let userSelection = 0;
 
@@ -54,11 +58,22 @@ function setup()
   buttonSeconds.position(((windowWidth / 2 + windowWidth * 0.1) + buttonSeconds.width) - ((windowWidth / 5) / 2), 0);
   buttonSeconds.mousePressed(changeSeconds);
 
+  
+  newPizza = createButton('Summon New Pizza. Current Pizza Count: ' + currentPizzaCount);
+  newPizza.size(windowWidth / 5, 100);
+  newPizza.position((windowWidth / 2) - ((windowWidth / 5) / 2), 100);
+  newPizza.mousePressed(summonNewPizza);
+
+
+
   //PHYSICS TIME
-  s1 = new Spring2D(0.0, width / 2, mass, gravity);
-  s2 = new Spring2D(0.0, width / 2, mass, gravity);
-  s3 = new Spring2D(0.0, width / 2, mass, gravity);
-  s4 = new Spring2D(0.0, width / 2, mass, gravity);
+
+
+    springs[0] = new Spring2D(0.0, width / 2, mass, gravity);
+  
+
+  
+
 
 
 
@@ -70,6 +85,8 @@ function draw()
 
   image(pizzajohn, 0, 0);
   cursor(pizza);
+  currentPizzaCount = springs.length;
+  newPizza.html('Summon New Pizza. Current Pizza Count: ' + currentPizzaCount);
 
 
   const d = new Date();
@@ -107,15 +124,15 @@ function draw()
 
   text("Committing to the bit: " + finalCountdown, windowWidth / 2, windowHeight / 2);
   fill(255);
-  s1.update(mouseX, mouseY);
-  s1.display(mouseX, mouseY);
-  s2.update(s1.x, s1.y);
-  s2.display(s1.x, s1.y);
 
-  s3.update(s2.x, s2.y);
-  s3.display(s2.x, s2.y);
-  s4.update(s3.x, s3.y);
-  s4.display(s3.x, s3.y);
+
+
+  
+
+
+
+displaySprings();
+
 
 
 
@@ -156,6 +173,10 @@ function resizeButtons()
   buttonSeconds.size(windowWidth / 5, 100);
   buttonSeconds.position(((windowWidth / 2 + windowWidth * 0.1) + buttonSeconds.width) - ((windowWidth / 5) / 2), 0);
 
+  newPizza.size(windowWidth / 5, 100);
+  newPizza.position((windowWidth / 2) - ((windowWidth / 5) / 2), 100);
+
+
 
 
 }
@@ -186,4 +207,25 @@ function Spring2D(xpos, ypos, m, g) {
   this.display = function(nx, ny) {
     image(pizza, this.x, this.y, 70,  70);
   }
+}
+
+function displaySprings()
+{
+  springs[0].update(mouseX, mouseY);
+  springs[0].display(mouseX, mouseY);
+
+
+  for(var i = 1; i < springs.length; i++)
+  {
+    springs[i].update(springs[i-1].x, springs[i-1].y);
+    springs[i].display(springs[i-1].x, springs[i-1].y);
+
+  }
+  
+
+}
+
+function summonNewPizza()
+{
+  springs[springs.length] = new Spring2D(0.0, width / 2, mass, gravity);
 }
