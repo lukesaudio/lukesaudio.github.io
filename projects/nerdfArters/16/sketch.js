@@ -1,11 +1,20 @@
 
 let customFont;
 let pizzajohn;
+let pizza; 
+
+let s1, s2;
+let gravity = 9.0;
+let mass = 2.0;
 
 function preload() 
 {
   customFont = loadFont('/projects/nerdfArters/16/Righteous-Regular.ttf');
   pizzajohn = loadImage('/projects/nerdfArters/16/pizzajohnBIG.png');
+  pizza = loadImage('/projects/nerdfArters/16/pizzaPNG.png');
+  pizzaCursor = pizza;
+  pizzaCursor.size(16, 16);
+
 
 }
 
@@ -20,7 +29,8 @@ let userSelection = 0;
 
 function setup() 
 {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, windowHeight);
+
 
 
   textFont(customFont);
@@ -44,13 +54,23 @@ function setup()
   buttonSeconds.position(((windowWidth / 2 + windowWidth * 0.1) + buttonSeconds.width) - ((windowWidth / 5) / 2), 0);
   buttonSeconds.mousePressed(changeSeconds);
 
+  //PHYSICS TIME
+  s1 = new Spring2D(0.0, width / 2, mass, gravity);
+  s2 = new Spring2D(0.0, width / 2, mass, gravity);
+  s3 = new Spring2D(0.0, width / 2, mass, gravity);
+  s4 = new Spring2D(0.0, width / 2, mass, gravity);
+
+
+
 
 }
 
 function draw() 
 {
 
-  image(pizzajohn, 0 - 1920 / 2, 0 - 1080 / 2);
+  image(pizzajohn, 0, 0);
+  cursor(pizza);
+
 
   const d = new Date();
   let hours = d.getHours();
@@ -85,7 +105,19 @@ function draw()
   }
 
 
-  text("Committing to the bit: " + finalCountdown, 0, 0);
+  text("Committing to the bit: " + finalCountdown, windowWidth / 2, windowHeight / 2);
+  fill(255);
+  s1.update(mouseX, mouseY);
+  s1.display(mouseX, mouseY);
+  s2.update(s1.x, s1.y);
+  s2.display(s1.x, s1.y);
+
+  s3.update(s2.x, s2.y);
+  s3.display(s2.x, s2.y);
+  s4.update(s3.x, s3.y);
+  s4.display(s3.x, s3.y);
+
+
 
 
 
@@ -126,4 +158,32 @@ function resizeButtons()
 
 
 
+}
+
+function Spring2D(xpos, ypos, m, g) {
+  this.x = xpos;// The x- and y-coordinates
+  this.y = ypos;
+  this.vx = 0; // The x- and y-axis velocities
+  this.vy = 0;
+  this.mass = m;
+  this.gravity = g;
+  this.radius = 30;
+  this.stiffness = 0.2;
+  this.damping = 0.7;
+
+  this.update = function(targetX, targetY) {
+    let forceX = (targetX - this.x) * this.stiffness;
+    let ax = forceX / this.mass;
+    this.vx = this.damping * (this.vx + ax);
+    this.x += this.vx;
+    let forceY = (targetY - this.y) * this.stiffness;
+    forceY += this.gravity;
+    let ay = forceY / this.mass;
+    this.vy = this.damping * (this.vy + ay);
+    this.y += this.vy;
+  }
+
+  this.display = function(nx, ny) {
+    image(pizza, this.x, this.y, 70,  70);
+  }
 }
