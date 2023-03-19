@@ -53,6 +53,9 @@ body, html
 }
 
 @media (max-width: 1000px) {
+  body{
+    overflow-y: scroll;
+  }
   .buttonBox {
     display: block;
     text-align: center;
