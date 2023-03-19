@@ -11,10 +11,13 @@ body, html
     width: 100%;
     height: 100%;
 
-    background-color: #E6E8E6;
-    color: #262322;
+    background-color: #0D1C19;
+    color: #FCFCFC;
 
-    font-family: Poppins, sans-serif !important;
+    font-family: Poppins, sans-serif;
+
+    overflow-x:hidden;
+    overflow-y: hidden;
 
 
 }
@@ -25,11 +28,25 @@ body, html
   height: 100%;
 
   display: flex; 
+  flex-direction: column;
   justify-content: center; 
-  align-items: center; 
-  
+  align-items: center;
+
   text-align: center;
   
+}
+
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+
+img
+{
+  padding: 16px;
+  background-color: #FCFCFC;
 }
 
 
