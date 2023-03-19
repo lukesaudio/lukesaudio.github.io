@@ -19,6 +19,8 @@ body, html
     overflow-x:hidden;
     overflow-y: hidden;
 
+    
+
 
 }
 
@@ -31,22 +33,64 @@ body, html
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  
+  
 
-  text-align: center;
+}
+
+.buttonBox
+{
+  display: flex; 
+  width:40%;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;   
   
 }
-
-.flex-grid {
-  display: flex;
+.buttonElement:hover
+{
+  opacity: 80%;
 }
-.col {
-  flex: 1;
+
+@media (max-width: 1000px) {
+  .buttonBox {
+    display: block;
+    text-align: center;
+  }
+}
+
+.buttonElement
+{
+  background-color: white;
+  color: white;
+  font-size: 16px;
+  padding: 16px;
+}
+
+figure
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;   
+}
+figcaption
+{
+  outline: white;
+  padding: 16px;
+  text-align: center;
+  border: solid 4px white;
+  width:40%;
 }
 
 img
 {
-  padding: 16px;
+  padding: 4px;
   background-color: #FCFCFC;
+}
+
+a{
+  text-decoration: none;
 }
 
 
