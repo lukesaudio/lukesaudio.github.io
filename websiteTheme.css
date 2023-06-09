@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone');
+
 /******************************************************** Global *********************************************************/
 
 
@@ -11,90 +12,475 @@ body, html
     width: 100%;
     height: 100%;
 
-    background-color: #0D1C19;
+    background-color: #111317;
     color: #FCFCFC;
 
-    font-family: Poppins, sans-serif;
+    font-family: Poppins, sans-serif !important;
 
     overflow-x:hidden;
     overflow-y: hidden;
+    margin: 0;
 
     
 
 
 }
 
-.maintenancePage
+
+h1
+{
+  padding: 16px;
+  margin-bottom: 4px;
+  color: #111317;
+  background-color: #F8F8FF;
+}
+h5
+{
+  font-size: 16px;
+  margin: 4px;
+  
+}
+
+a
+{
+  color:#F8F8FF;
+}
+
+button
+{
+
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  color: #111317;
+  background-color: #F8F8FF;
+  text-decoration: none;
+  cursor: pointer;
+} 
+button:hover
+{
+  color: #F8F8FF;
+  background-color: #111317;
+  text-decoration: underline;
+}
+
+li
+{
+  margin: 16px;
+}
+
+/* CUSTOM CLASSES */
+
+.heroImage
+{
+  display: flex;
+  width: 100%;
+  
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.heroTitle
+{
+  display: flex;
+  width: 100%;
+  
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.heroSubtitle
+{
+  display: flex;
+  width: 100%;
+
+  
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navBar
 {
   width: 100%;
-  height: 100%;
+  height: 80px;
 
-  display: flex; 
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-  
-  
-
-}
-
-.buttonBox
-{
-  display: flex; 
-  width:40%;
+  display: flex;
   flex-direction: row;
-  justify-content: center; 
-  align-items: center;   
+  justify-content: space-evenly;
+  align-items: center;
+
+
+  background-color: #F8F8FF;
+  color: #111317;
+}
+
+.navBarButton
+{
+  position: fixed;
+  color: #111317;
+  background-color: #F8F8FF;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  display: none;
+
+
+}
+
+.navBarButton:hover
+{
+  cursor: pointer;
+}
+
+
+
+.mainContentFull
+{
   
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+
 }
-.buttonElement:hover
+.mainContentUpper
 {
-  opacity: 80%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-start; 
 }
 
-@media (max-width: 1000px) {
-  body{
-    overflow-y: scroll;
-  }
-  .buttonBox {
-    display: block;
-    text-align: center;
-  }
-}
-
-.buttonElement
-{
-  background-color: white;
-  color: white;
-  font-size: 16px;
-  padding: 16px;
-}
-
-figure
+.mainContentLeft, .mainContentRight
 {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;   
-}
-figcaption
-{
-  outline: white;
+  align-items: center;
+  justify-content:flex-start;
+
+
+  margin: 16px;
   padding: 16px;
-  text-align: center;
-  width:40%;
+  width: 50%;
 }
-
-img
+.mainContentLeft
 {
+  order: 1;
+}
+
+.mainContentRight
+{
+  order: 2;
+}
+
+
+.mainContentLeftImage
+{
+    width: 100%;
+    border: solid 4px #F8F8FF;
+
+}
+.mainContentLeftImageCaption
+{
+  padding: 16px;
+}
+
+.mainContentRightText
+{
+  padding: 16px;
+}
+
+.mainContentUnder
+{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  align-content: center;
+  justify-content:left;
+
+
+  margin: 16px;
+  padding: 16px;
+  width: 100%
+}
+
+.mainContentButtons
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+
+.mainContentButtons > a > button
+{
+  width: 300px;
+  height: 50px;
+  margin: 4px;
+}
+
+.researchListEntry
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  border: solid;
+  margin-bottom: 100px;
+  
+  
+}
+.researchListImage
+{
+  width: 400px;
   padding: 4px;
+  
+}
+
+.researchListSubEntry
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+   
+}
+
+.researchListSubSubEntry
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+   
+}
+
+.researchListEntryLeft, .researchListEntryRight
+{
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#publicationsTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#publicationsTable td, #publicationsTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#publicationsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
   background-color: #FCFCFC;
+  color: #111317;
 }
 
-a{
-  text-decoration: none;
+
+.musicListEntry
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  border: solid;
+  margin-bottom: 100px;
+
+  
+  
+}
+.musicListImage
+{
+  width: 400px;
+  padding: 16px;
+  
 }
 
+.musicListSubEntry
+{
+  display: flex;
+  flex-direction: row;
+  align-items:start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+   
+}
+
+.musicListSubSubEntry
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: solid rgb(188, 188, 188);
+  padding: 16px;
+   
+}
+
+/*----------------------------------------------*/
+
+
+@media only screen and (max-width: 600px) 
+{
+  body
+  {
+      overflow-y: scroll;
+  }
+  .navBar 
+  {
+    position: absolute;
+      flex-direction: column;
+      height: 375px;
+      height: 100%;
+      display: none;
+      background-color: #f8f8ffed;
+  }
+  .navBarButton
+  {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  .mainContentFull
+  {
+    flex-direction: column;
+    justify-content: space-between  ;
+  }
+  .mainContentUpper
+  {
+    flex-direction: column;
+  }
+
+  .mainContentLeft, .mainContentRight
+  {
+    width: 80%;
+    justify-content: space-between  ;
+
+    
+
+  }
+  .mainContentLeft
+  {
+    order: 1;
+    
+    
+
+  }
+
+  .mainContentRight
+  {
+    order: 2;
+  }
+  .mainContentUnder
+  {
+    
+    width: 80%
+  }
+  .listButton
+  {
+    width: 100%;
+  }
+
+.researchListEntry
+{
+  
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+  
+  
+
+  .researchListImage
+{
+  width: 100%;
+  padding: 16px;
+  
+}
+  .researchListSubEntry
+  {
+    flex-direction: column;
+    width: 90%;
+ 
+     
+  }
+  .researchListSubSubEntry
+  {
+    flex-direction: column;
+    width: 90%;
+ 
+     
+  }
+
+  .researchListEntryLeft, .researchListEntryRight
+{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.musicListEntry
+{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: center;
+}
+  
+  
+
+  .musicListImage
+{
+  width: 100%;
+  padding: 16px;
+  
+}
+  .musicListSubEntry
+  {
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+    width: 90%;
+ 
+     
+  }
+  .musicListSubSubEntry
+  {
+    flex-direction: column;
+    width: 90%;
+ 
+     
+  }
+
+
+
+}
 
 
 
