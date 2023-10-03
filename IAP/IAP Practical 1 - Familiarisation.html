@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Housekeeping -->      
+        <meta charset="UTF-8">
+        <title>Practical 1 - Familiarisation</title>
+        <meta lang="en">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      </head>
+
+   
+
+<body>
+    <h1>Tutorial 1 - Familiarisation</h1>
+    <h2>Introduction</h2>
+
+    <p> This practical is designed to help familiarise you with the development tools that will be used for Introductory Audio Programming. You will be developing software in the programming language C++ using the Apple Integrated Development Environment (IDE) called Xcode or, on Windows, the Microsoft Visual Studio IDE. By the end of this session you should be familiar with: </p>
+    
+        <ol>
+            <li>Apple workstations in the faculty labs</li>
+            <li>Xcode or Visual Studio development environment</li>
+            <li>The Aserve application</li>
+            <li>The structure of a basic C++ program</li>
+        </ol>
+    
+    
+    <h2>Getting started</h2>
+    
+   <p>If you have not already done so, please follow the [getting started guide](../Getting%20Started.md) before attempting this practical.</p>
+    
+    <h3>What is all this stuff?</h3>
+    
+    <p>You will write code in one of two places.</p>
+    
+    <ul>
+        <li>The header `IAP.h` files</li>
+        <li>and a c++ `IAP.cpp` file.</li>
+    </ul>
+    
+    <p>
+    For this first task, we will only use the `IAP.cpp` file, single click on this file to open it now.
+    If you accidentally double-click, close the separate window that will appear and try again.
+    
+    
+    `IAP.cpp` is where you will be writing most of your C++ programs for this module. Files can be identified as C++ programs by either their, .cpp or .h extension. C++ program files are written in plain text so they may be opened using any ordinary text editor (including word, textedit, notepad, and so forth.). However, Xcode takes care of many other operations needed for creating and running a program.
+    
+    The code for this file will be broken down and explained below.
+    </p>
+    
+    <h3>Comments</h3>
+    
+    <p>
+    The first line of the program is a comment. You can write anything you like between the /* and */ and it will be ignored when the program is built. Comments may be written anywhere in your program and should be used judiciously to explain what’s going on and to make the code easier to understand and read. You will also see comments written by //. 
+    
+    -	Use /* */ for writing comments across multiple lines
+    -	Use // for writing single line comments.
+    </p>
+    
+    
+    <h3>Include files</h3>
+    
+    
+    #include "IAP.h"
+    #include <iostream>
+    
+    
+    <p>These two lines tell the compiler to include the information contained in the files IAP.h and iostream.</p>
+    
+    <ul>
+        <li>Quotation marks (“ “) are used to include files that we write ourselves.</li>
+        <li>Triangle brackets (< >) are used to include C++ library files.</li>
+    </ul>
+  
+    
+    <p>C++ programs often include a lot of code behind the scenes. We keep each part separated into different files to avoid having one massive document!</p>
+    
+    <h3>Run loop</h3>
+    
+    ```cpp
+    void IAP::run () 
+    {
+    
+    }
+    ```
+    
+    <p>The run function is where our code gets executed. The opening brace of the `run()` function is where program execution begins and the closing brace is where execution ends and the program stops.
+    
+    **Any code that you add to this program should go after opening brace { and before the  closing brace. }**
+</p>
+    
+    <h2>Exercise 1: Hello World</h2>
+    
+    <p>Modify the run function so it matches the following:</p>
+    
+    
+   
+    void IAP::run ()
+    {
+        std::cout << "Hello World! \n";
+    }
+    
+    <p>
+    Rebuild and run your program by pressing the ‘Run’ icon again (or cmd + r ). Should you encounter any errors, read the error message for clues as to what the problem might be and check that you have written the line exactly as shown.
+    
+    When ever we want to print text we use the std::cout command
+    </p>
+    
+    std::cout 
+    
+    <p>The two triangles arranged like this are used to direct data, i.e. we are directing the text we want to print to the std::cout command.</p>
+    
+    <<
+    
+    
+    <p>Finally, we put the text we want to display inside a pair of quotation marks.</p>
+    
+    "Hello World! \n"
+
+    **Oh and one more thing… We must end our line of code with a semi-colon. Many programming mistakes are caused by forgetting to put it!**
+    
+    ;
+    
+    <p>Other important things to note:</p>
+    
+    <ol>
+        <li>The std::cout command can be used because the header file <iostream> was included, which is where std::cout is declared.</li>
+        <li>The C++ compiler is case sensitive. That is, std::cout is valid and std::CoUt is not.</li>
+        <li>C++ statements are terminated with a semi-colon (;).</li>
+        <li>std::cout will be used every week.</li>
+        <li>Code that is enclosed by braces { } should be indented one tab space.</li>
+    </ol>
+
+    
+    <p>
+        Now modify your program so that it greets you by your first name. You may also wish to experiment with some other text to give your program a more colourful character. 
+    
+    std::cout displays the text enclosed by quotation marks on the console; however, there are exceptions. For example, \n does not appear. Try moving \n between the words Hello and World, to establish what it does. 
+    
+    \n is what’s called an escape sequence and lets us print characters that cannot be represented easily in code. \t is another useful escape sequence. Insert it in a few places to work out what it does. 
+    </p>
+
+    <h3>Keeping a reference archive of your work</h3>
+
+    
+    <p>To help you keep a reference of your work to help with future practicals and assignments, we have developed a handy application called `CodeBook`.</p>
+    
+    
+    <p>This application helps you take a snapshot of your work, with neatly organised spaces for each and every exercise of each and every practical.</p>
+    
+    <ol>
+        <li>In finder, navigate to the IAP `apps` folder and open CodeBook.app.</li>
+        
+        <li>On the left hand side of the application you should headers for each week.
+            * If codebook loads blank, use `File > Load` to pick `iap.xml` from `codebook files` folder</li>
+
+        <li>Within weekly headers you should see labels for each exercise.
+            * By default all headers are 'collapsed', double-click to expand/re-collapse them</li>
+        
+        <li>Copy and paste the contents of `IAP.cpp` and paste it into `Exercise 1: Hello World` in codebook. </li>
+        <li>You can now work on the next exercise in `IAP.cpp` in Xcode without the risk of losing any work. 
+        that you complete and then **save each exercise** with `File > Save'.</li>
+
+    </ol>
+   
+    
+    <p>Code book stores files in a `code book files` folder, you should avoid manual edits to this folder and **back it up carefully**.</p>
+    
+    <h3>Aserve 2.0</h3>
+    
+    <p>From your Documents/iap/ folder, find and launch Aserve. You should see the following interface:</p>
+    
+    <!--<img src="../images/aserve_screen_shot_a.png" />-->
+    
+    <h3>How Xcode and Aserve work together</h3>
+    
+    <p>
+    To produce sound in a musical context Aserve and your Xcode program work together as a 'client and server'. This is very similar to how a client at a restaurant might request food from the serving staff. Okay maybe that's a silly analogy - but it's not too bad!
+    
+    Broadly speaking:
+    </p>
+    
+    <ul>
+        <li>your `iapproj` program will always run inside Xcode</li>
+        <li>Your `iapproj` program can tell Aserve to make sound automatically ... or ... </li>
+     <li>Aserve will send messages to your Xcode program when MIDI keyboard controls are moved</li>
+         <li>Your `iapproj` program can respond by telling Aserve to make sound or become silent</li>
+         
+    </ul>
+    
+    <!--><img src="../images/AserveXcodeYourProgram.png" /> -->
+    
+    <p>We'll explore the second scenario (responding to MIDI controls) in later practicals, for now let's start with something simple.</p>
+    
+    <h2>Exercise 2: Test Tone</h2>
+    
+    <p> Go to Xcode and and delete the std::cout line and replace it with the following: </p>
+    
+    aserveOscillator(0, 1000.0, 1.0, 0);
+    aserveSleep(1000);
+    
+    <p>As before, click the Run button, if there are any errors, fix them and try again. When the program runs successfully, you should hear a one second tone. </p>
+    
+    The function call that starts the tone is: 
+
+    aserveOscillator(0, 1000.0, 1.0, 0);
+    aserveOscillator() switches on an oscillator with the settings that are specified as its four arguments. 
+    
+    <ul>
+        <li>Argument 1 has a value of 0</li>
+        <li>Argument 2 has a value of 1000.0</li> 
+        <li>Argument 3 has a value of 1.0</li>
+        <li>Argument 4 has a value of 0 </li>
+    </ul>
+
+    
+    
+    <p>with different values for arguments 2 - 4 and complete the table below with argument descriptions. Keep an eye on aserve for any errors!</p>
+    
+    
+    <table>
+        <tr>
+            <td>Argument</td>
+            <td>Description of what this argument controls</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+        </tr>
+    </table>
+    
+    <p>The oscillator function call is followed by a call to aserveSleep(), which causes program execution to pause for the time specified as its argument in milliseconds (i.e. aserveSleep(1000); will pause the program for 1 second). This causes the tone to be sustained for one second before the program exits (and the tone is stopped).
+    
+    
+    Make sure you save your solution to this exercise to codeBook before moving on.
+    </p>
+    
+    <h2>Exercise 3: Sequential Programming</h2>
+    
+    <!--<img src="../images/score_greensleves.png" />-->
+    
+    <p>The score for the first four bars of Greensleeves is shown above. Program the score using the aserveOscillator(), and aserveSleep() functions. Do not worry if you are unable to read music, the note names and durations are indicated below and a table showing the standard piano note names, frequencies, and durations are provided at the end of this practical.</p>
+    
+   
+    <table>
+        <tr>
+            <th>Order</th>
+            <th>Note</th>
+            <th>Duration</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>A4</td>
+            <td>Quaver</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>C5</td>
+            <td>Crotchet</td>
+        </tr>
+        
+
+        <tr>
+            <td>3</td>
+            <td>D5</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>4</td>
+            <td>E5</td>
+            <td>Dotted Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>5</td>
+            <td>F5</td>
+            <td>Semiquaver</td>
+        </tr>
+     
+
+        <tr>
+            <td>6</td>
+            <td>E5</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>7</td>
+            <td>D5</td>
+            <td>Crotchet</td>
+        </tr>
+        
+
+        <tr>
+            <td>8</td>
+            <td>B4</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>9</td>
+            <td>G4</td>
+            <td>Dotted Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>10</td>
+            <td>A4</td>
+            <td>Semiquaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>11</td>
+            <td>B4</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>12</td>
+            <td>C4</td>
+            <td>Crotchet</td>
+        </tr>
+        
+
+        <tr>
+            <td>13</td>
+            <td>A4</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>14</td>
+            <td>A4</td>
+            <td>Dotted Quaver</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Ab4</td>
+            <td>Semiquaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>16</td>
+            <td>A4</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>17</td>
+            <td>B4</td>
+            <td>Crotchet</td>
+        </tr>
+        
+
+        <tr>
+            <td>18</td>
+            <td>Ab4</td>
+            <td>Quaver</td>
+        </tr>
+        
+
+        <tr>
+            <td>19</td>
+            <td>E4</td>
+            <td>Quaver</td>
+        </tr>
+
+        <tr>
+            <td>20</td>
+            <td>A4</td>
+            <td>Semiquaver</td>
+        </tr>
+        
+        
+
+
+        
+        
+
+    </table>
+  
+    <p>
+    For the purposes of this exercise you can use the duration values given in appendix item B.
+    
+    Make sure you save your solution to this exercise to codeBook before moving on.
+    </p>
+    
+    <h2>Exercise 4: Playing Chords </h2>
+    
+    <p>So far we have only experimented with turning on one oscillator at a time. We can stack notes by adding them on more channels, note that the channel is specified by argument 1.</p>
+    
+    aserveOscillator(0, 1000.0, 1.0, 0);
+    aserveOscillator(1, 2000.0, 1.0, 0);
+    aserveOscillator(2, 4000.0, 1.0, 0);
+    aserveSleep(1000);
+    
+    <p>The following code will now play a 1kz, 2khz and 4kz tone at the same time. Using this technique program in the following chord sequence. </p>
+    
+    <!--<img src="../images/metascore.png" />-->
+    
+    <table>
+        <tr>
+            <th>Chords</th>
+            <th>Note</th>
+        </tr>
+        <tr>
+            <td>
+                Chord 1
+            </td>
+            <td>
+                E4 G4 B4
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Chord 2
+            </td>
+            <td>
+                D4 G4 B4
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Chord 3
+            </td>
+            <td>
+                C4 G4 B4
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Chord 4
+            </td>
+            <td>
+                C4 E4 Bb4
+            </td>
+        </tr>
+    </table>
+ 
+    
+    <h2>Debug exercise</h2>
+    
+    <p>Each week you will also be given a debugging challenge, whereby you have to fix broken code. Give the reason as to why this code will produce an error.</p>
+    
+    void IAP::run ()
+    {
+        std::cout << "Hello World! \n"
+    }
+    <h2>Challenge exercise: What about adding rests!</h2>
+
+    <p>In the previous exercise each note flowed from one to the next without any rests, in this exercise we will need to program in gaps in our music. The simplest way of doing is to to simply make a call to aserveOscillator with 0 for all arguments. Following this with a aserve sleep will give us a rest with a duration equivalent to the value we supply.</p>
+    
+    aserveOscillator(0, 1000.0, 1.0, 0);
+    aserveSleep(1000);
+    aserveOscillator(0, 0, 0, 0); //turn off oscillator
+    aserveSleep(1000); //rest duration
+    
+    <h3>Mario Theme</h3>
+    
+    <p>Lets program something a little more modern. Do not worry if you do not get time to complete this exercise.</p>
+    
+    <!--<img src="../images/marioscore.png" />-->
+    
+    <p>A table of events is given in the appendix.</p>
+    
+    <h2>Exercise: Homework</h2>
+    
+    
+    <p>Your homework task for this week is to program in your own choice of music, using what we have learnt in this session, or: Complete the Mario theme exercise.</p>
+    
+    <h2>Finishing Up</h2>
+    
+    Make sure that you have saved your work to codeBook and taken a backup of your iap folder.
+    
+    <h2>Important Material</h2>
+    
+    Make sure that you have a good understanding of the following before we return next week: 
+
+    <ol>
+        <li>The use of the Xcode IDE for loading, editing, building and running projects.</li>
+        <li>The use of the std::cout command.</li>
+        <li>The use of indentation in C programs.</li>
+        <li>The Aserve application, and the aserveOscillator() function.</li>
+        <li>The use and meanings of terms call and argument in C programs.</li>
+    </ol>
+    
+
+    
+    <h3>Appendix Item A: Standard Piano Note Names and Frequencies</h3>
+    
+    <!--<img src="../images/freq_note_map.png" />-->
+    
+    
+    ## Appendix Item B: Note Durations
+    
+    <table>
+        <tr>
+            <td>Note Type</td>
+            <td>Duration in ms</td>
+        </tr>
+        <tr>
+            <td>Crotched</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>Quaver</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>Dotted Quaver</td>
+            <td>375</td>
+        </tr>
+        <tr>
+            <td>Semiquaver</td>
+            <td>125</td>
+        </tr>
+        <tr>
+            <td>Triplet Crotchet</td>
+            <td>333</td>
+        </tr>
+    </table>
+    
+    ## Appendix item C: Mario Theme Table of events
+    
+    
+    
+    <table>
+        <tr>
+            <td>Order</td>
+            <td>Note</td>
+            <td>Duration</td>
+            <td>Order</td>
+            <td>Note</td>
+            <td>Duration</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>E5</td>
+            <td>Quaver</td>
+            <td>19</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>E5</td>
+            <td>Quaver</td>
+            <td>20</td>
+            <td>B4</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+            <td>21</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>E5</td>
+            <td>Quaver</td>
+            <td>22</td>
+            <td>Bb4</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+            <td>23</td>
+            <td>A4</td>
+            <td>Crotchet</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>C5</td>
+            <td>Quaver</td>
+            <td>24</td>
+            <td>G4</td>
+            <td>Triplet Crotchet</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>E5</td>
+            <td>Crotchet</td>
+            <td>25</td>
+            <td>E5</td>
+            <td>Triplet Crotchet</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>G5</td>
+            <td>Crotchet</td>
+            <td>26</td>
+            <td>G5</td>
+            <td>Triplet Crotchet</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Rest</td>
+            <td>Crotchet</td>
+            <td>27</td>
+            <td>A5</td>
+            <td>Crotchet</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>G5</td>
+            <td>Crotchet</td>
+            <td>28</td>
+            <td>F5</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Rest</td>
+            <td>Crotchet</td>
+            <td>29</td>
+            <td>G5</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>C5</td>
+            <td>Crotchet</td>
+            <td>30</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+            <td>31</td>
+            <td>E5</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>G4</td>
+            <td>Quaver</td>
+            <td>32</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Rest</td>
+            <td>Crotchet</td>
+            <td>33</td>
+            <td>C5</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>E4</td>
+            <td>Crotchet</td>
+            <td>34</td>
+            <td>D5</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Rest</td>
+            <td>Quaver</td>
+            <td>35</td>
+            <td>B4</td>
+            <td>Quaver</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>A4</td>
+            <td>Quaver</td>
+            <td>36</td>
+            <td>Rest</td>
+            <td>Crotchet</td>
+        </tr>
+    </table>
+    
+    
+    
+    
+    
+    <h2>Videos</h2>
+    
+    The following videos may help you during this session:
+    
+    <h3>Printing text</h3>
+    
+    <a href="http://www.youtube.com/watch?v=oAFGNsZ6MPc">Link to printing text video</a>
+    
+    
+    <h3>Programming Aserve</h3>
+    <a href="http://www.youtube.com/watch?v=Pfclu24116U">Link to general aserve programming video</a>
+    
+</body>
+</html>
