@@ -2,17 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone');
 
+
 body, html
 {
   
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin: 0;
+    margin: auto;
 
-    background-color: #FCFCFC;
+    /*background-color: #FCFCFC;*/
+
     color: #111317;
 
     font-family: 'Atkinson Hyperlegible', sans-serif !important;
+
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
 
     
 }
@@ -20,11 +25,14 @@ body, html
 h1
 {
     padding: 16px;
+    margin: 16px;
     border-bottom: solid 6px #111317;
 }
 h2
 {
     padding: 16px;
+    margin: 16px;
+
     border-bottom: solid 2px #111317;
 
 }
@@ -32,11 +40,12 @@ h2
 p
 {
     padding: 16px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 table, tr, th, tr, td
 {
+    font-size: 20px;
     padding: 16px;
     text-align: left;
 }
@@ -49,8 +58,9 @@ table {
 
 img
 {
-    width: 100%;
-    
+    width: 95%;
+    display: block;
+    margin: auto;
 }
 
 header, footer
@@ -64,4 +74,54 @@ header, footer
 
 }
 
+.pageHeader
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: solid 6px #111317;
+    margin: 16px;
+    background-color: #FCFCFC;
 
+}
+.pageHeaderElement
+{
+    display: flex;
+}
+
+
+#backgroundVideo {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 10%;
+    filter: grayscale(100%);
+    object-fit: cover;
+  
+}
+
+.backgroundPanel
+{
+    position:fixed;
+    z-index: -1;
+    background-color: #fcfcfccd;
+    min-height: 100%;
+    width: 81%;
+    top: 0;
+}
+
+li
+{
+    font-size: 20px;
+}
+
+
+
+@keyframes fadeIn {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
