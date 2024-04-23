@@ -125,3 +125,14 @@ li
     from {opacity: 0%;}
     to {opacity: 100%;}
   }
+
+  @media only screen and (max-width: 1000px) {
+    .pageHeader
+    {
+        flex-direction: column-reverse;
+    }
+    .pageHeaderElement
+    {
+        width: 90%;
+    }
+  }
