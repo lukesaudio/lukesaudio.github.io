@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');                                       /* Headings */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Rubik&display=swap');        /* Body */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone');                                /* Icons */
+
+body, html
+{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    
+    width: 100%;
+    height: 100%;
+overflow-x: hidden;    
+    justify-content: flex-start;
+    align-items: center;
+    align-content:flex-start;
+    text-align: left;
+
+    font-family: "Atkinson Hyperlegible", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: #0E0E23;
+    color: #DFF3E4;
+
+}
+
+h1, h2
+{
+    font-family: "Jua", serif;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+
+a
+{
+    color: #DFF3E4;
+}
+
+ul
+{
+    columns: 2;
+}
+#navButtons > ul
+{
+    margin: 0;
+    padding: 16px;
+}
+
+li
+{
+    display:flex;
+}
+
+i
+{
+    width: 100%;
+}
+
+footer
+{
+    bottom: 0;
+    display: block;    
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+#hero       {       background-color: #62139F; color: #FDFDF5;  }
+#about      {       background-color: #FDFDF5; color: #0E0E23;  }
+#research   {       background-color: #4b0516; color: #DFF3E4;  }
+#music      {       background-color: #FDFDF5; color: #0E0E23;  }
+#projects   {       background-color: #62139F; color: #DFF3E4;  }
+#creations      {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
+#contact    {       background-color: #4b0516; color: #DFF3E4;  }
+
+#hero, #about, #research, #music, #projects, #creations, #contact
+{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(/images/index/background.jpg);
+    background-blend-mode:overlay;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+
+#contact
+{
+    width: 100%;
+    height: auto;
+
+    display: flex;    
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+#sectionContentLeft, #sectionContentRight
+{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+#sectionContentLeftContact
+{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+#sectionContentLeftContact > #sectionTitleLeft
+{
+    text-align: center;
+}
+
+#sectionContentLeft {    text-align: left; }
+#sectionContentRight{    text-align: right;  }
+
+#sectionContentInternal {padding: 32px;}
+
+#sectionImage
+{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+    
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+#sectionTitleLeft, #sectionTitleRight, #sectionHeroTitle
+{
+    width: 100%;
+    margin: 0;
+    font-size: 15vh;
+    
+
+}
+
+
+#sectionHeroTitle
+{
+    font-size: 25vh;
+    padding: 16px;
+}
+
+#sectionHeroSubtitle
+{
+    margin: 0;
+    font-size: 10vh;
+    padding: 16px;
+}
+
+#sectionTitleLeft{      text-align: left;  }
+#sectionTitleRight{     text-align: left;  }
+#sectionTextLeft, #sectionTextRight{       font-size: 2.8vh; text-align: left; }
+#sectionTextEmphasis{font-weight: bold; display:block; border: solid #DFF3E4; padding: 8px; width: 60%;}
+
+#sectionTextEmphasisDark{font-weight: bold; display:block; border: solid #0E0E23; padding: 8px; }
+#sectionTextEmphasisDark > a{color: #0E0E23; }
+
+#sectionSubtitle
+{   
+    margin: 0;
+    font-size: 10vh;
+    padding: 16px;
+}
+
+
+#sectionActualImage
+{
+    width: 100%;
+    height: 100%;
+}
+#sectionActualImageMobile
+{
+    display: none;
+}
+
+#sectionLeftGrid
+{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    margin: auto;
+    overflow: auto;
+    padding: 32px;
+    align-items: flex-start;
+}
+
+#sectionLeftGrid > li
+{
+    width: 30vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+    body, html {flex-flow: column nowrap; height: 200vh; }
+   
+    #hero, #about, #research, #music, #projects, #contact{ 
+        height: 100%;
+        width: 100%;
+        flex-flow: column nowrap;
+        text-align: center; 
+        padding: 0;   
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        
+    }
+
+    #sectionContent
+    { 
+        height: 100%; 
+        width: 100%;  
+        flex-flow: column nowrap;
+    }
+    #sectionImage
+    {
+        display: none;
+    }
+    #sectionActualImageMobile
+    {
+        display: block;
+        width: 40%;
+        margin: auto;
+}
+
+    #sectionContentLeft, #sectionContentRight
+    {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    #sectionLeftGrid
+    {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #sectionTitleLeft{font-size: 10vh; width: 100%; text-align: center}
+    #sectionTitleRight{font-size: 10vh; width: 100%; text-align: center}
+    #sectionHeroTitle{font-size: 10vh; width: 100%; text-align: center;}
+    #sectionHeroSubtitle{text-align: center;}
+}
