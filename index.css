@@ -79,7 +79,7 @@ footer
 #research   {       background-color: #4b0516; color: #DFF3E4;  }
 #music      {       background-color: #FDFDF5; color: #0E0E23;  }
 #projects   {       background-color: #62139F; color: #DFF3E4;  }
-#creations      {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
+#creations  {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
 #contact    {       background-color: #4b0516; color: #DFF3E4;  }
 
 #hero, #about, #research, #music, #projects, #creations, #contact
@@ -102,7 +102,6 @@ footer
 {
     width: 100%;
     height: auto;
-
     display: flex;    
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -128,6 +127,9 @@ footer
     align-content: center;
 }
 
+#sectionContentLeft {    text-align: left;      }
+#sectionContentRight{    text-align: right;     }
+
 
 #sectionContentLeftContact
 {
@@ -145,9 +147,6 @@ footer
     text-align: center;
 }
 
-#sectionContentLeft {    text-align: left; }
-#sectionContentRight{    text-align: right;  }
-
 #sectionContentInternal {padding: 32px;}
 
 #sectionImage
@@ -157,9 +156,22 @@ footer
     display: flex;
 
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     align-content: center;
     
+}
+
+#sectionActualImage
+{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#sectionActualImageMobile
+{
+    display: none;
 }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -176,14 +188,14 @@ footer
 
 #sectionHeroTitle
 {
-    font-size: 25vh;
+    font-size: 20vh;
     padding: 16px;
 }
 
 #sectionHeroSubtitle
 {
     margin: 0;
-    font-size: 10vh;
+    font-size: 5vh;
     padding: 16px;
 }
 
@@ -203,15 +215,7 @@ footer
 }
 
 
-#sectionActualImage
-{
-    width: 100%;
-    height: 100%;
-}
-#sectionActualImageMobile
-{
-    display: none;
-}
+
 
 #sectionLeftGrid
 {
@@ -228,7 +232,7 @@ footer
 
 #sectionLeftGrid > li
 {
-    width: 30vh;
+    width: 15vh;
     align-content: center;
     justify-content: center;
     align-items: center;
