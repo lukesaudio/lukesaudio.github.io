@@ -10,7 +10,7 @@ body, html
     
     width: 100%;
     height: 100%;
-overflow-x: hidden;    
+    overflow-x: hidden;    
     justify-content: flex-start;
     align-items: center;
     align-content:flex-start;
@@ -41,17 +41,23 @@ a
 
 ul
 {
-    columns: 2;
+    padding: 0;
 }
+
 #navButtons > ul
 {
     margin: 0;
     padding: 16px;
+    columns: 2;
 }
 
 li
 {
     display:flex;
+    font-size: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
 }
 
 i
@@ -74,15 +80,16 @@ footer
 /*------------------------------------------------------------------------------------------------------*/
 
 
-#hero       {       background-color: #62139F; color: #FDFDF5;  }
-#about      {       background-color: #FDFDF5; color: #0E0E23;  }
-#research   {       background-color: #4b0516; color: #DFF3E4;  }
-#music      {       background-color: #FDFDF5; color: #0E0E23;  }
-#projects   {       background-color: #62139F; color: #DFF3E4;  }
-#creations  {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
-#contact    {       background-color: #4b0516; color: #DFF3E4;  }
+#hero                               {       background-color: #62139F; color: #FDFDF5;  }
+#about, #WalkingBillboards          {       background-color: #FDFDF5; color: #0E0E23;  }
+#research, #Cosmic                  {       background-color: #4b0516; color: #DFF3E4;  }
+#music, #Scrub                      {       background-color: #FDFDF5; color: #0E0E23;  }
+#projects, #OSSUAY                  {       background-color: #62139F; color: #DFF3E4;  }
+#creations, #TakeUpDarts            {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
+#contact, #SpaceDad                 {       background-color: #4b0516; color: #DFF3E4;  }
 
-#hero, #about, #research, #music, #projects, #creations, #contact
+#hero, #about, #research, #music, #projects, #creations, #contact,
+#WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad
 {
     width: 100%;
     height: 100vh;
@@ -176,11 +183,11 @@ footer
 
 /*------------------------------------------------------------------------------------------------------*/
 
-#sectionTitleLeft, #sectionTitleRight, #sectionHeroTitle
+#sectionTitleLeft, #sectionTitleRight, #sectionHeroTitle, #sectionTitleLeftOSSUAY
 {
     width: 100%;
     margin: 0;
-    font-size: 15vh;
+    font-size: 100px;
     
 
 }
@@ -188,20 +195,20 @@ footer
 
 #sectionHeroTitle
 {
-    font-size: 20vh;
+    font-size: 180px;
     padding: 16px;
 }
 
 #sectionHeroSubtitle
 {
     margin: 0;
-    font-size: 5vh;
+    font-size: 64px;
     padding: 16px;
 }
 
 #sectionTitleLeft{      text-align: left;  }
 #sectionTitleRight{     text-align: left;  }
-#sectionTextLeft, #sectionTextRight{       font-size: 2.8vh; text-align: left; }
+#sectionTextLeft, #sectionTextRight{       font-size: 24px; text-align: left; }
 #sectionTextEmphasis{font-weight: bold; display:block; border: solid #DFF3E4; padding: 8px; width: 60%;}
 
 #sectionTextEmphasisDark{font-weight: bold; display:block; border: solid #0E0E23; padding: 8px; }
@@ -246,8 +253,19 @@ footer
 
 @media only screen and (max-width: 1400px) {
     body, html {flex-flow: column nowrap; height: 200vh; }
+
+    ul{ columns: 1;    }
+    ul > a > li{ text-align: center; width: 100%;  justify-content: left; padding: 0; font-size: 16px;  }
+
+    #navButtons > ul
+   {
+        columns: 1;
+    }
+
    
-    #hero, #about, #research, #music, #projects, #contact{ 
+    #hero, #about, #research, #music, #projects, #contact,
+    #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad
+    { 
         height: 100%;
         width: 100%;
         flex-flow: column nowrap;
@@ -272,7 +290,8 @@ footer
     #sectionActualImageMobile
     {
         display: block;
-        width: 40%;
+        width: 100%;
+        max-width: 500px;
         margin: auto;
 }
 
@@ -290,7 +309,8 @@ footer
     }
 
     #sectionTitleLeft{font-size: 10vh; width: 100%; text-align: center}
+    #sectionTitleLeftOSSUAY{font-size: 6vh; width: 100%; text-align: center}
     #sectionTitleRight{font-size: 10vh; width: 100%; text-align: center}
-    #sectionHeroTitle{font-size: 10vh; width: 100%; text-align: center;}
-    #sectionHeroSubtitle{text-align: center;}
+    #sectionHeroTitle{font-size: 54px; width: 100%; text-align: center;}
+    #sectionHeroSubtitle{font-size: 32px; text-align: center;}
 }

@@ -118,13 +118,13 @@ footer > p
     align-content: center;
 
 
-
 }
 
 #templateLeftHalf, #templateRightHalf
 {
     width: 100%;
-    height: 50vh;
+    height: auto;
+    padding: 32px;
 
     background-image: url(/images/index/background.jpg);
     background-blend-mode:overlay;
@@ -172,13 +172,21 @@ footer > p
     width: 70%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-end;
     align-content: center;
 }
 
+
+
+
 #sectionContentLeft {    text-align: left; padding-left: 16px;  }
 #sectionContentRight{    text-align: right; padding-right: 16px;  }
+
+
+
+
+
 
 #sectionImageContainer
 {
@@ -212,13 +220,66 @@ footer > p
 
 /*------------------------------------------------------------------------------------------------------*/
 
-#sectionTitleLeft, #sectionTitleRight
+#sectionContentMusic
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#sectionTitleMusic
+{
+    width: 30%;
+    margin: 0;
+    font-size: 48px;
+    
+}
+
+#sectionImageContainerMusic
+{
+    height: auto;
+    width: 300px;
+    display: flex;
+    
+    margin: 16px;
+
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+    border: solid #0E0E23;
+    
+}
+#sectionTextMusic
+{
+     width: 40%;
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+}
+
+#sectionListMusic
+{
+    width: 10%;
+    text-align: left;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+
+
+#sectionTitleLeft, #sectionTitleRight, #sectionTitleLeftOSSUAY
 {
     width: 100%;
     margin: 0;
     font-size: 10vh;
     
 }
+
+
+
 
 
 #sectionHeroSubtitle
@@ -231,7 +292,9 @@ footer > p
 #sectionTitleLeft{      text-align: left;  }
 #sectionTitleRight{     text-align: right;  }
 
-#sectionTextLeft, #sectionTextRight{    font-size: 2.8vh; width: 99%; padding: 8px; }
+#sectionTextLeft, #sectionTextRight{    font-size: 2.8vh; width: 70%; padding: 8px; }
+#sectionTextLeftHalf, #sectionTextRightHalf{    font-size: 2.8vh; width: 70%; padding: 8px; }
+
 #sectionTextLeft{       text-align: left; }
 #sectionTextRight{      text-align: right; }
 
@@ -329,6 +392,7 @@ footer > p
     }
 
     #sectionTitleLeft{font-size: 10vh; width: 100%; text-align: center}
+    #sectionTitleLeftOSSUAY{font-size: 10vh; width: 100%; text-align: center}
     #sectionTitleRight{font-size: 10vh; width: 100%; text-align: center}
     #sectionHeroTitle{font-size: 10vh; width: 100%; text-align: center;}
     #sectionHeroSubtitle{text-align: center;}
