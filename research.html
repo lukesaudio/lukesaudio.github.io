@@ -14,110 +14,154 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
         <link rel="manifest" href="favicons/site.webmanifest">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         <script src="https://kit.fontawesome.com/2e529e3d96.js" crossorigin="anonymous"></script>
         
+
+
         <!-- External CSS -->
-        <link rel="stylesheet" href="/template.css">
-    </head>
+        <link rel="stylesheet" href="/index.css">
+
+      </head>
 
       <body>
-        <div id="templateTop">
 
-            <div id="templateNavButtons"><ul><a href="index.html"><li>return to homepage</li></a></ul></div>
-            <div id="templateTop">   <h1 id="templateTopTitle">Research</h1> </div>
+        <div id="hero">
+            <div id="sectionContentLeft" class="animate__animated animate__slideInLeft">
+                <div id="sectionContentInternal">
+                    <h1 id="sectionHeroTitle">Research</h1>
+                    <img id="sectionActualImageMobile" src="/images/music/luke with guitar.png">
+                    <h2 id="sectionHeroSubtitle">putting my brain through it's paces.</h2>
+                    
+                    <div id="navButtons">
+                        <ul>
+                            <a href="index.html"> <li>return to home page</li> </a>
+                            <a href="#ResearchAreas"> <li>skip to research areas</li> </a>
+                            <a href="#Publications"> <li>skip to publications</li> </a>
+                            <a href="#Teaching"> <li>skip to teaching</li> </a>
+                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="sectionImage">
+                <img id="sectionActualImage" src="/images/research/poster power pose.png" class="animate__animated animate__slideInRight" alt="Luke sat at a desk playing a Fender Cabronita guitar. There are 3 popouts. One points to Luke's face and says 'serious mode!'. Another points to Luke's t shirt and says 'trivium merch!'. The last one points to Luke's guitar and says 'Fender Cabronita!'">
+            </div>
 
         </div>
 
-        <div id="templateLeft">
-            <div id="sectionImageContainer"><img id="sectionActualImage" src="/images/research/smart headshot.jpg"></div>
+        <div id="ResearchAreas">
+        
+            <div id="sectionImage">
+                <img id="sectionActualImage" src="/images/research/smart headshot.jpg" alt="Luke and Archie from Walking Billboards pose next to a red telephone booth. Luke looks away from the camera while Archie crouches down. A popout over Luke reads 'cameras the other way!'. A popout over Archie reads 'cameras up here!'">
+            </div>
 
             <div id="sectionContentRight">
-                <h1 id="sectionTitleRight">What do I research?</h1>
-                <p id="sectionTextLeft">
-                    The primary topic of my research is making games accessible with sound. 
-                    I have a particular fondness for auditory navigation; "how do we get from A to B using sound and a controller?".
-                    I think there's an innate sense of curiousity and bewilderment encoded into space, and games facilitate us being able to interact with those spaces in otherworldly ways.
-                    Like, in what other career path can you shoot lightning beams at unsuspecting foes from the back of a dragon flying through the sky, and in the next breath, jump to hyperspace in an alien spaceship
-                    and weave betweens asteroids and planets?<br><br>
-                    The cardinal way of functionally engaging with these spaces though, is through looking at them. Spotting the next vehicle in the distance to swerve around. 
-                    Identifying the treasure chest on an island out to sea. Seeing that group of angry bandits waiting outside the castle walls. Each of these events though, has a unique
-                    sonic identity, and many of us have the ability to place that event in theoretical space with our hearing. So where's the line? Where can we stop functionally <em>looking</em> at
-                    our environments, and where can we start functionally <em>listening</em>?
+                <div id="sectionContentInternal">
 
+                <h1 id="sectionTitleRight"  >Research areas</h1>
+                <img id="sectionActualImageMobile" src="/images/research/smart headshot.jpg">
 
-                      
+                <p id="sectionTextRight">
+                    My research focuses on auditory navigation in open world video games for Blind and Low Vision acccessibility. 
+                    I'm investigating ways to sonify navigation and environment information in virtual environments and how we
+                    commuicate this information to gamers to design accessible gameplay systems around it. 
+                    
+                    <br><br>
 
+                    One of the biggest barriers for Blind and Low Vision gamers is being able to
+                    independently navigate virtual world spaces, not just functionally, but enjoyably, too. As such, I'm building systems that not only try to prioritise successful navigation,
+                    but also facilitate the curiousity and excitement found in many open world adventures found in virtual game environments.
                     
                 </p>
+                                 
+              
+            </div>
+
                 
             </div>
         </div>       
 
-        <div id="templateRight">
+        <div id="Publications">
 
             <div id="sectionContentLeft">
-                <h1 id="sectionTitleLeft">Studies</h1>
+                <div id="sectionContentInternal">
+                    <h1 id="sectionTitleLeft" >Publications</h1>
+                    <img id="sectionActualImageMobile" src="/images/music/cosmic.png">
+
                     <p id="sectionTextLeft">
-                       I am currently a PhD student, and as a result, I do PhD studies. Who'd have thought? If you'd like to have a read of them, you can do so here!:
+                        I've published a couple of papers in my time which you can read in different formats here:
                     </p>
 
-                    <ul>
-                        <li><a href="/research/study 1.html">Study 1 - Dialogic Discussions with Gamers about Sonic Accessibility in Video Games</a></li>
-                        <li><a href="/research/study 1.html">Study 2 - Blind-Accessible Auditory Navigation Tools for Open World Navigation in Video Games</a></li>
+                    <table id="PublicationTable">
+                        <tr>
+                            <th>Title of Publication</th>
+                            <th>Link to Official Publication</th>
+                            <th>Preprint PDF</th>
+                            <th>Preprint HTML</th>
+                        </tr>
+                        <tr>
+                            <td>A systematic review of reverberation and accessibility for B/blind users in virtual environments</td>
+                            <td><a href="https://aes2.org/publications/elibrary-page/?id=22168">Link to Paper on Audio Engineering Society Website</a></td>
+                            <td><a href="https://micalab.org/publications/051/aes2023.pdf">Link to PDF on Research Group Website</a></td>
+                            <td><a href="">Link to Paper as a HTML webpage</a></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Towards an audio attribute framework for understanding the perception of reverberant spaces through elicitation and clustering methods based on participant expectation</td>
+                            <td><a href="https://secure.aes.org/forum/pubs/conventions/?elib=21060">Link to Paper on Audio Engineering Society Website</a></td>
+                            <td><a href="">Link to PDF of Paper</a></td>
+                            <td><a href="">Link to Paper as a HTML webpage</a></td>
+                        </tr>
+                    </table>
 
-                    </ul>
-
-              
-
-
+                    </div>
 
 
             </div>
 
-            <div id="sectionImageContainer">
-                <img id="sectionActualImage" src="/images/research/poster power pose.png">
+            <div id="sectionImage">
+                <img id="sectionActualImage" src="/images/music/cosmic.png" alt="Luke sat at a desk wearing a space helmet and a space patterned jumper. He is throwing a peace sign to the camera. 2 popouts are on the image. One popout points to Luke's space helmet and reads 'cool space hat!'. the other popout points to Luke's jumper and says 'snazzy space jumper!'">
             </div>
         </div>
 
-        <div id="templateLeft">
-            <div id="sectionImageContainer"><img id="sectionActualImage" src="/images/research/poster power pose.png"></div>
+        <div id="Teaching">
+            <div id="sectionImage">
+                <img id="sectionActualImage" src="/images/music/scrub.png">
+            </div>
 
             <div id="sectionContentRight">
-                <h1 id="sectionTitleRight">Publications</h1>
-                <p id="sectionTextLeft">
-                
-                    I have also published a few pieces of work during my studies! You can find them in different formats here. Please note: links to external publishers will likely involve work
-                    behind paywalls (thanks academia) so preprints are also provided:
+                <div id="sectionContentInternal">
+                    <h1 id="sectionTitleRight"  >Teaching</h1>
+                    <img id="sectionActualImageMobile" src="/images/music/scrub.png">
 
+                    <p id="sectionTextRight">
+                        I also teach alongside my research! My teaching tends to be in the areas of HCI, game audio design and programming, audio programming, HCI and research methods/project supervision.
+                        I strive to create inclsuive spaces for progressive and awesome discussions and practice. I employ dialogic teaching practice and collaboration to make sure students get the
+                        best chance to apply and develop their skills as people. And obviously, I drop in good discussion around inclusive design and accessibility throughout all I do.    
 
                     <ul>
-                        <li>A systematic review of reverberation and accessibility for B/blind users in virtual environments</li>
-                        <ul>
-                            <li><a href="https://micalab.org/publications/051/aes2023.pdf">Preprint as a PDF</a></li>
-                            <li><a href="https://aes2.org/publications/elibrary-page/?id=22168">Publication on Publisher's Website</a></li>
-
-                        </ul>
-
-                        <li>Towards an audio attribute framework for understanding the perception of reverberant spaces through elicitation and clustering methods based on participant expectation
-                        </li>
-                        <ul>
-                            <li><a href="https://secure.aes.org/forum/pubs/conventions/?elib=21060">Publication on Publisher's Website</a></li>
-
-                        </ul>
-
+                            <li><a style="color: #0E0E23;" href="https://people.uwe.ac.uk/person/lukechild">UWE Staff Profile</a></li>
                     </ul>
-                   
-                </p>
+
+                    </p>
+                </div>
                 
             </div>
-        </div>   
- 
+        </div>
+
+
+
+         
         <footer>
             <p>Made from scratch with dreams and caffeine by Luke Child 2025 ©</p>
-            <div id="templateNavButtons"><ul><a href="index.html"> <li>return to homepage</li> </a></ul></div>
+            <a href="#hero">return to page top </a>
 
-            
         </footer>
 
       </body>
