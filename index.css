@@ -80,15 +80,15 @@ footer
 /*------------------------------------------------------------------------------------------------------*/
 
 
-#hero                                       {       background-color: #62139F; color: #FDFDF5;  }
-#about, #WalkingBillboards, #ResearchAreas  {       background-color: #FDFDF5; color: #0E0E23;  }
-#research, #Cosmic, #Publications           {       background-color: #4b0516; color: #DFF3E4;  }
-#music, #Scrub, #Teaching                   {       background-color: #FDFDF5; color: #0E0E23;  }
-#projects, #OSSUAY                          {       background-color: #62139F; color: #DFF3E4;  }
-#creations, #TakeUpDarts                    {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
-#contact, #SpaceDad                         {       background-color: #4b0516; color: #DFF3E4;  }
+#hero                                                   {       background-color: #62139F; color: #FDFDF5;  }
+#heroTable, #about, #WalkingBillboards, #ResearchAreas  {       background-color: #FDFDF5; color: #0E0E23;  }
+#research, #Cosmic, #Publications                       {       background-color: #4b0516; color: #DFF3E4;  }
+#music, #Scrub, #Teaching                               {       background-color: #FDFDF5; color: #0E0E23;  }
+#projects, #OSSUAY                                      {       background-color: #62139F; color: #DFF3E4;  }
+#creations, #TakeUpDarts                                {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
+#contact, #SpaceDad                                     {       background-color: #4b0516; color: #DFF3E4;  }
 
-#hero, #about, #research, #music, #projects, #creations, #contact,
+#hero, #heroTable, #about, #research, #music, #projects, #creations, #contact,
 #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
 #ResearchAreas, #Publications, #Teaching
 {
@@ -118,6 +118,7 @@ footer
 
 
 }
+
 
 
 
@@ -181,6 +182,18 @@ footer
 {
     display: none;
 }
+
+#heroTableContent
+{
+    width: 100%;
+    padding: 16px;
+}
+
+.linkDark
+{
+    color: #0E0E23;
+}
+
 
 /*------------------------------------------------------------------------------------------------------*/
 
@@ -324,7 +337,6 @@ footer
     border-collapse: collapse;
 }
 
-td:hover, th:hover {background-color: rgba(0, 0, 0, 0.349);}
 td, th
 {
     padding: 8px;

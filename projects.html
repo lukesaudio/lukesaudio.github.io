@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Housekeeping -->      
+        <meta charset="UTF-8">
+        <title>Cites and Sounds - Music</title>
+        <meta lang="en">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/site.webmanifest">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <script src="https://kit.fontawesome.com/2e529e3d96.js" crossorigin="anonymous"></script>
+        
+
+
+        <!-- External CSS -->
+        <link rel="stylesheet" href="/index.css">
+
+      </head>
+
+      <body>
+
+        <div id="hero">
+            <div id="sectionContentLeft" class="animate__animated animate__slideInLeft">
+                <div id="sectionContentInternal">
+                    <h1 id="sectionHeroTitle">Music</h1>
+                    <img id="sectionActualImageMobile" src="/images/music/luke with guitar.png">
+                    <h2 id="sectionHeroSubtitle">All the tunes I've ever made ever.</h2>
+                    
+                    <div id="navButtons">
+                        <ul>
+                            <a href="index.html"> <li>return to home page</li> </a>
+                            <a href="#WalkingBillboards"> <li>skip to sound projectd</li> </a>
+                            <a href="#Cosmic"><li>skip to code</li> </a>
+                            <a href="#Scrub"> <li>skip to scrub</li></a>
+                            <a href="#OSSUAY"><li>skip to ourspaceshipupagainstyours</li></a>
+                            <a href="#TakeUpDarts"><li>skip to take up darts</li></a>
+                            <a href="#SpaceDad"><li>skip to space dad</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="sectionImage">
+                <img id="sectionActualImage" src="/images/music/luke with guitar.png" class="animate__animated animate__slideInRight" alt="Luke sat at a desk playing a Fender Cabronita guitar. There are 3 popouts. One points to Luke's face and says 'serious mode!'. Another points to Luke's t shirt and says 'trivium merch!'. The last one points to Luke's guitar and says 'Fender Cabronita!'">
+            </div>
+
+        </div>
+
+        <div id="heroTable">
+                <table id="heroTableContent">
+                    <tr> <!-- HEADERS -->
+                    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+                        <th onclick="sortTable(0)">Year</th>
+                        <th onclick="sortTable(1)">Project Name</th>
+                        <th onclick="sortTable(2)">Role</th>
+                        <th>Brief Description</th>
+                        <th>Links</th>
+
+                    </tr>
+                    <tr> <!-- SONY HACKATHON -->
+                        <td>2024</td>
+                        <td>Sony Interactive Entertainment Accessible Music Instrument Hackathon</td>
+                        <td>Creative Technologist</td>
+                        <td>Partook in a 2-day Hackathon with Sony IE, Watershed and Drake Music designing bespoke accessible musical instruments for Disabled musicians</td>
+                        <td>
+                            <ul id="tableLinkList">
+                                <li><a class="linkDark" href="https://sonyinteractive.com/en/news/blog/when-tech-meets-music/">Sony IE Writeup of Project</a></li>                             
+                                <li><a class="linkDark" href="https://www.youtube.com/watch?v=sBi5qPhJK94">Audio Described YouTube Video by Sony </a></li>
+                                <li><a class="linkDark" href="https://www.youtube.com/watch?v=tSFNYuVSz8Q">YouTube Video by Sony</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                
+                </table>
+            
+
+        </div>
+
+
+        
+ 
+         
+        <footer>
+            <p>Made from scratch with dreams and caffeine by Luke Child 2025 ©</p>
+            <a href="#hero">return to page top </a>
+
+        </footer>
+
+      </body>
+</html>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
