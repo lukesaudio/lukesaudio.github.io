@@ -66,8 +66,9 @@ i
 }
 
 footer
-{
+{   
     bottom: 0;
+    padding: 16px;
     display: block;    
     width: 100%;
     text-align: center;
@@ -103,6 +104,12 @@ footer
     align-content: center;
 
 
+}
+
+#heroTable
+{
+    height: auto;
+    align-items: flex-start;
 }
 
 
@@ -342,4 +349,35 @@ td, th
     padding: 8px;
     border: 1px solid #ddd;
     font-size: 20px;
+}
+
+.sortable:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#heroTableCaption
+{
+    padding: 16px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th > button
+{
+    font-size: 20px;
+ 
+
+}
+
+button
+{
+    width: 100%;
+    
+}
+button:hover
+{
+    cursor: pointer;
 }
