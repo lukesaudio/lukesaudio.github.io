@@ -81,17 +81,17 @@ footer
 /*------------------------------------------------------------------------------------------------------*/
 
 
-#hero                                                   {       background-color: #62139F; color: #FDFDF5;  }
-#heroTable, #about, #WalkingBillboards, #ResearchAreas  {       background-color: #FDFDF5; color: #0E0E23;  }
-#research, #Cosmic, #Publications                       {       background-color: #4b0516; color: #DFF3E4;  }
-#music, #Scrub, #Teaching                               {       background-color: #FDFDF5; color: #0E0E23;  }
-#projects, #OSSUAY                                      {       background-color: #62139F; color: #DFF3E4;  }
-#creations, #TakeUpDarts                                {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
-#contact, #SpaceDad                                     {       background-color: #4b0516; color: #DFF3E4;  }
+#hero                                                                           {       background-color: #62139F; color: #FDFDF5;  }
+#heroTable, #about, #WalkingBillboards, #ResearchAreas, #WhereDidYouComeFrom    {       background-color: #FDFDF5; color: #0E0E23;  }
+#research, #Cosmic, #Publications, #WhereDidYouGo                               {       background-color: #4b0516; color: #DFF3E4;  }
+#music, #Scrub, #Teaching                                                       {       background-color: #FDFDF5; color: #0E0E23;  }
+#projects, #OSSUAY                                                              {       background-color: #62139F; color: #DFF3E4;  }
+#creations, #TakeUpDarts                                                        {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
+#contact, #SpaceDad                                                             {       background-color: #4b0516; color: #DFF3E4;  }
 
 #hero, #heroTable, #about, #research, #music, #projects, #creations, #contact,
 #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
-#ResearchAreas, #Publications, #Teaching
+#ResearchAreas, #Publications, #Teaching, #WhereDidYouComeFrom, #WhereDidYouGo
 {
     width: 100%;
     height: 100vh;
