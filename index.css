@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');                                       /* Headings */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');                     /* Headings Main */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');                                       /* Headings Alt */
+
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Rubik&display=swap');        /* Body */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone');                                /* Icons */
 
@@ -27,8 +29,8 @@ body, html
 
 h1, h2, .h1-subtitle
 {
-    font-family: "Jua", serif;
-    font-weight: 400;
+    font-family: "Fredoka", serif;
+    font-weight: 550;
     font-style: normal;
    
 }
@@ -177,6 +179,12 @@ footer
     
 }
 
+#indexLogo
+{
+    width: 90%;
+    height: auto;
+}
+
 #sectionActualImage
 {
     width:100%;
@@ -225,8 +233,8 @@ footer
     margin: 0;
     font-size: 64px;
     padding: 16px;
-    font-family: "Jua", serif;
-    font-weight: 400;
+    font-family: "Fredoka", serif;
+    font-weight: 550;
     font-style: normal;
 }
 
