@@ -22,8 +22,8 @@ body, html
     font-weight: 400;
     font-style: normal;
 
-    background-color: #0E0E23;
-    color: #DFF3E4;
+    background-color: #000000;
+    color: #FFFFFF;
 
 }
 
@@ -38,7 +38,7 @@ h1, h2, .h1-subtitle
 
 a
 {
-    color: #DFF3E4;
+    color: #FFFFFF;
 }
 
 ul
@@ -46,19 +46,22 @@ ul
     padding: 0;
 }
 
+
 #navButtons > ul
 {
     margin: 0;
     padding: 16px;
     columns: 2;
+
+    
 }
+
+
 
 li
 {
     display:flex;
     font-size: 24px;
-    padding-top: 16px;
-    padding-bottom: 16px;
 
 }
 
@@ -76,6 +79,12 @@ footer
     text-align: center;
 }
 
+p
+{
+    font-size: 2em !important;
+    
+}
+
 
 
 
@@ -83,13 +92,13 @@ footer
 /*------------------------------------------------------------------------------------------------------*/
 
 
-#hero                                                                           {       background-color: #62139F; color: #FDFDF5;  }
-#heroTable, #about, #WalkingBillboards, #ResearchAreas, #WhereDidYouComeFrom    {       background-color: #FDFDF5; color: #0E0E23;  }
-#research, #Cosmic, #Publications, #WhereDidYouGo                               {       background-color: #4b0516; color: #DFF3E4;  }
-#music, #Scrub, #Teaching                                                       {       background-color: #FDFDF5; color: #0E0E23;  }
-#projects, #OSSUAY                                                              {       background-color: #62139F; color: #DFF3E4;  }
-#creations, #TakeUpDarts                                                        {       background-color: #FDFDF5; color: #0E0E23;  } /*87C38F*/
-#contact, #SpaceDad                                                             {       background-color: #4b0516; color: #DFF3E4;  }
+#hero                                                                           {       background-color: #005999; color: #FFFFFF;  }
+#heroTable, #about, #WalkingBillboards, #ResearchAreas, #WhereDidYouComeFrom    {       background-color: #FFFFFF; color: #000000;  }
+#research, #Cosmic, #Publications, #WhereDidYouGo                               {       background-color: #005999; color: #FFFFFF;  }
+#music, #Scrub, #Teaching                                                       {       background-color: #FFFFFF; color: #000000;  }
+#projects, #OSSUAY                                                              {       background-color: #005999; color: #FFFFFF;  }
+#creations, #TakeUpDarts                                                        {       background-color: #FFFFFF; color: #000000;  } /*87C38F*/
+#contact, #SpaceDad                                                             {       background-color: #005999; color: #FFFFFF;  }
 
 #hero, #heroTable, #about, #research, #music, #projects, #creations, #contact,
 #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
@@ -98,8 +107,6 @@ footer
     width: 100%;
     height: 100vh;
 
-    background-image: url(/images/index/background.jpg);
-    background-blend-mode:overlay;
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -165,7 +172,16 @@ footer
     text-align: center;
 }
 
-#sectionContentInternal {padding: 32px;}
+#sectionContentInternal 
+{
+    display: flex;
+    width: 75%;
+    height: auto;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
 
 #sectionImage
 {
@@ -190,8 +206,8 @@ footer
     width:100%;
     height: 100%;
     object-fit: cover;
-
 }
+
 
 #sectionActualImageMobile
 {
@@ -226,6 +242,10 @@ footer
 {
     font-size: 180px;
     padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 #sectionHeroSubtitle
@@ -241,10 +261,10 @@ footer
 #sectionTitleLeft{      text-align: left;  }
 #sectionTitleRight{     text-align: left;  }
 #sectionTextLeft, #sectionTextRight{       font-size: 24px; text-align: left; }
-#sectionTextEmphasis{font-weight: bold; display:block; border: solid #DFF3E4; padding: 8px; width: 60%;}
+#sectionTextEmphasis{font-weight: bold; display:block; border: solid #ffffff; padding: 8px; width: 60%;}
 
-#sectionTextEmphasisDark{font-weight: bold; display:block; border: solid #0E0E23; padding: 8px; }
-#sectionTextEmphasisDark > a{color: #0E0E23; }
+#sectionTextEmphasisDark{font-weight: bold; display:block; border: solid ##000000; padding: 8px; }
+#sectionTextEmphasisDark > a{color: #000000; }
 
 #sectionSubtitle
 {   
@@ -283,7 +303,8 @@ footer
 
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) 
+{
     body, html {flex-flow: column nowrap; height: 200vh; }
 
     ul{ columns: 1;    }
@@ -298,11 +319,11 @@ footer
     #hero, #about, #research, #music, #projects, #contact,
     #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad
     { 
-        height: 100%;
         width: 100%;
         flex-flow: column nowrap;
         text-align: center; 
-        padding: 0;   
+        padding: auto;   
+
         justify-content: flex-start;
         align-items: center;
         align-content: center;
@@ -315,23 +336,40 @@ footer
         width: 100%;  
         flex-flow: column nowrap;
     }
+    #sectionActualImage
+    {
+        display: none;
+    }
     #sectionImage
     {
         display: none;
     }
+
     #sectionActualImageMobile
     {
         display: block;
         width: 100%;
         max-width: 500px;
         margin: auto;
-}
+    }
 
     #sectionContentLeft, #sectionContentRight
     {
-        height: 100%;
+        display: flex;
         width: 100%;
         text-align: center;
+        justify-content: space-around;
+
+
+
+
+    }
+
+    #sectionContentInternal
+    {
+        padding: 0;
+        width: 90%;
+
     }
 
     #sectionLeftGrid
@@ -340,11 +378,49 @@ footer
         justify-content: center;
     }
 
-    #sectionTitleLeft{font-size: 10vh; width: 100%; text-align: center}
+    #sectionTitleLeft{font-size: 7vh; width: 100%; text-align: center;}
     #sectionTitleLeftOSSUAY{font-size: 6vh; width: 100%; text-align: center}
-    #sectionTitleRight{font-size: 10vh; width: 100%; text-align: center}
+    #sectionTitleRight{font-size: 7vh; width: 100%; text-align: center}
     #sectionHeroTitle{font-size: 54px; width: 100%; text-align: center;}
     #sectionHeroSubtitle{font-size: 32px; text-align: center;}
+    #sectionTextLeft, #sectionTextRight
+    {
+        display: flex;
+
+        flex-flow: column nowrap;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+    }
+
+    #sectionTextLeft > a, #sectionTextRight > a
+    {
+             color: #FFFFFF !important;
+             background-color: #004170;
+             padding: 16px;
+    }
+
+
+
+#hero, #heroTable, #about, #research, #music, #projects, #creations, #contact,
+#WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
+#ResearchAreas, #Publications, #Teaching, #WhereDidYouComeFrom, #WhereDidYouGo
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;    
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+
+
+}
+
+
+
+
 }
 
 /*------------------------------------------------------------------------------------------------------*/
