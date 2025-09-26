@@ -363,7 +363,7 @@ p
 
 @media only screen and (max-width: 1400px) 
 {
-    body, html {flex-flow: column nowrap; height: 200vh; }
+    body, html {flex-flow: column nowrap; height: auto; }
 
     ul{ columns: 1;    }
     ul > a > li{ text-align: center; width: 100%;  justify-content: left; padding: 0; font-size: 16px;  }
@@ -373,12 +373,21 @@ p
     #navButtons > ul
    {
         columns: 2;
+        
     }
 
         #navButtons > ul > li
    {
         padding-top: 16px;
         padding-bottom: 16px;
+        font-size: 4vw;
+
+
+    }
+
+            #navButtons > ul > li::marker
+   {
+    font-size: 0;
 
     }
 
@@ -394,6 +403,13 @@ p
         align-items: center;
         align-content: center;
         
+    }
+
+    #navButtons
+    {
+        width: 100%;
+        overflow:wrap;
+        word-wrap: break-word;
     }
 
     #indexLogo
@@ -498,9 +514,10 @@ p
     width: 70%;
     flex-flow: column nowrap;
     align-items: center;
-    border: solid 10px #005999;
     padding: 64px;
     font-size: 3vh;
+        margin-bottom: 16px;
+
 }
 
 #sectionTextLinksDark
@@ -509,9 +526,10 @@ p
     width: 70%;
     align-items: center;
     flex-flow: column nowrap;
-    border: solid 10px #ffffff;
+    border: solid #ffffff;
     padding: 64px;
     font-size: 3vh;
+    margin-bottom: 16px;
 }
 
 #sectionTextLinksLight > a, #sectionTextLinksDark > a
