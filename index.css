@@ -89,7 +89,7 @@ padding: 8px;
 
 p
 {
-    font-size: 2em !important;
+    font-size: 2em ;
     
 }
 
@@ -378,9 +378,10 @@ p
 
         #navButtons > ul > li
    {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        font-size: 4vw;
+    width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 16px;
 
 
     }
@@ -408,6 +409,9 @@ p
     #navButtons
     {
         width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         overflow:wrap;
         word-wrap: break-word;
     }
@@ -481,6 +485,7 @@ p
         flex-flow: column nowrap;
         width: 100%;
         height: auto;
+        font-size: 1.3em;
 
     }
 
@@ -488,7 +493,7 @@ p
     {
              color: #FFFFFF !important;
              background-color: #004170;
-             padding: 16px;
+             padding: 16px !important;
     }
 
 
