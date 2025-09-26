@@ -80,6 +80,11 @@ footer
     display: block;    
     width: 100%;
     text-align: center;
+    font-size: 1vh;
+}
+footer > p
+{   
+padding: 8px;
 }
 
 p
@@ -449,8 +454,8 @@ p
         justify-content: center;
     }
 
-    #sectionTitleLeft{font-size: 10vw; width: 100%; padding: 32px; text-align: center;}
-    #sectionTitleRight{font-size: 10vw; width: 100%; padding: 32px; text-align: center;}
+    #sectionTitleLeft{font-size: 10vw; width: 100%; padding-top: 16px; padding-bottom: 16px;  text-align: center;}
+    #sectionTitleRight{font-size: 10vw; width: 100%; padding-top: 16px; padding-bottom: 16px; text-align: center;}
     #sectionTitleLeftOSSUAY{font-size: 10vw; width: 100%;}
     #sectionHeroTitle{font-size: 10vw; width: 100%;}
     #sectionTextLeft, #sectionTextRight
