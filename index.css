@@ -108,7 +108,7 @@ p
 #creations, #TakeUpDarts                                                        {       background-color: #FFFFFF; color: #000000;  } /*87C38F*/
 #contact, #SpaceDad                                                             {       background-color: #005999; color: #FFFFFF;  }
 
-#hero, #heroTable, #about, #research, #music, #projects, #creations, #contact,
+#hero, #about, #research, #music, #projects, #creations, #contact,
 #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
 #ResearchAreas, #Publications, #Teaching, #WhereDidYouComeFrom, #WhereDidYouGo
 {
@@ -123,11 +123,11 @@ p
 
 }
 
-#heroTable
-{
-    height: auto;
-    align-items: flex-start;
-}
+    #heroTable
+    {
+        height: auto;
+        align-items: flex-start;
+    }
 
 
 #contact
@@ -233,10 +233,19 @@ p
     display: none;
 }
 
+
+
 #heroTableContent
 {
+
     width: 100%;
-    padding: 16px;
+    overflow: auto;
+
+}
+
+#heroTableContent > tbody > tr > td, #heroTableContent > tbody > tr > th, #heroTableContent > tbody > tr > td > ul > li > a, #heroTableContent > tbody > tr > td > ul > li
+{
+  font-size: 16px;
 }
 
 .linkDark
@@ -498,7 +507,7 @@ p
 
 
 
-#hero, #heroTable, #about, #research, #music, #projects, #creations, #contact,
+#hero, #about, #research, #music, #projects, #creations, #contact,
 #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
 #ResearchAreas, #Publications, #Teaching, #WhereDidYouComeFrom, #WhereDidYouGo
 {
@@ -512,6 +521,7 @@ p
 
 
 }
+
 
 #sectionTextLinksLight
 {
@@ -556,9 +566,53 @@ padding-bottom: 16px;
 }
 
 
+#heroTable
+{
+    width: 100%;
+    display: flex;
+        flex-flow: column nowrap;
+
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#heroTableContainer
+{
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#heroTableContent
+{
+    
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+#heroTableCaption
+{
+    text-align: center !important;
+}
+
+
+#heroTableContent > tbody
+{
+    display: block;
+    width: 1px;
 
 
 
+}
 }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -573,7 +627,7 @@ td, th
 {
     padding: 8px;
     border: 1px solid #ddd;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .sortable:hover
