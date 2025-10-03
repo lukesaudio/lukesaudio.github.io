@@ -13,7 +13,7 @@ let font;
 
 const swiftLyricPhrases = [
   "You made a deal with the devil, turns out my dick's bigger",
-  "I’ve been dying of trying just to seem cool",
+  "I've been dying of trying just to seem cool",
   "Matching scars, we wear them like awards",
   "Good thing I like my friends cancelled",
   "We danced through ashes just to feel alive",
