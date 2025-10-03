@@ -140,11 +140,11 @@ function draw()
   if(cloud5pos > width + 100) { cloud5pos = -100; pickNewIncrements(5); pickNewHeight(5); pickNewDrop(5); pickNewLyric(5); cloud5lyricPos = 0; }
 
   tint(255, 200);
-  image(cloud1, cloud1pos, cloud1height, 400, 400);
-  image(cloud2, cloud2pos, cloud2height, 400, 400);
+  image(cloud1, cloud1pos, cloud1height, 800, 800);
+  image(cloud2, cloud2pos, cloud2height, 500, 500);
   image(cloud3, cloud3pos, cloud3height, 400, 400);
-  image(cloud4, cloud4pos, cloud4height, 400, 400);
-  image(cloud5, cloud5pos, cloud5height, 400, 400);
+  image(cloud4, cloud4pos, cloud4height, 700, 700);
+  image(cloud5, cloud5pos, cloud5height, 600, 600);
 
 
   cloud1lyricPos += cloud1lyricIncrement;
