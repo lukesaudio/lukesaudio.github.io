@@ -51,11 +51,11 @@ function preload()
 {
 
   background  = loadImage("background.jpeg")
-  cloud1 = loadImage('/cloudImages/cloud1.png');
-  cloud2 = loadImage('/cloudImages/cloud2.png');
-  cloud3 = loadImage('/cloudImages/cloud3.png');
-  cloud4 = loadImage('/cloudImages/cloud4.png');
-  cloud5 = loadImage('/cloudImages/cloud5.png');
+  cloud1 = loadImage('cloud1.png');
+  cloud2 = loadImage('cloud2.png');
+  cloud3 = loadImage('cloud3.png');
+  cloud4 = loadImage('cloud4.png');
+  cloud5 = loadImage('cloud5.png');
 
   cloud1pos = -109;
   cloud2pos = -131;
