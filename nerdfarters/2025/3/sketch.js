@@ -121,8 +121,8 @@ function setup() {
 
 function draw() 
 {
-
-    image(background, windowWidth, windowHeight);
+  frameRate(60);
+  image(background, windowWidth, windowHeight);
 
   cloud1pos += cloud1increment;
   if(cloud1pos > width + 100) { cloud1pos = -100; pickNewIncrements(1); pickNewHeight(1); pickNewDrop(1); pickNewLyric(1); cloud1lyricPos = 0;  }
@@ -229,7 +229,7 @@ function pickNewLyric(cloudNum)
 
 function pickNewLyricHeight(cloudNum)
 {
-  let newLyricHeight = random(1, windowHeight - 300);
+  let newLyricHeight = random(1, windowHeight);
 
   if(cloudNum == 1) { cloud1lyricHeight = newLyricHeight; }
   if(cloudNum == 2) { cloud2lyricHeight = newLyricHeight; } 
