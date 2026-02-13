@@ -1,662 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');                     /* Headings Main */
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');                                       /* Headings Alt */
-
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Rubik&display=swap');        /* Body */
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone');                                /* Icons */
-
-body, html
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Poetsen+One&display=swap');
+body
 {
-    display: flex;
-    flex-flow: row wrap;
+    width: 100%;
+    height: auto !important; 
+    min-height: 100vh;
+    border: 0;
     margin: 0;
-    
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;    
-    justify-content: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+
     align-items: center;
-    align-content:flex-start;
-    text-align: left;
+    justify-content: center;
+    align-content: center;
 
-    font-family: "Atkinson Hyperlegible", serif;
-    font-weight: 400;
-    font-style: normal;
+    background-image: url(images/flowers\ wide.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
 
-    background-color: #000000;
-    color: #FFFFFF;
+
 
 }
 
-h1, h2, .h1-subtitle
+
+
+h1, h2
 {
-    font-family: "Fredoka", serif;
-    font-weight: 550;
-    font-style: normal;
-   
-}
-
-
-a
-{
-    color: #FFFFFF;
-}
-
-ul
-{
-    padding: 0;
-}
-
-
-#navButtons > ul
-{
-    columns: 2;    
-}
-
-#navButtons > ul > li 
-{
-    padding: 16px;
-}
-
-
-
-li
-{
-    display: list-item;
-    font-size: 24px;
-    list-style-type:square;
-
-
-}
-
-i
-{
-    width: 100%;
-}
-
-footer
-{   
-    bottom: 0;
-    padding: 16px;
-    display: block;    
-    width: 100%;
-    text-align: center;
-    font-size: 1vh;
-}
-footer > p
-{   
-padding: 8px;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 p
 {
-    font-size: 2em ;
-    
-}
-
-
-
-
-
-/*------------------------------------------------------------------------------------------------------*/
-
-
-#hero                                                                           {       background-color: #005999; color: #FFFFFF; }
-#heroTable, #about, #WalkingBillboards, #ResearchAreas, #WhereDidYouComeFrom    {       background-color: #FFFFFF; color: #000000;  }
-#research, #Cosmic, #Publications, #WhereDidYouGo                               {       background-color: #005999; color: #FFFFFF;  }
-#music, #Scrub, #Teaching                                                       {       background-color: #FFFFFF; color: #000000;  }
-#projects, #OSSUAY                                                              {       background-color: #005999; color: #FFFFFF;  }
-#creations, #TakeUpDarts                                                        {       background-color: #FFFFFF; color: #000000;  } /*87C38F*/
-#contact, #SpaceDad                                                             {       background-color: #005999; color: #FFFFFF;  }
-
-#hero, #about, #research, #music, #projects, #creations, #contact,
-#WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
-#ResearchAreas, #Publications, #Teaching, #WhereDidYouComeFrom, #WhereDidYouGo
-{
-    width: 100%;
-    height: 100vh;
-
-    display: flex;    
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-
-}
-
-    #heroTable
-    {
-        height: auto;
-        align-items: flex-start;
-    }
-
-
-#contact
-{
-    width: 100%;
-    height: auto;
-    display: flex;    
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-
-
-}
-
-
-
-
-/*------------------------------------------------------------------------------------------------------*/
-
-
-#sectionContentLeft, #sectionContentRight
-{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: left;
-    
-
-
-}
-
-
-
-#sectionContentLeftContact
-{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-}
-#sectionContentLeftContact > #sectionTitleLeft
-{
-    text-align: center;
-}
-
-#sectionContentLeftContact > #sectionLeftGrid > li::marker
-{
-    font-size: 0;
-}
-
-#sectionContentInternal 
-{
-    display: flex;
-    width: 75%;
-    height: auto;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 32px;
-}
-
-#sectionImage
-{
-    height: 100vh;
-    width: 50%;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-    
-}
-
-#indexLogo
-{
-    width: 90%;
-    height: auto;
-}
-
-#sectionActualImage
-{
-    width:100%;
-    height: 100%;
-    object-fit:cover;
-
-}
-
-
-
-
-#sectionActualImageMobile
-{
-    display: none;
-}
-
-
-
-#heroTableContent
-{
-
-    width: 100%;
-    overflow: auto;
-
-}
-
-#heroTableContent > tbody > tr > td, #heroTableContent > tbody > tr > th, #heroTableContent > tbody > tr > td > ul > li > a, #heroTableContent > tbody > tr > td > ul > li
-{
-  font-size: 16px;
-}
-
-.linkDark
-{
-    color: #0E0E23;
-}
-
-#sectionContentLeftContact > #sectionLeftGrid > li
-{
-    padding: 16px;
-}
-
-#sectionContentLeftContact > #sectionLeftGrid > li > span > a > i, #sectionContentLeftContact > #sectionLeftGrid > li > span > i
-{
-    font-size: 5vw;
-    
-}
-
-#tableLinkList > li::marker
-{
-    font-size: 0;
-}
-
-
-/*------------------------------------------------------------------------------------------------------*/
-
-#sectionTitleLeft, #sectionTitleRight, #sectionHeroTitle, #sectionTitleLeftOSSUAY
-{
-    width: 100%;
-    margin: 0;
-    font-size: 100px;
-    
-
-}
-
-
-#sectionHeroTitle
-{
-    font-size: 180px;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-#sectionHeroSubtitle
-{
-    margin: 0;
-    font-size: 64px;
-    padding: 16px;
-    font-family: "Fredoka", serif;
-    font-weight: 550;
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
+    font-size: 24px;
 }
 
-#sectionTitleLeft{      text-align: left;  }
-#sectionTitleRight{     text-align: left;  }
-#sectionTextLeft, #sectionTextRight{       font-size: 24px; text-align: left; }
-#sectionTextEmphasis{font-weight: bold; display:block; border: solid #ffffff; padding: 8px; width: 60%;}
-
-#sectionTextEmphasisDark{font-weight: bold; display:block; border: solid ##000000; padding: 8px; }
-#sectionTextEmphasisDark > a{color: #000000; }
-
-#sectionSubtitle
-{   
-    margin: 0;
-    font-size: 10vh;
-    padding: 16px;
+#mainContainer
+{
+    width: 50vw;
+    height: auto;
+    padding: 64px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
+    
 
 
-
-
-#sectionLeftGrid
+.firstContainer
 {
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    margin: auto;
-    overflow: auto;
-    padding: 32px;
-    align-items: flex-start;
-}
-
-#sectionLeftGrid > li
-{
-    width: 15vh;
-    align-content: center;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+}
+
+.newContainer
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 50vh;
+
+}
+
+.containerInner
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-content: space-between;
+
+
+    width: 50vw;
+    height: 30vh;
+
+}
+
+.containerText
+{
+    display: flex;
+    flex-flow: column nowrap;
+    padding-right: 16px;
+}
+
+footer
+{
     text-align: center;
-    
 }
 
-#sectionTextLinksLight
-{
-    display: flex;
-    width: 70%;
-    flex-flow: column nowrap;
-    align-items: center;
-    border: solid 3px #000000;
-    padding: 16px;
-    text-align: left;
-    font-size: 1.5vw;
-}
-
-#sectionTextLinksDark
-{
-    display: flex;
-    width: 70%;
-    align-items: center;
-    flex-flow: column nowrap;
-    border: solid 3px #ffffff;
-    padding: 16px;
-    text-align: left;
-    font-size: 1.5vw;
-}
-
-
-
-
-@media only screen and (max-width: 1400px) 
-{
-    body, html {flex-flow: column nowrap; height: auto; }
-
-    ul{ columns: 1;    }
-    ul > a > li{ text-align: center; width: 100%;  justify-content: left; padding: 0; font-size: 16px;  }
-
-
-
-    #navButtons > ul
-   {
-        columns: 2;
-        
-    }
-
-        #navButtons > ul > li
-   {
-    width: 100%;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        font-size: 16px;
-
-
-    }
-
-            #navButtons > ul > li::marker
-   {
-    font-size: 0;
-
-    }
-
-   
-    #hero, #about, #research, #music, #projects, #contact,
-    #WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad
-    { 
-        width: 100%;
-        flex-flow: column nowrap;
-        padding: auto;   
-
-        justify-content: flex-start;
-        align-items: center;
-        align-content: center;
-        
-    }
-
-    #navButtons
-    {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        overflow:wrap;
-        word-wrap: break-word;
-    }
-
-    #indexLogo
-    {
-        width: 50%;
-    }
-
-    #sectionHeroSubtitle
-    {
-        font-size: 5vh !important;
-        text-align: center;
-    }
-
-    #sectionContent
-    { 
-        height: 100%; 
-        width: 100%;  
-        flex-flow: column nowrap;
-    }
-    #sectionActualImage
-    {
-        display: none;
-    }
-    #sectionImage
-    {
-        display: none;
-    }
-
-    #sectionActualImageMobile
-    {
-        display: block;
-        width: 100%;
-        max-width: 500px;
-        margin: auto;
-    }
-
-    #sectionContentLeft, #sectionContentRight
-    {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-
-
-
-
-    }
-
-    #sectionContentInternal
-    {
-        padding: 0;
-        width: 90%;
-
-    }
-
-    #sectionLeftGrid
-    {
-        width: 100%;
-        justify-content: center;
-    }
-
-    #sectionTitleLeft{font-size: 10vw; width: 100%; padding-top: 16px; padding-bottom: 16px;  text-align: center;}
-    #sectionTitleRight{font-size: 10vw; width: 100%; padding-top: 16px; padding-bottom: 16px; text-align: center;}
-    #sectionTitleLeftOSSUAY{font-size: 10vw; width: 100%;}
-    #sectionHeroTitle{font-size: 10vw; width: 100%;}
-    #sectionTextLeft, #sectionTextRight
-    {
-        display: flex;
-
-        flex-flow: column nowrap;
-        width: 100%;
-        height: auto;
-        font-size: 1.3em;
-
-    }
-
-    #sectionTextLeft > a, #sectionTextRight > a
-    {
-             color: #FFFFFF !important;
-             background-color: #004170;
-             padding: 16px !important;
-    }
-
-
-
-#hero, #about, #research, #music, #projects, #creations, #contact,
-#WalkingBillboards, #Cosmic, #Scrub, #OSSUAY, #TakeUpDarts, #SpaceDad, 
-#ResearchAreas, #Publications, #Teaching, #WhereDidYouComeFrom, #WhereDidYouGo
-{
-    width: 100%;
-    height: 100%;
-
-    display: flex;    
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-
-
-}
-
-
-#sectionTextLinksLight
-{
-    display: flex;
-    width: 70%;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 64px;
-    font-size: 3vh;
-        margin-bottom: 16px;
-
-}
-
-#sectionTextLinksDark
-{
-    display: flex;
-    width: 70%;
-    align-items: center;
-    flex-flow: column nowrap;
-    border: solid #ffffff;
-    padding: 64px;
-    font-size: 3vh;
-    margin-bottom: 16px;
-}
-
-#sectionTextLinksLight > a, #sectionTextLinksDark > a
-{
-width: 100%;
-padding-top: 16px;
-padding-bottom: 16px;
-}
-
-#sectionContentLeftContact > #sectionLeftGrid > li
-{
-    padding: 16px;
-}
-
-#sectionContentLeftContact > #sectionLeftGrid > li > span > a > i, #sectionContentLeftContact > #sectionLeftGrid > li > span > i
-{
-    font-size: 10vw;
-    
-}
-
-
-#heroTable
-{
-    width: 100%;
-    display: flex;
-        flex-flow: column nowrap;
-
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-#heroTableContainer
-{
-    width: 100%;
-    overflow-x: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-#heroTableContent
-{
-    
-    display: flex;
-    width: 100%;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-}
-
-#heroTableCaption
-{
-    text-align: center !important;
-}
-
-
-#heroTableContent > tbody
-{
+@media screen and (max-width: 1200px) {
+  
+  
+  body{
+    background-image: url(images/flowers\ close.png);
+    background-color: #f1f1f1;
+    background-size: contain;
+    background-position: bottom;
+  }
+  
+    #mainContainer, .newContainer, .firstContainer, .containerInner, .containerText, .containerImage {
     display: block;
-    width: 1px;
+    height: auto;
+  }
 
+  #mainContainer
+  {
+    background-color: #f4f4f4;
+  }
 
+  .firstContainer
+  {
+    text-align: center;
+  }
 
-}
-}
+  .newContainer
+  {
+    padding-top: 16px;
+    padding-bottom: 16px;
 
-/*------------------------------------------------------------------------------------------------------*/
+    border-top: solid black;
+  }
 
+  #consult
+  {
+    margin-bottom: 0 !important;
+  }
 
-#PublicationTable
-{
-    border-collapse: collapse;
-}
+  #consultInner
+  {
+    height: auto !important;
+  }
 
-td, th
-{
-    padding: 8px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-.sortable:hover
-{
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-#heroTableCaption
-{
-    padding: 16px;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: left;
-}
-
-th > button
-{
-    font-size: 20px;
- 
-
-}
-
-button
-{
-    width: 100%;
-    
-}
-button:hover
-{
-    cursor: pointer;
 }
