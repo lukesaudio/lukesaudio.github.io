@@ -114,11 +114,24 @@ footer
     #mainContainer, .newContainer, .firstContainer, .containerInner, .containerText, .containerImage {
     display: block;
     height: auto;
+    padding: 0;
+
   }
 
   #mainContainer
   {
     background-color: #f4f4f4;
+    width: 90%;
+    padding: 12px;
+
+  }
+  .containerInner
+  {
+    width: 100%;
+  }
+  .containerText
+  {
+    width: 100%;
   }
 
   .firstContainer
