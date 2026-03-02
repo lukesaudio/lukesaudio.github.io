@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Poetsen+One&display=swap');
+body
+{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 16px;
+    background-color: #f1f1f1;
+    margin: 32px;
+
+    justify-content: center;
+
+}
+
+*       {   font-family: "Atkinson Hyperlegible Next", sans-serif;  }
+h1      {   font-size: 40px;    }
+h2      {   font-size: 32px;    }
+p, li   {   font-size: 24px;    }
+
+
+#textAndImage
+{
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#textAndImage > * { padding: 32px;}
+
+#textAndImage > img
+{
+    width: 40%;
+    max-width: 500px; 
+    height: 100%;   
+    border: solid 4px black;
+    padding: 0;
+}
+
+@media screen and (max-width: 1200px) 
+{
+    #textAndImage
+    {
+        flex-flow: column-reverse nowrap;
+    }
+}
+
+
+
